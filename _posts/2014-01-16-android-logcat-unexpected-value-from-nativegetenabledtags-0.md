@@ -25,3 +25,5 @@ This apparently is some kind of bug. This makes it really hard to read the logs 
 ```
 adb logcat | grep -v .*nativeGetEnabledTags.*
 ```
+
+<!--more-->

@@ -25,3 +25,5 @@ It will install the latest version of vim(from github), download and install the
 ```
 
 And you are set. Hope it is useful.
+
+<!--more-->

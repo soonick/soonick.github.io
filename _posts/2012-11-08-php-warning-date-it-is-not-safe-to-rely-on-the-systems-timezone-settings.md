@@ -23,3 +23,5 @@ date.timezone = "America/Mexico_City"
 You can get a list of the supported timezones on this URL: <http://php.net/manual/en/timezones.php>. The error should go away after you restart apache.
 
 For Linux systems there are some times two php.ini files, one for apache and one for CLI. Make sure you add the line to both files.
+
+<!--more-->

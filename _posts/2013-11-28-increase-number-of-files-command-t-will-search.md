@@ -15,3 +15,5 @@ I was having a problem with Vim&#8217;s Command-T plugin, where it didn&#8217;t 
 " Increase the number for files Command-T will search "
 let g:CommandTMaxFiles=50000
 ```
+
+<!--more-->

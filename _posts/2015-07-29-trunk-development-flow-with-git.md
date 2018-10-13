@@ -21,3 +21,5 @@ These are the rules I follow when using the trunk model with git:
   * **Master is always stable** &#8211; The master branch should always be stable and deployable. For this reason your codebase should be guarded by as many tests and monitoring as possible. Developers should feel comfortable deploying anything that goes to master as soon as it is committed because there may be a system that continuously deploys the master branch.
   * **No merges allowed** &#8211; The master branch should remain flat by always rebasing to it. Keeping the master branch flat makes is easier to bisect and revert commits.
   * **No branches for large tasks** &#8211; On other flows, branches are created for large tasks that may take days or weeks. This makes development easy, but integration hard. When you are done developing your feature and are ready to add your changes to master, there may be conflicts. Fixing conflicts that are weeks old is hard and error prone. To avoid this problem and still allow for large tasks, use [feature toggles](http://martinfowler.com/bliki/FeatureToggle.html) instead.
+
+<!--more-->

@@ -39,3 +39,5 @@ And reopen them using fg %n. For example:
 ```
 fg %2
 ```
+
+<!--more-->

@@ -22,3 +22,5 @@ Since currently I am working on an Android app and I want a tab width of 4, I cr
 set tabstop=4
 set shiftwidth=4
 ```
+
+<!--more-->

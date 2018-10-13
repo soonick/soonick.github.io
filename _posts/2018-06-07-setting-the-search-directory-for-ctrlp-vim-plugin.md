@@ -17,3 +17,5 @@ By default ctrlp will look for the root of your repo (by looking for a .git, .hg
 ```
 let g:ctrlp_working_path_mode = 'a'
 ```
+
+<!--more-->

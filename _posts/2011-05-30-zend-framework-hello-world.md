@@ -20,7 +20,9 @@ Zend Framework uses the Front Controller pattern on its implementation of MVC. T
 
 For this example we are going to create a folder for our application: /home/adrian/www/hello. Inside that folder we need to create three folders: application, library and public.
 
-<!--more-->application: This folder usually contains three folders: controllers, models and views. These folders contain your application&#8217;s controllers, models and views respectively.
+<!--more-->
+
+application: This folder usually contains three folders: controllers, models and views. These folders contain your application&#8217;s controllers, models and views respectively.
 
 library: This folder contains all the external components that your application needs to function. One of these external components is the Zend Framework itself.
 

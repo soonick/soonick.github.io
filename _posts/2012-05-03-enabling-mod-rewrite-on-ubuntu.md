@@ -34,3 +34,5 @@ sudo /etc/init.d/apache2 restart
 ```
 
 Now RewriteEngine is a recognized command for your .htaccess files.
+
+<!--more-->

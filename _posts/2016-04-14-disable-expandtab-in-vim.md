@@ -25,3 +25,5 @@ Lately I&#8217;ve been working a little with Go. The standard in Go is to use ta
 ```
 set expandtab!
 ```
+
+<!--more-->

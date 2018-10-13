@@ -39,3 +39,5 @@ while [[ ${output:0:7} != 'stopped' ]]; do
   sleep 1
 done
 ```
+
+<!--more-->

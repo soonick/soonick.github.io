@@ -31,3 +31,5 @@ Your hosts file should have something like this:
 ```
 
 You can really write the domain name you want but it needs to be fully qualified, that means it should contain a top level domain, in my example **dev**.
+
+<!--more-->

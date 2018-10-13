@@ -17,3 +17,5 @@ To modify the names of your Desktop and Downloads folder you just modify _~/.con
 XDG_DESKTOP_DIR="$HOME/desktop"
 XDG_DOWNLOAD_DIR="$HOME/downloads"
 ```
+
+<!--more-->

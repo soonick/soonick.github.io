@@ -36,3 +36,5 @@ Now you have access to the environment variable from php:
 ```php
 getenv('APPLICATION_ENV');
 ```
+
+<!--more-->

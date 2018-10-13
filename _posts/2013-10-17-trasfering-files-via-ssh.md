@@ -28,3 +28,5 @@ scp <remote user>@<some domain or ip>:<remote path to file> /home/adrian/
 ```
 
 Finally, if you want to copy a folder with all it&#8217;s content you need to add a **-r** flag.
+
+<!--more-->

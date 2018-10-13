@@ -33,3 +33,5 @@ If you will constantly be working on this repository this will become annoying r
   name = First Last
   email = email@domain.com
 ```
+
+<!--more-->

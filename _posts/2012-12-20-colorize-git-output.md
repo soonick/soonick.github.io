@@ -18,3 +18,5 @@ In linux git doesn&#8217;t show colors by default. To make git diff, log, status
 ```
 git config --global color.ui true
 ```
+
+<!--more-->

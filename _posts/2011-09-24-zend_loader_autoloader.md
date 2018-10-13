@@ -28,3 +28,5 @@ $frontController = Zend_Controller_Front::getInstance();
 ```
 
 Zend framework will replace underscores (\_) with directory separators (/) and look for the file Zend/Controller/Front in your include path(get\_include_path()), if the file is found it will be loaded, if it is not found an error will be issued.
+
+<!--more-->

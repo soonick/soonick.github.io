@@ -30,3 +30,5 @@ You could even have more than one syntax checker per language if you wanted:
 ```
 let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 ```
+
+<!--more-->

@@ -38,6 +38,8 @@ KiB Swap: 20713468 total, 20713468 free,        0 used. 17373856 avail Mem
  1833 root      20   0  756772  68200  39192 S   0.3  0.3   0:11.96 dockerd
 ```
 
+<!--more-->
+
 The first line shows the time, how long has the system been up, the number of users logged into the system and the load average over the last 1, 5 and 15 minutes. The exact same information can be obtained by using the **uptime** program.
 
 In the example above, we can see that the system has been running for 13 hours and 24 minutes and it currently has a single user logged in. The **0.58, 0.56, 0.63** is a little tricky to read. In a system with a single CPU it means that the system was 58% utilized the last minute, 56% utilized the last 5 minutes and 63% utilized the last 15 minutes. The system where I ran **top** has [4 processing units](https://ncona.com/2018/09/how-to-find-how-many-cores-your-system-has/) so the value we would see when the system is at capacity is 4.00. The 0.58 value actually means that the system was only 14.5% utilized. A system can be more than 100% used in some scenarios. What this means is that there are processes waiting for the CPU, but they are being queued.

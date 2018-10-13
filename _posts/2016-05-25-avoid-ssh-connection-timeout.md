@@ -24,3 +24,5 @@ ServerAliveCountMax 3
 **ServerAliveCountMax** &#8211; How many times the client will try to send a message to the server if it doesn&#8217;t respond.
 
 With the configuration above, the client will send a null package every 15 seconds. If the server doesn&#8217;t respond to one of those packages then after 15 seconds the clients will try again and then one more time. After three failures the client will disconnect.
+
+<!--more-->

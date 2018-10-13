@@ -17,3 +17,5 @@ Every now and then I have to dig into other people&#8217;s code that doesn&#8217
 ```
 :set SyntasticToggleMode
 ```
+
+<!--more-->

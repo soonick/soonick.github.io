@@ -35,3 +35,5 @@ ServerName myserver
 At the end of /etc/apache2/apache2.conf
 
 That should do it.
+
+<!--more-->

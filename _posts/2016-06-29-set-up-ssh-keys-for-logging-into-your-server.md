@@ -29,3 +29,5 @@ ssh-copy-id -i /home/myself/.ssh/server_key_rsa user@myhost
 ```
 
 From now on I won&#8217;t be prompted for a password when I try to log into my server.
+
+<!--more-->

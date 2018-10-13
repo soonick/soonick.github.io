@@ -43,3 +43,5 @@ terraform import google_compute_instance.us-central1-c--f1-micro--001 ncona-1798
 ```
 
 From here terraform can manage it as if it had created it.
+
+<!--more-->

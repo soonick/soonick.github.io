@@ -34,3 +34,5 @@ dependencies {
 ```
 
 Now you can use your library within your app.
+
+<!--more-->

@@ -18,3 +18,5 @@ Since I have been working with Java I found annoying every time I used Command-T
 ```
 set wildignore+=*.class
 ```
+
+<!--more-->

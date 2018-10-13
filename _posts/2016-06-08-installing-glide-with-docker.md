@@ -32,3 +32,5 @@ ENV PATH /tools/glide:$PATH
 ```
 
 Now, all containers created from this image will have glide available in their path.
+
+<!--more-->

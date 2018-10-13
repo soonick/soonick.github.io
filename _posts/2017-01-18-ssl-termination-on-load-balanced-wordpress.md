@@ -38,3 +38,5 @@ if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
 ```
 
 This solved the problem and I can finally serve my blog with https.
+
+<!--more-->
