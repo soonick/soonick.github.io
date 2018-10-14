@@ -70,9 +70,9 @@ Once the image is running, you can point your browser to **http://localhost:8080
 
 Sign out from the Administrator user click become, and then click on the **New account** register button.
 
-[<img src="http://ncona.com/wp-content/uploads/2015/11/become.png" alt="become" width="1044" height="182" class="alignnone size-full wp-image-3289" srcset="https://ncona.com/wp-content/uploads/2015/11/become.png 1044w, https://ncona.com/wp-content/uploads/2015/11/become-300x52.png 300w, https://ncona.com/wp-content/uploads/2015/11/become-1024x179.png 1024w" sizes="(max-width: 1044px) 100vw, 1044px" />](http://ncona.com/wp-content/uploads/2015/11/become.png)
+[<img src="http://ncona.com/wp-content/uploads/2015/11/become.png" alt="become" width="100%" class="alignnone size-full wp-image-3289" srcset="https://ncona.com/wp-content/uploads/2015/11/become.png 1044w, https://ncona.com/wp-content/uploads/2015/11/become-300x52.png 300w, https://ncona.com/wp-content/uploads/2015/11/become-1024x179.png 1024w" sizes="(max-width: 1044px) 100vw, 1044px" />](http://ncona.com/wp-content/uploads/2015/11/become.png)
 
-[<img src="http://ncona.com/wp-content/uploads/2015/11/new-account.png" alt="new-account" width="593" height="270" class="alignnone size-full wp-image-3290" srcset="https://ncona.com/wp-content/uploads/2015/11/new-account.png 593w, https://ncona.com/wp-content/uploads/2015/11/new-account-300x137.png 300w" sizes="(max-width: 593px) 100vw, 593px" />](http://ncona.com/wp-content/uploads/2015/11/new-account.png)
+[<img src="http://ncona.com/wp-content/uploads/2015/11/new-account.png" alt="new-account" width="100%" class="alignnone size-full wp-image-3290" srcset="https://ncona.com/wp-content/uploads/2015/11/new-account.png 593w, https://ncona.com/wp-content/uploads/2015/11/new-account-300x137.png 300w" sizes="(max-width: 593px) 100vw, 593px" />](http://ncona.com/wp-content/uploads/2015/11/new-account.png)
 
 [<img src="http://ncona.com/wp-content/uploads/2015/11/creating-user.png" alt="creating-user" width="693" height="279" class="alignnone size-full wp-image-3291" srcset="https://ncona.com/wp-content/uploads/2015/11/creating-user.png 693w, https://ncona.com/wp-content/uploads/2015/11/creating-user-300x121.png 300w" sizes="(max-width: 693px) 100vw, 693px" />](http://ncona.com/wp-content/uploads/2015/11/creating-user.png)
 
@@ -112,9 +112,9 @@ Before a user can clone the project in a read-write mode, they first need to reg
 
 [<img src="http://ncona.com/wp-content/uploads/2015/11/username-gerrit.png" alt="username-gerrit" width="637" height="286" class="alignnone size-full wp-image-3311" srcset="https://ncona.com/wp-content/uploads/2015/11/username-gerrit.png 637w, https://ncona.com/wp-content/uploads/2015/11/username-gerrit-300x135.png 300w" sizes="(max-width: 637px) 100vw, 637px" />](http://ncona.com/wp-content/uploads/2015/11/username-gerrit.png)
 
-[<img src="http://ncona.com/wp-content/uploads/2015/11/email-gerrit.png" alt="email-gerrit" width="883" height="233" class="alignnone size-full wp-image-3315" srcset="https://ncona.com/wp-content/uploads/2015/11/email-gerrit.png 883w, https://ncona.com/wp-content/uploads/2015/11/email-gerrit-300x79.png 300w" sizes="(max-width: 883px) 100vw, 883px" />](http://ncona.com/wp-content/uploads/2015/11/email-gerrit.png)
+[<img src="http://ncona.com/wp-content/uploads/2015/11/email-gerrit.png" alt="email-gerrit" width="100%" class="alignnone size-full wp-image-3315" srcset="https://ncona.com/wp-content/uploads/2015/11/email-gerrit.png 883w, https://ncona.com/wp-content/uploads/2015/11/email-gerrit-300x79.png 300w" sizes="(max-width: 883px) 100vw, 883px" />](http://ncona.com/wp-content/uploads/2015/11/email-gerrit.png)
 
-[<img src="http://ncona.com/wp-content/uploads/2015/11/ssh-key-gerrit.png" alt="ssh-key-gerrit" width="762" height="501" class="alignnone size-full wp-image-3312" srcset="https://ncona.com/wp-content/uploads/2015/11/ssh-key-gerrit.png 762w, https://ncona.com/wp-content/uploads/2015/11/ssh-key-gerrit-300x197.png 300w" sizes="(max-width: 762px) 100vw, 762px" />](http://ncona.com/wp-content/uploads/2015/11/ssh-key-gerrit.png)
+[<img src="http://ncona.com/wp-content/uploads/2015/11/ssh-key-gerrit.png" alt="ssh-key-gerrit" width="100%" class="alignnone size-full wp-image-3312" srcset="https://ncona.com/wp-content/uploads/2015/11/ssh-key-gerrit.png 762w, https://ncona.com/wp-content/uploads/2015/11/ssh-key-gerrit-300x197.png 300w" sizes="(max-width: 762px) 100vw, 762px" />](http://ncona.com/wp-content/uploads/2015/11/ssh-key-gerrit.png)
 
 [<img src="http://ncona.com/wp-content/uploads/2015/11/gerrit-clone-url.png" alt="gerrit-clone-url" width="663" height="561" class="alignnone size-full wp-image-3313" srcset="https://ncona.com/wp-content/uploads/2015/11/gerrit-clone-url.png 663w, https://ncona.com/wp-content/uploads/2015/11/gerrit-clone-url-300x254.png 300w" sizes="(max-width: 663px) 100vw, 663px" />](http://ncona.com/wp-content/uploads/2015/11/gerrit-clone-url.png)
 
@@ -134,11 +134,11 @@ git push origin HEAD:refs/for/master
 
 Now, you can log in as Luis and see the change:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/11/new-change.png" alt="new-change" width="1126" height="173" class="alignnone size-full wp-image-3319" srcset="https://ncona.com/wp-content/uploads/2015/11/new-change.png 1126w, https://ncona.com/wp-content/uploads/2015/11/new-change-300x46.png 300w, https://ncona.com/wp-content/uploads/2015/11/new-change-1024x157.png 1024w" sizes="(max-width: 1126px) 100vw, 1126px" />](http://ncona.com/wp-content/uploads/2015/11/new-change.png)
+[<img src="http://ncona.com/wp-content/uploads/2015/11/new-change.png" alt="new-change" width="100%" class="alignnone size-full wp-image-3319" srcset="https://ncona.com/wp-content/uploads/2015/11/new-change.png 1126w, https://ncona.com/wp-content/uploads/2015/11/new-change-300x46.png 300w, https://ncona.com/wp-content/uploads/2015/11/new-change-1024x157.png 1024w" sizes="(max-width: 1126px) 100vw, 1126px" />](http://ncona.com/wp-content/uploads/2015/11/new-change.png)
 
 Luis can now leave comments on the code and choose not to accept-it at the moment:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/11/not-approved.png" alt="not-approved" width="1171" height="624" class="alignnone size-full wp-image-3321" srcset="https://ncona.com/wp-content/uploads/2015/11/not-approved.png 1171w, https://ncona.com/wp-content/uploads/2015/11/not-approved-300x160.png 300w, https://ncona.com/wp-content/uploads/2015/11/not-approved-1024x546.png 1024w" sizes="(max-width: 1171px) 100vw, 1171px" />](http://ncona.com/wp-content/uploads/2015/11/not-approved.png)
+[<img src="http://ncona.com/wp-content/uploads/2015/11/not-approved.png" alt="not-approved" width="100%" class="alignnone size-full wp-image-3321" srcset="https://ncona.com/wp-content/uploads/2015/11/not-approved.png 1171w, https://ncona.com/wp-content/uploads/2015/11/not-approved-300x160.png 300w, https://ncona.com/wp-content/uploads/2015/11/not-approved-1024x546.png 1024w" sizes="(max-width: 1171px) 100vw, 1171px" />](http://ncona.com/wp-content/uploads/2015/11/not-approved.png)
 
 Carlos fixes the code based on the comments and the amends the fixes to the previous commit. He goes ahead an pushes again:
 

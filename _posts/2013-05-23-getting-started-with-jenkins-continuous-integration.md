@@ -42,11 +42,11 @@ By default anyone will be able to access Jenkins and create and modify any jobs.
 
 To modify the security settings go to <http://localhost:8080/configure> and check the **Enable security** checkbox. On the **Access Control** section select **Jenkins&#8217;s own user database** and **Logged-in users can do anything**, then click **Save**.
 
-[<img class="alignnone size-full wp-image-1284" alt="Jenkins" src="http://ncona.com/wp-content/uploads/2013/04/Jenkins.png" width="1068" height="504" srcset="https://ncona.com/wp-content/uploads/2013/04/Jenkins.png 1068w, https://ncona.com/wp-content/uploads/2013/04/Jenkins-300x141.png 300w, https://ncona.com/wp-content/uploads/2013/04/Jenkins-1024x483.png 1024w" sizes="(max-width: 1068px) 100vw, 1068px" />](http://ncona.com/wp-content/uploads/2013/04/Jenkins.png)
+[<img class="alignnone size-full wp-image-1284" alt="Jenkins" src="http://ncona.com/wp-content/uploads/2013/04/Jenkins.png" width="100%" srcset="https://ncona.com/wp-content/uploads/2013/04/Jenkins.png 1068w, https://ncona.com/wp-content/uploads/2013/04/Jenkins-300x141.png 300w, https://ncona.com/wp-content/uploads/2013/04/Jenkins-1024x483.png 1024w" sizes="(max-width: 1068px) 100vw, 1068px" />](http://ncona.com/wp-content/uploads/2013/04/Jenkins.png)
 
 You will immediately get a form to create your first user. Fill all the information and click **Sign Up**
 
-[<img src="http://ncona.com/wp-content/uploads/2013/04/signup.png" alt="signup" width="636" height="382" class="alignnone size-full wp-image-1286" srcset="https://ncona.com/wp-content/uploads/2013/04/signup.png 636w, https://ncona.com/wp-content/uploads/2013/04/signup-300x180.png 300w" sizes="(max-width: 636px) 100vw, 636px" />](http://ncona.com/wp-content/uploads/2013/04/signup.png)
+[<img src="http://ncona.com/wp-content/uploads/2013/04/signup.png" alt="signup" width="100%" class="alignnone size-full wp-image-1286" srcset="https://ncona.com/wp-content/uploads/2013/04/signup.png 636w, https://ncona.com/wp-content/uploads/2013/04/signup-300x180.png 300w" sizes="(max-width: 636px) 100vw, 636px" />](http://ncona.com/wp-content/uploads/2013/04/signup.png)
 
 Now you have an authenticated user that can securely create and modify jobs.
 
@@ -54,7 +54,7 @@ Now you have an authenticated user that can securely create and modify jobs.
 
 Now it&#8217;s time to get to the interesting part. To create a new job click on the **New Job** button on the left menu of the main page. You will get to a form where you can enter a name for your Job and choose the type of project you want to create. I will select **Build a free-style software project**.
 
-[<img src="http://ncona.com/wp-content/uploads/2013/04/new_job.png" alt="new_job" width="1084" height="225" class="alignnone size-full wp-image-1292" srcset="https://ncona.com/wp-content/uploads/2013/04/new_job.png 1084w, https://ncona.com/wp-content/uploads/2013/04/new_job-300x62.png 300w, https://ncona.com/wp-content/uploads/2013/04/new_job-1024x212.png 1024w" sizes="(max-width: 1084px) 100vw, 1084px" />](http://ncona.com/wp-content/uploads/2013/04/new_job.png)
+[<img src="http://ncona.com/wp-content/uploads/2013/04/new_job.png" alt="new_job" width="100%" class="alignnone size-full wp-image-1292" srcset="https://ncona.com/wp-content/uploads/2013/04/new_job.png 1084w, https://ncona.com/wp-content/uploads/2013/04/new_job-300x62.png 300w, https://ncona.com/wp-content/uploads/2013/04/new_job-1024x212.png 1024w" sizes="(max-width: 1084px) 100vw, 1084px" />](http://ncona.com/wp-content/uploads/2013/04/new_job.png)
 
 Then you will be taken to a job configuration form. The most important fields here are:
 

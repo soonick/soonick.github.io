@@ -179,7 +179,7 @@ gradle uploadArchives
 
 Once the upload finishes successfully you should be able to log in to [Sonatype](https://oss.sonatype.org/ "Sonatype") and see your artifacts in the **Staging Repositories** list.
 
-[<img src="http://ncona.com/wp-content/uploads/2014/09/Sonatype.png" alt="Sonatype" width="1076" height="680" class="alignnone size-full wp-image-2311" srcset="https://ncona.com/wp-content/uploads/2014/09/Sonatype.png 1076w, https://ncona.com/wp-content/uploads/2014/09/Sonatype-300x189.png 300w, https://ncona.com/wp-content/uploads/2014/09/Sonatype-1024x647.png 1024w" sizes="(max-width: 1076px) 100vw, 1076px" />](http://ncona.com/wp-content/uploads/2014/09/Sonatype.png)
+[<img src="http://ncona.com/wp-content/uploads/2014/09/Sonatype.png" alt="Sonatype" width="100%" class="alignnone size-full wp-image-2311" srcset="https://ncona.com/wp-content/uploads/2014/09/Sonatype.png 1076w, https://ncona.com/wp-content/uploads/2014/09/Sonatype-300x189.png 300w, https://ncona.com/wp-content/uploads/2014/09/Sonatype-1024x647.png 1024w" sizes="(max-width: 1076px) 100vw, 1076px" />](http://ncona.com/wp-content/uploads/2014/09/Sonatype.png)
 
 From here you will be able to examine the artifacts you uploaded. If you see anything wrong you can drop the repository and try again. If everything looks good you will want to close it and then release it.
 

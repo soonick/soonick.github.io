@@ -36,7 +36,7 @@ At this point you should be able to build and run a very simple app.
 
 Our application will have two screens: A sign-in screen that the user will get when they are not signed in, and an application screen that will allow the user to sign out.
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625.jpg" alt="App diagram" width="700" height="571" class="alignnone size-full wp-image-2546" srcset="https://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625.jpg 700w, https://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625-300x245.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" />](http://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625.jpg)
+[<img src="http://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625.jpg" alt="App diagram" width="100%" class="alignnone size-full wp-image-2546" srcset="https://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625.jpg 700w, https://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625-300x245.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" />](http://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625.jpg)
 
 ## Setting up the API
 
@@ -48,7 +48,7 @@ Create a new project. The name of the project doesn&#8217;t matter at this point
 
 In the API section enable Google+ API:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/google-api.png" alt="google-api" width="900" height="219" class="alignnone size-full wp-image-2550" srcset="https://ncona.com/wp-content/uploads/2015/01/google-api.png 900w, https://ncona.com/wp-content/uploads/2015/01/google-api-300x73.png 300w" sizes="(max-width: 900px) 100vw, 900px" />](http://ncona.com/wp-content/uploads/2015/01/google-api.png)
+[<img src="http://ncona.com/wp-content/uploads/2015/01/google-api.png" alt="google-api" width="100%" class="alignnone size-full wp-image-2550" srcset="https://ncona.com/wp-content/uploads/2015/01/google-api.png 900w, https://ncona.com/wp-content/uploads/2015/01/google-api-300x73.png 300w" sizes="(max-width: 900px) 100vw, 900px" />](http://ncona.com/wp-content/uploads/2015/01/google-api.png)
 
 Then you will need to configure a consent screen. Only the e-mail and product name are necessary:
 

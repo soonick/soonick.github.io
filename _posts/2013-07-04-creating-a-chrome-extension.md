@@ -39,7 +39,7 @@ The step of setting up the environment is extremely easy. Chrome gives you a lot
 
 Then you just need to open chrome and go to **chrome://extensions/** and select the checkbox in the right top corner (Developer mode). Now you will see the button **Load unpacked extension&#8230;** where you can select the folder where your extension lives, and that is pretty much it:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/06/chrome-extension.png" alt="chrome-extension" width="802" height="239" class="alignnone size-full wp-image-1513" srcset="https://ncona.com/wp-content/uploads/2013/06/chrome-extension.png 802w, https://ncona.com/wp-content/uploads/2013/06/chrome-extension-300x89.png 300w" sizes="(max-width: 802px) 100vw, 802px" />](http://ncona.com/wp-content/uploads/2013/06/chrome-extension.png)
+[<img src="http://ncona.com/wp-content/uploads/2013/06/chrome-extension.png" alt="chrome-extension" width="100%" class="alignnone size-full wp-image-1513" srcset="https://ncona.com/wp-content/uploads/2013/06/chrome-extension.png 802w, https://ncona.com/wp-content/uploads/2013/06/chrome-extension-300x89.png 300w" sizes="(max-width: 802px) 100vw, 802px" />](http://ncona.com/wp-content/uploads/2013/06/chrome-extension.png)
 
 ## Writing some code
 
