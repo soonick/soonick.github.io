@@ -41,6 +41,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll/tagging
 
 tag_page_layout: tag_page
 tag_page_dir: tag
