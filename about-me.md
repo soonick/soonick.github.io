@@ -1,15 +1,14 @@
 ---
-id: 9
-title: About me
-date: 2011-05-21T00:44:30+00:00
-author: adrian.ancona
 layout: page
-guid: http://ncona.dev/?page_id=9
+title: About me
+permalink: /about-me/
 ---
-Hello Visitor,
 
-Welcome to my humble blog. I mostly write about web development, but every now and then I write about technologies that I have been playing with. If you have any question, suggestion or correction feel free to leave a comment or you can always find me at adrian(-at-)ncona.com.
 
-If you want to know more about me, you can take a look at LinkedIn profile: [http://www.linkedin.com/in/adriananconanovelo](http://www.linkedin.com/in/adriananconanovelo "Adrian Ancona LinkedIn account")
+Hello Visitor,  
 
-Enjoy!
+My name is Adrian and this is my blog. I like computers and enjoy learning about them. Whenever I learn something new I try to write about it.
+
+It is very likely that I'll make mistakes in my posts, so feel free to correct me if I'm wrong. Questions are also welcome, but I might not have the time or knowledge to answer all of them.
+
+If you want to know more about me, you can take a look at [**my LinkedIn profile**](https://www.linkedin.com/in/adriananconanovelo)
