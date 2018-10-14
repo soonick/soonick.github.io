@@ -47,7 +47,10 @@ paginate: 10
 
 excerpt_separator: <!--more-->
 
-highlighter: rouge
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 
 # Set the Sass partials directory, as we're using @imports
 sass:
