@@ -72,14 +72,14 @@ We have now specified a home icon and a name for our app, but there is still som
 
 This app is now installable, but the installation is not as smooth as we would probably like it to be. Mostly, because the user has to dig into the browser menu and select **Add to Home screen**:
 
-[<img src="http://ncona.com/wp-content/uploads/2016/09/Add-to-home-screen.png" alt="add-to-home-screen" width="378" height="672" class="alignnone size-full wp-image-3909" srcset="https://ncona.com/wp-content/uploads/2016/09/Add-to-home-screen.png 1080w, https://ncona.com/wp-content/uploads/2016/09/Add-to-home-screen-169x300.png 169w, https://ncona.com/wp-content/uploads/2016/09/Add-to-home-screen-768x1365.png 768w, https://ncona.com/wp-content/uploads/2016/09/Add-to-home-screen-576x1024.png 576w" sizes="(max-width: 378px) 100vw, 378px" />](http://ncona.com/wp-content/uploads/2016/09/Add-to-home-screen.png)
+[<img src="/images/posts/Add-to-home-screen.png" alt="add-to-home-screen" />](/images/posts/Add-to-home-screen.png)
 
 Then you get a confirmation screen:
 
-[<img src="http://ncona.com/wp-content/uploads/2016/09/Confirm-name.png" alt="confirm-name" width="378" height="672" class="alignnone size-full wp-image-3910" srcset="https://ncona.com/wp-content/uploads/2016/09/Confirm-name.png 1080w, https://ncona.com/wp-content/uploads/2016/09/Confirm-name-169x300.png 169w, https://ncona.com/wp-content/uploads/2016/09/Confirm-name-768x1365.png 768w, https://ncona.com/wp-content/uploads/2016/09/Confirm-name-576x1024.png 576w" sizes="(max-width: 378px) 100vw, 378px" />](http://ncona.com/wp-content/uploads/2016/09/Confirm-name.png)
+[<img src="/images/posts/Confirm-name.png" alt="confirm-name" />](/images/posts/Confirm-name.png)
 
 Finally, you can see it in your home like any other app:
 
-[<img src="http://ncona.com/wp-content/uploads/2016/09/Screen-icon.png" alt="screen-icon" width="378" height="672" class="alignnone size-full wp-image-3911" srcset="https://ncona.com/wp-content/uploads/2016/09/Screen-icon.png 1080w, https://ncona.com/wp-content/uploads/2016/09/Screen-icon-169x300.png 169w, https://ncona.com/wp-content/uploads/2016/09/Screen-icon-768x1365.png 768w, https://ncona.com/wp-content/uploads/2016/09/Screen-icon-576x1024.png 576w" sizes="(max-width: 378px) 100vw, 378px" />](http://ncona.com/wp-content/uploads/2016/09/Screen-icon.png)
+[<img src="/images/posts/Screen-icon.png" alt="screen-icon" />](/images/posts/Screen-icon.png)
 
 There is a way to have the browser automatically show a banner to the user telling them to install your app, but I&#8217;m going to cover it in another post since it requires the creation of a service worker, which is more than I want to cover here.

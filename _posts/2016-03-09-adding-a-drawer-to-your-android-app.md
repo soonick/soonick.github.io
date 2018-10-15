@@ -122,11 +122,11 @@ A few important things: In line 2 you can see that we are wrapping everything in
 
 Now we have a drawer in our app, but the only way to open it is by swiping from the right edge of the screen to the left:
 
-<a href="http://ncona.com/wp-content/uploads/2016/03/drawer.png" rel="attachment wp-att-3553"><img src="http://ncona.com/wp-content/uploads/2016/03/drawer.png" alt="drawer" width="1080" height="628" class="alignnone size-full wp-image-3553" srcset="https://ncona.com/wp-content/uploads/2016/03/drawer.png 1080w, https://ncona.com/wp-content/uploads/2016/03/drawer-300x174.png 300w, https://ncona.com/wp-content/uploads/2016/03/drawer-768x447.png 768w, https://ncona.com/wp-content/uploads/2016/03/drawer-1024x595.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
+[<img src="/images/posts/drawer.png" alt="drawer" />](/images/posts/drawer.png)
 
 What we want is to make it appear also when the navigation button is clicked:
 
-<a href="http://ncona.com/wp-content/uploads/2016/03/menu-button.png" rel="attachment wp-att-3555"><img src="http://ncona.com/wp-content/uploads/2016/03/menu-button.png" alt="menu-button" width="1080" height="498" class="alignnone size-full wp-image-3555" srcset="https://ncona.com/wp-content/uploads/2016/03/menu-button.png 1080w, https://ncona.com/wp-content/uploads/2016/03/menu-button-300x138.png 300w, https://ncona.com/wp-content/uploads/2016/03/menu-button-768x354.png 768w, https://ncona.com/wp-content/uploads/2016/03/menu-button-1024x472.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
+[<img src="/images/posts/menu-button.png" alt="menu-button" />](/images/posts/menu-button.png)
 
 To do this we just need to call openDrawer in the DrawerLayout. Something like this would suffice:
 
@@ -176,6 +176,6 @@ Now, lets add a real item to our drawer:
 
 Lines 15 and 17 above are important to make this item clickable and have a ripple effect. The end result will be something like this:
 
-<a href="http://ncona.com/wp-content/uploads/2016/03/sign-out-button.png" rel="attachment wp-att-3558"><img src="http://ncona.com/wp-content/uploads/2016/03/sign-out-button.png" alt="sign-out-button" width="1080" height="434" class="alignnone size-full wp-image-3558" srcset="https://ncona.com/wp-content/uploads/2016/03/sign-out-button.png 1080w, https://ncona.com/wp-content/uploads/2016/03/sign-out-button-300x121.png 300w, https://ncona.com/wp-content/uploads/2016/03/sign-out-button-768x309.png 768w, https://ncona.com/wp-content/uploads/2016/03/sign-out-button-1024x411.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
+[<img src="/images/posts/sign-out-button.png" alt="sign-out-button" />](/images/posts/sign-out-button.png)
 
 From here it should be easy to customize the drawer to make it do whatever you desire.

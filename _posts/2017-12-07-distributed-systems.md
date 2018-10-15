@@ -26,7 +26,7 @@ Before we look at how these problems can affect a distributed system, lets look 
 
 With our definition of a stateless system above. Lets create a distributed system that doesn&#8217;t hold any state. A good example of this could be a static files server. In this system, you will get a file back when you request a URL. The system doesn&#8217;t care about anything else, when it receives the request it will return the file without asking any questions or doing any calculations. To make this a distributed system, lets put a load balancer before our server:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/10/b9a7ff78-distributed-system.png" alt="" width="361" height="61" class="alignnone size-full wp-image-4557" srcset="https://storage.googleapis.com/ncona-media/2017/10/b9a7ff78-distributed-system.png 361w, https://storage.googleapis.com/ncona-media/2017/10/b9a7ff78-distributed-system-300x51.png 300w" sizes="(max-width: 361px) 100vw, 361px" />](https://storage.googleapis.com/ncona-media/2017/10/b9a7ff78-distributed-system.png)
+[<img src="/images/posts/distributed-system.png" />](/images/posts/distributed-system.png)
 
 The failure modes for this system are very simple. If the network is down, we won&#8217;t be able to serve the static file. There is really nothing we can do about this. If the network is slow, the file will take a long time to get transferred. This might result in a timeout in any part of the system: The requester, the load balancer or the static files server.
 
@@ -38,7 +38,7 @@ Stateful systems add a new dimension of problems that have been subject to a lot
 
 Lets look at a simple stateful system first:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/10/220cdd03-stateful-system.png" alt="" width="301" height="61" class="alignnone size-full wp-image-4558" srcset="https://storage.googleapis.com/ncona-media/2017/10/220cdd03-stateful-system.png 301w, https://storage.googleapis.com/ncona-media/2017/10/220cdd03-stateful-system-300x61.png 300w" sizes="(max-width: 301px) 100vw, 301px" />](https://storage.googleapis.com/ncona-media/2017/10/220cdd03-stateful-system.png)
+[<img src="/images/posts/stateful-system.png" />](/images/posts/stateful-system.png)
 
 This system has a database where state can be saved. Although this is a distributed system, our state management is centralized. Most likely our first approach to scaling this system would be to add another server, but keep using a single DB.
 
@@ -72,7 +72,7 @@ If we continue on the distributed systems path, we will encounter systems where 
 
 Lets look at an example system that uses distributed state to achieve scalability. It uses an asynchronous database replica for reads, this way reducing the load on the main database:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/10/52cccc56-read-replica.png" alt="" width="301" height="161" class="alignnone size-full wp-image-4563" srcset="https://storage.googleapis.com/ncona-media/2017/10/52cccc56-read-replica.png 301w, https://storage.googleapis.com/ncona-media/2017/10/52cccc56-read-replica-300x160.png 300w" sizes="(max-width: 301px) 100vw, 301px" />](https://storage.googleapis.com/ncona-media/2017/10/52cccc56-read-replica.png)
+[<img src="/images/posts/read-replica.png" />](/images/posts/read-replica.png)
 
 This system has all the same issues as the example with a centralized database with some extra problems of its own. Since the state is replicated asynchronously from the master DB to the Replica, it takes some time for state to propagate from one to the other. The amount of time it takes to replicate varies a lot, but it could be very large if the system is very busy.
 
@@ -92,7 +92,7 @@ This might seem like an undesirable situation, but in a lot of cases, the scalab
 
 A different configuration that comes with the challenges previously mentioned plus some of it&#8217;s own is the master-master configuration:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/10/92cc4d08-master-master.png" alt="" width="531" height="61" class="alignnone size-full wp-image-4567" srcset="https://storage.googleapis.com/ncona-media/2017/10/92cc4d08-master-master.png 531w, https://storage.googleapis.com/ncona-media/2017/10/92cc4d08-master-master-300x34.png 300w" sizes="(max-width: 531px) 100vw, 531px" />](https://storage.googleapis.com/ncona-media/2017/10/92cc4d08-master-master.png)
+[<img src="/images/posts/master-master.png" />](/images/posts/master-master.png)
 
 In this configuration there are two master DBs. Both of them can receive reads and writes equally. These two databases communicate asynchronously to propagate changes from one to the other. This configuration has the advantage that if one of the DBs goes down, the system can continue functioning by connecting to the other DB.
 

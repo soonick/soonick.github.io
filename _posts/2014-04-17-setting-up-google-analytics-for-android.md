@@ -27,17 +27,17 @@ android
 
 And install the Google Play services package:
 
-[<img src="http://ncona.com/wp-content/uploads/2014/04/google_play_services.png" alt="google_play_services" width="660" height="253" class="alignnone size-full wp-image-2045" srcset="https://ncona.com/wp-content/uploads/2014/04/google_play_services.png 660w, https://ncona.com/wp-content/uploads/2014/04/google_play_services-300x115.png 300w" sizes="(max-width: 660px) 100vw, 660px" />](http://ncona.com/wp-content/uploads/2014/04/google_play_services.png)
+[<img src="/images/posts/google_play_services.png" alt="google_play_services" />](/images/posts/google_play_services.png)
 
 <!--more-->
 
 Since you will probably be testing your app on an emulator you will also need to install the Google APIs package for your emulator version:
 
-[<img src="http://ncona.com/wp-content/uploads/2014/04/google_apis.png" alt="Google APIs" width="527" height="184" class="alignnone size-full wp-image-2047" srcset="https://ncona.com/wp-content/uploads/2014/04/google_apis.png 527w, https://ncona.com/wp-content/uploads/2014/04/google_apis-300x104.png 300w" sizes="(max-width: 527px) 100vw, 527px" />](http://ncona.com/wp-content/uploads/2014/04/google_apis.png)
+[<img src="/images/posts/google_apis.png" alt="Google APIs" />](/images/posts/google_apis.png)
 
 And make sure your emulator is targeting Google APIs:
 
-[<img src="http://ncona.com/wp-content/uploads/2014/04/Targeting-Google-APIs.png" alt="Targeting Google APIs" width="498" height="717" class="alignnone size-full wp-image-2048" srcset="https://ncona.com/wp-content/uploads/2014/04/Targeting-Google-APIs.png 498w, https://ncona.com/wp-content/uploads/2014/04/Targeting-Google-APIs-208x300.png 208w" sizes="(max-width: 498px) 100vw, 498px" />](http://ncona.com/wp-content/uploads/2014/04/Targeting-Google-APIs.png)
+[<img src="/images/posts/Targeting-Google-APIs.png" alt="Targeting Google APIs" />](/images/posts/Targeting-Google-APIs.png)
 
 Then you will need to reference the Google APIs library from your project. You can do that by running these commands from within your project folder:
 

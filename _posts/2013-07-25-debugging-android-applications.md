@@ -91,7 +91,7 @@ cd android-sdk/tools/
 
 This will open a window where you can find a list of all the applications running in your simulator. You can then look for your app and find the app id:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/07/running_apps.png" alt="running_apps" width="584" height="511" class="alignnone size-full wp-image-1602" srcset="https://ncona.com/wp-content/uploads/2013/07/running_apps.png 584w, https://ncona.com/wp-content/uploads/2013/07/running_apps-300x262.png 300w" sizes="(max-width: 584px) 100vw, 584px" />](http://ncona.com/wp-content/uploads/2013/07/running_apps.png)
+[<img src="/images/posts/running_apps.png" alt="running_apps" />](/images/posts/running_apps.png)
 
 The next step is to forward android debugger for our app to a specific port so we can use JDB on that port:
 

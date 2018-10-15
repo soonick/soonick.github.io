@@ -57,7 +57,7 @@ canvas.drawCircle(200, 200, 100, p);
 
 And this is how it looks like:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/08/GradientCircle.png" alt="GradientCircle" width="301" height="301" class="alignnone size-full wp-image-1684" srcset="https://ncona.com/wp-content/uploads/2013/08/GradientCircle.png 301w, https://ncona.com/wp-content/uploads/2013/08/GradientCircle-150x150.png 150w, https://ncona.com/wp-content/uploads/2013/08/GradientCircle-300x300.png 300w" sizes="(max-width: 301px) 100vw, 301px" />](http://ncona.com/wp-content/uploads/2013/08/GradientCircle.png)
+[<img src="/images/posts/GradientCircle.png" alt="GradientCircle" />](/images/posts/GradientCircle.png)
 
 ## Drawing polygons
 
@@ -78,7 +78,7 @@ canvas.drawPath(path, p);
 
 Gives this result:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/08/Polygon.png" alt="Polygon" width="164" height="98" class="alignnone size-full wp-image-1687" />](http://ncona.com/wp-content/uploads/2013/08/Polygon.png)
+[<img src="/images/posts/Polygon.png" alt="Polygon" />](/images/posts/Polygon.png)
 
 ## Anti aliasing
 
@@ -90,7 +90,7 @@ p.setAntiAlias(true);
 
 This is how the polygon looks like after applying anti-alias:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/08/anti-alias.png" alt="anti-alias" width="161" height="103" class="alignnone size-full wp-image-1689" />](http://ncona.com/wp-content/uploads/2013/08/anti-alias.png)
+[<img src="/images/posts/anti-alias.png" alt="anti-alias" />](/images/posts/anti-alias.png)
 
 ## Arcs
 
@@ -118,7 +118,7 @@ p.setColor(Color.WHITE);
 canvas.drawArc(new RectF(10, 10, 200, 150), 0, 90, false, p);
 ```
 
-[<img src="http://ncona.com/wp-content/uploads/2013/08/0_90_arc.png" alt="0_90_arc" width="304" height="229" class="alignnone size-full wp-image-1691" srcset="https://ncona.com/wp-content/uploads/2013/08/0_90_arc.png 304w, https://ncona.com/wp-content/uploads/2013/08/0_90_arc-300x225.png 300w" sizes="(max-width: 304px) 100vw, 304px" />](http://ncona.com/wp-content/uploads/2013/08/0_90_arc.png)
+[<img src="/images/posts/0_90_arc.png" alt="0_90_arc" />](/images/posts/0_90_arc.png)
 
 As you can see, I specified to start at 0 degrees and sweep for 90 degrees. This is not what I expected because I usually start counting from the left. So, when you want to draw an arc in Android you need to keep this in mind. To get the result I expected I should have used:
 
@@ -126,7 +126,7 @@ As you can see, I specified to start at 0 degrees and sweep for 90 degrees. This
 canvas.drawArc(new RectF(10, 10, 200, 150), 180, 90, false, p);
 ```
 
-[<img src="http://ncona.com/wp-content/uploads/2013/08/180_90_arc.png" alt="180_90_arc" width="280" height="203" class="alignnone size-full wp-image-1692" />](http://ncona.com/wp-content/uploads/2013/08/180_90_arc.png)
+[<img src="/images/posts/180_90_arc.png" alt="180_90_arc" />](/images/posts/180_90_arc.png)
 
 It is also useful to know (specially when drawing arcs as part of a path) that you can also specify negative degrees, so I can get the same result using this:
 

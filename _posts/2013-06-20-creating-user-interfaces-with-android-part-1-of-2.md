@@ -102,7 +102,7 @@ Images in Android fall into the resources category. This means that you need to 
 
 Now that we know how to put elements on the screen we want to be able to put them where we want them. To learn this I am going to do a little exercise. I&#8217;m going to use different layouts to create this UI:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/05/wireframe.png" alt="wireframe" width="269" height="424" class="alignnone size-full wp-image-1458" srcset="https://ncona.com/wp-content/uploads/2013/05/wireframe.png 269w, https://ncona.com/wp-content/uploads/2013/05/wireframe-190x300.png 190w" sizes="(max-width: 269px) 100vw, 269px" />](http://ncona.com/wp-content/uploads/2013/05/wireframe.png)
+[<img src="/images/posts/wireframe.png" alt="wireframe" />](/images/posts/wireframe.png)
 
 Lets go over the different kind of layouts really fast to see which ones can help us achieve this:
 
@@ -185,7 +185,7 @@ Lets start by dumping our elements in an xml file:
 
 The result will be something like this:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/05/before_layout.png" alt="before_layout" width="481" height="801" class="alignnone size-full wp-image-1470" srcset="https://ncona.com/wp-content/uploads/2013/05/before_layout.png 481w, https://ncona.com/wp-content/uploads/2013/05/before_layout-180x300.png 180w" sizes="(max-width: 481px) 100vw, 481px" />](http://ncona.com/wp-content/uploads/2013/05/before_layout.png)
+[<img src="/images/posts/before_layout.png" alt="before_layout" />](/images/posts/before_layout.png)
 
 Now that we have all our elements lets try to put them where we want them. After a playing a little with the values I got to this code:
 
@@ -307,4 +307,4 @@ Now that we have all our elements lets try to put them where we want them. After
 
 I added comments in the things I found more interesting. I ended with this screen:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/05/after_layout.png" alt="after_layout" width="484" height="726" class="alignnone size-full wp-image-1471" srcset="https://ncona.com/wp-content/uploads/2013/05/after_layout.png 484w, https://ncona.com/wp-content/uploads/2013/05/after_layout-200x300.png 200w" sizes="(max-width: 484px) 100vw, 484px" />](http://ncona.com/wp-content/uploads/2013/05/after_layout.png)
+[<img src="/images/posts/after_layout.png" alt="after_layout" />](/images/posts/after_layout.png)

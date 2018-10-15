@@ -23,11 +23,11 @@ After some googling I found the problem was that I was trying to call a google s
 
 <!--more-->
 
-[<img src="http://ncona.com/wp-content/uploads/2015/10/google-dev-console.png" alt="google-dev-console" width="100%" class="alignnone size-full wp-image-3247" srcset="https://ncona.com/wp-content/uploads/2015/10/google-dev-console.png 937w, https://ncona.com/wp-content/uploads/2015/10/google-dev-console-300x108.png 300w" sizes="(max-width: 937px) 100vw, 937px" />](http://ncona.com/wp-content/uploads/2015/10/google-dev-console.png)
+[<img src="/images/posts/google-dev-console.png" alt="google-dev-console" />](/images/posts/google-dev-console.png)
 
 And modifying the signing certificate fingerprint:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/10/sing-certificate.png" alt="sing-certificate" width="100%" class="alignnone size-full wp-image-3248" srcset="https://ncona.com/wp-content/uploads/2015/10/sing-certificate.png 668w, https://ncona.com/wp-content/uploads/2015/10/sing-certificate-300x189.png 300w" sizes="(max-width: 668px) 100vw, 668px" />](http://ncona.com/wp-content/uploads/2015/10/sing-certificate.png)
+[<img src="/images/posts/sing-certificate.png" alt="sing-certificate" />](/images/posts/sing-certificate.png)
 
 If you are doing a debug build, you most probably are using the debug keystore, so you can get the fingerprint by running:
 

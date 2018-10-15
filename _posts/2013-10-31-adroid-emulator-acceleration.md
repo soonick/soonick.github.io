@@ -35,7 +35,7 @@ You can verify that you meet these requirements by launching the android app:
 
 And checking the following values:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/10/Screenshot-1.png" alt="android versions" width="675" height="585" class="alignnone size-full wp-image-1825" srcset="https://ncona.com/wp-content/uploads/2013/10/Screenshot-1.png 675w, https://ncona.com/wp-content/uploads/2013/10/Screenshot-1-300x260.png 300w" sizes="(max-width: 675px) 100vw, 675px" />](http://ncona.com/wp-content/uploads/2013/10/Screenshot-1.png)
+[<img src="/images/posts/emulator-acceleration.png" alt="android versions" />](/images/posts/emulator-acceleration.png)
 
 Once the requirements have been met you want to create a virtual device that can use the acceleration. For this you can use the avd tool.
 

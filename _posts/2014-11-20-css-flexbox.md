@@ -14,7 +14,7 @@ tags:
 ---
 Today I found myself in the need to create a layout that I hadn&#8217;t done before:
 
-[<img src="https://storage.googleapis.com/ncona-media/2014/11/69bd1d87-flexbox.png" alt="" width="100%" class="alignnone size-full wp-image-4547" srcset="https://storage.googleapis.com/ncona-media/2014/11/69bd1d87-flexbox.png 945w, https://storage.googleapis.com/ncona-media/2014/11/69bd1d87-flexbox-300x76.png 300w, https://storage.googleapis.com/ncona-media/2014/11/69bd1d87-flexbox-768x194.png 768w" sizes="(max-width: 945px) 100vw, 945px" />](https://storage.googleapis.com/ncona-media/2014/11/69bd1d87-flexbox.png)
+[<img src="/images/posts/flexbox.png" />](/images/posts/flexbox.png)
 
 This layout would be easy if I knew the widths of the elements, but I needed it to be flexible. Another possibility that crossed my mind was using percentages but there was a requirement that didn&#8217;t allow me to do it. To understand better there are a few things about the image above that I need to explain:
 

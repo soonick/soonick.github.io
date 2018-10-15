@@ -79,7 +79,7 @@ The script is commented to make it easier to understand. We use some shell magic
 
 The script above needs to log in to Canister in order to push the generated Docker image. We don&#8217;t want to allow anybody to push to our repository, so we need to authenticate before we can push. Bitbucket allows you to save the environment variables online and they will be securely stored for you. The variables can be created on a repository level or an account level:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/09/d9ec5917-secure-variables.png" alt="" width="1342" height="667" class="alignnone size-full wp-image-4408" srcset="https://storage.googleapis.com/ncona-media/2017/09/d9ec5917-secure-variables.png 1342w, https://storage.googleapis.com/ncona-media/2017/09/d9ec5917-secure-variables-300x149.png 300w, https://storage.googleapis.com/ncona-media/2017/09/d9ec5917-secure-variables-768x382.png 768w, https://storage.googleapis.com/ncona-media/2017/09/d9ec5917-secure-variables-1024x509.png 1024w" sizes="(max-width: 1342px) 100vw, 1342px" />](https://storage.googleapis.com/ncona-media/2017/09/d9ec5917-secure-variables.png)
+[<img src="/images/posts/secure-variables.png" />](/images/posts/secure-variables.png)
 
 ## SSH key
 
@@ -87,10 +87,10 @@ For this specific scenario in which I want to tag each successful commit, I need
 
 First, we need to generate a new SSH key for our workers. This can be done from the repository settings:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/09/d9d0e1f5-worker-ssh-key.png" alt="" width="1238" height="649" class="alignnone size-full wp-image-4409" srcset="https://storage.googleapis.com/ncona-media/2017/09/d9d0e1f5-worker-ssh-key.png 1238w, https://storage.googleapis.com/ncona-media/2017/09/d9d0e1f5-worker-ssh-key-300x157.png 300w, https://storage.googleapis.com/ncona-media/2017/09/d9d0e1f5-worker-ssh-key-768x403.png 768w, https://storage.googleapis.com/ncona-media/2017/09/d9d0e1f5-worker-ssh-key-1024x537.png 1024w" sizes="(max-width: 1238px) 100vw, 1238px" />](https://storage.googleapis.com/ncona-media/2017/09/d9d0e1f5-worker-ssh-key.png)
+[<img src="/images/posts/worker-ssh-key.png" />](/images/posts/worker-ssh-key.png)
 
 Finally, since I want this key to have write access to the repo, I have to add the public key to the list of my user&#8217;s SSH keys:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/09/52a9d685-user-ssh-keys.png" alt="" width="783" height="295" class="alignnone size-full wp-image-4412" srcset="https://storage.googleapis.com/ncona-media/2017/09/52a9d685-user-ssh-keys.png 783w, https://storage.googleapis.com/ncona-media/2017/09/52a9d685-user-ssh-keys-300x113.png 300w, https://storage.googleapis.com/ncona-media/2017/09/52a9d685-user-ssh-keys-768x289.png 768w" sizes="(max-width: 783px) 100vw, 783px" />](https://storage.googleapis.com/ncona-media/2017/09/52a9d685-user-ssh-keys.png)
+[<img src="/images/posts/user-ssh-keys.png" />](/images/posts/user-ssh-keys.png)
 
 After all this, I can have my pipeline automatically publish all my commits to canister so I can deploy whenever I want.

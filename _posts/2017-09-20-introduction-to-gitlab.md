@@ -34,7 +34,7 @@ Since I&#8217;m moving this project from Bitbucket to GitLab, I need to do a cou
 
 The process to add an SSH to GitLab key is very similar as with Github or Bitbucket. You just need to generate an SSH key and add the public key to your profile:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/09/f62578ae-gitlab-ssh-key.png" alt="" width="983" height="554" class="alignnone size-full wp-image-4414" srcset="https://storage.googleapis.com/ncona-media/2017/09/f62578ae-gitlab-ssh-key.png 983w, https://storage.googleapis.com/ncona-media/2017/09/f62578ae-gitlab-ssh-key-300x169.png 300w, https://storage.googleapis.com/ncona-media/2017/09/f62578ae-gitlab-ssh-key-768x433.png 768w" sizes="(max-width: 983px) 100vw, 983px" />](https://storage.googleapis.com/ncona-media/2017/09/f62578ae-gitlab-ssh-key.png)
+[<img src="/images/posts/gitlab-ssh-key.png" />](/images/posts/gitlab-ssh-key.png)
 
 To change your origin, you can use this command:
 
@@ -123,7 +123,7 @@ First I had to [generate a public-private key pair](https://docs.gitlab.com/ee/s
   
 Then I needed to add the generated private key as a secret variable on my project&#8217;s pipeline settings:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/09/1b8322b3-secret-variables-gitlab.png" alt="" width="990" height="317" class="alignnone size-full wp-image-4415" srcset="https://storage.googleapis.com/ncona-media/2017/09/1b8322b3-secret-variables-gitlab.png 990w, https://storage.googleapis.com/ncona-media/2017/09/1b8322b3-secret-variables-gitlab-300x96.png 300w, https://storage.googleapis.com/ncona-media/2017/09/1b8322b3-secret-variables-gitlab-768x246.png 768w, https://storage.googleapis.com/ncona-media/2017/09/1b8322b3-secret-variables-gitlab-620x200.png 620w" sizes="(max-width: 990px) 100vw, 990px" />](https://storage.googleapis.com/ncona-media/2017/09/1b8322b3-secret-variables-gitlab.png)
+[<img src="/images/posts/secret-variables-gitlab.png" />](/images/posts/secret-variables-gitlab.png)
 
 Protected variables are only passed to protected branches, so I had to make sure my master branch was protected. While I was here I also added my credentials for Canister (REGISTRY\_USERNAME and REGISTRY\_PASSWORD).
 
@@ -135,6 +135,6 @@ bash -c "ssh-add <(echo '$SSH_PRIVATE_KEY')"
 
 Now we need to tell Gitlab that this key is allowed to push to our repo. We can do this by adding the public key as a deploy key. This can be done from the **Deploy keys** section in the repository settings:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/09/8e385f5c-deploy-key-gitlab.png" alt="" width="984" height="502" class="alignnone size-full wp-image-4416" srcset="https://storage.googleapis.com/ncona-media/2017/09/8e385f5c-deploy-key-gitlab.png 984w, https://storage.googleapis.com/ncona-media/2017/09/8e385f5c-deploy-key-gitlab-300x153.png 300w, https://storage.googleapis.com/ncona-media/2017/09/8e385f5c-deploy-key-gitlab-768x392.png 768w" sizes="(max-width: 984px) 100vw, 984px" />](https://storage.googleapis.com/ncona-media/2017/09/8e385f5c-deploy-key-gitlab.png)
+[<img src="/images/posts/deploy-key-gitlab.png" />](/images/posts/deploy-key-gitlab.png)
 
 Finally, every commit pushed to master will generate a Docker image that will be published to Canister.

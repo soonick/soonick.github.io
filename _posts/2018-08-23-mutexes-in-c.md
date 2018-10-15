@@ -19,7 +19,7 @@ Mutexes are a technique for concurrency management. They are called Mutex becaus
 
 Mutexes are used to prevent race conditions on shared data between threads. Lets look at a stack backed by an array. At some point it could look like this:
 
-[<img src="https://storage.googleapis.com/ncona-media/2018/08/3010f31a-20180805_113318.jpg" alt="" width="100%" class="alignnone size-full wp-image-5220" srcset="https://storage.googleapis.com/ncona-media/2018/08/3010f31a-20180805_113318.jpg 2170w, https://storage.googleapis.com/ncona-media/2018/08/3010f31a-20180805_113318-300x87.jpg 300w, https://storage.googleapis.com/ncona-media/2018/08/3010f31a-20180805_113318-768x222.jpg 768w, https://storage.googleapis.com/ncona-media/2018/08/3010f31a-20180805_113318-1024x295.jpg 1024w" sizes="(max-width: 2170px) 100vw, 2170px" />](https://storage.googleapis.com/ncona-media/2018/08/3010f31a-20180805_113318.jpg)
+[<img src="/images/posts/head.jpg" />](/images/posts/head.jpg)
 
 If we want to insert a value on this stack we need to follow these steps:
 
@@ -33,7 +33,7 @@ If two threads need to insert a value into this stack at the same time, one of t
 
 <!--more-->
 
-[<img src="https://storage.googleapis.com/ncona-media/2018/08/feda3c59-20180805_114822.jpg" alt="" width="100%" class="alignnone size-full wp-image-5222" srcset="https://storage.googleapis.com/ncona-media/2018/08/feda3c59-20180805_114822.jpg 3253w, https://storage.googleapis.com/ncona-media/2018/08/feda3c59-20180805_114822-300x218.jpg 300w, https://storage.googleapis.com/ncona-media/2018/08/feda3c59-20180805_114822-768x557.jpg 768w, https://storage.googleapis.com/ncona-media/2018/08/feda3c59-20180805_114822-1024x743.jpg 1024w" sizes="(max-width: 3253px) 100vw, 3253px" />](https://storage.googleapis.com/ncona-media/2018/08/feda3c59-20180805_114822.jpg)
+[<img src="/images/posts/threads.jpg" />](/images/posts/threads.jpg)
 
 In the image above, one thread is trying to push 7 to the stack, while another thread is trying to push 4. The end result is that only one of the values is inserted (we don&#8217;t know which one), and the other is lost.
 
@@ -41,7 +41,7 @@ In the image above, one thread is trying to push 7 to the stack, while another t
 
 When a thread is about to enter a critical section (Do something that can cause race conditions), it needs to grab a lock of the Mutex. Only one thread can hold the lock at a time. If two threads try to grab the lock at the same time, only one will get it and the other will wait until the other thread releases it before proceeding.
 
-[<img src="https://storage.googleapis.com/ncona-media/2018/08/79300c9d-20180805_131805.jpg" alt="" width="100%" class="alignnone size-full wp-image-5225" srcset="https://storage.googleapis.com/ncona-media/2018/08/79300c9d-20180805_131805.jpg 2130w, https://storage.googleapis.com/ncona-media/2018/08/79300c9d-20180805_131805-219x300.jpg 219w, https://storage.googleapis.com/ncona-media/2018/08/79300c9d-20180805_131805-768x1050.jpg 768w, https://storage.googleapis.com/ncona-media/2018/08/79300c9d-20180805_131805-749x1024.jpg 749w" sizes="(max-width: 2130px) 100vw, 2130px" />](https://storage.googleapis.com/ncona-media/2018/08/79300c9d-20180805_131805.jpg)
+[<img src="/images/posts/mutexes.jpg" />](/images/posts/mutexes.jpg)
 
 This solves the problem of a race condition, by making sure one operation is performed before the other.
 

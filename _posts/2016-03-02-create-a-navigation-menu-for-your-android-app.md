@@ -18,7 +18,7 @@ I finished building a hobby app a few weeks ago, but after getting all the funct
 
 The first thing that I want to do is get rid of the default title bar because it occupies too much space:
 
-<a href="http://ncona.com/wp-content/uploads/2016/02/title-bar-android.png" rel="attachment wp-att-3527"><img src="http://ncona.com/wp-content/uploads/2016/02/title-bar-android.png" alt="title-bar-android" width="1080" height="498" class="alignnone size-full wp-image-3527" srcset="https://ncona.com/wp-content/uploads/2016/02/title-bar-android.png 1080w, https://ncona.com/wp-content/uploads/2016/02/title-bar-android-300x138.png 300w, https://ncona.com/wp-content/uploads/2016/02/title-bar-android-768x354.png 768w, https://ncona.com/wp-content/uploads/2016/02/title-bar-android-1024x472.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
+[<img src="/images/posts/title-bar-android.png" alt="title-bar-android" />](/images/posts/title-bar-android.png)
 
 Create the file **src/main/res/values/style.xml** if it doesn&#8217;t exist already and create a new theme with no title:
 
@@ -57,7 +57,7 @@ We create a new theme that extends the light theme of Android and overwrites the
 
 Line 9 assigns the theme to the application. The app doesn&#8217;t have a title bar anymore:
 
-<a href="http://ncona.com/wp-content/uploads/2016/02/android-no-title.png" rel="attachment wp-att-3531"><img src="http://ncona.com/wp-content/uploads/2016/02/android-no-title.png" alt="android-no-title" width="1080" height="210" class="alignnone size-full wp-image-3531" srcset="https://ncona.com/wp-content/uploads/2016/02/android-no-title.png 1080w, https://ncona.com/wp-content/uploads/2016/02/android-no-title-300x58.png 300w, https://ncona.com/wp-content/uploads/2016/02/android-no-title-768x149.png 768w, https://ncona.com/wp-content/uploads/2016/02/android-no-title-1024x199.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
+[<img src="/images/posts/android-no-title.png" alt="android-no-title" />](/images/posts/android-no-title.png)
 
 The next step I would recommend is to grab some icons from the [material icon library](https://design.google.com/icons/) depending on what items you want in your navigation bar. After grabbing some icons you can use ImageButton to create the navigation bar. This is how my **res/layout/main.xml** looks like:
 
@@ -92,7 +92,7 @@ The next step I would recommend is to grab some icons from the [material icon li
 
 So far it is a simple LinearLayout containing three ImageButtons with icons from the google material library. I set the height of the LinearLayout to 40dip because this is the height I want for my navigation bar, this can be adjusted as needed. This is the result:
 
-<a href="http://ncona.com/wp-content/uploads/2016/02/menu-first-attempt.png" rel="attachment wp-att-3535"><img src="http://ncona.com/wp-content/uploads/2016/02/menu-first-attempt.png" alt="menu-first-attempt" width="1080" height="360" class="alignnone size-full wp-image-3535" srcset="https://ncona.com/wp-content/uploads/2016/02/menu-first-attempt.png 1080w, https://ncona.com/wp-content/uploads/2016/02/menu-first-attempt-300x100.png 300w, https://ncona.com/wp-content/uploads/2016/02/menu-first-attempt-768x256.png 768w, https://ncona.com/wp-content/uploads/2016/02/menu-first-attempt-1024x341.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
+[<img src="/images/posts/menu-first-attempt.png" alt="menu-first-attempt" />](/images/posts/menu-first-attempt.png)
 
 It&#8217;s starting to look better. Lets make the buttons flat and add a border so it looks more like a navigation bar:
 
@@ -141,7 +141,7 @@ style="?android:attr/borderlessButtonStyle"
 
 The easiest way I found to add a border to the navigation was by adding a view below it with a background color. All together gives this result:
 
-<a href="http://ncona.com/wp-content/uploads/2016/02/nav-with-border-android.png" rel="attachment wp-att-3537"><img src="http://ncona.com/wp-content/uploads/2016/02/nav-with-border-android.png" alt="nav-with-border-android" width="1080" height="354" class="alignnone size-full wp-image-3537" srcset="https://ncona.com/wp-content/uploads/2016/02/nav-with-border-android.png 1080w, https://ncona.com/wp-content/uploads/2016/02/nav-with-border-android-300x98.png 300w, https://ncona.com/wp-content/uploads/2016/02/nav-with-border-android-768x252.png 768w, https://ncona.com/wp-content/uploads/2016/02/nav-with-border-android-1024x336.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
+[<img src="/images/posts/nav-with-border-android.png" alt="nav-with-border-android" />](/images/posts/nav-with-border-android.png)
 
 It looks very good now, but it doesn&#8217;t have those cool ripple effects that material buttons usually have. For getting that effect we need to use the AppCompat.Light theme. First we need to add appcompat as a dependency in build.gradle:
 

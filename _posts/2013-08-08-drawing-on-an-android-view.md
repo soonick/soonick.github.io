@@ -87,6 +87,6 @@ public class MyApp extends Activity
 
 And this is how it looks:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/08/red_circle.png" alt="red_circle" width="479" height="723" class="alignnone size-full wp-image-1674" srcset="https://ncona.com/wp-content/uploads/2013/08/red_circle.png 479w, https://ncona.com/wp-content/uploads/2013/08/red_circle-198x300.png 198w" sizes="(max-width: 479px) 100vw, 479px" />](http://ncona.com/wp-content/uploads/2013/08/red_circle.png)
+[<img src="/images/posts/red_circle.png" alt="red_circle" />](/images/posts/red_circle.png)
 
 Now I have a very exciting piece of software I can show off to my mom.

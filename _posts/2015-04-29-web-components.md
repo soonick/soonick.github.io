@@ -48,7 +48,7 @@ document.body.appendChild(div);
 
 As you would expect, the content of the template will be appended to the body:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/04/html-template.png" alt="html-template" width="122" height="70" class="alignnone size-full wp-image-2781" />](http://ncona.com/wp-content/uploads/2015/04/html-template.png)
+[<img src="/images/posts/html-template.png" alt="html-template" />](/images/posts/html-template.png)
 
 Once you have cloned the template you can use JS to modify the structure, attach event listeners or do whatever you need.
 
@@ -93,7 +93,7 @@ This works, but is not very useful, something more useful would probably be:
 
 From looking at this HTML we can easily guess what it does. It is an accordion and the first item is active when it is rendered for the first time. Even though it makes sense for us by looking at it, the browser doesn&#8217;t really know how to render it:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/04/bad-accordion.png" alt="bad-accordion" width="258" height="33" class="alignnone size-full wp-image-2786" />](http://ncona.com/wp-content/uploads/2015/04/bad-accordion.png)
+[<img src="/images/posts/bad-accordion.png" alt="bad-accordion" />](/images/posts/bad-accordion.png)
 
 We can fix the way it looks with CSS:
 
@@ -123,7 +123,7 @@ adr-accordion adr-item[active] adr-content {
 
 It now looks a little better:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/04/accordion-styled.png" alt="accordion-styled" width="222" height="101" class="alignnone size-full wp-image-2788" />](http://ncona.com/wp-content/uploads/2015/04/accordion-styled.png)
+[<img src="/images/posts/accordion-styled.png" alt="accordion-styled" />](/images/posts/accordion-styled.png)
 
 But it still doesn&#8217;t work like an accordion. To make it behave like an accordion we will create a custom element with custom functionality:
 
@@ -175,7 +175,7 @@ We have now created a custom element. The next step is to isolate it from the ou
 
 We would expect to see the text &#8220;Hello&#8221; in the screen, but instead we see nothing:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/04/shadow-dom-empty.png" alt="shadow-dom-empty" width="600" height="255" class="alignnone size-full wp-image-2794" srcset="https://ncona.com/wp-content/uploads/2015/04/shadow-dom-empty.png 600w, https://ncona.com/wp-content/uploads/2015/04/shadow-dom-empty-300x128.png 300w" sizes="(max-width: 600px) 100vw, 600px" />](http://ncona.com/wp-content/uploads/2015/04/shadow-dom-empty.png)
+[<img src="/images/posts/shadow-dom-empty.png" alt="shadow-dom-empty" />](/images/posts/shadow-dom-empty.png)
 
 Even when the DOM inspector shows our div with Hello inside of it, it is not rendered because it is not part of the shadowRoot. There are a few ways we can move content from the outside to the shadowRoot. The simplest one would be using insertion points:
 
@@ -197,7 +197,7 @@ Even when the DOM inspector shows our div with Hello inside of it, it is not ren
 
 Which gives this result:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/04/shadow-insertion.png" alt="shadow-insertion" width="494" height="246" class="alignnone size-full wp-image-2797" srcset="https://ncona.com/wp-content/uploads/2015/04/shadow-insertion.png 494w, https://ncona.com/wp-content/uploads/2015/04/shadow-insertion-300x149.png 300w" sizes="(max-width: 494px) 100vw, 494px" />](http://ncona.com/wp-content/uploads/2015/04/shadow-insertion.png)
+[<img src="/images/posts/shadow-insertion.png" alt="shadow-insertion" />](/images/posts/shadow-insertion.png)
 
 There are some more advanced things that you can do with insertion points, but when you need more power, you can always use JS do manipulate the DOM.
 
@@ -236,7 +236,7 @@ div {
 
 The resulting page looks like this:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/04/css-shadowing.png" alt="css-shadowing" width="227" height="111" class="alignnone size-full wp-image-2799" />](http://ncona.com/wp-content/uploads/2015/04/css-shadowing.png)
+[<img src="/images/posts/css-shadowing.png" alt="css-shadowing" />](/images/posts/css-shadowing.png)
 
 Lets understand what is happening. First we see a green border surrounding our component. This is the border we are setting on all div elements on the document. When we use an insertion point, we grab all the content inside the hello element, but it is still a div from the outside so it will still be affected by the style definitions in the document.
 
@@ -279,7 +279,7 @@ div {
 
 I changed the message from &#8220;Hello&#8221; to &#8220;Hello <p>world</p>&#8221;. Lets see the result:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/04/shadow-dom-style-content.png" alt="shadow-dom-style-content" width="225" height="167" class="alignnone size-full wp-image-2803" />](http://ncona.com/wp-content/uploads/2015/04/shadow-dom-style-content.png)
+[<img src="/images/posts/shadow-dom-style-content.png" alt="shadow-dom-style-content" />](/images/posts/shadow-dom-style-content.png)
 
 You might have expected &#8220;world&#8221; to have a blue border(at least that is what I expected). Instead it has a blue border. This is because elements added to the shadowRoot using insertion points will also be affected by styles from the outside.
 

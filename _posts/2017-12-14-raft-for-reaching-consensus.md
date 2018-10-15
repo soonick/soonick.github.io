@@ -27,7 +27,7 @@ How do we achieve consistent data with no leaders?
 
 The trick with a leaderless setup is that clients send a request to all nodes, instead of just one (like done in master-master). If everything goes well, this would mean that all nodes in our system will have the same value because the same requests are being sent to each node. Lets look at how this works:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/10/ab8aec24-client-multiple-requests.png" alt="" width="411" height="361" class="alignnone size-full wp-image-4576" srcset="https://storage.googleapis.com/ncona-media/2017/10/ab8aec24-client-multiple-requests.png 411w, https://storage.googleapis.com/ncona-media/2017/10/ab8aec24-client-multiple-requests-300x264.png 300w" sizes="(max-width: 411px) 100vw, 411px" />](https://storage.googleapis.com/ncona-media/2017/10/ab8aec24-client-multiple-requests.png)
+[<img src="/images/posts/client-multiple-requests.png" />](/images/posts/client-multiple-requests.png)
 
 Of course, things won&#8217;t always work perfectly, so lets look at how problems are solved.
 
@@ -43,11 +43,11 @@ One of the goals of a leaderless system is to be able to tolerate node failures.
 
 Lets look at an example:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/10/3f812ed1-dont-remeber.png" alt="" width="411" height="361" class="alignnone size-full wp-image-4578" srcset="https://storage.googleapis.com/ncona-media/2017/10/3f812ed1-dont-remeber.png 411w, https://storage.googleapis.com/ncona-media/2017/10/3f812ed1-dont-remeber-300x264.png 300w" sizes="(max-width: 411px) 100vw, 411px" />](https://storage.googleapis.com/ncona-media/2017/10/3f812ed1-dont-remeber.png)
+[<img src="/images/posts/dont-remeber.png" />](/images/posts/dont-remeber.png)
 
 Now that we know how disagreement can arise, lets look at how we solve it. In the example above, we have two node, so both nodes would have to agree all the time. Since we want our system to tolerate failures, we can add another node, so consensus can be reached with only two machines. In this scenario, the client must be configured to know that all it needs is two nodes with the same result to consider an agreement:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/10/b8be4cc6-consensus.png" alt="" width="591" height="481" class="alignnone size-full wp-image-4580" srcset="https://storage.googleapis.com/ncona-media/2017/10/b8be4cc6-consensus.png 591w, https://storage.googleapis.com/ncona-media/2017/10/b8be4cc6-consensus-300x244.png 300w" sizes="(max-width: 591px) 100vw, 591px" />](https://storage.googleapis.com/ncona-media/2017/10/b8be4cc6-consensus.png)
+[<img src="/images/posts/consensus.png" />](/images/posts/consensus.png)
 
 We can see here that the client was able to save and retrieve information even when one node was down at the time of writing. The problem now is that one of the nodes is out of sync with the others. How do we fix this? One option is to have the client tell the node what is the correct value. Another option could be to have a background process in charge of synchronizing nodes that have incorrect values.
 
@@ -55,7 +55,7 @@ Because nodes can go down and come up again at any point in time, it is possible
 
 To illustrate this we need a cluster with 5 nodes (3 is the majority). We will assume they already have one value on them (value: frogs, version: 1) and go from there:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/10/cb9e67d2-consensus-nodes-down.png" alt="" width="822" height="491" class="alignnone size-full wp-image-4582" srcset="https://storage.googleapis.com/ncona-media/2017/10/cb9e67d2-consensus-nodes-down.png 822w, https://storage.googleapis.com/ncona-media/2017/10/cb9e67d2-consensus-nodes-down-300x179.png 300w, https://storage.googleapis.com/ncona-media/2017/10/cb9e67d2-consensus-nodes-down-768x459.png 768w" sizes="(max-width: 822px) 100vw, 822px" />](https://storage.googleapis.com/ncona-media/2017/10/cb9e67d2-consensus-nodes-down.png)
+[<img src="/images/posts/consensus-nodes-down.png" />](/images/posts/consensus-nodes-down.png)
 
 Now we have an unfortunate situation where we wrote to 3 nodes, but two of them went down when we tried to read. At the end we got two wrong results and the right one. In this scenario the majority of the results were wrong, but because we require 3 results to make a decision, we are sure that at least one of them will have the right value (The one with the latest version).
 
@@ -98,7 +98,7 @@ What we want to get from this system is a reliable state machine. Once there is 
 
 This image shows how the happy path would look like:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/10/786cf949-log-replication.jpg" alt="" width="2208" height="1248" class="alignnone size-full wp-image-4592" srcset="https://storage.googleapis.com/ncona-media/2017/10/786cf949-log-replication.jpg 2208w, https://storage.googleapis.com/ncona-media/2017/10/786cf949-log-replication-300x170.jpg 300w, https://storage.googleapis.com/ncona-media/2017/10/786cf949-log-replication-768x434.jpg 768w, https://storage.googleapis.com/ncona-media/2017/10/786cf949-log-replication-1024x579.jpg 1024w" sizes="(max-width: 2208px) 100vw, 2208px" />](https://storage.googleapis.com/ncona-media/2017/10/786cf949-log-replication.jpg)
+[<img src="/images/posts/log-replication.jpg" />](/images/posts/log-replication.jpg)
 
 The image shows the order of the actions but it lacks detail about what actually happens in the log. So I&#8217;ll try to explain it here. First of all, lets assume this is the first request ever, so the log is empty. This is the state of the log on each of the nodes:
 

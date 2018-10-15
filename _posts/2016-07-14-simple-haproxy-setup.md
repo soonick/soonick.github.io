@@ -27,7 +27,7 @@ Since I&#8217;m moving a domain that I already own from one shared server to a D
 
 After I&#8217;m done with those steps my web application will be served using HAProxy from my droplet. At this point adding more applications will be a simple matter of changing the configuration.
 
-[<img src="http://ncona.com/wp-content/uploads/2016/07/haproxy.jpg" alt="haproxy" width="2332" height="962" class="alignnone size-full wp-image-3773" srcset="https://ncona.com/wp-content/uploads/2016/07/haproxy.jpg 2332w, https://ncona.com/wp-content/uploads/2016/07/haproxy-300x124.jpg 300w, https://ncona.com/wp-content/uploads/2016/07/haproxy-768x317.jpg 768w, https://ncona.com/wp-content/uploads/2016/07/haproxy-1024x422.jpg 1024w" sizes="(max-width: 2332px) 100vw, 2332px" />](http://ncona.com/wp-content/uploads/2016/07/haproxy.jpg)
+[<img src="/images/posts/haproxy.jpg" alt="haproxy" />](/images/posts/haproxy.jpg)
 
 I want to focus on the HAProxy part so I&#8217;m not going to go into much detail on how I set up the application. This also varies a lot based on the type of application. For this specific scenario I&#8217;m going to use an application running in a Docker container. The application will be exposed in port 9999 of the machine.
 

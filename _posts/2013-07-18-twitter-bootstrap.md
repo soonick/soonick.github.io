@@ -34,9 +34,9 @@ Bootstrap uses a 12 columns grid by default. You can create a row by adding the 
 
 For the example below you get a 3 column page that accommodates the columns when you resize the window:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/07/full_size.png" alt="full_size" width="963" height="54" class="alignnone size-full wp-image-1611" srcset="https://ncona.com/wp-content/uploads/2013/07/full_size.png 963w, https://ncona.com/wp-content/uploads/2013/07/full_size-300x16.png 300w" sizes="(max-width: 963px) 100vw, 963px" />](http://ncona.com/wp-content/uploads/2013/07/full_size.png)
+[<img src="/images/posts/full_size.png" alt="full_size" />](/images/posts/full_size.png)
 
-[<img src="http://ncona.com/wp-content/uploads/2013/07/resized.png" alt="resized" width="483" height="60" class="alignnone size-full wp-image-1612" srcset="https://ncona.com/wp-content/uploads/2013/07/resized.png 483w, https://ncona.com/wp-content/uploads/2013/07/resized-300x37.png 300w" sizes="(max-width: 483px) 100vw, 483px" />](http://ncona.com/wp-content/uploads/2013/07/resized.png)
+[<img src="/images/posts/resized.png" alt="resized" />](/images/posts/resized.png)
 
 By default the grid will adapt to be 1170px wide, but you can make it completely fluid using the **.row-fluid** class. This configuration will expand or collapse your row to use the whole space without breaking the row:
 
@@ -48,7 +48,7 @@ By default the grid will adapt to be 1170px wide, but you can make it completely
 </div>
 ```
 
-[<img src="http://ncona.com/wp-content/uploads/2013/07/fluid.png" alt="fluid" width="527" height="32" class="alignnone size-full wp-image-1615" srcset="https://ncona.com/wp-content/uploads/2013/07/fluid.png 527w, https://ncona.com/wp-content/uploads/2013/07/fluid-300x18.png 300w" sizes="(max-width: 527px) 100vw, 527px" />](http://ncona.com/wp-content/uploads/2013/07/fluid.png)
+[<img src="/images/posts/fluid.png" alt="fluid" />](/images/posts/fluid.png)
 
 ## Styles
 
@@ -91,7 +91,7 @@ Bootstrap provides a lot of styles for base HTML elements that make for an easy 
 </form>
 ```
 
-[<img src="http://ncona.com/wp-content/uploads/2013/07/base_css1.png" alt="base_css" width="559" height="265" class="alignnone size-full wp-image-1644" srcset="https://ncona.com/wp-content/uploads/2013/07/base_css1.png 559w, https://ncona.com/wp-content/uploads/2013/07/base_css1-300x142.png 300w" sizes="(max-width: 559px) 100vw, 559px" />](http://ncona.com/wp-content/uploads/2013/07/base_css1.png)
+[<img src="/images/posts/base_css1.png" alt="base_css" />](/images/posts/base_css1.png)
 
 ## The rest
 

@@ -51,7 +51,7 @@ The next thing you might want do to is add action items (buttons that perform ac
 
 I defined a menu with three items. Specifying **android:showAsAction** attribute as **ifRoom** tells android to try to show the menu item if there is room in the action bar. If there is no room the items will appear when you click the hardware menu button or the expand button on the action bar. This is how it looks in the simulator:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/07/ActionItem.png" alt="ActionItem" width="483" height="765" class="alignnone size-full wp-image-1573" srcset="https://ncona.com/wp-content/uploads/2013/07/ActionItem.png 483w, https://ncona.com/wp-content/uploads/2013/07/ActionItem-189x300.png 189w" sizes="(max-width: 483px) 100vw, 483px" />](http://ncona.com/wp-content/uploads/2013/07/ActionItem.png)
+[<img src="/images/posts/ActionItem.png" alt="ActionItem" />](/images/posts/ActionItem.png)
 
 Item one and Item two are shown in the action bar because they fit there. Item three is only shown when the hardware button is clicked.
 
@@ -161,7 +161,7 @@ public class UiTest extends Activity
 
 Now when you click on the check box you will see something like this:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/07/ContextActionMenu.png" alt="ContextActionMenu" width="483" height="194" class="alignnone size-full wp-image-1581" srcset="https://ncona.com/wp-content/uploads/2013/07/ContextActionMenu.png 483w, https://ncona.com/wp-content/uploads/2013/07/ContextActionMenu-300x120.png 300w" sizes="(max-width: 483px) 100vw, 483px" />](http://ncona.com/wp-content/uploads/2013/07/ContextActionMenu.png)
+[<img src="/images/posts/ContextActionMenu.png" alt="ContextActionMenu" />](/images/posts/ContextActionMenu.png)
 
 ## Popup menu
 
@@ -189,4 +189,4 @@ public void checkboxOneClicked(View view)
 
 Here we are telling the app to show our popup menu on the check box every time it is clicked. The final result looks like this:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/07/popup.png" alt="popup" width="479" height="297" class="alignnone size-full wp-image-1584" srcset="https://ncona.com/wp-content/uploads/2013/07/popup.png 479w, https://ncona.com/wp-content/uploads/2013/07/popup-300x186.png 300w" sizes="(max-width: 479px) 100vw, 479px" />](http://ncona.com/wp-content/uploads/2013/07/popup.png)
+[<img src="/images/posts/popup.png" alt="popup" />](/images/posts/popup.png)

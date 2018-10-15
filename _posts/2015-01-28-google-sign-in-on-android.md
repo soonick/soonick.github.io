@@ -36,7 +36,7 @@ At this point you should be able to build and run a very simple app.
 
 Our application will have two screens: A sign-in screen that the user will get when they are not signed in, and an application screen that will allow the user to sign out.
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625.jpg" alt="App diagram" width="100%" class="alignnone size-full wp-image-2546" srcset="https://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625.jpg 700w, https://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625-300x245.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" />](http://ncona.com/wp-content/uploads/2015/01/IMG_20150122_141625.jpg)
+[<img src="/images/posts/sign-in-flow.jpg" alt="App diagram" />](/images/posts/sign-in-flow.jpg)
 
 ## Setting up the API
 
@@ -44,21 +44,21 @@ In order to use Google+ API to sign in our users we first need to configure our 
 
 Create a new project. The name of the project doesn&#8217;t matter at this point:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/create-project.png" alt="create-project" width="536" height="295" class="alignnone size-full wp-image-2548" srcset="https://ncona.com/wp-content/uploads/2015/01/create-project.png 536w, https://ncona.com/wp-content/uploads/2015/01/create-project-300x165.png 300w" sizes="(max-width: 536px) 100vw, 536px" />](http://ncona.com/wp-content/uploads/2015/01/create-project.png)
+[<img src="/images/posts/create-project.png" alt="create-project" />](/images/posts/create-project.png)
 
 In the API section enable Google+ API:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/google-api.png" alt="google-api" width="100%" class="alignnone size-full wp-image-2550" srcset="https://ncona.com/wp-content/uploads/2015/01/google-api.png 900w, https://ncona.com/wp-content/uploads/2015/01/google-api-300x73.png 300w" sizes="(max-width: 900px) 100vw, 900px" />](http://ncona.com/wp-content/uploads/2015/01/google-api.png)
+[<img src="/images/posts/google-api.png" alt="google-api" />](/images/posts/google-api.png)
 
 Then you will need to configure a consent screen. Only the e-mail and product name are necessary:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/consent.png" alt="consent" width="768" height="316" class="alignnone size-full wp-image-2551" srcset="https://ncona.com/wp-content/uploads/2015/01/consent.png 768w, https://ncona.com/wp-content/uploads/2015/01/consent-300x123.png 300w" sizes="(max-width: 768px) 100vw, 768px" />](http://ncona.com/wp-content/uploads/2015/01/consent.png)
+[<img src="/images/posts/consent.png" alt="consent" />](/images/posts/consent.png)
 
 Finally, create an new client-id from the credentials section.
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/oauth-credentials.png" alt="oauth-credentials" width="507" height="326" class="alignnone size-full wp-image-2553" srcset="https://ncona.com/wp-content/uploads/2015/01/oauth-credentials.png 507w, https://ncona.com/wp-content/uploads/2015/01/oauth-credentials-300x193.png 300w" sizes="(max-width: 507px) 100vw, 507px" />](http://ncona.com/wp-content/uploads/2015/01/oauth-credentials.png)
+[<img src="/images/posts/oauth-credentials.png" alt="oauth-credentials" />](/images/posts/oauth-credentials.png)
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/create-client-id.png" alt="create-client-id" width="471" height="602" class="alignnone size-full wp-image-2552" srcset="https://ncona.com/wp-content/uploads/2015/01/create-client-id.png 471w, https://ncona.com/wp-content/uploads/2015/01/create-client-id-235x300.png 235w" sizes="(max-width: 471px) 100vw, 471px" />](http://ncona.com/wp-content/uploads/2015/01/create-client-id.png)
+[<img src="/images/posts/create-client-id.png" alt="create-client-id" />](/images/posts/create-client-id.png)
 
 If you are following the steps on this post you should use example.com as package name, otherwise use your app package name. You can get the singing certificate fingerprint using this command:
 
@@ -105,7 +105,7 @@ Google play services comes with a branded sing-in button that can be easily inte
 </RelativeLayout>
 ```
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/sing-in-button.png" alt="sing-in-button" width="200" height="355" class="alignnone size-full wp-image-2556" srcset="https://ncona.com/wp-content/uploads/2015/01/sing-in-button.png 200w, https://ncona.com/wp-content/uploads/2015/01/sing-in-button-169x300.png 169w" sizes="(max-width: 200px) 100vw, 200px" />](http://ncona.com/wp-content/uploads/2015/01/sing-in-button.png)
+[<img src="/images/posts/sing-in-button.png" alt="sing-in-button" />](/images/posts/sing-in-button.png)
 
 ## Google+ functionality
 

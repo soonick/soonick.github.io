@@ -44,7 +44,7 @@ C++ has the concept of pointers, which other higher level programming languages 
 
 In most modern computers, memory is divided in slots of 1 byte (8 bits). Each of these slots has a memory address associated with it. Something like this:
 
-[<img src="https://storage.googleapis.com/ncona-media/2017/12/208f68e1-20171130_183143-e1512259879690.jpg" alt="" width="1000" height="574" class="alignnone size-full wp-image-4721" />](https://storage.googleapis.com/ncona-media/2017/12/208f68e1-20171130_183143-e1512259879690.jpg)
+[<img src="/images/posts/adresses.jpg" />](/images/posts/adresses.jpg)
 
 There are many memory addresses in a modern computer, so the addresses are usually shown in hexadecimal to make the address number look a little smaller. Lets look at an example:
 

@@ -28,7 +28,7 @@ http.createServer(function(req, res) {
 
 Save the file and open a terminal in the folder where that file is stored. Then run **node server.js** and visit **http://127.0.0.1:9000**. You will see something like this:
 
-[<img src="http://ncona.com/wp-content/uploads/2013/04/Screenshot.png" alt="Node server" width="193" height="73" class="alignnone size-full wp-image-1307" />](http://ncona.com/wp-content/uploads/2013/04/Screenshot.png)
+[<img src="/images/posts/node-server.png" alt="Node server" />](/images/posts/node-server.png)
 
 Might not be very exciting but this is were everything starts.
 

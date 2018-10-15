@@ -28,19 +28,19 @@ Just by installing xDebug you will get two very basic but useful rewards: Pretty
 
 So instead of getting this:
 
-[<img src="https://storage.googleapis.com/ncona-media/2012/09/c9249511-php_error.png" alt="" width="560" height="88" class="alignnone size-full wp-image-4870" srcset="https://storage.googleapis.com/ncona-media/2012/09/c9249511-php_error.png 560w, https://storage.googleapis.com/ncona-media/2012/09/c9249511-php_error-300x47.png 300w" sizes="(max-width: 560px) 100vw, 560px" />](https://storage.googleapis.com/ncona-media/2012/09/c9249511-php_error.png)
+[<img src="/images/posts/php_error.png" />](/images/posts/php_error.png)
 
 or this:
 
-[<img src="https://storage.googleapis.com/ncona-media/2012/09/847d466d-var_dump.png" alt="" width="792" height="33" class="alignnone size-full wp-image-4871" srcset="https://storage.googleapis.com/ncona-media/2012/09/847d466d-var_dump.png 792w, https://storage.googleapis.com/ncona-media/2012/09/847d466d-var_dump-300x13.png 300w, https://storage.googleapis.com/ncona-media/2012/09/847d466d-var_dump-768x32.png 768w" sizes="(max-width: 792px) 100vw, 792px" />](https://storage.googleapis.com/ncona-media/2012/09/847d466d-var_dump.png)
+[<img src="/images/posts/var_dump.png" />](/images/posts/var_dump.png)
 
 You will be getting this:
 
-[<img src="https://storage.googleapis.com/ncona-media/2012/09/deeee5de-xdebug_php_error.png" alt="" width="590" height="143" class="alignnone size-full wp-image-4873" srcset="https://storage.googleapis.com/ncona-media/2012/09/deeee5de-xdebug_php_error.png 590w, https://storage.googleapis.com/ncona-media/2012/09/deeee5de-xdebug_php_error-300x73.png 300w" sizes="(max-width: 590px) 100vw, 590px" />](https://storage.googleapis.com/ncona-media/2012/09/deeee5de-xdebug_php_error.png)
+[<img src="/images/posts/xdebug_php_error.png" />](/images/posts/xdebug_php_error.png)
 
 and this:
 
-[<img class="alignnone size-full wp-image-815" title="xdebug_var_dump" src="http://ncona.com/wp-content/uploads/2012/09/xdebug_var_dump.png" alt="xDebug var_dump output" width="126" height="140" />](http://ncona.com/wp-content/uploads/2012/09/xdebug_var_dump.png)
+[<img src="/images/posts/xdebug_var_dump.png" alt="xDebug var_dump output" />](/images/posts/xdebug_var_dump.png)
 
 You can configure the dept of the variables nesting to show on your var_dumps with this xDebug property:
 

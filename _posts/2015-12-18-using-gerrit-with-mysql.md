@@ -103,7 +103,7 @@ docker run -p 8080:8080 -p 29418:29418 <image_id>
 
 If the world was perfect this would be the end of the post. But it isn&#8217;t. There is a bug in the setup process that causes the Administrator to not be able to create new projects:
 
-<a href="http://ncona.com/wp-content/uploads/2015/12/new-project.png" rel="attachment wp-att-3355"><img src="http://ncona.com/wp-content/uploads/2015/12/new-project.png" alt="new-project" width="100%" class="alignnone size-full wp-image-3355" srcset="https://ncona.com/wp-content/uploads/2015/12/new-project.png 1083w, https://ncona.com/wp-content/uploads/2015/12/new-project-300x14.png 300w, https://ncona.com/wp-content/uploads/2015/12/new-project-768x36.png 768w, https://ncona.com/wp-content/uploads/2015/12/new-project-1024x48.png 1024w" sizes="(max-width: 1083px) 100vw, 1083px" /></a>
+[<img src="/images/posts/new-project.png" alt="new-project" />](/images/posts/new-project.png)
 
 I found a bug report related to this issue that explained a workaround: <https://code.google.com/p/gerrit/issues/detail?id=3698>. Hopefully this issue will be soon fixed and the workaround will not be necessary anymore.
 
@@ -171,6 +171,6 @@ At the end it will look something like this:
 
 We just need to restart the container and we will get our desired button:
 
-<a href="http://ncona.com/wp-content/uploads/2015/12/new-project-button.png" rel="attachment wp-att-3357"><img src="http://ncona.com/wp-content/uploads/2015/12/new-project-button.png" alt="new-project-button" width="1123" height="51" class="alignnone size-full wp-image-3357" srcset="https://ncona.com/wp-content/uploads/2015/12/new-project-button.png 1123w, https://ncona.com/wp-content/uploads/2015/12/new-project-button-300x14.png 300w, https://ncona.com/wp-content/uploads/2015/12/new-project-button-768x35.png 768w, https://ncona.com/wp-content/uploads/2015/12/new-project-button-1024x47.png 1024w" sizes="(max-width: 1123px) 100vw, 1123px" /></a>
+[<img src="/images/posts/new-project-button.png" alt="new-project-button" />](/images/posts/new-project-button.png)
 
 Now we have gerrit working with MySQL.

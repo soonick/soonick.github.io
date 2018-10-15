@@ -259,7 +259,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 After the command is finished we can see our droplet in Digital Ocean:
 
-[<img src="https://storage.googleapis.com/ncona-media/2018/05/66650660-screenshot-from-2018-05-23-23-40-15.png" alt="" width="1032" height="270" class="alignnone size-full wp-image-5094" srcset="https://storage.googleapis.com/ncona-media/2018/05/66650660-screenshot-from-2018-05-23-23-40-15.png 1032w, https://storage.googleapis.com/ncona-media/2018/05/66650660-screenshot-from-2018-05-23-23-40-15-300x78.png 300w, https://storage.googleapis.com/ncona-media/2018/05/66650660-screenshot-from-2018-05-23-23-40-15-768x201.png 768w, https://storage.googleapis.com/ncona-media/2018/05/66650660-screenshot-from-2018-05-23-23-40-15-1024x268.png 1024w" sizes="(max-width: 1032px) 100vw, 1032px" />](https://storage.googleapis.com/ncona-media/2018/05/66650660-screenshot-from-2018-05-23-23-40-15.png)
+[<img src="/images/posts/droplets.png" />](/images/posts/droplets.png)
 
 We can update our infrastructure (add a new droplet):
 
@@ -348,7 +348,7 @@ digitalocean_droplet.nyc-002: Creation complete after 23s (ID: 94842062)
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-[<img src="https://storage.googleapis.com/ncona-media/2018/05/a4fff26c-screenshot-from-2018-05-23-23-44-38.png" alt="" width="1017" height="328" class="alignnone size-full wp-image-5095" srcset="https://storage.googleapis.com/ncona-media/2018/05/a4fff26c-screenshot-from-2018-05-23-23-44-38.png 1017w, https://storage.googleapis.com/ncona-media/2018/05/a4fff26c-screenshot-from-2018-05-23-23-44-38-300x97.png 300w, https://storage.googleapis.com/ncona-media/2018/05/a4fff26c-screenshot-from-2018-05-23-23-44-38-768x248.png 768w, https://storage.googleapis.com/ncona-media/2018/05/a4fff26c-screenshot-from-2018-05-23-23-44-38-620x200.png 620w" sizes="(max-width: 1017px) 100vw, 1017px" />](https://storage.googleapis.com/ncona-media/2018/05/a4fff26c-screenshot-from-2018-05-23-23-44-38.png)
+[<img src="/images/posts/droplets-terraform.png" />](/images/posts/droplets-terraform.png)
 
 We can also remove machines:
 
@@ -397,7 +397,7 @@ Apply complete! Resources: 0 added, 0 changed, 2 destroyed.
 
 And the droplets are deleted from Digital Ocean:
 
-[<img src="https://storage.googleapis.com/ncona-media/2018/05/7bff4dd5-screenshot-from-2018-05-23-23-49-26.png" alt="" width="1006" height="570" class="alignnone size-full wp-image-5096" srcset="https://storage.googleapis.com/ncona-media/2018/05/7bff4dd5-screenshot-from-2018-05-23-23-49-26.png 1006w, https://storage.googleapis.com/ncona-media/2018/05/7bff4dd5-screenshot-from-2018-05-23-23-49-26-300x170.png 300w, https://storage.googleapis.com/ncona-media/2018/05/7bff4dd5-screenshot-from-2018-05-23-23-49-26-768x435.png 768w" sizes="(max-width: 1006px) 100vw, 1006px" />](https://storage.googleapis.com/ncona-media/2018/05/7bff4dd5-screenshot-from-2018-05-23-23-49-26.png)
+[<img src="/images/posts/no-droplets.png" />](/images/posts/no-droplets.png)
 
 ## Conclusion
 

@@ -135,7 +135,7 @@ resource "google_compute_instance" "us-central1-c--f1-micro" {
 }
 ```
 
-[<img src="https://storage.googleapis.com/ncona-media/2018/05/1c2d7906-screenshot-from-2018-05-25-19-59-02.png" alt="" width="814" height="67" class="alignnone size-full wp-image-5108" srcset="https://storage.googleapis.com/ncona-media/2018/05/1c2d7906-screenshot-from-2018-05-25-19-59-02.png 814w, https://storage.googleapis.com/ncona-media/2018/05/1c2d7906-screenshot-from-2018-05-25-19-59-02-300x25.png 300w, https://storage.googleapis.com/ncona-media/2018/05/1c2d7906-screenshot-from-2018-05-25-19-59-02-768x63.png 768w" sizes="(max-width: 814px) 100vw, 814px" />](https://storage.googleapis.com/ncona-media/2018/05/1c2d7906-screenshot-from-2018-05-25-19-59-02.png)
+[<img src="/images/posts/ssh-access.png" />](/images/posts/ssh-access.png)
 
 This is of course not enough to be able to SSH to our server. We also need to specify who can SSH to this machine. We can do this using the metadata attribute:
 

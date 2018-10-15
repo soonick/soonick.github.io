@@ -22,9 +22,9 @@ Google uses the OpenID protocol and ID Tokens to make this possible. An ID Token
 
 One requisite to create an ID Token is to provide the client id of the server that will be consuming this token. Go to [Google API Console](https://console.developers.google.com) and in the same project where you created your Android client create another client of type **Web Application**. Once created you will be given a client id.
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/web_application_client.png" alt="web_application_client" width="477" height="586" class="alignnone size-full wp-image-2567" srcset="https://ncona.com/wp-content/uploads/2015/01/web_application_client.png 477w, https://ncona.com/wp-content/uploads/2015/01/web_application_client-244x300.png 244w" sizes="(max-width: 477px) 100vw, 477px" />](http://ncona.com/wp-content/uploads/2015/01/web_application_client.png)
+[<img src="/images/posts/web_application_client.png" alt="web_application_client" />](/images/posts/web_application_client.png)
 
-[<img src="http://ncona.com/wp-content/uploads/2015/01/client_id.png" alt="client_id" width="668" height="265" class="alignnone size-full wp-image-2566" srcset="https://ncona.com/wp-content/uploads/2015/01/client_id.png 668w, https://ncona.com/wp-content/uploads/2015/01/client_id-300x119.png 300w" sizes="(max-width: 668px) 100vw, 668px" />](http://ncona.com/wp-content/uploads/2015/01/client_id.png)
+[<img src="/images/posts/client_id.png" alt="client_id" />](/images/posts/client_id.png)
 
 Once you have the client ID for your server you can use something like this to get a token:
 

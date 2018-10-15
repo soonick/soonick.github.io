@@ -61,7 +61,7 @@ Graphite-web will run in port 80 inside the container. We are using the -p flag 
 
 We have now a semi-working Graphite installation. You can see it by hitting the correct URL in the browser, for example: http://my.remote.server
 
-[<img src="http://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-15-55-01.png" alt="Screenshot from 2016-06-19 15-55-01" width="893" height="616" class="alignnone size-full wp-image-3737" srcset="https://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-15-55-01.png 893w, https://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-15-55-01-300x207.png 300w, https://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-15-55-01-768x530.png 768w" sizes="(max-width: 893px) 100vw, 893px" />](http://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-15-55-01.png)
+[<img src="/images/posts/graphite-home.png" alt="graphite home" />](/images/posts/graphite-home.png)
 
 Now, I said semi-working, because we have no data. As a matter of fact we not only have no data, we have no way to send data to our server. Lets fix the problem of not having a way to send data. The only thing we need to do is open port 2003 which is where Carbon is running.
 
@@ -77,7 +77,9 @@ And we can send some data to test that it is working (I&#8217;m using the GNU ve
 echo "test.graphite.count 20 `date +%s`" | nc my.remote.server 2003
 ```
 
-After a few requests we can see something going on[<img src="http://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-16-29-39.png" alt="Screenshot from 2016-06-19 16-29-39" width="376" height="388" class="alignnone size-full wp-image-3741" srcset="https://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-16-29-39.png 376w, https://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-16-29-39-291x300.png 291w" sizes="(max-width: 376px) 100vw, 376px" />](http://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-16-29-39.png):
+After a few requests we can see something going on
+
+[<img src="/images/posts/graphite-data.png" alt="graphite data" />](/images/posts/graphite-data.png):
 
 We got a very simple Graphite installed and tested very quickly. This is probably not a good configuration for production, but it is a good first step. The last thing we need to do is get Collectd up and running in the machine we want to monitor.
 
@@ -125,6 +127,6 @@ So I will comment all the others. Most of our plugins will work out of the box, 
 
 Restart Collectd and wait a few seconds. You should start seeing data in Graphite:
 
-[<img src="http://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-18-31-06.png" alt="Screenshot from 2016-06-19 18-31-06" width="1545" height="844" class="alignnone size-full wp-image-3752" srcset="https://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-18-31-06.png 1545w, https://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-18-31-06-300x164.png 300w, https://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-18-31-06-768x420.png 768w, https://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-18-31-06-1024x559.png 1024w" sizes="(max-width: 1545px) 100vw, 1545px" />](http://ncona.com/wp-content/uploads/2016/06/Screenshot-from-2016-06-19-18-31-06.png)
+[<img src="/images/posts/graphite-dashboard.png" alt="graphite-dashboard" />](/images/posts/graphite-dashboard.png)
 
 There is still a lot of work to do before this is production ready, but now we have a way of monitoring the state of our server.
