@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1703
 permalink: /2013/08/git-rebasing-vs-merging/
-categories:
-  - Git
 tags:
-  - Git
+  - git
   - productivity
 ---
 When I switched to git for the first time I had a very hard time understanding what rebasing did to a point where I totally avoided it. I had been doing all my work on private and public repositories by going to master and merging to my feature branch or to a team member&#8217;s branch. I was happy with this way of working until I started on my new job a few months ago and they had a rebase based workflow. It goes something like this:

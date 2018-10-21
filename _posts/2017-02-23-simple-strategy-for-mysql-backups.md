@@ -6,13 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4157
 permalink: /2017/02/simple-strategy-for-mysql-backups/
-categories:
-  - Linux
-  - Mysql
 tags:
   - automation
   - linux
-  - MySQL
+  - mysql
   - productivity
 ---
 I now have a good amount of data in my blog that I would be very sad if I lost. As a precautionary measure I decided to build a little system that will backup my data regularly so I&#8217;m prepared in case of a disaster.

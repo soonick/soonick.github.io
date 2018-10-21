@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2235
 permalink: /2016/02/add-one-to-a-number-without-using-plus-or-minus-sign/
-categories:
-  - Computer science
 tags:
+  - computer_science
   - algorithms
   - javascript
   - programming

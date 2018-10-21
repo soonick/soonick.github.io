@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3923
 permalink: /2017/03/securing-your-network-with-iptables/
-categories:
-  - Linux
 tags:
   - linux
   - networking

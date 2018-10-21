@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4322
 permalink: /2017/09/introduction-to-gitlab/
-categories:
-  - Automation
 tags:
   - automation
   - docker

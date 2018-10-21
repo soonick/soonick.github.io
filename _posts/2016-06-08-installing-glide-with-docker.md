@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3673
 permalink: /2016/06/installing-glide-with-docker/
-categories:
-  - Linux
 tags:
+  - linux
   - automation
   - docker
   - golang

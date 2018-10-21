@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=416
 permalink: /2011/11/test-driven-development-with-zend-framework/
-categories:
-  - PHP
 tags:
   - php
   - testing
-  - zend framework
+  - zend_framework
 ---
 Test Driven Development (TDD) is a software development process that consist in writing unit tests for functionality that is going to be needed and once the test fails writing the code to make it pass. This process is repeated for every new feature or bug.
 

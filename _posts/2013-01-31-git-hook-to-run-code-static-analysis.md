@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=942
 permalink: /2013/01/git-hook-to-run-code-static-analysis/
-categories:
-  - Automation
 tags:
   - automation
   - bash
-  - Git
+  - git
   - php
   - programming
   - testing

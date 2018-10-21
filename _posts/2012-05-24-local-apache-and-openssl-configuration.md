@@ -6,12 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=282
 permalink: /2012/05/local-apache-and-openssl-configuration/
-categories:
-  - Linux
 tags:
   - apache
   - ssl
-  - virtual host
+  - virtual_host
+  - linux
 ---
 This post can be seen as a continuation of &#8220;[Creating local virtual hosts with apache](http://ncona.com/2011/06/creating-local-virtual-hosts-with-apache/)&#8220;. We are going to extend the virtual server we created to be accessible via SSL locally.
 

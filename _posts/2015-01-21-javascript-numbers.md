@@ -6,12 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2417
 permalink: /2015/01/javascript-numbers/
-categories:
-  - Computer science
-  - Javascript
 tags:
+  - computer_science
   - algorithms
-  - computer science
   - javascript
 ---
 The title for this post might sound vague, but the reason I&#8217;m writing it is because in JavaScript this is true:

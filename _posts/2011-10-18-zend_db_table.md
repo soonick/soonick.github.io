@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=408
 permalink: /2011/10/zend_db_table/
-categories:
-  - PHP
 tags:
   - php
-  - zend framework
+  - zend_framework
 ---
 Zend\_Db\_Table is an implementation of the Table Data Gateway design pattern provided by the Zend Framework. It provides a set of methods and attributes useful for interacting with a database table, but can also be extended to provide custom functionality for your application.
 

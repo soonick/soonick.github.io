@@ -6,13 +6,12 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1787
 permalink: /2013/10/hooking-your-github-project-to-travis-ci/
-categories:
-  - Automation
 tags:
-  - Git
+  - automation
+  - git
   - github
   - node
-  - open source
+  - open_source
   - php
   - productivity
   - projects

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3446
 permalink: /2016/01/debugging-with-tcpdump/
-categories:
-  - Linux
 tags:
   - linux
   - tcpdump

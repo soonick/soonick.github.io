@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5014
 permalink: /2018/05/file-descriptors/
-categories:
-  - Linux
 tags:
   - linux
   - programming

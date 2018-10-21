@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2770
 permalink: /2015/06/introduction-to-polymer/
-categories:
-  - Javascript
 tags:
-  - design patterns
+  - design_patterns
   - dom
   - javascript
   - polymer

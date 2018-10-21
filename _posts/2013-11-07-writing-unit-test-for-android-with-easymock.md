@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1799
 permalink: /2013/11/writing-unit-test-for-android-with-easymock/
-categories:
-  - Mobile development
 tags:
   - android
   - java

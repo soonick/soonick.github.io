@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1206
 permalink: /2013/02/introduction-to-android-development-building-an-application-without-an-ide/
-categories:
-  - Mobile development
 tags:
   - android
   - ant

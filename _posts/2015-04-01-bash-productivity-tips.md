@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2722
 permalink: /2015/04/bash-productivity-tips/
-categories:
-  - Linux
 tags:
   - bash
   - linux

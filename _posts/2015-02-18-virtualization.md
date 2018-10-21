@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1430
 permalink: /2015/02/virtualization/
-categories:
-  - Linux
 tags:
   - hardware
   - linux

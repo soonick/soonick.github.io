@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=708
 permalink: /2012/06/contributing-to-openhatch-project/
-categories:
-  - Python
 tags:
-  - Git
+  - git
   - github
-  - open source
+  - open_source
   - projects
   - python
 ---

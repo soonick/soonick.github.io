@@ -6,13 +6,12 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4680
 permalink: /2018/01/autotools/
-categories:
-  - C/C++
 tags:
   - automation
   - linux
   - productivity
   - programming
+  - c++
 ---
 A few days ago I was listening to a talk about the new features of C++ and I heard the presenter mention autools. I felt pretty dumb not knowing what he was talking about so I&#8217;m writing this post to make me feel less dumb.
 

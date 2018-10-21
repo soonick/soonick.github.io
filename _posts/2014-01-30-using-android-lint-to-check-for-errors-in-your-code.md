@@ -6,10 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1838
 permalink: /2014/01/using-android-lint-to-check-for-errors-in-your-code/
-categories:
-  - Mobile development
 tags:
   - android
+  - mobile
   - automation
   - debugging
   - java

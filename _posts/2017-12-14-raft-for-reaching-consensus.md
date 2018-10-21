@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4560
 permalink: /2017/12/raft-for-reaching-consensus/
-categories:
-  - Computer science
 tags:
+  - computer_science
   - algorithms
 ---
 In a past post I wrote about [distributed systems](http://ncona.com/2017/12/distributed-systems/), but I intentionally omitted the subject of leaderless replication since I consider it a topic that deserves a little more focus.

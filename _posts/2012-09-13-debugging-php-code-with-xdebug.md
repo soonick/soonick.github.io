@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=801
 permalink: /2012/09/debugging-php-code-with-xdebug/
-categories:
-  - PHP
 tags:
   - debugging
   - php

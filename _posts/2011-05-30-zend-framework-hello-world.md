@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=189
 permalink: /2011/05/zend-framework-hello-world/
-categories:
-  - PHP
 tags:
   - php
-  - zend framework
+  - zend_framework
 ---
 I am going to explain how to make a very simple hello world application using Zend Framework. While doing this I am going to try to explain how Zend Framework manages MVC.
 

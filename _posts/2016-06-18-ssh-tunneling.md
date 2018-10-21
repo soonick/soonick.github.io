@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3700
 permalink: /2016/06/ssh-tunneling/
-categories:
-  - Linux
 tags:
   - automation
   - linux

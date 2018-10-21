@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3678
 permalink: /2016/05/avoid-ssh-connection-timeout/
-categories:
-  - Linux
 tags:
   - linux
   - ssh

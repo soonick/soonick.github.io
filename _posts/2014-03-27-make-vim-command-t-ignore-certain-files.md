@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1996
 permalink: /2014/03/make-vim-command-t-ignore-certain-files/
-categories:
-  - Vim
 tags:
   - android
   - java

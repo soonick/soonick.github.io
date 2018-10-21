@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=302
 permalink: /2011/07/getting-more-from-git-log/
-categories:
-  - Git
 tags:
-  - Git
+  - git
   - github
 ---
 This post is basically a copy of [pimping out git log](http://www.jukie.net/bart/blog/pimping-out-git-log "Pimping out git log"). I just made some modifications to Bart&#8217;s alias to fit my personal preferences.

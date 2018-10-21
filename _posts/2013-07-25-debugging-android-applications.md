@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1590
 permalink: /2013/07/debugging-android-applications/
-categories:
-  - Mobile development
 tags:
   - android
   - debugging

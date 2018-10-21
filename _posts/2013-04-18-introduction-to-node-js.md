@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1196
 permalink: /2013/04/introduction-to-node-js/
-categories:
-  - Javascript
 tags:
   - javascript
   - node

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5116
 permalink: /2018/05/taking-over-existing-instances-with-terraform/
-categories:
-  - Linux
 tags:
   - automation
   - linux

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=497
 permalink: /2012/01/introduction-to-python/
-categories:
-  - Python
 tags:
   - programming
   - python

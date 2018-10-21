@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1512
 permalink: /2013/07/creating-a-chrome-extension/
-categories:
-  - Javascript
 tags:
-  - chrome extension
+  - chrome_extension
   - javascript
-  - open source
+  - open_source
   - programming
   - projects
 ---

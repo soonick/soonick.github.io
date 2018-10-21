@@ -6,13 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=794
 permalink: /2012/12/zend-framework-authentication/
-categories:
-  - PHP
 tags:
   - authentication
   - php
   - programming
-  - zend framework
+  - zend_framework
 ---
 Authentication is the process of confirming that a person is who they say they are. In software the most common method of authentication is the use of a password that only the person knows.
 

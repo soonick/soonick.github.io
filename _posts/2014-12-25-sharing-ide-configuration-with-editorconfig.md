@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2444
 permalink: /2014/12/sharing-ide-configuration-with-editorconfig/
-categories:
-  - Vim
 tags:
   - productivity
   - vim

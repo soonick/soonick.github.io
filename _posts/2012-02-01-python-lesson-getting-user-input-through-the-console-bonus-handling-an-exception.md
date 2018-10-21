@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=507
 permalink: /2012/02/python-lesson-getting-user-input-through-the-console-bonus-handling-an-exception/
-categories:
-  - Python
 tags:
   - programming
   - python

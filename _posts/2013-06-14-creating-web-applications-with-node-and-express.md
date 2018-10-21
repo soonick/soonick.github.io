@@ -6,8 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1384
 permalink: /2013/06/creating-web-applications-with-node-and-express/
-categories:
-  - Javascript
+tags:
+  - javascript
 ---
 Express is a web framework which allows you to easily make web applications on node. I already wrote about [writing a simple server with node](http://ncona.com/2013/04/writing-a-simple-node-js-server/ "Writing a simple server with node"), but this time I will focus more on the application structure.
 

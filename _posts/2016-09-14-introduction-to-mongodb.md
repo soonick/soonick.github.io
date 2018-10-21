@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3885
 permalink: /2016/09/introduction-to-mongodb/
-categories:
-  - MongoDB
 tags:
   - databases
   - mongodb

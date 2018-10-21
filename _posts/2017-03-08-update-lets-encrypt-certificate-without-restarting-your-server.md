@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4199
 permalink: /2017/03/update-lets-encrypt-certificate-without-restarting-your-server/
-categories:
-  - Linux
 tags:
   - automation
   - linux

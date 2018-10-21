@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2821
 permalink: /2015/04/building-modular-apps-with-angular-part-2/
-categories:
-  - Javascript
 tags:
   - angularjs
-  - design patterns
+  - design_patterns
   - javascript
   - programming
 ---

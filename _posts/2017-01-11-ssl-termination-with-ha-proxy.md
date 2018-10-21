@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4060
 permalink: /2017/01/ssl-termination-with-ha-proxy/
-categories:
-  - Linux
 tags:
   - docker
   - haproxy

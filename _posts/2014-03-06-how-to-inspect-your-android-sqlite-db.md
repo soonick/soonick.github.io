@@ -6,14 +6,12 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1949
 permalink: /2014/03/how-to-inspect-your-android-sqlite-db/
-categories:
-  - Mobile development
 tags:
   - android
   - debugging
   - linux
   - mobile
-  - SQLite
+  - sqlite
 ---
 I am developing an Android app that makes use of an SQLite database. Every now and then I want to see what is the state of my app&#8217;s database to make sure things are being stored the way I expect. To do this you need to connect to your emulator using an adb shell.
 

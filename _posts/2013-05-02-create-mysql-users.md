@@ -6,11 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1331
 permalink: /2013/05/create-mysql-users/
-categories:
-  - Mysql
 tags:
-  - MySQL
-  - SQL
+  - mysql
 ---
 I always forget the syntax to create a new mysql user, so I decided to write it in here for later reference. I am doing this from a mysql terminal, so first we need to login:
 

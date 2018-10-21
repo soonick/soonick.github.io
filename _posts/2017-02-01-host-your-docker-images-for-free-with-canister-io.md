@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4088
 permalink: /2017/02/host-your-docker-images-for-free-with-canister-io/
-categories:
-  - Linux
 tags:
+  - linux
   - automation
   - docker
   - productivity

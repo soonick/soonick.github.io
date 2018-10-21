@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1731
 permalink: /2013/09/different-settings-for-different-language-in-vim/
-categories:
-  - Vim
 tags:
   - linux
   - productivity

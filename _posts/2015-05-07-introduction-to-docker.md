@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2840
 permalink: /2015/05/introduction-to-docker/
-categories:
-  - Linux
 tags:
   - linux
   - productivity

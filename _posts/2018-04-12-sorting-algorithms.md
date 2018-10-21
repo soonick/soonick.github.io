@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2195
 permalink: /2018/04/sorting-algorithms/
-categories:
-  - Computer science
 tags:
+  - computer_science
   - algorithms
   - javascript
   - programming

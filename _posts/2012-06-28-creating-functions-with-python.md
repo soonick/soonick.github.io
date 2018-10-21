@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=723
 permalink: /2012/06/creating-functions-with-python/
-categories:
-  - Python
 tags:
   - programming
   - python

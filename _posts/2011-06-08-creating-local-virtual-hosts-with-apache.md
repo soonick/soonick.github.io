@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=206
 permalink: /2011/06/creating-local-virtual-hosts-with-apache/
-categories:
-  - Linux
 tags:
   - apache
   - linux
-  - virtual host
+  - virtual_host
 ---
 If you are a web developer, virtual hosts is probably something you already use, if not, you should.
 

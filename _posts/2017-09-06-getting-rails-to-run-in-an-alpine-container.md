@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4236
 permalink: /2017/09/getting-rails-to-run-in-an-alpine-container/
-categories:
-  - Linux
 tags:
+  - linux
   - automation
   - docker
   - productivity

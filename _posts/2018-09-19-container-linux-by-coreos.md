@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4653
 permalink: /2018/09/container-linux-by-coreos/
-categories:
-  - Linux
 tags:
   - docker
   - linux

@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3970
 permalink: /2016/11/showing-records-from-mysql-tables-with-many-columns/
-categories:
-  - Mysql
 tags:
-  - MySQL
+  - mysql
   - productivity
 ---
 Lately I&#8217;ve been working on a system that has a lot of big tables (with a lot of columns), and often I want to do something like:

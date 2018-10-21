@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1824
 permalink: /2013/10/adroid-emulator-acceleration/
-categories:
-  - Mobile development
 tags:
   - android
   - automation

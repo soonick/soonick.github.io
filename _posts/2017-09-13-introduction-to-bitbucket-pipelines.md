@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4307
 permalink: /2017/09/introduction-to-bitbucket-pipelines/
-categories:
-  - Automation
 tags:
   - automation
   - bash

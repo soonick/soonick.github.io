@@ -10,6 +10,13 @@ layout: blog
     {{ content }}
   </div>
 
+  <span>[
+    {% for tag in page.tags %}
+      {% capture tag_name %}{{ tag }}{% endcapture %}
+      <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+    {% endfor %}
+  ]</span>
+
   {% include share-bar.html %}
   {% include related-posts.html %}
   {% include disqus.html %}

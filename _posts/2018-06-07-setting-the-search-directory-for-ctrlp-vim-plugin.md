@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5128
 permalink: /2018/06/setting-the-search-directory-for-ctrlp-vim-plugin/
-categories:
-  - Vim
 tags:
   - productivity
   - vim

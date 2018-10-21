@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3703
 permalink: /2016/07/bitwise-operations-in-javascript/
-categories:
-  - Javascript
 tags:
   - algorithms
   - javascript

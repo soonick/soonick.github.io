@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3418
 permalink: /2016/02/go-language-methods-and-interfaces/
-categories:
-  - Go
 tags:
   - golang
   - programming

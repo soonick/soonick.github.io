@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=593
 permalink: /2012/04/python-sequences-part-2/
-categories:
-  - Python
 tags:
   - programming
   - python

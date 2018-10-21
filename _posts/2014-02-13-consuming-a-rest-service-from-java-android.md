@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1941
 permalink: /2014/02/consuming-a-rest-service-from-java-android/
-categories:
-  - Mobile development
 tags:
+  - mobile
   - android
   - java
   - json

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=956
 permalink: /2013/03/writting-django-applications-for-your-project/
-categories:
-  - Python
 tags:
   - django
   - programming

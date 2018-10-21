@@ -6,9 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3516
 permalink: /2016/02/using-the-gradle-wrapper-on-your-android-project/
-categories:
-  - Automation
-  - Mobile development
 tags:
   - android
   - automation

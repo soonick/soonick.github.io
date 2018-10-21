@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=491
 permalink: /2012/01/configuring-a-quick-and-ugly-local-email-server-on-ubuntu/
-categories:
-  - Linux
 tags:
   - apache
   - e-mail

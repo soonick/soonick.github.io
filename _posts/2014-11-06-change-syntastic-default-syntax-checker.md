@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2389
 permalink: /2014/11/change-syntastic-default-syntax-checker/
-categories:
-  - Vim
 tags:
   - productivity
   - syntastic

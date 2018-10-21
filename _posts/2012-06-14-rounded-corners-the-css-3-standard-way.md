@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=655
 permalink: /2012/06/rounded-corners-the-css-3-standard-way/
-categories:
-  - CSS
 tags:
   - css
-  - web-design
+  - web_design
 ---
 In this article I am going to explain the CSS 3 standard way of achieving rounded corners. Using only this technique is probably not going to give the cross browser behavior that you are expecting.
 

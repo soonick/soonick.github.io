@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=623
 permalink: /2012/04/creating-a-batch-file-on-windows/
-categories:
-  - Automation
 tags:
   - automation
   - programming

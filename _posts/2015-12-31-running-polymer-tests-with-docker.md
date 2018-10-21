@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3385
 permalink: /2015/12/running-polymer-tests-with-docker/
-categories:
-  - Javascript
 tags:
   - docker
   - javascript

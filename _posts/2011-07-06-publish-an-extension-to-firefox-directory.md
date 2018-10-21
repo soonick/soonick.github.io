@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=258
 permalink: /2011/07/publish-an-extension-to-firefox-directory/
-categories:
-  - Javascript
 tags:
-  - firefox extension
+  - firefox_extension
   - javascript
   - projects
   - tntfixer

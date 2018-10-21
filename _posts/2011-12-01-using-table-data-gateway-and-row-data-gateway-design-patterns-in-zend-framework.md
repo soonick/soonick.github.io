@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=480
 permalink: /2011/12/using-table-data-gateway-and-row-data-gateway-design-patterns-in-zend-framework/
-categories:
-  - PHP
 tags:
-  - design patterns
+  - design_patterns
   - php
-  - zend framework
+  - zend_framework
 ---
 Table Data Gateway and Row Data Gateway are two design patterns that are very closely related. The former specifies an object that acts as a gateway from our system to a table in a database. This means that it will give us the functionality necessary to execute all common operation to that table easily by providing methods to all the CRUD (Create, Read, Update, Delete) operations.
   

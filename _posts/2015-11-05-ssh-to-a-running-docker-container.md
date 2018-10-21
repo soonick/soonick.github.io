@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3266
 permalink: /2015/11/ssh-to-a-running-docker-container/
-categories:
-  - Linux
 tags:
   - docker
   - linux

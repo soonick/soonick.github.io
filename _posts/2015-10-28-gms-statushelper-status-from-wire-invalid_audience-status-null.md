@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3246
 permalink: /2015/10/gms-statushelper-status-from-wire-invalid_audience-status-null/
-categories:
-  - Mobile development
 tags:
+  - mobile
   - android
   - debugging
   - projects

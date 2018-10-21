@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2222
 permalink: /2015/02/binary-search/
-categories:
-  - Computer science
 tags:
+  - computer_science
   - algorithms
   - javascript
   - programming

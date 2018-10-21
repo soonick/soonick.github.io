@@ -6,10 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2116
 permalink: /2014/08/combine-two-strings/
-categories:
-  - Application Design
-  - Computer science
 tags:
+  - application_design
+  - computer_science
   - algorithms
   - javascript
   - programming

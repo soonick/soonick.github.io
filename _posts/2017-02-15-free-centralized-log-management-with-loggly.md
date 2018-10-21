@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4122
 permalink: /2017/02/free-centralized-log-management-with-loggly/
-categories:
-  - Linux
 tags:
   - docker
   - linux
-  - MySQL
+  - mysql
   - productivity
 ---
 I&#8217;m looking for a centralized log management system that I can plug into some of my hobby projects and while I was about to spin up my ELK server (Elasticsearch, Logstash, Kibana) I found that Loggly has a free tier. I have used Loggly before and it is pretty good so I decided to give it a try.

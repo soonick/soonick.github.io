@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2699
 permalink: /2015/03/routing-with-angular/
-categories:
-  - Javascript
 tags:
   - angularjs
   - javascript

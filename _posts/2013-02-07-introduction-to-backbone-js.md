@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=792
 permalink: /2013/02/introduction-to-backbone-js/
-categories:
-  - Javascript
 tags:
   - backbone
-  - design patterns
+  - design_patterns
   - javascript
   - mvc
 ---

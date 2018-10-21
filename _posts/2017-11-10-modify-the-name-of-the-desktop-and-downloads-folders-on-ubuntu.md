@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4645
 permalink: /2017/11/modify-the-name-of-the-desktop-and-downloads-folders-on-ubuntu/
-categories:
-  - Linux
 tags:
   - linux
 ---

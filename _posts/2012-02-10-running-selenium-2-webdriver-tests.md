@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=474
 permalink: /2012/02/running-selenium-2-webdriver-tests/
-categories:
-  - Automation
 tags:
+  - automation
   - java
   - selenium
   - testing

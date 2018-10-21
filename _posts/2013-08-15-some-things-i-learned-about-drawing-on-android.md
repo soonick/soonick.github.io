@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1681
 permalink: /2013/08/some-things-i-learned-about-drawing-on-android/
-categories:
-  - Mobile development
 tags:
   - android
   - java

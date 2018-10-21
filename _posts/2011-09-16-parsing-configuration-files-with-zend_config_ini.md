@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=300
 permalink: /2011/09/parsing-configuration-files-with-zend_config_ini/
-categories:
-  - PHP
 tags:
   - php
-  - zend framework
+  - zend_framework
 ---
 In most of the Internet applications there is a need to have a configuration file to store static information that the application needs to work. An very common example of this information is credentials to connect to a database.
 

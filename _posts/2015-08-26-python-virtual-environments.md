@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3120
 permalink: /2015/08/python-virtual-environments/
-categories:
-  - Python
 tags:
   - programming
   - python

@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4887
 permalink: /2018/02/introduction-to-gdb/
-categories:
-  - C/C++
 tags:
+  - c++
   - debugging
   - programming
 ---

@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=169
 permalink: /2011/05/attaching-event-listeners-to-the-current-document-on-firefox/
-categories:
-  - Javascript
 tags:
-  - firefox extension
+  - firefox_extension
   - javascript
   - projects
   - tntfixer

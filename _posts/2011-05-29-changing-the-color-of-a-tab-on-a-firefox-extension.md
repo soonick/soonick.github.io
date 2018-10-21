@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=185
 permalink: /2011/05/changing-the-color-of-a-tab-on-a-firefox-extension/
-categories:
-  - Javascript
 tags:
-  - firefox extension
+  - firefox_extension
   - javascript
   - xul
 ---

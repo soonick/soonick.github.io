@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4949
 permalink: /2018/03/stack-and-heap-memory-in-c/
-categories:
-  - C/C++
-  - Computer science
 tags:
+  - c++
   - programming
 ---
 Since I&#8217;ve been working in C++, I&#8217;ve noticed the necessity to get familiar with concepts about computer architecture and how the operating system works. One thing that has been bothering me for a few weeks is hearing people talk about the heap and stack memory, while I don&#8217;t really know what those things mean.

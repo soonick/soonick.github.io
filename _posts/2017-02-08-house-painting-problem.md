@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2193
 permalink: /2017/02/house-painting-problem/
-categories:
-  - Computer science
 tags:
+  - computer_science
   - algorithms
   - javascript
   - programming

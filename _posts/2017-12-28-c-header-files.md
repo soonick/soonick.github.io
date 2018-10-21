@@ -6,11 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4684
 permalink: /2017/12/c-header-files/
-categories:
-  - C/C++
 tags:
-  - design patterns
+  - design_patterns
   - programming
+  - c++
 ---
 I&#8217;m writing C++ in the title of this article because I&#8217;m currently in a journey to learn C++. I believe the same concepts apply to C.
 

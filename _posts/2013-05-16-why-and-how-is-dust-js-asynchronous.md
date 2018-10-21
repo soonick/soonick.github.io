@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1371
 permalink: /2013/05/why-and-how-is-dust-js-asynchronous/
-categories:
-  - Javascript
 tags:
   - ajax
   - debugging

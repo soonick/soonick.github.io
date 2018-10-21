@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=639
 permalink: /2012/06/pushing-and-deleting-remote-branches-with-git/
-categories:
-  - Git
 tags:
-  - Git
+  - git
   - github
 ---
 Creating new branches and deleting them locally is an easy task with git, but when it comes to doing it for a remote repository, happily, it is very easy too.

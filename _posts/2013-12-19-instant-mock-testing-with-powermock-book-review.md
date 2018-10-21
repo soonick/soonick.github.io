@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1897
 permalink: /2013/12/instant-mock-testing-with-powermock-book-review/
-categories:
-  - Automation
 tags:
   - android
   - automation

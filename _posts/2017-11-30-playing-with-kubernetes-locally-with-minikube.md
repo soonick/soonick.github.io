@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4172
 permalink: /2017/11/playing-with-kubernetes-locally-with-minikube/
-categories:
-  - Linux
 tags:
   - automation
   - docker

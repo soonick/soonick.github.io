@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1152
 permalink: /2013/02/making-your-local-server-accessible-from-anywhere/
-categories:
-  - Linux
 tags:
+  - linux
   - apache
   - networking
   - ssh

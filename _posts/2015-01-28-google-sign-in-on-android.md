@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2543
 permalink: /2015/01/google-sign-in-on-android/
-categories:
-  - Mobile development
 tags:
   - android
   - authentication

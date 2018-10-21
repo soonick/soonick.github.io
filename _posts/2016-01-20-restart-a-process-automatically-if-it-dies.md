@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3444
 permalink: /2016/01/restart-a-process-automatically-if-it-dies/
-categories:
-  - Linux
 tags:
   - automation
   - linux

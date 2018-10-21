@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3193
 permalink: /2015/10/using-webpack-with-react/
-categories:
-  - Javascript
 tags:
   - javascript
   - productivity

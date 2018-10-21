@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2113
 permalink: /2014/05/using-eslint-to-enforce-js-coding-conventions/
-categories:
-  - Javascript
 tags:
   - automation
   - javascript

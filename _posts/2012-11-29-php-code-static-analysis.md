@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=913
 permalink: /2012/11/php-code-static-analysis/
-categories:
-  - Automation
 tags:
   - automation
   - php

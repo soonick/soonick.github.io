@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4355
 permalink: /2017/10/introduction-to-beego/
-categories:
-  - Go
 tags:
   - bootstrapping
   - docker

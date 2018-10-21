@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2758
 permalink: /2015/04/building-modular-apps-with-angular/
-categories:
-  - Javascript
 tags:
   - angularjs
   - bootstrapping
-  - design patterns
+  - design_patterns
   - javascript
   - productivity
   - programming

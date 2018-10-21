@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3403
 permalink: /2016/01/first-steps-in-go-language/
-categories:
-  - Go
 tags:
   - golang
   - programming

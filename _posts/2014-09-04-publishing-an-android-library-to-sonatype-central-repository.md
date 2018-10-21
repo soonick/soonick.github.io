@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2287
 permalink: /2014/09/publishing-an-android-library-to-sonatype-central-repository/
-categories:
-  - Mobile development
 tags:
   - android
   - automation

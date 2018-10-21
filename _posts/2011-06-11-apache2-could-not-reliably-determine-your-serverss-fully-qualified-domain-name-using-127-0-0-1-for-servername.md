@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=225
 permalink: /2011/06/apache2-could-not-reliably-determine-your-serverss-fully-qualified-domain-name-using-127-0-0-1-for-servername/
-categories:
-  - Linux
 tags:
   - apache
   - linux

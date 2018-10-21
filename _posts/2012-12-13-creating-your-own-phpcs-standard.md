@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=947
 permalink: /2012/12/creating-your-own-phpcs-standard/
-categories:
-  - PHP
 tags:
   - automation
   - css

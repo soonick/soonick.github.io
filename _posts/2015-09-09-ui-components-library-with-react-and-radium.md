@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3151
 permalink: /2015/09/ui-components-library-with-react-and-radium/
-categories:
-  - Javascript
 tags:
   - css
   - javascript

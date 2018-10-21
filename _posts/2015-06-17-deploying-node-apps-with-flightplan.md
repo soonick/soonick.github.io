@@ -6,9 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2977
 permalink: /2015/06/deploying-node-apps-with-flightplan/
-categories:
-  - Javascript
-  - Linux
 tags:
   - automation
   - javascript

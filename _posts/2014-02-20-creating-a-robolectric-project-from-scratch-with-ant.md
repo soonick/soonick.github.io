@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1952
 permalink: /2014/02/creating-a-robolectric-project-from-scratch-with-ant/
-categories:
-  - Mobile development
 tags:
   - android
   - ant

@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1230
 permalink: /2013/05/getting-started-with-jenkins-continuous-integration/
-categories:
-  - Automation
 tags:
   - automation
   - jenkins
-  - open source
+  - open_source
   - testing
 ---
 For those of you who don&#8217;t know, Jenkins is an application that allows you to create a Continuous Integration environment for your software projects. Most of the time it is used to periodically run test and build your project in an environment that should be similar to your production environment.

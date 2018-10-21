@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3647
 permalink: /2016/05/golang-sane-dependency-management-with-glide/
-categories:
-  - Go
 tags:
   - automation
   - golang

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1669
 permalink: /2013/08/drawing-on-an-android-view/
-categories:
-  - Mobile development
 tags:
   - android
   - java

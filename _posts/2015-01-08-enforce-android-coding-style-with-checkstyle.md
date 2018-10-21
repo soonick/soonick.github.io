@@ -6,9 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2502
 permalink: /2015/01/enforce-android-coding-style-with-checkstyle/
-categories:
-  - Automation
-  - Mobile development
 tags:
   - android
   - automation

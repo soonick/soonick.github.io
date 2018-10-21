@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=829
 permalink: /2012/09/making-an-objects-protected-and-private-members-public-using-reflection/
-categories:
-  - PHP
 tags:
-  - design patterns
+  - design_patterns
   - php
   - programming
   - reflection

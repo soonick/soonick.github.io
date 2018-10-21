@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1789
 permalink: /2013/10/trasfering-files-via-ssh/
-categories:
-  - Linux
 tags:
   - linux
   - productivity

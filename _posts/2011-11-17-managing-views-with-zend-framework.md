@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=448
 permalink: /2011/11/managing-views-with-zend-framework/
-categories:
-  - PHP
 tags:
   - bootstrapping
   - php
-  - zend framework
+  - zend_framework
 ---
 ## Zend Layout
 

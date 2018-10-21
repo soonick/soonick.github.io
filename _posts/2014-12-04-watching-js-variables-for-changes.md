@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2393
 permalink: /2014/12/watching-js-variables-for-changes/
-categories:
-  - Javascript
 tags:
-  - design patterns
+  - design_patterns
   - javascript
   - programming
 ---

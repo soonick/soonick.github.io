@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.dev/?p=87
 permalink: /2011/05/using-firefox-preferences-system-when-developing-extensions/
-categories:
-  - Javascript
 tags:
-  - firefox extension
+  - firefox_extension
   - javascript
   - projects
   - tntfixer

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3714
 permalink: /2016/06/set-up-ssh-keys-for-logging-into-your-server/
-categories:
-  - Linux
 tags:
   - linux
   - ssh

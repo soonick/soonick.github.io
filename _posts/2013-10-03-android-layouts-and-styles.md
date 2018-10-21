@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1759
 permalink: /2013/10/android-layouts-and-styles/
-categories:
-  - Mobile development
 tags:
   - android
-  - design patterns
+  - design_patterns
   - java
   - mobile
   - programming

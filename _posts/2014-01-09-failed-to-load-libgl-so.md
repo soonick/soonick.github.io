@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1927
 permalink: /2014/01/failed-to-load-libgl-so/
-categories:
-  - Mobile development
 tags:
   - android
   - linux

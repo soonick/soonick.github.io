@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5123
 permalink: /2018/06/introduction-to-networking-in-google-cloud/
-categories:
-  - Application Design
 tags:
+  - application_design
   - linux
   - security
 ---

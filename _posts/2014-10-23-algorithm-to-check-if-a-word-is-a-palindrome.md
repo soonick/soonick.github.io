@@ -6,10 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2225
 permalink: /2014/10/algorithm-to-check-if-a-word-is-a-palindrome/
-categories:
-  - Application Design
-  - Computer science
 tags:
+  - application_design
+  - computer_science
   - algorithms
   - javascript
   - programming

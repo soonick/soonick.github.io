@@ -6,10 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2163
 permalink: /2014/12/median-of-integer-stream/
-categories:
-  - Application Design
-  - Computer science
 tags:
+  - application_design
+  - computer_science
   - algorithms
   - javascript
   - programming

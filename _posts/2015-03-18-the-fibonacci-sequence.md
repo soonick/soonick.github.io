@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2230
 permalink: /2015/03/the-fibonacci-sequence/
-categories:
-  - Computer science
 tags:
+  - computer_science
   - algorithms
   - javascript
   - programming

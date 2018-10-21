@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.dev/?p=118
 permalink: /2011/05/detecting-when-a-new-tab-or-window-is-open-on-firefox/
-categories:
-  - Javascript
 tags:
-  - firefox extension
+  - firefox_extension
   - javascript
   - projects
   - tntfixer

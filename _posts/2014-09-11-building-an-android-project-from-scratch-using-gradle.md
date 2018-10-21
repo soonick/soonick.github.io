@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2173
 permalink: /2014/09/building-an-android-project-from-scratch-using-gradle/
-categories:
-  - Mobile development
 tags:
   - android
   - automation

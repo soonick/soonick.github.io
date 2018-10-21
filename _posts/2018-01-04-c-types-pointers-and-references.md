@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4682
 permalink: /2018/01/c-types-pointers-and-references/
-categories:
-  - C/C++
 tags:
-  - C++
+  - c++
   - programming
 ---
 Writing a post about types in most high level languages I&#8217;m used to wouldn&#8217;t be very interesting, but I&#8217;ve recently started learning C++ and I realized that I need to understand memory a little better to be able to write and read C++ programs effectively.

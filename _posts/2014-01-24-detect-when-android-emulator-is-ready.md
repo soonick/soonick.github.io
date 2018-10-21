@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1888
 permalink: /2014/01/detect-when-android-emulator-is-ready/
-categories:
-  - Automation
-  - Mobile development
 tags:
   - android
+  - mobile
   - automation
   - productivity
   - testing

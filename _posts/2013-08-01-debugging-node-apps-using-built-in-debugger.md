@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1625
 permalink: /2013/08/debugging-node-apps-using-built-in-debugger/
-categories:
-  - Javascript
 tags:
   - debugging
   - javascript

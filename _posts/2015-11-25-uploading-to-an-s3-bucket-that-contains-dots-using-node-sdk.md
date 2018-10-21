@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3335
 permalink: /2015/11/uploading-to-an-s3-bucket-that-contains-dots-using-node-sdk/
-categories:
-  - Javascript
 tags:
   - aws
   - javascript

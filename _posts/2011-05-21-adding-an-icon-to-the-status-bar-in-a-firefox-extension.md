@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.dev/?p=52
 permalink: /2011/05/adding-an-icon-to-the-status-bar-in-a-firefox-extension/
-categories:
-  - Javascript
 tags:
-  - firefox extension
+  - firefox_extension
   - javascript
   - projects
   - tntfixer

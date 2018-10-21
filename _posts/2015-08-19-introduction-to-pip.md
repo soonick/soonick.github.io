@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3122
 permalink: /2015/08/introduction-to-pip/
-categories:
-  - Python
 tags:
   - programming
   - python

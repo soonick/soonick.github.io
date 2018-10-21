@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1907
 permalink: /2014/01/android-logcat-unexpected-value-from-nativegetenabledtags-0/
-categories:
-  - Mobile development
 tags:
+  - mobile
   - android
   - debugging
   - java

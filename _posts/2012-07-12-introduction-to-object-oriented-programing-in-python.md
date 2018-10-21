@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=732
 permalink: /2012/07/introduction-to-object-oriented-programing-in-python/
-categories:
-  - Python
 tags:
   - programming
   - python

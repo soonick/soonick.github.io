@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.dev/?p=14
 permalink: /2011/05/firefox-extensions-development/
-categories:
-  - Javascript
 tags:
-  - firefox extension
+  - firefox_extension
   - javascript
   - projects
   - tntfixer

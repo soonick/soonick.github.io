@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2999
 permalink: /2015/07/introduction-to-react/
-categories:
-  - Javascript
 tags:
   - javascript
   - programming

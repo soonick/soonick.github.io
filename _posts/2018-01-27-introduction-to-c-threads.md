@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4858
 permalink: /2018/01/introduction-to-c-threads/
-categories:
-  - C/C++
 tags:
+  - c++
   - linux
   - programming
 ---

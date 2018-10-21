@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5101
 permalink: /2018/07/getting-familiar-with-terraform/
-categories:
-  - Linux
 tags:
   - automation
   - linux

@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=796
 permalink: /2013/01/zend-framework-authorization/
-categories:
-  - PHP
 tags:
   - authentication
-  - design patterns
+  - design_patterns
   - php
   - programming
 ---

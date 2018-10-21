@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=866
 permalink: /2012/10/clear-floating-elements-with-css-clearfix/
-categories:
-  - CSS
 tags:
   - css
   - dom

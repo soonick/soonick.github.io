@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5275
 permalink: /2018/09/copy-assignment-and-copy-construction-in-c/
-categories:
-  - C/C++
 tags:
+  - c++
   - programming
 ---
 If you have written C++, you have most likely already used copy-assignment. Variables are copy assigned by using the equal sign:

@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=383
 permalink: /2012/04/creating-and-applying-patches-with-git/
-categories:
-  - Git
 tags:
-  - Git
+  - git
   - github
 ---
 Creating and applying patches using git is a task relatively easy to do. I will show how it all works using an example scenario.

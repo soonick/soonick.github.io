@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4449
 permalink: /2017/10/models-in-beego/
-categories:
-  - Go
 tags:
-  - design patterns
+  - design_patterns
   - golang
   - programming
 ---

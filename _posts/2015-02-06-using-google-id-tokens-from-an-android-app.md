@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2565
 permalink: /2015/02/using-google-id-tokens-from-an-android-app/
-categories:
-  - Mobile development
 tags:
   - android
   - java

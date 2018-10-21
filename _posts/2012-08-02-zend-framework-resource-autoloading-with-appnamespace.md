@@ -6,13 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=763
 permalink: /2012/08/zend-framework-resource-autoloading-with-appnamespace/
-categories:
-  - PHP
 tags:
   - bootstrapping
   - php
   - programming
-  - zend framework
+  - zend_framework
 ---
 A few days ago I was having problems getting my models autoloaded by Zend Framewok, after a little research I found the solution.
 

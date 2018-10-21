@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=286
 permalink: /2011/07/how-to-delete-a-commit-in-git-local-and-remote/
-categories:
-  - Git
 tags:
-  - Git
+  - git
   - github
 ---
 It has happened to me more than once that I make a commit without verifying the changes I am committing. Time after that I review the commit and I notice that there is something in the commit that doesn&#8217;t belong there.

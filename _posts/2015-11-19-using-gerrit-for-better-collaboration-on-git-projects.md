@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3254
 permalink: /2015/11/using-gerrit-for-better-collaboration-on-git-projects/
-categories:
-  - Git
 tags:
-  - Git
+  - git
   - linux
-  - open source
+  - open_source
   - productivity
 ---
 I&#8217;m working with a small team that is divided in two geographical locations. This separation has made collaboration a little challenging which has compromised the quality of the code base. I&#8217;m exploring tools that can help us collaborate better, particularly making it easy to review each others code.

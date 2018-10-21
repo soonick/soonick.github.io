@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=860
 permalink: /2012/11/profiling-php-applications-with-xdebug/
-categories:
-  - PHP
 tags:
   - debugging
   - php

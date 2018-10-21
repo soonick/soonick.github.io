@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3229
 permalink: /2015/10/socket-statistics-with-ss/
-categories:
-  - Linux
 tags:
   - apache
   - debugging

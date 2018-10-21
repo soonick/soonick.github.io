@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=647
 permalink: /2012/05/sudo-unable-to-resolve-host/
-categories:
-  - Linux
 tags:
   - apache
   - linux
-  - virtual host
+  - virtual_host
 ---
 Today out of the blue (or at least that is what I thought when I first saw it) I started seeing this message everytime I issued a command using sudo:
 

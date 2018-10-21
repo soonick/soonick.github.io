@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=278
 permalink: /2011/08/run-php-unit-tests-automatically-using-git-hooks/
-categories:
-  - PHP
 tags:
-  - Git
+  - git
   - linux
   - php
 ---

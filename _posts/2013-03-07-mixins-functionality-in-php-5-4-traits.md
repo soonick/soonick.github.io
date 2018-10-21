@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=790
 permalink: /2013/03/mixins-functionality-in-php-5-4-traits/
-categories:
-  - PHP
 tags:
-  - design patterns
+  - design_patterns
   - php
   - programming
   - traits

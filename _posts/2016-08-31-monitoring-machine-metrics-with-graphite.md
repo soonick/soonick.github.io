@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3720
 permalink: /2016/08/monitoring-machine-metrics-with-graphite/
-categories:
-  - Linux
 tags:
   - docker
   - linux

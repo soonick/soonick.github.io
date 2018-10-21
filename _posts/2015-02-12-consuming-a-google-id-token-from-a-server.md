@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2573
 permalink: /2015/02/consuming-a-google-id-token-from-a-server/
-categories:
-  - Javascript
-  - Mobile development
 tags:
   - javascript
+  - mobile
   - node
   - programming
 ---

@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3524
 permalink: /2016/03/create-a-navigation-menu-for-your-android-app/
-categories:
-  - Mobile development
 tags:
+  - mobile
   - android
   - java
   - programming

@@ -6,13 +6,12 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1863
 permalink: /2014/03/hash-tables/
-categories:
-  - Application Design
-  - Computer science
 tags:
+  - application_design
+  - computer_science
   - algorithms
-  - data structures
-  - design patterns
+  - data_structures
+  - design_patterns
   - javascript
   - programming
 ---

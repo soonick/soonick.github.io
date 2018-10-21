@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2083
 permalink: /2014/06/java-generics/
-categories:
-  - Mobile development
 tags:
+  - mobile
   - java
   - programming
 ---

@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1117
 permalink: /2013/03/working-with-git-submodules/
-categories:
-  - Git
 tags:
-  - Git
+  - git
 ---
 Git submodules is a way to organize your code so you can include libraries or other projects into your project. You want to treat these libraries as a separate repository so they are by themselves versioned by git in another repository.
 

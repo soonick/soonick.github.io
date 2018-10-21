@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5036
 permalink: /2018/05/linux-page-cache/
-categories:
-  - Linux
 tags:
   - debugging
   - linux

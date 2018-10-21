@@ -6,11 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2004
 permalink: /2014/05/building-back-stack-correctly-when-coming-from-a-notification-on-android/
-categories:
-  - Mobile development
 tags:
+  - mobile
   - android
-  - design patterns
+  - design_patterns
   - java
   - programming
 ---

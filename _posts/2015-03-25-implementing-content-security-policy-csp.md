@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1850
 permalink: /2015/03/implementing-content-security-policy-csp/
-categories:
-  - Javascript
 tags:
   - javascript
   - programming

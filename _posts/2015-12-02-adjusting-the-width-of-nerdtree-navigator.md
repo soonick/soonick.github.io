@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3342
 permalink: /2015/12/adjusting-the-width-of-nerdtree-navigator/
-categories:
-  - Vim
 tags:
   - productivity
   - vim

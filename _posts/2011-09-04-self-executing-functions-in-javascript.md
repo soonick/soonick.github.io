@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=284
 permalink: /2011/09/self-executing-functions-in-javascript/
-categories:
-  - Javascript
 tags:
-  - design patterns
+  - design_patterns
   - javascript
 ---
 When I first saw this programming pattern I found very difficult to understand why would people want to make their code so confusing. When I finally understood why this is used I knew I had to write about it someday. Today is that day.

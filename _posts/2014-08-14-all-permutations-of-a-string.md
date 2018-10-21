@@ -6,10 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2157
 permalink: /2014/08/all-permutations-of-a-string/
-categories:
-  - Application Design
-  - Computer science
 tags:
+  - application_design
+  - computer_science
   - algorithms
   - javascript
   - programming

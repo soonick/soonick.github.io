@@ -6,13 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=863
 permalink: /2013/05/js-dependency-management/
-categories:
-  - Javascript
 tags:
-  - dependecy management
+  - dependecy_management
   - javascript
   - programming
-  - require.js
+  - require_js
 ---
 It is common for JavaScript applications to depend on libraries, or JavasScript files to depend on other files. The way we usually deal with this problem is by manually including the files we depend on on our document:
 

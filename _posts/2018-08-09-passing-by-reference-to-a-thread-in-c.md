@@ -6,11 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5213
 permalink: /2018/08/passing-by-reference-to-a-thread-in-c/
-categories:
-  - C/C++
 tags:
-  - design patterns
+  - design_patterns
   - programming
+  - c++
 ---
 Today I discovered that there are some interesting behaviors when you use a function that takes a reference as an entry point for a thread.
 

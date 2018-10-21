@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1443
 permalink: /2013/06/creating-user-interfaces-with-android-part-1-of-2/
-categories:
-  - Mobile development
 tags:
   - android
   - java

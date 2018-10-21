@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1679
 permalink: /2013/08/changing-your-default-name-and-e-mail-on-git/
-categories:
-  - Git
 tags:
-  - Git
+  - git
   - linux
 ---
 If you just installed git in your computer you probably got a message telling you that your name and e-mail haven&#8217;t been configured and suggesting you to change them the first time you commit:

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5318
 permalink: /2018/10/introduction-to-top-for-system-diagnosis/
-categories:
-  - Linux
 tags:
   - debugging
   - linux

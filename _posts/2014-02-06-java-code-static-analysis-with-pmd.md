@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1890
 permalink: /2014/02/java-code-static-analysis-with-pmd/
-categories:
-  - Automation
 tags:
   - android
   - automation

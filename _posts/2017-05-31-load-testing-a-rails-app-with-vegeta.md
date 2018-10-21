@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4251
 permalink: /2017/05/load-testing-a-rails-app-with-vegeta/
-categories:
-  - Application Design
 tags:
+  - application_design
   - docker
   - programming
   - rails

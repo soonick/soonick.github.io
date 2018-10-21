@@ -6,13 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4432
 permalink: /2017/10/database-migrations-in-beego/
-categories:
-  - Go
 tags:
   - automation
-  - design patterns
+  - design_patterns
   - golang
-  - MySQL
+  - mysql
   - productivity
   - programming
 ---

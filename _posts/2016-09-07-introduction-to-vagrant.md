@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3855
 permalink: /2016/09/introduction-to-vagrant/
-categories:
-  - Linux
 tags:
   - bootstrapping
   - linux
-  - open source
+  - open_source
   - productivity
 ---
 Vagrant is a tool for easily creating shareable development environments for your team. It consists of a configuration file with instructions for creating a virtual machine. This virtual machine should contain everything a developer might need to work in a specific project. This configuration file is then committed to the repo and shared with the team. All developers work inside this machine, preventing problems or inconsistencies setting up their development environment.

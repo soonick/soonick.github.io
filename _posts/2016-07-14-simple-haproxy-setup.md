@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3771
 permalink: /2016/07/simple-haproxy-setup/
-categories:
-  - Linux
 tags:
   - docker
   - haproxy

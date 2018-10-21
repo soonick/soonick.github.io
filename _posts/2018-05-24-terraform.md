@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5061
 permalink: /2018/05/terraform/
-categories:
-  - Linux
 tags:
   - automation
   - linux

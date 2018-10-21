@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2774
 permalink: /2015/04/web-components/
-categories:
-  - Javascript
 tags:
-  - design patterns
+  - design_patterns
   - dom
   - javascript
   - programming

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4389
 permalink: /2017/11/disable-sslv3-in-haproxy/
-categories:
-  - Linux
 tags:
   - linux
   - security

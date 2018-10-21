@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4604
 permalink: /2017/12/introduction-to-etcd/
-categories:
-  - Linux
 tags:
   - linux
-  - open source
+  - open_source
 ---
 In previous posts I wrote a little about [distributed systems](http://ncona.com/2017/12/distributed-systems/) and the [Raft algorithm](http://ncona.com/2017/12/raft-for-reaching-consensus/). Today I&#8217;m going to look at one distributed key-value store that uses the Raft algorithm to achieve consistency and high availability.
 

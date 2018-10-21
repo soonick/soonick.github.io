@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1840
 permalink: /2014/10/angularjs-vocabulary/
-categories:
-  - Javascript
 tags:
   - angularjs
-  - design patterns
+  - design_patterns
   - javascript
   - programming
 ---

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1972
 permalink: /2014/04/schedule-your-android-app-to-do-something-periodically/
-categories:
-  - Mobile development
 tags:
   - android
   - bootstrapping

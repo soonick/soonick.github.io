@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=387
 permalink: /2011/10/using-zend_application-for-bootstrapping/
-categories:
-  - PHP
 tags:
   - bootstrapping
   - php
-  - zend framework
+  - zend_framework
 ---
 Zend_Application is a class that provides an easy to use bootstrapping facility for your application. It also takes care of setting up the PHP environment and introduces autoloading by default.
 

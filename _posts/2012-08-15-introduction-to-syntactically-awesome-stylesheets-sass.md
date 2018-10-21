@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=773
 permalink: /2012/08/introduction-to-syntactically-awesome-stylesheets-sass/
-categories:
-  - CSS
 tags:
   - automation
   - css

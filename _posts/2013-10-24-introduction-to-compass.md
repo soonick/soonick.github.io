@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1808
 permalink: /2013/10/introduction-to-compass/
-categories:
-  - CSS
 tags:
   - css
   - productivity
-  - web-design
+  - web_design
 ---
 Compass describes itself as an open source CSS authoring framework. For me, it is a tool that helps me organize my CSS and create sprites easily.
 

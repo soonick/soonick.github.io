@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3171
 permalink: /2015/09/introduction-to-reworkcss/
-categories:
-  - CSS
 tags:
   - css
   - productivity

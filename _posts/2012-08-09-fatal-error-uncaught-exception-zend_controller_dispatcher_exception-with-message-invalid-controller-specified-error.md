@@ -6,13 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=759
 permalink: /2012/08/fatal-error-uncaught-exception-zend_controller_dispatcher_exception-with-message-invalid-controller-specified-error/
-categories:
-  - PHP
 tags:
   - bootstrapping
   - php
   - programming
-  - zend framework
+  - zend_framework
 ---
 By default Zend Framework has a front controller plugin that tries to send all exceptions and errors to a controller named ErrorController. If that controller is not found you will get this error.
 

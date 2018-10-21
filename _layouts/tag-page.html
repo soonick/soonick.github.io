@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<h1>{{ page.tag | capitalize}}</h1>
+<div class="tag-posts">
+{% for post in site.tags[page.tag] %}
+  <h2><a href="{{post.url | prepend: site.baseurl}}">{{ post.title }}</a></h2>
+  <h3>{{ post.date | date_to_string }}</h3>
+{% endfor %}
+</div>

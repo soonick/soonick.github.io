@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3471
 permalink: /2016/02/go-language-arrays/
-categories:
-  - Go
 tags:
   - golang
   - programming

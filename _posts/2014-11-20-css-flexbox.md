@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2398
 permalink: /2014/11/css-flexbox/
-categories:
-  - CSS
 tags:
   - css
-  - web-design
+  - web_design
 ---
 Today I found myself in the need to create a layout that I hadn&#8217;t done before:
 

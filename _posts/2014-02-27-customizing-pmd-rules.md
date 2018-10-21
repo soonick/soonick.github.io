@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1962
 permalink: /2014/02/customizing-pmd-rules/
-categories:
-  - Automation
 tags:
   - ant
   - automation

@@ -6,12 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=633
 permalink: /2012/05/enabling-mod-rewrite-on-ubuntu/
-categories:
-  - Linux
 tags:
   - apache
   - linux
-  - virtual host
+  - virtual_host
 ---
 I recently reinstalled the operating system on my computer and thus had to re-install all my applications and development environments.
 

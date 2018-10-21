@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4081
 permalink: /2017/01/ssl-termination-on-load-balanced-wordpress/
-categories:
-  - PHP
 tags:
   - php
   - programming

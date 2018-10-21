@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2815
 permalink: /2015/06/introduction-to-browserify/
-categories:
-  - Javascript
 tags:
   - browserify
   - javascript

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1841
 permalink: /2013/11/command-line-task-manager-for-linux/
-categories:
-  - Linux
 tags:
   - linux
   - productivity

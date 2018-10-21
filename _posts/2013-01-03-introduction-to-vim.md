@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1050
 permalink: /2013/01/introduction-to-vim/
-categories:
-  - Vim
 tags:
   - productivity
   - programming

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=890
 permalink: /2012/10/javascript-inheritance/
-categories:
-  - Javascript
 tags:
   - javascript
   - programming

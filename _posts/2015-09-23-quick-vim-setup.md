@@ -6,12 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3184
 permalink: /2015/09/quick-vim-setup/
-categories:
-  - Vim
 tags:
+  - vim
   - automation
   - github
-  - open source
+  - open_source
   - productivity
   - programming
   - projects

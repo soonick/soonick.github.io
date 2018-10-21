@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1057
 permalink: /2013/01/configuring-vim/
-categories:
-  - Vim
 tags:
   - linux
   - productivity

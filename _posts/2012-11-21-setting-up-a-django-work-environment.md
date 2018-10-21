@@ -6,13 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=951
 permalink: /2012/11/setting-up-a-django-work-environment/
-categories:
-  - Python
 tags:
   - apache
   - programming
   - python
-  - virtual host
+  - virtual_host
 ---
 In my journey to learn python, the next step is to learn Django. Django is a web framework powered by python, so to use it we need to make sure we have python installed:
 

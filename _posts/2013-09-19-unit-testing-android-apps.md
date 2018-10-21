@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1718
 permalink: /2013/09/unit-testing-android-apps/
-categories:
-  - Mobile development
 tags:
   - android
   - ant

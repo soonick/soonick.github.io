@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3348
 permalink: /2015/12/suspending-processes/
-categories:
-  - Linux
 tags:
   - bash
   - linux

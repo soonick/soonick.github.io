@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3785
 permalink: /2016/07/android-development-with-docker/
-categories:
-  - Mobile development
 tags:
   - android
   - automation

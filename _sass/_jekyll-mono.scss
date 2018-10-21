@@ -317,3 +317,14 @@ button.button-primary:focus {
 .tag-posts h3 {
   margin-top: 0;
 }
+
+.tag-posts h2 {
+  margin-bottom: 0;
+  a {
+    color: $h1-color;
+  }
+}
+
+.tag-posts h3 {
+  margin-top: 0;
+}

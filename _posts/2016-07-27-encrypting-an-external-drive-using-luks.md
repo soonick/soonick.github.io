@@ -6,8 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3827
 permalink: /2016/07/encrypting-an-external-drive-using-luks/
-categories:
-  - Linux
+tags:
+  - linux
 ---
 I recently had a friend who lost an external hard drive where she stored private information. This hard drive can now be read by anyone who finds it because there was no protection on it. To prevent that from happening to me I decided I will start encrypting my external drives (My computer drives are already encrypted by the OS).
 

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4015
 permalink: /2017/01/free-https-with-lets-encrypt/
-categories:
-  - Linux
 tags:
   - automation
   - linux

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3581
 permalink: /2016/03/go-language-the-for-loop/
-categories:
-  - Go
 tags:
   - golang
   - programming

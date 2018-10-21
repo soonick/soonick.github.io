@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3025
 permalink: /2015/07/writing-es6-with-babel/
-categories:
-  - Javascript
 tags:
   - es6
   - javascript

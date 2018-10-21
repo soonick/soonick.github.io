@@ -6,9 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1998
 permalink: /2014/03/configure-syntastic-to-work-fine-with-android-projects/
-categories:
-  - Mobile development
-  - Vim
 tags:
   - android
   - java

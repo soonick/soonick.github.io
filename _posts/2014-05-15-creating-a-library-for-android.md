@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2081
 permalink: /2014/05/creating-a-library-for-android/
-categories:
-  - Mobile development
 tags:
   - android
   - java

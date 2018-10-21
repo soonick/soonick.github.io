@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=917
 permalink: /2012/11/php-warning-date-it-is-not-safe-to-rely-on-the-systems-timezone-settings/
-categories:
-  - PHP
 tags:
   - apache
-  - error messages
+  - error_messages
   - linux
   - php
 ---

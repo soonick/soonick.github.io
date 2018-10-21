@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1305
 permalink: /2013/04/writing-a-simple-node-js-server/
-categories:
-  - Javascript
 tags:
   - javascript
   - node

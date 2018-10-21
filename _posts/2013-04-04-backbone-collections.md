@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1195
 permalink: /2013/04/backbone-collections/
-categories:
-  - Javascript
 tags:
   - backbone
   - collections

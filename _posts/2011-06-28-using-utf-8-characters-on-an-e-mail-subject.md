@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=234
 permalink: /2011/06/using-utf-8-characters-on-an-e-mail-subject/
-categories:
-  - PHP
 tags:
+  - php
   - e-mail
   - internationalization
 ---

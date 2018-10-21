@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2289
 permalink: /2014/08/consuming-android-library-with-gradle/
-categories:
-  - Mobile development
 tags:
+  - mobile
   - android
   - gradle
   - productivity

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3277
 permalink: /2015/11/local-development-with-docker/
-categories:
-  - Linux
 tags:
   - docker
   - linux

@@ -6,8 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1909
 permalink: /2014/01/publishing-an-android-app-to-the-play-store/
-categories:
-  - Mobile development
+tags:
+  - mobile
 ---
 There is extensive documentation of what you need to do to release your app in the Android documentation. It is so much documentation that I wanted to gather a more straight forward list of steps.
 

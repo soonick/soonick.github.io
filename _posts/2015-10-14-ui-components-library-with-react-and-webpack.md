@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3158
 permalink: /2015/10/ui-components-library-with-react-and-webpack/
-categories:
-  - Javascript
 tags:
   - javascript
   - programming

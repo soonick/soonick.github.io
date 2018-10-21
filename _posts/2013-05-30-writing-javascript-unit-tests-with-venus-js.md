@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1398
 permalink: /2013/05/writing-javascript-unit-tests-with-venus-js/
-categories:
-  - Javascript
 tags:
   - automation
   - debugging

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3367
 permalink: /2015/12/testing-polymer-components-using-web-component-tester/
-categories:
-  - Javascript
 tags:
   - javascript
   - polymer

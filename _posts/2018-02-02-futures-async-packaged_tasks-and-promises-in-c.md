@@ -6,10 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4906
 permalink: /2018/02/futures-async-packaged_tasks-and-promises-in-c/
-categories:
-  - C/C++
 tags:
-  - design patterns
+  - c++
+  - design_patterns
   - programming
 ---
 If you are unfamiliar with threads in C++ I recommend you take a look at [my article about threads](https://ncona.com/2018/01/introduction-to-c-threads/) before reading this one.

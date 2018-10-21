@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4387
 permalink: /2017/11/progressive-web-apps-install-banner/
-categories:
-  - Javascript
 tags:
   - debugging
   - javascript

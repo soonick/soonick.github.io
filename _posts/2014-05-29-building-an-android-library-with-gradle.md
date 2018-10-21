@@ -6,14 +6,12 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2144
 permalink: /2014/05/building-an-android-library-with-gradle/
-categories:
-  - Mobile development
 tags:
   - android
   - automation
   - gradle
   - mobile
-  - open source
+  - open_source
   - productivity
 ---
 Android has moved away from ant and adopted gradle as its build system. I&#8217;m not very familiar with gradle but there is a feature of the new build system that makes it really appealing to migrate to it. The new gradle build system compiles libraries into an .aar (Android ARchive) which includes it&#8217;s resources and assets in a way that can be consumed by the apps that use your library.

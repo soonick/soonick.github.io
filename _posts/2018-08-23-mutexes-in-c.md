@@ -6,10 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5218
 permalink: /2018/08/mutexes-in-c/
-categories:
-  - C/C++
 tags:
-  - design patterns
+  - c++
+  - design_patterns
   - linux
   - programming
 ---

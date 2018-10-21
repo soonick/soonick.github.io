@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=331
 permalink: /2011/08/transforming-xhtml-documents-with-xslt-1-0-and-php/
-categories:
-  - PHP
 tags:
   - php
   - xml

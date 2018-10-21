@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=556
 permalink: /2012/03/filesync-file-synchronization-plugin-for-notepad/
-categories:
-  - C/C++
 tags:
-  - C/C++
+  - c++
   - programming
   - projects
 ---

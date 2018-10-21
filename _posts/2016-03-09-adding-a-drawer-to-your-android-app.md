@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3547
 permalink: /2016/03/adding-a-drawer-to-your-android-app/
-categories:
-  - Mobile development
 tags:
   - android
   - java

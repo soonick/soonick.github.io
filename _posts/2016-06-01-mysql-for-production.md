@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3675
 permalink: /2016/06/mysql-for-production/
-categories:
-  - Mysql
 tags:
+  - mysql
   - linux
-  - MySQL
   - security
 ---
 I&#8217;m starting a web project and I decided to save some money by hosting my MySQL database in a cheap instance in Digital Ocean. I was a little concerned about security so I did some research and found some ways to make my installation a little safer.

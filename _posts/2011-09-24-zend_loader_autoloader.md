@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=378
 permalink: /2011/09/zend_loader_autoloader/
-categories:
-  - PHP
 tags:
   - php
-  - zend framework
+  - zend_framework
 ---
 This class allows lazy loading of classes upon request. This will in place prevent you from having to manually include the files that you will need in your application.
 

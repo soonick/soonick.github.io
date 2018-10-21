@@ -6,12 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=1359
 permalink: /2013/06/getting-started-with-raspberry-pi/
-categories:
-  - Linux
 tags:
+  - linux
   - bootstrapping
   - hardware
-  - raspberry pi
+  - raspberry_pi
 ---
 I got my hands into a Raspberry Pi, so I thought it was time to start playing with it. My goal is to show the first steps to get your Pi running, so basically installing the OS in the SD card.
 

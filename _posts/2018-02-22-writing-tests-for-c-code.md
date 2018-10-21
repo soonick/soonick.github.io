@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4846
 permalink: /2018/02/writing-tests-for-c-code/
-categories:
-  - C/C++
 tags:
+  - c++
   - programming
   - testing
 ---

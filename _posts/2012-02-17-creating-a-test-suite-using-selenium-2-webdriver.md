@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=543
 permalink: /2012/02/creating-a-test-suite-using-selenium-2-webdriver/
-categories:
-  - Automation
 tags:
+  - automation
   - java
   - selenium
   - testing

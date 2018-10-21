@@ -6,13 +6,11 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=748
 permalink: /2012/07/setting-environment-variables/
-categories:
-  - PHP
 tags:
   - apache
   - php
   - programming
-  - virtual host
+  - virtual_host
 ---
 It is often necessary to differentiate different environments by setting an environment variable with a different value on each of your different systems (development, qa, production). This is very easy to achieve if you are using Apache and PHP. You just need to modify your virtual host definition (See: [Creating local virtual hosts with apache](http://ncona.com/2011/06/creating-local-virtual-hosts-with-apache/ "Creating local virtual hosts in apache")) to include a SetEnv directive:
 

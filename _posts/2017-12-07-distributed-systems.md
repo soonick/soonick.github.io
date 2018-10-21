@@ -6,11 +6,10 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=4553
 permalink: /2017/12/distributed-systems/
-categories:
-  - Application Design
 tags:
-  - design patterns
-  - MySQL
+  - application_design
+  - design_patterns
+  - mysql
 ---
 In computer science a distributed system is a software system in which different parts of it communicate by passing messages through a network. The different parts could be running in the same machine or distributed across the globe; as long as they communicate through an unreliable channel (a network), we can classify them as distributed and consider the challenges that come with it.
 

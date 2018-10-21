@@ -6,10 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2911
 permalink: /2015/05/git-bisect/
-categories:
-  - Git
 tags:
-  - Git
+  - git
   - productivity
 ---
 Git bisect helps you find out the commit that introduced a bug. It has happened a few times that somebody discovers a bug that I knew used to work fine before. When this happens I go back to an arbitrary point in the git history and try to reproduce the bug. If the bug is still present I go back a little more, until I find a point where the bug is not there. Then I try to find the commit that introduced the bug by searching through the commits between the commit I know works and the one I know doesn&#8217;t.

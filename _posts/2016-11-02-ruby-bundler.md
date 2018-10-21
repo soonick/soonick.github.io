@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3931
 permalink: /2016/11/ruby-bundler/
-categories:
-  - Ruby
 tags:
   - bundler
   - programming

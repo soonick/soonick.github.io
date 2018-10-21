@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=5320
 permalink: /2018/09/how-to-find-how-many-cores-your-system-has/
-categories:
-  - Linux
 tags:
   - linux
 ---

@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=350
 permalink: /2011/08/dealing-with-apaches-limit-on-back-references-when-rewriting-urls/
-categories:
-  - PHP
 tags:
   - apache
   - linux

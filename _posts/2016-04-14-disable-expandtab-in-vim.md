@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3656
 permalink: /2016/04/disable-expandtab-in-vim/
-categories:
-  - Vim
 tags:
   - productivity
   - vim

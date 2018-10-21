@@ -6,9 +6,8 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=2498
 permalink: /2015/01/unable-to-exclude-pmd-rule-after-upgrading-to-gradle-2/
-categories:
-  - Mobile development
 tags:
+  - mobile
   - android
   - automation
   - gradle

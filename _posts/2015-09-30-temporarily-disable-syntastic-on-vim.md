@@ -6,8 +6,6 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3186
 permalink: /2015/09/temporarily-disable-syntastic-on-vim/
-categories:
-  - Vim
 tags:
   - productivity
   - vim

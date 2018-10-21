@@ -6,11 +6,9 @@ author: adrian.ancona
 layout: post
 guid: http://ncona.com/?p=3087
 permalink: /2015/07/trunk-development-flow-with-git/
-categories:
-  - Git
 tags:
   - automation
-  - Git
+  - git
 ---
 The trunk development flow is an alternative to [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) or [github flow](https://guides.github.com/introduction/flow/) that is used at very big companies(LinkedIn, Google, FaceBook) to allow many developers to work in the same code base with the least amount of friction.
 
