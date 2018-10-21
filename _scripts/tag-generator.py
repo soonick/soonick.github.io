@@ -2,14 +2,13 @@
 
 import glob
 import os
-from sets import Set
 
 post_dir = '_posts/'
 tag_dir = 'tag-pages/'
 
 filenames = glob.glob(post_dir + '*md')
 
-all_tags = Set()
+all_tags = set()
 for filename in filenames:
     f = open(filename, 'r')
 
