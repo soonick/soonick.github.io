@@ -2,7 +2,7 @@ AVL trees (named after their inventors, Adelson-Velskii and Landis) were the fir
 
 This type of tree allows you to perform insertions, deletions and searches in O(log n). This tree keeps track of the heights of all the nodes. Every time one node is inserted, its height is compared with all the other leafs. If the height differs by more than one, the tree needs to be balanced.
 
-<strong>Search</strong>
+## Search
 
 An AVL tree is a binary search tree (BST). A binary search tree is a binary tree where the nodes are ordered following these characteristics:
 
@@ -19,33 +19,34 @@ Searching an AVL tree works the same way as searching any other binary search tr
 - If the value you are looking for is lower then do a binary search on the left node
 - If at any time you find a null node then the value was not found
 
-[cc lang="js"]
-function search(val, root) {
-  // If the val is in the current root then return it
-  if (root.val === val) {
-    return root;
-  }
-
-  if (val > root.val) {
-    // If the value we are searching for is greater then
-    // we keep searching at the right
-    if (root.right) {
-      return this.search(val, root.right);
+```js
+class AvlTree {
+  search(val) {
+    // If the val is in the current root then return it
+    if (this.val === val) {
+      return this;
     }
-  } else {
-    // If the value we are searching for is lower then
-    // we keep searching at the left
-    if (root.left) {
-      return this.search(val, root.left);
-    }
-  }
 
-  // If there was no root.left or root.right then
-  // nothing will be returned
+    if (val > this.val) {
+      // If the value we are searching for is greater, then
+      // we keep searching at the right
+      if (this.right) {
+        return this.right.search(val);
+      }
+    } else {
+      // If the value we are searching for is lower, then
+      // we keep searching at the left
+      if (this.left) {
+        return this.left.search(val);
+      }
+    }
+
+    // If there was no this.left or this.right then nothing will be returned
+  }
 }
-[/cc]
+```
 
-<strong>Balancing</strong>
+## Balancing
 
 Before jumping into insertion and deletion we need to explore balancing the tree. If at any moment the left node height and the right node height difference is greater than one then we need to rebalance. Let's look at an example:
 
@@ -88,9 +89,9 @@ Now that we roughly know when to balance a tree, we need to look at how to do it
 
 When a tree becomes unbalanced, it has to be balanced by performing what is called a rotation. There are four different rotations that we can use to balance a tree. I'll use examples with only three nodes for simplicity, but the examples can be generalized. More specifically, once you find the node where the rotation needs to be made, you can make the rotation and disregard the sub-trees of the nodes below.
 
-<strong>LL - Left-Left</strong>
+## LL - Left-Left
 
-An LL rotation is necessary when we have a tree that is too heave on the right:
+An LL rotation is necessary when we have a tree that is too heavy on the right:
 
 [cc]
     4
@@ -110,15 +111,13 @@ For the example above, we can imagine that we started by inserting 4, then 5 and
 
 The steps we followed to get there are:
 
-<ul>
-  <li>Whatever is above 4 needs to point to 5 now</li>
-  <li>4 becomes 5's left child</li>
-  <li>Whatever was 5's left child, becomes, 4's right child</li>
-</ul>
+ - Whatever is above 4 needs to point to 5 now
+ - 4 becomes 5's left child
+ - Whatever was 5's left child, becomes, 4's right child
 
 Those are all the changes needed. Everything else stays the same. Let's add some markers to make this clearer:
 
-[cc]
+```
 This:
 
     P
@@ -137,13 +136,13 @@ Becomes this:
 4       6
  \
   L
-[/cc]
+```
 
-<strong>RR - Right-Right</strong>
+## RR - Right-Right
 
 This is a mirror of LL:
 
-[cc]
+```
 This:
 
     P
@@ -162,41 +161,39 @@ Becomes this:
 4       6
        /
       R
-[/cc]
+```
 
 The steps we followed are:
 
-<ul>
-  <li>Whatever is above 6 needs to point to 5 now</li>
-  <li>6 becomes 5's right child</li>
-  <li>Whatever was 5's right child, becomes, 6's left child</li>
-</ul>
+ - Whatever is above 6 needs to point to 5 now
+ - 6 becomes 5's right child
+ - Whatever was 5's right child, becomes, 6's left child
 
-<strong>LR - Left-Right</strong>
+## LR - Left-Right
 
 This is where things become a little more interesting. In some situations a single rotation is not enough:
 
-[cc]
+```
     4
       \
        6
       /
      5
-[/cc]
+```
 
 We could try an LL, but that doesn't really solve anything:
 
-[cc]
+```
     6
    /
   4
    \
     5
-[/cc]
+```
 
-The way we do this is by doing a right on the right sub-tree:
+The way we solve this is by doing a right rotation on the right sub-tree:
 
-[cc]
+```
 This is were we started:
 
     4
@@ -211,7 +208,7 @@ This is the right sub-tree of 4:
  /
 5
 
-After right rotating this tree we get:
+After a right rotating this is the tree we get:
 
 5
  \
@@ -224,15 +221,15 @@ And the whole thing looks like this:
    5
     \
      6
+```
 
 From here we can do our left rotation and we'll have a balanced tree.
-[/cc]
 
-<strong>RL - Right-Left</strong>
+## RL - Right-Left
 
 This is a mirror or LR. The process looks something like this:
 
-[cc]
+```
 This would be the starting point:
 
   6
@@ -260,70 +257,70 @@ And the whole thing looks like this:
   5
  /
 4
-[/cc]
+```
 
-<strong>What to rotate?</strong>
+## What to rotate?
 
 Now that we know how to rotate, we still need to figure out when a rotation needs to be made, which rotation and what will be the root.
 
 Before we can make these decisions we need to decide how to calculate the height of all the sub-trees whenever we need them. Calculating the heights of the sub-trees of the root node would require us to traverse the whole tree, which would be very inefficient. For this reason a better approach is to store and update the height of the trees every time it is needed. Lets start with a simple node that can store the height:
 
-[cc]
-function Node(val, left, right, height) {
+```
+constructor(val) {
   this.val = val;
-  this.left = left;
-  this.right = right;
-  this.height = height;
+  this.left = null;
+  this.right = null;
+  this.height = 1;
 };
-[/cc]
+```
 
 Now, we need to decide when to update the height of a node:
 
-[cc]
+```
   5      -> Height = 2
  / \
 4   6    -> Height = 1
-[/cc]
+```
 
 If we insert a 7 here, we end with this:
 
-[cc]
+```
   5      -> Height = 2
  / \
 4   6    -> Height = 1
      \
       7
-[/cc]
+```
 
-Because we are inserting a child under a node that has a height of 0, that means that we changed its height to 1. But this could also (but not necessarily) have affected the height of the parents. The first problem we have is that after finding the where we want to insert 7, we want to be able to traverse the tree in reverse. For this, we need to modify our node to also have a link to the parent:
+Because we are inserting a child under a node that has a height of 1, that means that we changed its height to 2. But this could also (but not necessarily) have affected the height of the parents. The first problem we have is that after finding where we want to insert 7, we want to be able to traverse the tree in reverse. For this, we need to modify our node to also have a link to the parent:
 
-[cc]
-function Node(val, parent, left, right, height) {
-  this.parent = parent;
+```
+constructor(val, parent) {
   this.val = val;
-  this.left = left;
-  this.right = right;
-  this.height = height;
+  this.parent = parent;
+  this.left = null;
+  this.right = null;
+  this.height = 1;
 };
-[/cc]
+```
 
-After we find that we are going to insert 7 as the right child of 6, we know that we are modifying the height of the right sub-tree of 6. It used to be 0 (no children) and it will become 1. Before we modify the height of 6, we need to verify the height of the left sub-tree. Only if the height of the left sub-tree is lower than the height of the modified sub-tree (we are inserting on the right sub-tree), we increase the height of 6. To put it more clearly:
+After we find that we are going to insert 7 as the right child of 6, we know that we are modifying the height of the right sub-tree of 6. It used to be 0 (no children) and it will become 1. Before we modify the height of 6, we need to check if `6` has a left subtree, only if there is no left subtree, we increase the height of 6. To put it more clearly:
 
 Steps to insert 7:
 
-<ul>
-  <li>Search where 7 will be inserted (In this case, as the right child of 6)</li>
-  <li>Create a new node (Node(7, parentNode, null, null, 1))</li>
-  <li>Set 6's right node to the new node (parentNode.right = newNode)</li>
-  <li>Go to new node's parent and check if the height of the other sub-tree is equal to the one of the modified subtree. If the heights are the same, we don't modify the height and we stop. If the height is different, we modify the height and continue recursively with 6's parent</li>
-</ul>
+ - Search where 7 will be inserted (In this case, as the right child of 6)
+ - Create a new node (Node(7, parentNode, null, null, 1))
+ - Set 6's right node to the new node (parentNode.right = newNode)
+ - Go to new node's parent and check if the there is a sub-tree on the other side
+   - If there is, we don't modify the height and we stop
+   - If there isn't, we modify the height and continue recursively with 6's parent
 
-<strong>Inserting</strong>
+## Inserting
 
 Let's try to put it in practice now. Inserting consists of searching where the element we want to insert should be, add the element and rebalance if necessary. Here is an example implementation:
 
-[cc lang="js"]
-function Node(val, parent, left, right, height) {
+```js
+constructor(val, parent, left, right, height) {
   this.parent = parent;
   this.val = val;
   this.left = left;
@@ -382,9 +379,9 @@ function insert(val, root) {
       }
   }
 };
-[/cc]
+```js
 
-<strong>Deleting</strong>
+## Deleting
 
 Deleting a node is a little more tricky:
 - Find the node you want to delete (Lets call it A)
