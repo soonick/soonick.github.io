@@ -1,3 +1,16 @@
+---
+title: Binary Search Trees
+date: 2018-12-05
+author: adrian.ancona
+layout: post
+permalink: /2018/12/binary-search-trees/
+tags:
+  - programming
+  - javascript
+  - computer_science
+  - algorithms
+---
+
 A Binary Search Tree (BST) is a binary tree where the nodes are ordered following these characteristics:
 
 - The left subtree of a node contains only nodes with values less than the node's value
@@ -7,6 +20,8 @@ A Binary Search Tree (BST) is a binary tree where the nodes are ordered followin
 - A unique path exists from the root to every other node
 
 The possible operations on a Binary Search Tree are: Search, Insert and Delete. An update is just a delete followed by an insert.
+
+<!--more-->
 
 ## Search
 
