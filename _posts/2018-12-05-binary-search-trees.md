@@ -35,7 +35,7 @@ Searching a Binary Search Tree follows these steps:
 
 Consider a tree like this:
 
-[<img src="/images/posts/bst-example.png" alt="BST example" />](/images/posts/bst-example.png)
+[<img src="/images/posts/bst-example.jpg" alt="BST example" />](/images/posts/bst-example.jpg)
 
 If we search for value `18` on that tree, we will follow these steps:
 
@@ -44,7 +44,7 @@ If we search for value `18` on that tree, we will follow these steps:
 - `19` is not the value we are looking for, we move to the left child
 - `18` is the value we are looking for, we are done
 
-[<img src="/images/posts/bst-search.png" alt="BST search" />](/images/posts/bst-search.png)
+[<img src="/images/posts/bst-search.jpg" alt="BST search" />](/images/posts/bst-search.jpg)
 
 ## Insert
 
@@ -58,7 +58,7 @@ Inserting in a Binary Search Tree is very similar to the search:
 
 The image above, illustrates the steps to insert a value in a binary tree:
 
-[<img src="/images/posts/bst-insert.png" alt="BST search" />](/images/posts/bst-insert.png)
+[<img src="/images/posts/bst-insert.jpg" alt="BST search" />](/images/posts/bst-insert.jpg)
 
 - A search for value `19` is done in the tree
 - `16` is the last node in the search (Since `19` is greater, but there is no right child)
@@ -78,19 +78,19 @@ Deleting is the most complicated to implement. It follows these steps:
 
 The simplest case would be deleting a leaf:
 
-[<img src="/images/posts/bst-delete-simple.png" alt="BST delete simple" />](/images/posts/bst-delete-simple.png)
+[<img src="/images/posts/bst-delete-simple.jpg" alt="BST delete simple" />](/images/posts/bst-delete-simple.jpg)
 
 - Find node `19`
 - Remove the node (Set `16`'s right child to null)
 
 A little more complicated would be to delete a node with a single child:
 
-[<img src="/images/posts/bst-delete-one-child.png" alt="BST delete one child" />](/images/posts/bst-delete-one-child.png)
+[<img src="/images/posts/bst-delete-one-child.jpg" alt="BST delete one child" />](/images/posts/bst-delete-one-child.jpg)
 
 - Find the node to delete (`10`)
 - Since `10` is the left child of `21`, make `7` its left child instead
 
-[<img src="/images/posts/bst-delete-one-child-2.png" alt="BST delete one child" />](/images/posts/bst-delete-one-child-2.png)
+[<img src="/images/posts/bst-delete-one-child-2.jpg" alt="BST delete one child" />](/images/posts/bst-delete-one-child-2.jpg)
 
 The most complicated case is the one where the node we want to delete has two children:
 
@@ -100,11 +100,11 @@ The most complicated case is the one where the node we want to delete has two ch
 - Replace the value of `10` and `12` (`10` will end at the bottom)
 - Delete the node that has `10` now (At this point it will have 0 or 1 children)
 
-[<img src="/images/posts/bst-delete-two-children.png" alt="BST delete two children" />](/images/posts/bst-delete-two-children.png)
+[<img src="/images/posts/bst-delete-two-children.jpg" alt="BST delete two children" />](/images/posts/bst-delete-two-children.jpg)
 
-[<img src="/images/posts/bst-delete-two-children-2.png" alt="BST delete two children" />](/images/posts/bst-delete-two-children-2.png)
+[<img src="/images/posts/bst-delete-two-children-2.jpg" alt="BST delete two children" />](/images/posts/bst-delete-two-children-2.jpg)
 
-[<img src="/images/posts/bst-delete-two-children-3.png" alt="BST delete two children" />](/images/posts/bst-delete-two-children-3.png)
+[<img src="/images/posts/bst-delete-two-children-3.jpg" alt="BST delete two children" />](/images/posts/bst-delete-two-children-3.jpg)
 
 ## The code
 

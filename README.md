@@ -7,5 +7,5 @@ My blog. You can find it at [ncona.com](https://ncona.com).
 To run locally:
 
 ```
-jekyll s -Il
+jekyll build && jekyll s -DIl
 ```
