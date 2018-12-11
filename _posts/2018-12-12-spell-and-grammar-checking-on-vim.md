@@ -2,11 +2,11 @@
 title: Spell and Grammar checking on vim
 author: adrian.ancona
 layout: post
+date: 2018-12-12
+permalink: /2018/12/binary-search-trees/
 tags:
   - vim
   - productivity
-# date:
-# permalink:
 ---
 
 I recently moved my blog to Jekyll, which means I now write my posts in my favorite editor. One problem I encountered is that vim doesn't check my spelling by default, which means I probably had a lot of mistakes in the last posts I wrote.
