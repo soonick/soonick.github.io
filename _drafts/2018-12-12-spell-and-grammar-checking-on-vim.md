@@ -21,6 +21,8 @@ The first thing I had to do was install Java Runtime:
 sudo apt install default-jre
 ```
 
+<!--more-->
+
 Then I had to download `LanguageTool`. I used this command, but you might want to get the latest version:
 
 ```
