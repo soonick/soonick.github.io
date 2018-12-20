@@ -31,6 +31,31 @@ x64 has 16 general purpose registers:
 
 These registers are 64 bits long, but they can be split to work with 32, 16 or 8 bits.
 
+## Addressing modes
+
+Before we start learn about instructions, we have to learn how to reference data to be used in an instruction. The simplest example could be a static memory address:
+
+```
+0x548821
+```
+
+This way of accessing memory is not very common, because you usually don't know in what address your data is going to be when your program. Most likely you will use the registers. If you have a memory address in a register and you want to use the data in that memory address, you can use:
+
+```
+(%rax)
+```
+
+You can also use a memory address in a register as a starting point, but then move up or down in memory:
+
+```
+```
+
+- register
+- immediate
+- label / variable
+- 
+
+
 ## Instructions
 
 The exact number of instructions on the x64 architecture is hard to find, but it might be somewhere close to 1000 instructions. In this section I'm just going to show a few examples.
@@ -45,6 +70,7 @@ The line above is assembly code. The word `add` is an instruction. It works a li
 
 https://software.intel.com/en-us/articles/introduction-to-x64-assembly
 https://www.nayuki.io/page/a-fundamental-introduction-to-x86-assembly-programming
+https://web.stanford.edu/class/cs107/guide/x86-64.html <--- Addressing modes
 
 ## Machine language
 
