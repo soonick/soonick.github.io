@@ -3,7 +3,7 @@ title: Spell and Grammar checking on vim
 author: adrian.ancona
 layout: post
 date: 2018-12-12
-permalink: /2018/12/binary-search-trees/
+permalink: /2018/12/spell-and-grammar-checking-on-vim/
 tags:
   - vim
   - productivity
