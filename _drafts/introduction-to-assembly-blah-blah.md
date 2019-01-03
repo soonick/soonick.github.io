@@ -17,34 +17,34 @@ Instructions are how we tell the computer to do something. The exact number of i
 An instruction consists of an `opcode` and optionally 1 or more `operands`:
 
 ```
-MOV RAX,14  <---------------check if the syntax is correct
+mov rax, 60
 ```
 
-The code above is a single instruction. The opcode is `MOV` and it receives 2 operands `RAX` and `14`. What this instruction does is move the value `14` to the `RAX` register.
+The code above is a single instruction. The opcode is `mov` and it receives 2 operands `rax` and `60`. What this instruction does is move the value `60` to the `rax` register.
 
 ## Addressing modes
 
-One of the most fundamental things about assembly is knowing which addressing mode to use. An addressing mode is a way to specify which values are going to be use as operands of and instruction.
+One of the most fundamental things about assembly is knowing which addressing mode to use. An addressing mode is a way to specify which values are going to be use as operands for and instruction.
 
 The example I showed above, uses the `immediate addressing mode`:
 
 ```
-MOV RAX,14
+mov rax, 60
 ```
 
-This mode is very simple because there is no indirection. The `RAX` register will be set to `14`. Te value `14` is called an immediate constant. Another simple addressing mode is the `register addressing mode`:
+This mode is very simple because there is no indirection. The `rax` register will be set to `60`. Te value `60` is called an immediate constant. Another simple addressing mode is the `register addressing mode`:
 
 ```
-MOV RAX,RBX
+mov rax,rbx
 ```
 
-In this case, the value in a registry is used. `RAX` will be set to whichever value is currently in `RBX`. Things get a little more complicated very quickly:
+In this case, the value in a registry is used. `rax` will be set to whichever value is currently in `rbx`. Things get a little more complicated very quickly:
 
 ```
-MOV RAX,(%RBX)
+mov rax,(%rbx)
 ```
 
-In this case we are still setting `RAX`. To find the value that is being set, we first need to go to `RAX`. `RAX` will contain a memory address. Then we need to go to that memory address to find the value.
+In this case we are still setting `rax`. To find the value that is being set, we first need to go to `rax`. `rax` will contain a memory address. Then we need to go to that memory address to find the value.
 
 ##### Picture of the memory stuff
 
@@ -97,4 +97,5 @@ These 56 bits tell an x86 CPU to take an action. More specifically, it tells it 
 
 
 
-
+http://cs.lmu.edu/~ray/notes/nasmtutorial/
+https://0xax.github.io/asm_1/
