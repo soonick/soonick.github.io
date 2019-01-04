@@ -86,7 +86,7 @@ If you run those commands, you will notice that the assembly step finishes succe
 ld: warning: cannot find entry symbol _start; not setting start address
 ```
 
-An assembly program need a `_start` entry point. Let's modify our example so it works:
+An assembly program needs a `_start` entry point. Let's modify our example so it works:
 
 ```nasm
 section .text
@@ -146,4 +146,4 @@ $ echo $?
 0
 ```
 
-We have now successfully assembled our first program. In future posts I will explore how ot do more interesting stuff with assembly.
+We have now successfully assembled our first program. In future posts I will explore how to do more interesting stuff with assembly.
