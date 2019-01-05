@@ -43,7 +43,7 @@ Person adrian{"Adrian", 32};
 
 In this case, the order of the member variables in the definition of `Person` dictates the order of arguments in the initialization. The first argument, will be assigned to `name`, and the second to `age`.
 
-There is different syntax that can be used:
+There is a different syntax that can be used:
 
 ```cpp
 Person carlos{
