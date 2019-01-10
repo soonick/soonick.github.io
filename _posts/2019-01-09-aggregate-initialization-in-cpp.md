@@ -9,7 +9,7 @@ tags:
   - c++
 ---
 
-I previously wrote an article about [variable initialization in C++](/2019/01/2019-01-02-variable-initialization-in-cpp), but sadly, initialization of variables in C++ is a complicated subject with a lot of options.
+I previously wrote an article about [variable initialization in C++](/2019/01/variable-initialization-in-cpp), but sadly, initialization of variables in C++ is a complicated subject with a lot of options.
 
 ## Aggregate classes
 
