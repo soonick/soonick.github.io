@@ -2,6 +2,8 @@
 title: Writing a vim plugin - Grepfrut
 author: adrian.ancona
 layout: post
+date: 2019-02-06
+permalink: /2019/02/writing-a-vim-plugin-grepfrut/
 tags:
   - automation
   - programming
@@ -24,10 +26,10 @@ VimL (or Vimscript) is the language used by Vim for mostly everything. The `.vim
 If you have written a `.vimrc` file, you already know how to create a comment in VimL:
 
 ```viml
-" This is a comment in VimL "
+" This is a comment in VimL
 ```
 
-A command that will be useful for debugging while writting our plugin is `echomsg`. This command will output a message on the Vim status bar, but it will also save it to the message history. The command can be used like this:
+A command that will be useful for debugging while writing our plugin is `echomsg`. This command will output a message to the user, and it will also save it to the message history. The command can be used like this:
 
 ```viml
 echomsg "This is a message"
@@ -51,8 +53,6 @@ We can get more information about any command with the `help` command:
 :help messages
 ```
 
-User defined commands must start with a capital letter.
-
 ### Variables
 
 VimL is a scripting programming language, so it has variables, conditions, loops, etc. Let's explore them.
@@ -66,12 +66,10 @@ let some_variable = "some value"
 If we want to modify the value of the variable, we have to use the `let` command too:
 
 ```viml
-let some_variable = "some value"
-
 " This is an error:
-some_variable = "another value"
+some_variable = "some value"
 
-" This is an correct:
+" This is correct:
 let some_variable = "another value"
 ```
 
@@ -136,7 +134,7 @@ if "abc" != "def"
 endif
 ```
 
-All these conditions evaluate to true. One thing to keep in mind is that string comparisons might or might not be case sensitive depending on user settings. Because of this, we should always use `==? (case insensitive comparison)` and `==# (case sensitive comparison)` when comparing strings.
+All these conditions evaluate to true. One thing to keep in mind is that string comparisons might or might not be case-sensitive depending on user settings. Because of this, we should always use `==? (case-insensitive comparison)` and `==# (case-sensitive comparison)` when comparing strings.
 
 ### Functions
 
@@ -198,7 +196,9 @@ I'm not going to go in a lot of depth into it, because you can get good informat
 :command -nargs=0 Hello echo "Hello everybody!"
 ```
 
-What `-nargs=0` means is that this command doesn't expect any arguments. If you give it any arguments, an error will be show. All it does is echo `Hello everybody!" when the `Hello` command is used.
+What `-nargs=0` means is that this command doesn't expect any arguments. If you give it any arguments, an error will be shown. All the command does is echo `Hello everybody!` when the `Hello` command is used.
+
+User defined commands must start with a capital letter.
 
 ## Writing a plugin
 
@@ -217,7 +217,7 @@ grepfrut/
 
 All the code will be in grepfrut.vim. README.md will be used for documentation.
 
-Before we start to write code, we have to decide what it will do. I want to keep it very simple, to use the plugin we will start with the `Gf` command:
+Before we start to write code, we have to decide what it will do. I want to keep it very simple. To use the plugin we will start with the `Gf` command:
 
 ```viml
 :Gf <search string>
@@ -245,11 +245,11 @@ The results will be shown in a quickfix window and pressing enter on any of the 
 
 We start by creating the command:
 
-```
+```viml
 command! -nargs=1 Gf call s:Grepfrut(<f-args>)
 ```
 
-The command receives only one argument (even if there are spaces, it will be read as a single argument) and that argument will be passed to a function called `Grepfut`. The `s` preceding the function name means that the funtion is local to the file (`:help internal-variables`).
+The command receives only one argument (even if there are spaces, it will be read as a single argument) and that argument will be passed to a function called `Grepfut`. The `s` preceding the function name means that the funtion is local to the file (`:help internal-variables` to learn about scopes).
 
 Let's now define `s:Grepfrut`, which will basically take care of the UI:
 
@@ -276,7 +276,7 @@ endfunction
 
 This function will basically show the correct prompts to the user and then leave the actual execution work to `s:BuildGrepCommand` and `s:RunCommand`.
 
-```
+```viml
 " Builds the command to grep for the search_string in all files
 " search_string - The string we are searching for
 " dir - The directory where the search will start
@@ -301,24 +301,24 @@ function s:BuildGrepCommand(search_string, dir, include_files, exclude_files)
 endfunction
 ```
 
-This function build the correct grep command based on the user input. For example, if the user is searching for `something` in `/some/dir` in all `cpp` files, except the ones with `test` in the name, it will generate this command:
+This function builds the correct grep command based on the user input. For example, if the user is searching for `something` in `/some/dir` in all `cpp` files, except the ones with `test` in the name, it will generate this command:
 
-```
+```bash
 find /some/dir -type f | grep "cpp" | grep -v "test" | xargs grep -n "something"
 ```
 
 The last thing left is to execute the command and add it to the quickfix:
 
-```
+```viml
 " Run the command and show results in quickfix
-" cmd - The grep command that will be exuted
+" cmd - The grep command that will be executed
 function s:RunCommand(cmd)
   let cmd_output = system(a:cmd)
 
   " Open the output in a quickfix window
-  caddexpr cmd_output
+  cgetexpr cmd_output
   copen
 endfunction
 ```
 
-That's it, a simple Vim plugin. I uploaded the [Grepfrut plugin to Github](https://github.com/soonick/grepfrut) in case you want to try it or see all the code together.
+That's it. A simple Vim plugin. I uploaded the [Grepfrut plugin to Github](https://github.com/soonick/grepfrut) in case you want to try it or see all the code together.
