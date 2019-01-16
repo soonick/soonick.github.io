@@ -29,6 +29,26 @@ The most common registers are the general-purpose registers. They are called gen
 
 There is another kind of registers called special-purpose registers. These registers have a specific pupose. To give an example, `rip` is called the instruction pointer; it always points to the next instruction to be executed by the program. Another example is `rflags`; this register contains various flags that change depending on the result of an operation; the flags tell you things like if the result was zero, there was a carry or an overflow, etc. There are more special purpose registers, but I won't explore them in this article.
 
+## Intel vs AT&T
+
+There are two ways to write assembly; Intel syntax, used mostly in the windows world and AT&T syntax, used everywhere else. I mostly use Linux, so I will learn the AT&T syntax.
+
+Here is an example instruction in Intel:
+
+```nasm
+mov $1, %rax
+```
+
+And the same instruction in AT&T:
+
+```nasm
+mov rax, 1
+```
+
+Both instructions set the registry `rax` to the value `1`. We can see in the Intel case that the value `1` is prefixed with `$` and the registry name is prefixed with `%`. The order of the parameters is also different.
+
+In the rest of the article I will use only AT&T syntax.
+
 ## Installing an assembler
 
 Assembly is a low level language where we tell the computer exactly which instructions to execute, but the code we write in a text editor has to be transformed into a binary file that the OS and processor can execute. An assembler takes care of this step.
@@ -63,7 +83,7 @@ nasm -hf
 Since I'm using Linux, I'll use something like this to assemble my programs:
 
 ```bash
-nams -f elf64 -o example.o example.asm
+nasm -f elf64 -o example.o example.asm
 ```
 
 There is one more step before our program is ready to run. We need to link it. Linking a program is helpful to combine many object files together and is necessary to create the executable we need. For linking a program, I'll use GNU linker (`ld`):
