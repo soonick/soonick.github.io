@@ -176,6 +176,6 @@ This is how this statusline looks:
 
 If you use Nerdtree like me, you probably noticed, that the nerdtree buffer adds some information to its statusline, but because it is so narrow, it is impossible to read. To get rid of it, you can add this to your `.vimrc`:
 
-```
+```viml
 let g:NERDTreeStatusline = '%#NonText#'
 ```
