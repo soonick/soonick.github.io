@@ -1,5 +1,5 @@
 ---
-title: Introduction to assembly - Blah Blah
+title: Assembly - Addressing modes and common instructions
 author: adrian.ancona
 layout: post
 tags:
@@ -26,19 +26,36 @@ The code above is a single instruction. The opcode is `mov` and it receives 2 op
 
 One of the most fundamental things about assembly is knowing which addressing mode to use. An addressing mode is a way to specify which values are going to be use as operands for and instruction.
 
+### Immediate mode
+
 The example I showed above, uses the `immediate addressing mode`:
 
 ```
 mov rax, 60
 ```
 
-This mode is very simple because there is no indirection. The `rax` register will be set to `60`. Te value `60` is called an immediate constant. Another simple addressing mode is the `register addressing mode`:
+This mode is very simple because there is no indirection. The `rax` register will be set to `60`. Te value `60` is called an immediate constant. Immediate constants can be specified in decimal, binary, octal or hexadecimal. These instructions all do the same:
+
+```
+mov rax, 60 ; decimal
+mov rax, 0b111100 ; binary
+mov rax, 0o74 ; octal
+mov rax, 0x3C ; hexadecimal
+```
+
+### Register mode
+
+This mode is also very easy to understand. Information will be copied from one registry to the other:
 
 ```
 mov rax,rbx
 ```
 
-In this case, the value in a registry is used. `rax` will be set to whichever value is currently in `rbx`. Things get a little more complicated very quickly:
+In this case, the value of `rax` will be set to whichever value is currently in `rbx`.
+
+### Register indirect mode
+
+Things get a little more complicated very quickly:
 
 ```
 mov rax,(%rbx)

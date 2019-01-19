@@ -43,14 +43,6 @@ The `dwarf` format is supposed to be an improvement over stabs, so I'm going to 
 nasm -f elf64 -g -F dwarf -o example.o example.asm
 ```
 
-## objdump
-
-
-
---- talk about objdump
-
-
-
 ## Debugging with GDB
 
 Let's look at the basics over the same program I used for the introduction:
