@@ -19,6 +19,8 @@ What we need to do is copy our `.bashrc` file to the host we are going to SSH to
 scp ~/.bashrc user@host:/tmp/.my-bashrc
 ```
 
+<!--more-->
+
 The next step is to source the file, but we don't want to do it manually. Luckily `ssh` allows us to specify commands to execute when we connect to a host:
 
 ```bash
