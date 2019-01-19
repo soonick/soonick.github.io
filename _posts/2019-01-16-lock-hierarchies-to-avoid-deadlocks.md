@@ -34,8 +34,7 @@ void doSomethingElse() {
   std::lock_guard<std::mutex> gA(mutexA);
 }
 
-int main()
-{
+int main() {
   std::thread t1(doSomething);
   std::thread t2(doSomethingElse);
 
@@ -87,8 +86,7 @@ void doSomethingElse() {
   std::lock_guard<std::mutex> gB(mutexB, std::adopt_lock);
 }
 
-int main()
-{
+int main() {
   std::thread t1(doSomething);
   std::thread t2(doSomethingElse);
 
@@ -128,8 +126,7 @@ void doSomethingElse() {
   doSomethingWithMutexA();
 }
 
-int main()
-{
+int main() {
   std::thread t1(doSomething);
   std::thread t2(doSomethingElse);
 
@@ -305,8 +302,7 @@ void doSomethingElse() {
   doSomethingWithMutexA();
 }
 
-int main()
-{
+int main() {
   std::thread t1(doSomething);
   std::thread t2(doSomethingElse);
 
