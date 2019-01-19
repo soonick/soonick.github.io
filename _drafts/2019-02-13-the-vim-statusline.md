@@ -168,6 +168,10 @@ set statusline+=\ \|\                  " A separator
 set statusline+=%L                     " Total number of lines
 ```
 
+This is how this statusline looks:
+
+[<img src="/images/posts/vim-statusline.png" alt="Custom Vim statusline" />](/images/posts/vim-statusline.png)
+
 ## Nerdtree
 
 If you use Nerdtree like me, you probably noticed, that the nerdtree buffer adds some information to its statusline, but because it is so narrow, it is impossible to read. To get rid of it, you can add this to your `.vimrc`:
