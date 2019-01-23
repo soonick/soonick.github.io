@@ -10,6 +10,57 @@ tags:
 
 In a previous article I showed [how to assemble a program](/2019/01/introduction-to-assembly-assembling-a-program/) using nasm. In this article I'm going to explore different ways to access data and explore some instructions.
 
+## Variables
+
+The .data section (These are called segments: code segment and data segment)
+
+The format to define initialized data:
+
+[variable-name]    define-directive    initial-value   [,initial-value]...
+
+print variable address in gdb:
+info address exit_code
+
+print variable value in gdb:
+print exit_code
+
+
+```viml
+section .data
+  exit_code dq 0
+  sys_call dq 60
+
+section .text
+  global _start
+
+_start:
+  mov rax, [sys_call]
+  mov rdi, [exit_code]
+  syscall
+```
+
+Defining multiple (arrays):
+some_data dq 1, 10, 100, 1000
+
+strings:
+hello db 'hello'
+
+null terminated string:
+hello db 'hello', 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Instructions
 
 Instructions are how we tell the computer to do something. The exact number of instructions on the x64 architecture is hard to find, but it might be somewhere close to one thousand. I'm obviously not cover all of them.
