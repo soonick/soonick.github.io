@@ -31,23 +31,23 @@ There is another kind of registers called special-purpose registers. These regis
 
 ## Intel vs AT&T
 
-There are two ways to write assembly; Intel syntax, used mostly in the windows world and AT&T syntax, used everywhere else. I mostly use Linux, so I will learn the AT&T syntax.
+There are two ways to write assembly; Intel syntax, which in the beginning was used mostly in the windows world and AT&T syntax, which was used everywhere else. Which syntax you use can also depend on the assembler.
 
 Here is an example instruction in Intel:
-
-```nasm
-mov $1, %rax
-```
-
-And the same instruction in AT&T:
 
 ```nasm
 mov rax, 1
 ```
 
-Both instructions set the registry `rax` to the value `1`. We can see in the Intel case that the value `1` is prefixed with `$` and the registry name is prefixed with `%`. The order of the parameters is also different.
+And the same instruction in AT&T:
 
-In the rest of the article I will use only AT&T syntax.
+```nasm
+mov $1, %rax
+```
+
+Both instructions set the registry `rax` to the value `1`. We can see in the AT&T case that the value `1` is prefixed with `$` and the registry name is prefixed with `%`. The order of the parameters is also different.
+
+In the rest of the article I will use only Intel syntax because it's the one supported by NASM.
 
 ## Installing an assembler
 

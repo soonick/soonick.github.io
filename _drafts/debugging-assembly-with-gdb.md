@@ -166,7 +166,11 @@ The first column is the hexadecimal value (`0x3c`) and the second is decimal (`6
 
 ## Inspecting memory
 
+print variable address in gdb:
+info address exit_code
 
+print variable value in gdb:
+print exit_code
 
 
 

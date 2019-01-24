@@ -18,13 +18,6 @@ The format to define initialized data:
 
 [variable-name]    define-directive    initial-value   [,initial-value]...
 
-print variable address in gdb:
-info address exit_code
-
-print variable value in gdb:
-print exit_code
-
-
 ```viml
 section .data
   exit_code dq 0
@@ -38,6 +31,8 @@ _start:
   mov rdi, [exit_code]
   syscall
 ```
+
+When we define a variable, the variable name will be replaced with the assigned memory address. If we want to access the value in that memory address we need to use brackets `[]`
 
 Defining multiple (arrays):
 some_data dq 1, 10, 100, 1000
