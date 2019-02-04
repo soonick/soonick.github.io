@@ -140,7 +140,7 @@ Segmentation fault (core dumped)
 The reason we get a segmentation fault is that the program doesn't end correctly. In higher level programming languages, the `runtime` (the compiler) takes care of this. In assembly, this needs to be done by the programmer. To do this, we need to use syscall `60` (sys_exit). The interface for `sys_exit` is:
 
 ```
-%rdi int error_code
+rdi int error_code
 ```
 
 What this means is that is takes a single int argument in the `rdi` register. This argument is the exit code for the program. A successful program should finish with code 0.
