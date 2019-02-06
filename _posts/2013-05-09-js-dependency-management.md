@@ -7,7 +7,7 @@ layout: post
 guid: http://ncona.com/?p=863
 permalink: /2013/05/js-dependency-management/
 tags:
-  - dependecy_management
+  - dependency_management
   - javascript
   - programming
   - require_js

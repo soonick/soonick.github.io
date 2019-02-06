@@ -10,6 +10,8 @@ tags:
   - golang
   - productivity
   - programming
+  - dependency_management
+  - automation
 ---
 I have just begun my journey in the Go universe and so far I have found a few things that I don&#8217;t really like. I consider this natural because as I get familiar with a way of working I find it hard to accept other ways without questioning them very heavily first.
 

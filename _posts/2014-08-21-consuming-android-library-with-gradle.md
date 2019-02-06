@@ -11,6 +11,8 @@ tags:
   - android
   - gradle
   - productivity
+  - dependency_management
+  - automation
 ---
 I have an Android project in gradle where I want to use a library packaged in an aar file. After some research I found the easiest way to consume it is by adding a flatDir repository to your build.gradle file.
 

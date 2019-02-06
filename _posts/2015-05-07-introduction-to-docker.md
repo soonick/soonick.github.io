@@ -9,6 +9,7 @@ permalink: /2015/05/introduction-to-docker/
 tags:
   - linux
   - productivity
+  - docker
 ---
 What is docker?
 

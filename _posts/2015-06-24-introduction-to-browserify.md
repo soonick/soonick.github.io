@@ -11,6 +11,7 @@ tags:
   - javascript
   - productivity
   - programming
+  - dependency_management
 ---
 When a web project starts getting big, managing dependencies becomes hard if you don&#8217;t have the right tools. If you have some experience with web development, you probably use RequireJS to manage your dependencies.
 

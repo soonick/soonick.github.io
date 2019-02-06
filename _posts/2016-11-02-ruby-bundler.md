@@ -10,6 +10,8 @@ tags:
   - bundler
   - programming
   - ruby
+  - dependency_management
+  - automation
 ---
 I&#8217;m working on a Rails project at the moment, and being new to the Ruby ecosystem I decided to learn a little about [Bundler](http://bundler.io/), a framework for managing your project dependencies (similar to npm, composer or pip).
 

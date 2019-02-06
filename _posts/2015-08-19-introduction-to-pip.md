@@ -9,6 +9,8 @@ permalink: /2015/08/introduction-to-pip/
 tags:
   - programming
   - python
+  - dependency_management
+  - automation
 ---
 PIP(PIP Installs Packages) is Python&#8217;s recommended tool for package managing. Most modern operating systems come with Python and PIP installed. You can check if Python and PIP are installed using the which command:
 

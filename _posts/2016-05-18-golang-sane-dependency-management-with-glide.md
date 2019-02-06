@@ -10,6 +10,7 @@ tags:
   - automation
   - golang
   - programming
+  - dependency_management
 ---
 In a previous article I wrote an article explaining [how to do dependency management wrong by following Go&#8217;s recommendations](http://ncona.com/2016/04/golang-dependency-management-done-wrong/). This week I&#8217;m going to explore a better way to manage your dependencies.
 

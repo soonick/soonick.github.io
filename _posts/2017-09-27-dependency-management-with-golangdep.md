@@ -10,6 +10,8 @@ tags:
   - docker
   - golang
   - programming
+  - dependency_management
+  - automation
 ---
 It has been more than a year since I wrote an article about [dependency management with Glide](https://ncona.com/2016/05/golang-sane-dependency-management-with-glide/). It seems like things have changed a little since then. An [official package manager](https://github.com/golang/dep) has been started by the community, which hopefully will make things easier for developers.
 
