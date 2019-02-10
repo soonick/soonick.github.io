@@ -66,8 +66,7 @@ void setValue(int v) {
   mutex.unlock();
 }
 
-int main()
-{
+int main() {
   std::thread t1(setValue, 1);
   std::thread t2(setValue, 2);
 
@@ -97,8 +96,7 @@ void setValue(int v) {
   value = v;
 }
 
-int main()
-{
+int main() {
   std::thread t1(setValue, 1);
   std::thread t2(setValue, 2);
 
