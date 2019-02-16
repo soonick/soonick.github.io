@@ -86,9 +86,9 @@ int main() {
 }
 ```
 
-The output of this program will change every time, because a stack allocation will be done every time it is ran. A sample output looks like this:
+The output of this program will change every time, because a stack allocation will be done every time it is run. A sample output looks like this:
 
-```
+```cpp
 Variable a is in memory address: 0x7fffeb1a7c8c
 Variable b is in memory address: 0x7fffeb1a7c90
 Variable c is in memory address: 0x7fffeb1a7c94
@@ -100,11 +100,11 @@ Variable b in anotherFunction has address: 0x7fffeb1a7c60
 Variable c in anotherFunction has address: 0x7fffeb1a7c64
 ```
 
-There are a few things we can learn about the output of this program. All variables used in the program are allocated in the stack, because of that reason, we can see that the memory addresses are contiguous. The first int we created was given address 0x7ffc0763f98c and the next one was given address 0x7ffc0763f990. From the output we can see that the size of an int in this system is 4 bytes.
+There are a few things we can learn about the output of this program. All variables used in the program are allocated in the stack, because of that reason, we can see that the memory addresses are contiguous. The first int we created was given address `0x7fffeb1a7c8c` and the next one was given address `0x7fffeb1a7c90`. From the output we can see that the size of an int in this system is 4 bytes.
 
 Another interesting thing about the output is that variables created inside function() have lower address than those of main. This makes me think that the stack grows towards lower memory addresses. More interesting is that variables declared in a single function seem to grow towards higher memory addresses.
 
-One more thing that we can see is that the memory addresses used by _function_ and _anotherFunction_ are the same, which shows that when _function_ returned, all the memory addresses it was using were given back to the stack (the stack pointer was moved up), and when _anotherFunction_ was called the same addresses were allocated (the stack pointer was moved down).
+One more thing that we can see is that the memory addresses used by `function` and `anotherFunction` are the same, which shows that when `function` returned, all the memory addresses it was using were given back to the stack (the stack pointer was moved up), and when `anotherFunction` was called the same addresses were allocated (the stack pointer was moved down).
 
 ## Closer look at the heap
 
@@ -149,7 +149,7 @@ int main() {
 
 This time we use _new int()_ to allocate in the heap instead of the stack. The output looks like this:
 
-```
+```cpp
 Variable a is in memory address: 0x24d4c20
 Variable b is in memory address: 0x24d4c40
 Variable c is in memory address: 0x24d4c60
@@ -161,7 +161,7 @@ Variable b in anotherFunction has address: 0x24d5110
 Variable c in anotherFunction has address: 0x24d5130
 ```
 
-We can see based on the memory addresses that they also seem to increase at a constant rate with every new variable declaration. This might be an artifact of how the heap does the allocation. The most visible change is that in this case _function_ and _anotherFunction_ don&#8217;t share the same memory addresses, because we actually never released the addresses (memory addresses allocated with new, need to be de-allocated with delete). When a variable is put in the stack it gets deallocated automatically when the scope where it was defined exits.
+We can see based on the memory addresses that they also seem to increase at a constant rate with every new variable declaration. This might be an artifact of how the heap does the allocation. The most visible change is that in this case `function` and `anotherFunction` don't share the same memory addresses, because we actually never released the addresses (memory addresses allocated with new, need to be de-allocated with delete). When a variable is put in the stack it gets deallocated automatically when the scope where it was defined exits.
 
 Lets look at what happens when we actually deallocate the memory we are not using anymore:
 
@@ -232,4 +232,4 @@ It&#8217;s very interesting to see that the allocator reuses the memory address 
 
 ## Conclusion
 
-It is good to understand a little better how stack and heap allocation work. The abstraction is done well enough that I don&#8217;t think is very necessary to possess this knowledge in order to write good programs. In most cases you will allocate to the heap (using new) because you need to share resources between threads or different function scopes.
+It is good to understand a little better how stack and heap allocation work. The abstraction is done well enough that I don't think is very necessary to possess this knowledge in order to write good programs. In most cases you will allocate to the heap (using new) because you need to share resources between threads or different function scopes.
