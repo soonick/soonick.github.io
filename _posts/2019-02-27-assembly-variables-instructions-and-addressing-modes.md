@@ -63,7 +63,7 @@ some_string db "Hello world, I'm trying to learn assembly, but it's hard. Do "
             db "you know what is the fastest way to learn?", 0
 ```
 
-The variable name only needs to be specified once, but the `define` directive needs to be repeated.
+The variable name only needs to be specified once, but the `define-directive` needs to be repeated.
 
 ## Printing a string
 
@@ -153,7 +153,7 @@ These are just some of the instructions available in an x64 processor. There are
 
 ## Addressing modes
 
-One of the most fundamental things about assembly is understanding addressing modes. An addressing mode is a way to specify which values are going to be use as operands for and instruction. We already used addressing modes in the axamples above. In this section, we are going to give them names and understand them a little more.
+One of the most fundamental things about assembly is understanding addressing modes. An addressing mode is a way to specify which values are going to be used as operands for an instruction. We already used addressing modes in the axamples above. In this section, we are going to give them names and understand them a little more.
 
 ### Immediate mode
 
