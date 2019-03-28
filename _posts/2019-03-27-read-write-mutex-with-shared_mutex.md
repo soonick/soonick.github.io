@@ -8,7 +8,6 @@ tags:
   - c++
   - programming
   - design_patterns
-  - boost
 ---
 
 A while ago I wrote an article about [mutexes in C++](/2018/08/mutexes-in-c/). I explained how they solve the problem of race conditions by allowing only one thread to access data simultaneously.

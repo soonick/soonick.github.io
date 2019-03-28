@@ -13,5 +13,5 @@ jekyll build && jekyll s -DIl
 To generate tag pages:
 
 ```
-./scripts/tag-generator.py
+./_scripts/tag-generator.py
 ```
