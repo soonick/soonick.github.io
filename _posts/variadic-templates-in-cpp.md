@@ -2,6 +2,8 @@
 title: Variadic templates / functions in C++
 author: adrian.ancona
 layout: post
+date: 2019-06-19
+permalink: /2019/06/variadic-templates-in-cpp/
 tags:
   - c++
   - programming
