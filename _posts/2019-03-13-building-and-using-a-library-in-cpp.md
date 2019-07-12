@@ -84,7 +84,7 @@ g++ -c -o main.o main.cpp
 And link it with our library:
 
 ```
-g++ -o main main.o MyLibrary.o
+g++ -o main main.o MyLibrary.a
 ```
 
 This is all it takes. We now have an executable file that uses a library we created.
