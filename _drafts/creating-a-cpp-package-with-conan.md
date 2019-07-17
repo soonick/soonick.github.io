@@ -196,7 +196,7 @@ class MylibConan(ConanFile):
 To build the package:
 
 ```
-conan create . src/MyLib
+conan create . myself/MyLib
 ```
 
 If everything goes well you will see a line like this in the output:
