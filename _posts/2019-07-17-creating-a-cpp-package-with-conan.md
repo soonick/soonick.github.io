@@ -13,7 +13,7 @@ tags:
 
 In the past I wrote an article that explains how to [consume packages using Conan](/2019/04/dependency-management-in-cpp-with-conan/). In this article I'm going to explain how we can create our own packages with Conan.
 
-I'm going to create a simple cpp library an make a conan package out of it.
+I'm going to create a simple cpp library and make a conan package out of it.
 
 ## Sample package
 
@@ -207,6 +207,6 @@ MyLib/0.1@src/MyLib: Package folder /home/me/.conan/data/MyLib/0.1/src/MyLib/pac
 ...
 ```
 
-You can see go to that folder to see the contents of the package.
+You can go to that folder to see the contents of the package.
 
-In a future article, I will explain how we can publish this so it can be used by anyone.
+In my next article, I will explain how we can publish a package so it can be used by anyone.
