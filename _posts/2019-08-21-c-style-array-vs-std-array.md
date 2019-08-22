@@ -2,7 +2,7 @@
 title: C-style arrays vs std::array
 author: adrian.ancona
 layout: post
-date: 2019-08-07
+date: 2019-08-21
 permalink: /2019/08/c-style-arrays-vs-std-array/
 tags:
   - programming
