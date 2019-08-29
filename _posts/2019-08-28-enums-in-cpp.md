@@ -2,7 +2,7 @@
 title: Enums in C++
 author: adrian.ancona
 layout: post
-date: 2019-08-14
+date: 2019-08-28
 permalink: /2019/08/enums-in-cpp/
 tags:
   - programming
