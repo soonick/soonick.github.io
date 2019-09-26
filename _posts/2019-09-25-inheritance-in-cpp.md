@@ -46,7 +46,7 @@ Above, we can see that to inherit from a class, we use the format:
 class class-name : access-specifier parent-class {
 ```
 
-`SpanishGreeter` inherits from `Greeter`. This means that it has the same methods and properties as `Greeter`. The only difference between these clases is that `SpanishGreeter`'s greeting is `hola` instead of `hello`. This means that calling `talk()` on `SpanishGreeter` will print `hola`.
+`SpanishGreeter` inherits from `Greeter`. This means that it has the same methods and properties as `Greeter`. The only difference between these classes is that `SpanishGreeter`'s greeting is `hola` instead of `hello`. This means that calling `talk()` on `SpanishGreeter` will print `hola`.
 
 In its simplest form, this is inheritance in C++.
 
@@ -74,7 +74,7 @@ Here is a short description for each of them:
 - `protected` - Can be seen by the class and children classes
 - `public` - Can be seen by anyone
 
-Looking at `Greeter`, we decided to make `talk()` public, because that method could be called from any code that instantiates the class. The `greeting_` property, on the other hand is an implementation detail that doesn't need to be known by callers. Making `greeting_` `protected` makes it possible to overwrite its value on children classes; If it was private it wouldn't be possible to modify it from `SpanishGreeter`.
+Looking at `Greeter`, we decided to make `talk()` public, because that method could be called from any code that instantiates the class. The `greeting_` property, on the other hand is an implementation detail that doesn't need to be known by callers. Making `greeting_` protected makes it possible to overwrite its value on children classes; If it was private it wouldn't be possible to modify it from `SpanishGreeter`.
 
 ## Object construction
 
@@ -94,4 +94,4 @@ Although `public` inheritance is the most common, it's good to understand what t
 - `protected` - public and protected methods and properties of the parent class, become protected for the child class.
 - `private` - public and `protected` methods and properties of the parent class, become private for the child class.
 
-I haven't really seen `public` and `protected` used on the wild, but they are there in case they are needed.
+I haven't really seen `protected` or `private` used on the wild, but they are there in case they are needed.
