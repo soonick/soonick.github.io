@@ -3,7 +3,7 @@ title: Configuring gnome terminal programmatically
 author: adrian.ancona
 layout: post
 date: 2019-11-13
-#permalink: /2019/11/configuring-gnome-terminal-programmatically/
+permalink: /2019/11/configuring-gnome-terminal-programmatically/
 tags:
   - linux
   - automation
