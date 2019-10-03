@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-The reason the output is `hello` is because `Programs`'s constructor expects a `Greeter` not a `SpanishGreeter`. This causes the `spanishGreeter` to be converted to a `Greeter`, and calling the `talk` method on a `Greeter` prints `hello`.
+The reason the output is `hello` is because `Programs`'s constructor expects a `Greeter` not a `SpanishGreeter`. This causes the `SpanishGreeter` to be converted to a `Greeter`, and calling the `talk` method on a `Greeter` prints `hello`.
 
 The solution to this is to achieve run-time polymorphism on the `talk` method of `Greeter`. This means that we want children of `Greeter` to be able to define their own behavior for the `talk` method.
 
