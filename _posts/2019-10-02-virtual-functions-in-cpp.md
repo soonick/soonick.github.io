@@ -81,7 +81,7 @@ If we wanted to use a different Greeter, we might be surprised that the output i
 ...
 
 int main() {
-  Greeter spanishGreeter;
+  SpanishGreeter spanishGreeter;
   Program p(spanishGreeter);
   p.run();
 }
