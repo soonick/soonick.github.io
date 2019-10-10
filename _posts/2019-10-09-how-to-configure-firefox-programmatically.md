@@ -10,7 +10,7 @@ tags:
   - bash
 ---
 
-I reinstalled Ubuntu on my personal computer recently and I noticed that there are some things I don't like about the default distribution. One of things I noticed is that Firefox keeps asking me if I want it to remember my passwords, which I don't.
+I reinstalled Ubuntu on my personal computer recently and I noticed that there are some things I don't like about the default distribution. One of the things I noticed is that Firefox keeps asking me if I want it to remember my passwords, which I don't.
 
 I know that I can go to settings and disable this feature, but I wanted to learn how to do it programmatically, so in the future I can just run a script and have Firefox work the way I want.
 
@@ -29,7 +29,7 @@ For custom configurations we can write our desired changes to one of two files:
 - `all-<something>.js` - Sets configurations for all users in that host
 - `user.js` - Sets configurations for a specific user
 
-The `all-<something>.js` method is usually preferred, because a user might want to set their own preferences. If `user.js` method is used, anything they set will be overwritten by the values set by the administrator on every Firefox run.
+The `all-<something>.js` method is usually preferred because a user might want to set their own preferences. If `user.js` method is used, anything they set will be overwritten by the values set by the administrator on every Firefox run.
 
 ## Setting preferences
 
@@ -46,4 +46,4 @@ echo "pref('signon.rememberSignons', false);" >> $ff_preferences
 
 ## Finding preferences
 
-Finding which preference to change can also be tricky. The best I could find was a [list of preferences](http://kb.mozillazine.org/About:config_entries) with short descriptions, but it can be hard to find what you are looking for.
+Finding which preference to change can also be tricky. The best I could find is a [list of preferences](http://kb.mozillazine.org/About:config_entries) with short descriptions, but it can be hard to find what you are looking for.
