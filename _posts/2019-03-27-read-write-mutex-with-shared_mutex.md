@@ -200,7 +200,6 @@ void setValue(int v) {
   // Simulate some latency
   std::this_thread::sleep_for(std::chrono::seconds(1));
   value = v;
-  mutex.unlock();
 }
 
 int main()
