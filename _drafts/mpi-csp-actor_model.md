@@ -1,1 +1,0 @@
-OpenMP framework
