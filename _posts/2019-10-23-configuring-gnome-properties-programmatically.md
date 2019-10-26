@@ -41,7 +41,7 @@ gsettings list-keys org.gnome.settings-daemon.plugins.media-keys
 To set the shortcut for openning the terminal, I used this command:
 
 ```sh
-gsettings set org.gnome.settings-daemon.plugins.media-keys terminal '<Ctrl><Alt>t'
+gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "['<Ctrl><Alt>t']"
 ```
 
 ### Hide dock
