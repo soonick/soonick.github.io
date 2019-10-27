@@ -12,12 +12,10 @@ tags:
 
 As part of getting a new computer, I want to be able to run a script to configure gnome terminal to my preferred configuration. Doing this is not very hard, but finding how to do it took me some time.
 
-Configuration for gnome terminal lives in [`dconf`](https://wiki.gnome.org/Projects/dconf); gnome's default configuration system.
-
 The first thing we need to do is get the default terminal profile id:
 
 ```sh
-$ dconf read /org/gnome/terminal/legacy/profiles:/default
+$ gsettings get org.gnome.Terminal.ProfilesList default
 'b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
 ```
 
@@ -26,36 +24,28 @@ $ dconf read /org/gnome/terminal/legacy/profiles:/default
 We will need this value later, so let's save it in a variable:
 
 ```sh
-GNOME_TERMINAL_PROFILE=`dconf read /org/gnome/terminal/legacy/profiles:/default | awk -F \' '{print $2}'`
+GNOME_TERMINAL_PROFILE=`gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}'`
 ```
 
-Next, we need to load our desired configuration into this profile:
+Next, we can use gsettings to change the properties we want to change. For my terminal I use these settings:
 
 ```sh
-dconf load /org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ < terminal-profile
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Monospace 10'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ use-system-font false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ audible-bell false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ use-theme-colors false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ background-color '#000000'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ foreground-color '#AFAFAF'
 ```
 
-My `terminal-profile` file looks like this:
+You can list all the properties that can be configured:
 
-```ini
-[/]
-foreground-color='rgb(175,175,175)'
-palette=['rgb(0,0,0)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
-cursor-shape='block'
-use-system-font=false
-use-theme-colors=false
-use-transparent-background=false
-font='Monospace 10'
-use-theme-transparency=false
-background-color='rgb(18,18,18)'
-background-transparency-percent=0
-audible-bell=false
+```
+gsettings list-keys org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/
 ```
 
-If you like your current terminal profile, you can get the settings for your current default profile using:
+If you want to see the current value for a setting you can use:
 
-```sh
-dconf dump /org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/
 ```
-
-You can make modifications to this file if you desire and then load them on other machines to get the same configuration.
+gsettings get org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ foreground-color
+```
