@@ -222,4 +222,4 @@ c
 
 This will continue the execution of the program until it reaches another endpoint, or (in our case) until the program ends.
 
-This are some of the most common use cases for debugging a simple program. I&#8217;ll cover more advanced cases in another post.
+These are some of the most common use cases for debugging a simple program. I&#8217;ll cover more advanced cases in another post.
