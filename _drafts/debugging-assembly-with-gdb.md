@@ -9,19 +9,21 @@ tags:
   - debugging
 ---
 
-I wrote a couple of articles about assembly in the last weeks, and in order to understand what I was doing, I thought it would be useful to take a look at the contents of memory and registers to confirm my understand was correct. I looked around, and found that GDB can help with this.
+I wrote a couple of articles about assembly before, and in order to understand what I was doing, I thought it would be useful to take a look at the contents of memory and registers to confirm my understanding was correct. I looked around, and found that GDB can help with this.
 
-I wrote an [introductory article to GDB](/2018/02/introduction-to-gdb/) a few months ago that you can look at to get the basics. This article is going to build on top of it.
+I wrote an [introductory article to GDB](/2018/02/introduction-to-gdb/) a few months ago that you can check to get the basics. This article is going to build on top of it.
 
 ## Debug information
 
-In my introductory article, I used this command to assemble my program:
+In my [introduction to assembly](/2019/01/introduction-to-assembly-assembling-a-program/), I used this command to assemble my program:
 
 ```bash
 nasm -f elf64 -o example.o example.asm
 ```
 
-The [elf64 (Executable and linkable format)](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format) parameter specifies the format of the output file. This will genearte a file will enough information so the Operating System can execute it, but it doesn't contain any information to help debugging. If we want our executable to contain debug information (information about the file and line number a program is executing) we need to say so when we assemble the program.
+<!--more-->
+
+The [elf64 (Executable and linkable format)](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format) parameter specifies the format of the output file. This will generate a file with enough information so the Operating System can execute it, but it doesn't contain any information to help debugging. If we want our executable to contain debug information (information about the file and line number a program is executing) we need to say so when we assemble the program.
 
 To see what are the formats for debug information available in your version of nasm, you can use:
 
@@ -54,7 +56,6 @@ _start:
   mov rax, 60
   mov rdi, 0
   syscall
-
 ```
 
 If we save this in a a file named examble.asm, we generate the executable with these commands:
@@ -166,12 +167,50 @@ The first column is the hexadecimal value (`0x3c`) and the second is decimal (`6
 
 ## Inspecting memory
 
-print variable address in gdb:
-info address exit_code
+Let's introduce some variables to our program:
 
-print variable value in gdb:
-print exit_code
+```nasm
+section .data
+  exit_code dq 0
+  sys_call dq 60
 
+section .text
+  global _start
 
+_start:
+  mov rax, [sys_call]
+  mov rdi, [exit_code]
+  syscall
+```
 
-http://dbp-consulting.com/tutorials/debugging/basicAsmDebuggingGDB.html
+If we open stop gdb on `_start`, we can inspect the variables in the program:
+
+```gdb
+(gdb) print (int) sys_call
+$1 = 60
+```
+
+Note that we need to cast the variable (`(int)`), otherwise we'll get an error:
+
+```gdb
+(gdb) print sys_call
+'sys_call' has unknown type; cast it to its declared type
+```
+
+Another thing we can do is get the memory address sys_call refers to:
+
+```gdb
+(gdb) info address sys_call
+Symbol "sys_call" is at 0x402008 in a file compiled without debugging
+```
+
+We can also see the data at a memory address using an `*`:
+
+```gdb
+(gdb) print (int) *0x402008
+$4 = 60
+```
+
+## Conclusion
+
+This article shows how to use gdb to debug a simple assembly program. Most commands are similar to the ones used for debugging any other programming language, but we also go over how to access registers and memory addresses, which is more commonly needed when working at assembly level.
