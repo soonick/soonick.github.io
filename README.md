@@ -4,10 +4,16 @@ My blog. You can find it at [ncona.com](https://ncona.com).
 
 # Development
 
+First install dependencies:
+
+```
+bundle install
+```
+
 To run locally:
 
 ```
-jekyll build && jekyll s -DIl
+bundle exec jekyll build && bundle exec jekyll s -DIl
 ```
 
 To generate tag pages:
