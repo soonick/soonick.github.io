@@ -9,13 +9,13 @@ tags:
   - programming
 ---
 
-In this post I'm going to talk about how to use exceptions for error handling in C++.
+In this post I'm going to write about using exceptions for error handling in C++.
 
 ## Exceptions
 
 They are called exceptions, because they happen in exceptional scenarios. A program should in most cases run without exceptions, but sometimes unexpected things happen and we might want to do something in those scenarios.
 
-Exceptions happen when there is either a developer error (Dereferencing a null pointer) or an environment error (Trying to write to a disk that is full). They should not happen for user created errors (incorrect input by user), if those errors are common.
+Exceptions happen when there is either a developer error (Dereferencing a null pointer) or an environment error (Trying to write to a disk that is full). They should not happen for user triggered errors (incorrect input by user), if those errors are common.
 
 When an error such as dereferencing a null pointer occurs, an Exception object is created. The Exception object contains information about the error, and the state of the program at the time this happened. The exception will then be `thrown` and left for the runtime to handle.
 
