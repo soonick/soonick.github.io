@@ -3,7 +3,7 @@ title: Using lsof to find who is using a file or socket
 author: adrian.ancona
 layout: post
 date: 2019-03-06
-permalink: /2019/03/assembly-variables-instructions-and-addressing-modes/
+permalink: /2019/03/using-lsof-to-find-who-is-using-a-file-or-socket/
 tags:
   - linux
   - debugging
