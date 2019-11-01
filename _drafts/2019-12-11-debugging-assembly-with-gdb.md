@@ -47,7 +47,7 @@ nasm -f elf64 -g -F dwarf -o example.o example.asm
 
 ## Debugging with GDB
 
-Let's look at the basics over the same program I used for the introduction:
+Let's look at the basics over the same program I used for my introduction to assembly article:
 
 ```nasm
 section .text
@@ -58,7 +58,7 @@ _start:
   syscall
 ```
 
-If we save this in a a file named examble.asm, we generate the executable with these commands:
+If we save this in a file named example.asm, we can generate the executable with these commands:
 
 ```bash
 nasm -f elf64 -g -F dwarf -o example.o example.asm
@@ -69,34 +69,19 @@ We can now start gdb with the program loaded:
 
 ```bash
 $ gdb example
-GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.5) 7.11.1
-Copyright (C) 2016 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
-and "show warranty" for details.
-This GDB was configured as "x86_64-linux-gnu".
-Type "show configuration" for configuration details.
-For bug reporting instructions, please see:
-<http://www.gnu.org/software/gdb/bugs/>.
-Find the GDB manual and other documentation resources online at:
-<http://www.gnu.org/software/gdb/documentation/>.
-For help, type "help".
-Type "apropos word" to search for commands related to "word"...
-Reading symbols from example...done.
 (gdb)
 ```
 
 We can use the `b` command to set a breakpoint. For now, let's set it at the `_start` symbol:
 
-```gdb
+```
 (gdb) b _start
 Breakpoint 1 at 0x400080: file example.asm, line 4.
 ```
 
 Because the executable contains debug information, gdb can tell us in which file and line number the breakpoint was set. We can now run the program and it will stop at our breakpoint:
 
-```gdb
+```
 (gdb) run
 Starting program: /home/adrian/example
 
@@ -106,7 +91,7 @@ Breakpoint 1, _start () at example.asm:4
 
 The program stops at the first executable line of our program. We can step line by line using the `s` command:
 
-```gdb
+```
 (gdb) s
 5	  mov rdi, 0
 (gdb) s
@@ -121,7 +106,7 @@ Use `q` to quit gdb.
 
 Writing assembly code, you will find yourself moving things in and out of regiters very often. It is then natural that debugging a program we might want to see their contents. To see the contents of all registers we can use `info registers` or the abbreviation `i r`. Using the same example program:
 
-```gdb
+```
 (gdb) run
 Starting program: /home/adrian/example
 
@@ -156,7 +141,7 @@ gs             0x0	0
 
 By printing the registers we can see that the breakpoint takes effect before executing the line: `mov rax, 60`. In many cases we probably only want to see a specific register. To do this we just need to add the register name to the command: `i r <register>`:
 
-```gdb
+```
 (gdb) s
 5	  mov rdi, 0
 (gdb) i r rax
@@ -183,30 +168,30 @@ _start:
   syscall
 ```
 
-If we open stop gdb on `_start`, we can inspect the variables in the program:
+If we stop gdb at `_start`, we can inspect the variables in the program:
 
-```gdb
+```
 (gdb) print (int) sys_call
 $1 = 60
 ```
 
-Note that we need to cast the variable (`(int)`), otherwise we'll get an error:
+Note that we need to cast the variable to the correct type or we'll get an error:
 
-```gdb
+```
 (gdb) print sys_call
 'sys_call' has unknown type; cast it to its declared type
 ```
 
 Another thing we can do is get the memory address sys_call refers to:
 
-```gdb
+```
 (gdb) info address sys_call
 Symbol "sys_call" is at 0x402008 in a file compiled without debugging
 ```
 
-We can also see the data at a memory address using an `*`:
+We can also see the data at a memory address using an asterisk (`*`):
 
-```gdb
+```
 (gdb) print (int) *0x402008
 $4 = 60
 ```
