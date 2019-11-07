@@ -21,7 +21,7 @@ int number = 7;
 
 <!--more-->
 
-There are two values in this expression. On the left of the `=` sign we have `number`. On the right, we have `7`. `number` has a memory location associated to it, and it will be filled with the value 7. The `7` on the right doesn't have a memory access associated to it. It is part of the program, but we can't really get its memory address.
+There are two values in this expression. On the left of the `=` sign we have `number`. On the right, we have `7`. `number` has a memory location associated to it, and it will be filled with the value 7. The `7` on the right doesn't have a memory address associated to it. It is part of the program, but we can't really get its memory address.
 
 An expression like the one above, expects the left side of the `=` sign to be an lvalue. That's the reason something like this doesn't work:
 
@@ -33,7 +33,7 @@ An `rvalue` can be defined as anything that is not an `lvalue` (At least it coul
 
 ## Non-modifiable lvalue
 
-In the beginning of C++ there were only `lvalues` and `rvalues`. Lvalues could be modified and rvalues couldn't. When C++ introduced the `const` keyword this changed.
+In the beginning of C++ there were only `lvalues` and `rvalues`. Lvalues could be modified and rvalues couldn't. When C++ introduced the `const` keyword, this changed.
 
 ```cpp
 const int number = 7;
@@ -44,7 +44,7 @@ The code above fails because number is a `non-modifiable lvalue` and the `=` ope
 
 ## References
 
-References were later added to the standard, and with it, new rules. A reference (now called `lvalue references`) binds to an lvalue like this:
+References were later added to the standard, and with it, new rules. A reference (now called `lvalue reference`) binds to an lvalue like this:
 
 ```cpp
 int number = 7;
