@@ -10,7 +10,7 @@ tags:
   - bash
 ---
 
-As part of getting a new computer, I want to be able to run a script to configure gnome terminal to my preferred configuration. Doing this is not very hard, but finding how to do it took me some time.
+As part of getting a new computer, I want to be able to run a script to configure gnome terminal to my preferred setup. Doing this is not very hard, but finding how to do it took me some time.
 
 The first thing we need to do is get the default terminal profile id:
 
@@ -27,7 +27,7 @@ We will need this value later, so let's save it in a variable:
 GNOME_TERMINAL_PROFILE=`gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}'`
 ```
 
-Next, we can use gsettings to change the properties we want to change. For my terminal I use these settings:
+Next, we can use gsettings to change the properties we care about. For my terminal I use these settings:
 
 ```sh
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Monospace 10'
