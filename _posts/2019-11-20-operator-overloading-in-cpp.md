@@ -143,7 +143,7 @@ class Counter {
   }
 
  private:
-  int squares[3] = {1, 2, 9};
+  int squares[3] = {1, 4, 9};
 };
 
 int main() {
