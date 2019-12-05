@@ -255,7 +255,9 @@ The `push` method does modify data, so there is potential for data corruption. A
 
 Most of these steps could fail, and we have to make sure our data structure doesn't get in a bad state if they do. If we look at the steps from top to bottom, we can see that if something fails before `head_` is set to the new node, everything will be fine. For example, if we fail to create a node and throw an exception, the destructor will cleanup the new node and our data structure will not have changed.
 
-The step of setting `head_` to the newly created node can't fail. If it fails it could leave `head_` pointing to some corrupted data, which is something we don't want. Luckily the only thing the program does in the last step is copy a shared_ptr, which can't fail, so we don't have to worry about exceptions. On the other hand, we could have a problem if another thread is setting `head_` at the same time, so we will need a mutex to protect this operation.
+The step of setting `head_` to the newly created node can't fail. If it fails it could leave `head_` pointing to some corrupted data, which is something we don't want. Luckily the only thing the program does in the last step is copy a shared_ptr, which can't fail, so we don't have to worry about exceptions.
+
+One thing we need to keep in mind is what would happen if multiple threads call this method at the same time. If we have two threads create a new node at the same time, they will both set the `next` field to the current head. Then `head_` would be set to one of these values. This effectively means, one push would be lost. To prevent this from happening, we'll use a mutex.
 
 Finally, the `pop` method, consists of a few steps too:
 
@@ -275,11 +277,8 @@ template <typename T>
 class Stack {
  public:
   void push(T in) {
-    auto newNode = std::make_shared<Node>(std::move(in), head_);
-
-    // We only need to lock the copy of the shared_ptr
     std::lock_guard<std::mutex> g(m);
-    head_ = newNode;
+    head_ = std::make_shared<Node>(std::move(in), head_);
   }
 
   T pop() {
