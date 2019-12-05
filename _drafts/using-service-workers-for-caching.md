@@ -16,6 +16,8 @@ A service worker is a script that can be used as a client-side proxy for network
 
 Service workers can be used to improve the performance and user experience of an application. They can be used to cache assets that are commonly needed but don't change often, or to provide offline functionality.
 
+<!--more-->
+
 ## HTTPS
 
 For security reasons, service workers only work over HTTPs.
