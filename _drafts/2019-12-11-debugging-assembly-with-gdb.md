@@ -2,6 +2,8 @@
 title: Debugging assembly with GDB
 author: adrian.ancona
 layout: post
+date: 2019-12-11
+permalink: /2019/12/debugging-assembly-with-gdb/
 tags:
   - computer_science
   - programming
