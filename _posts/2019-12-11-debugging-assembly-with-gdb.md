@@ -106,7 +106,7 @@ Use `q` to quit gdb.
 
 ## Inspecting registers
 
-Writing assembly code, you will find yourself moving things in and out of regiters very often. It is then natural that debugging a program we might want to see their contents. To see the contents of all registers we can use `info registers` or the abbreviation `i r`. Using the same example program:
+Writing assembly code, you will find yourself moving things in and out of registers very often. It is then natural that debugging a program we might want to see their contents. To see the contents of all registers we can use `info registers` or the abbreviation `i r`. Using the same example program:
 
 ```
 (gdb) run
