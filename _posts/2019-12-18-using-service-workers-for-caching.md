@@ -139,7 +139,7 @@ If there is a bug in the service worker that prevents the app from loading, dele
 
 Usual debugging primitives can be used. `console.log` and `debugging` will work as expected if used inside service worker code.
 
-Another tool that can help understand what is happening is the browser developer tools. In Chrome, the Application tab will show you information about the currently installed and running service worker:
+Another tool that can help understand what is happening, is the browser developer tools. In Chrome, the Application tab will show you information about the currently installed and running service worker:
 
 [<img src="/images/posts/sw-application-tab.png" />](/images/posts/sw-application-tab.png)
 
@@ -208,7 +208,7 @@ self.addEventListener('fetch', event => {
 });
 ```
 
-The code above shows an example of caching requests on the fly. A huge problem with the code above is that once it caches a request, it will always return a response from cache, which is most likely not something you want to do for most requests.
+The code above shows an example of caching requests on the fly. A small problem with the code above is that once it caches a request, it will always return a response from cache, which might not be what you want in all cases.
 
 ## What and when to cache
 
