@@ -336,3 +336,12 @@ code.highlighter-rouge {
 .highlighter-rouge {
   font-size: 80%;
 }
+
+.s-table th, .s-table td {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+.s-table th {
+  background-color: #0078af;
+}
