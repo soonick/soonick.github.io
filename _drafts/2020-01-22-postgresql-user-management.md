@@ -2,8 +2,8 @@
 title: PostgreSQL user management
 author: adrian.ancona
 layout: post
-# date: 2019-12-25
-# permalink: /2019/12/introduction-to-postgresql/
+date: 2020-01-22
+permalink: /2020/01/postgresql-user-management/
 tags:
   - postgresql
   - linux
@@ -56,7 +56,7 @@ The group membership can be seen using `\du`:
 ```sh
 \du
                                      List of roles
- Role name  |                         Attributes                         |  Member of   
+ Role name  |                         Attributes                         |  Member of
 ------------+------------------------------------------------------------+--------------
  postgres   | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
  some_group | Cannot login                                               | {}
@@ -159,7 +159,7 @@ We now have a user with permissions to read from a table, but we can't yet log-i
 ```sh
 \du
                                      List of roles
- Role name  |                         Attributes                         |  Member of   
+ Role name  |                         Attributes                         |  Member of
 ------------+------------------------------------------------------------+--------------
  postgres   | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
  some_group | Cannot login                                               | {}
@@ -182,7 +182,7 @@ psql -d test
 
 Peer authentication is not very useful for a production database, since we need to allow different systems to connect to the database from other hosts.
 
-To enable authentication methods for different users, we need to use [`pg_hba.conf`](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) (HBA stands for host-based authentication). This configuration file, lists all the users that are allowed to connect to the database and which authentication methods they are allowed to use.
+To enable different authentication methods for users, we need to use [`pg_hba.conf`](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) (HBA stands for host-based authentication). This configuration file lists all the users that are allowed to connect to the database and which authentication methods they are allowed to use.
 
 The location of the file can be found with an SQL query:
 
@@ -225,7 +225,7 @@ Let's look at what the different fields mean.
   - `hostssl` - Same as `host`, but only using SSL.
   - `hostnossl` - Same as `host`, but only not using SSL.
 - `DATABASE` - Name of the database we want to allow connections to. The special value `all` means connection to all databases is allowed.
-- `USER` - Name of the user we want to allow connection to. The value `all` means, all users.
+- `USER` - Name of the user we want to allow to connect. The value `all` means, all users.
 - `ADDRESS` - For connection types that allow remote connections, this specifies which hosts are allowed to connect. This is typically expressed using CIDR.
 - `METHOD` - Authentication method to use.
 
@@ -312,5 +312,30 @@ WHERE
 
 If the passwd field has `SCRAM-SHA-256` at the beginning, it means everything went well.
 
+The next step is to make sure PostgreSQL is accepting connections from other hosts. My article about [handling connection refused error](/2020/01/postgresql-connection-refused/) explains how to do this.
 
--------------- Write about modifying hba-conf to allow connections from other machines using ssl
+Besides allowing connections from other hosts, we also need to allow the user we created to log-in from other hosts. To do this, we need to modify our `hba_file` to allow `some_user` to connect from any host:
+
+```ini
+hostssl   some_database   some_user   all   scram-sha-256
+```
+
+If we want to allow connections only from hosts that are part of a subnet:
+
+```ini
+hostssl   some_database   some_user   10.120.33.0/24   scram-sha-256
+```
+
+If we want to allow connections only from a specific host:
+
+```ini
+hostssl   some_database   some_user   10.120.33.1/32   scram-sha-256
+```
+
+Since we used `hostssl` as the connection type, PostgreSQL won't allow the connection unless it uses SSL.
+
+When a client connects to the database, it can choose which [`sslmode`](https://www.postgresql.org/docs/current/libpq-ssl.html) to use. The most secure level is `verify-full`, which requires a Certificate Authority that validates the certificate of the server. The level that I use internally is `require`, which guarantees that communication will be encrypted, but doesn't protect from man-in-the-middle attacks.
+
+## Conclusion
+
+In this article I explained how to create users, assign them permissions and allow them to connect to a database. These are the steps I followed to create a small service that required to talk to a PostgreSQL database on another host. Hopefully this helps you get started too.
