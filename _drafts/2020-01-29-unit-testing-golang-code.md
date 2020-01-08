@@ -5,12 +5,13 @@ layout: post
 date: 2020-01-29
 permalink: /2020/01/unit-testing-golang-code/
 tags:
-  - postgresql
-  - linux
+  - automation
+  - golang
+  - programming
+  - testing
 ---
 
 In this article I'm going to explain how to write and run unit tests for Golang code using `go test`. If you are completely new to the language, I recommend you take a look at my [introduction to Golang](/2016/01/first-steps-in-go-language/) article.
-
 
 ## Packages
 
