@@ -2,8 +2,8 @@
 title: Using testify for Golang tests
 author: adrian.ancona
 layout: post
-# date: 2020-02-19
-# permalink: /2020/02/using-testify-for-golang-tests/
+date: 2020-02-19
+permalink: /2020/02/using-testify-for-golang-tests/
 tags:
   - automation
   - golang
