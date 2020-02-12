@@ -2,8 +2,8 @@
 title: Introduction to AWS CLI
 author: adrian.ancona
 layout: post
-# date: 2020-02-26
-# permalink: /2020/02/introduction-to-circleci/
+date: 2020-03-04
+permalink: /2020/03/introduction-to-aws-cli/
 tags:
   - authentication
   - automation
@@ -20,6 +20,8 @@ Although it is possible to do most things from AWS management console, learning 
 ## Installation
 
 To install AWS CLI we need Python 3.4 or later. Use `--version` to verify it's installed:
+
+<!--more-->
 
 ```sh
 python3 --version
@@ -57,7 +59,7 @@ When we open an AWS account, we are the root of that account. It is recomended t
 
 To create our user, we need to go to the [IAM console](https://console.aws.amazon.com/iam/). Select `Users` on the left menu and then `Add user`.
 
-[<img src="/images/posts/aws-aim-add-user.png" alt="AWS IAM add user" />](/images/posts/aws-iam-add-user.png)
+[<img src="/images/posts/aws-iam-add-user.png" alt="AWS IAM add user" />](/images/posts/aws-iam-add-user.png)
 
 The first step is to choose a user name and what kind of access we want for the user, I chose `awscli` as user name and only programmatic access:
 
@@ -84,7 +86,7 @@ This screen will show the `Access key ID` and `Secret access key` for the user. 
 
 ## Configuration
 
-Now that we have our admin user, we can configure the CLI so it can create resources on our AWS account.
+Now that we have our admin user, we can configure the CLI, so it can create resources on our AWS account.
 
 ```sh
 aws configure
@@ -115,7 +117,7 @@ AWS CLI can be used to manage most resources provided by AWS, so I won't be cove
 aws help
 ```
 
-This command will you the command line arguments that can be used with `aws`, as well as a list of the services that it can manage. To get information about a specific service:
+This command will show the command line arguments that can be used with `aws`, as well as a list of the services that it can manage. To get information about a specific service:
 
 ```sh
 aws rds help
@@ -130,7 +132,63 @@ aws ec2 describe-images --owners amazon
 This will return a huge list of images. To find the latest Ubuntu LTS image we can use this command (You might need to modify the commad to fit the name and version of the latest LTS):
 
 ```sh
-aws ec2 describe-images --owners 099720109477 --filters 'Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-????????' 'Name=state,Values=available' --query 'reverse(sort_by(Images, &CreationDate))[:1]'
+aws ec2 describe-images --owners 099720109477 --filters \
+'Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-????????' 'Name=state,Values=available' --query 'reverse(sort_by(Images, &CreationDate))[:1]'
 ```
 
-We will need the `ImageId`.
+At the time of this writing, this is the output:
+
+```js
+[
+    {
+        "Architecture": "x86_64",
+        "CreationDate": "2020-02-04T18:52:10.000Z",
+        "ImageId": "ami-04c7af7de7ad468f0",
+        "ImageLocation": "099720109477/ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200131",
+        "ImageType": "machine",
+        "Public": true,
+        "OwnerId": "099720109477",
+        "State": "available",
+        "BlockDeviceMappings": [
+            {
+                "DeviceName": "/dev/sda1",
+                "Ebs": {
+                    "DeleteOnTermination": true,
+                    "SnapshotId": "snap-09a2da60644ad7422",
+                    "VolumeSize": 8,
+                    "VolumeType": "gp2",
+                    "Encrypted": false
+                }
+            },
+            {
+                "DeviceName": "/dev/sdb",
+                "VirtualName": "ephemeral0"
+            },
+            {
+                "DeviceName": "/dev/sdc",
+                "VirtualName": "ephemeral1"
+            }
+        ],
+        "Description": "Canonical, Ubuntu, 18.04 LTS, amd64 bionic image build on 2020-01-31",
+        "EnaSupport": true,
+        "Hypervisor": "xen",
+        "Name": "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200131",
+        "RootDeviceName": "/dev/sda1",
+        "RootDeviceType": "ebs",
+        "SriovNetSupport": "simple",
+        "VirtualizationType": "hvm"
+    }
+]
+```
+
+Now that we have the `ImageId`, we can create an EC2 instance:
+
+```
+aws ec2 run-instances --image-id ami-04c7af7de7ad468f0 --instance-type t2.micro --count 1
+```
+
+The command will start a single ec2 instance running Linux.
+
+## Conclusion
+
+As I mentioned before, you can manage most resources with AWS CLI. In this article I covered the basics of how to use it, so you can use the documentation for reference when you need to perform a specific task.
