@@ -8,6 +8,14 @@ tags:
   - some good tags
 ---
 
-I just joined a team that is working on a database, so I need to learn a little more about how databases work internally. Before I try to understand how databases store data, I'm going to explore a technique for optimizing durable storage.
+I just joined a team that is working on a database, so I need to learn a little more about how databases work internally. In this article I'm going to learn how databases store data using slotted pages.
+
+
+
+
+https://www.mssqltips.com/sqlservertip/4345/understanding-how-sql-server-stores-data-in-data-files/
+https://www.postgresql.org/docs/9.0/storage-page-layout.html
+
+
 
 Slotted page or slot directory SILBERSCHATZ10 RAMAKRISHNAN03
