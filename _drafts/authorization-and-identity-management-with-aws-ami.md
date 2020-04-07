@@ -22,19 +22,19 @@ To protect this account, it is recommended that it is only used to create an Adm
 
 For the rest of this post I will assume the admin account has been created and the CLI has been configured to use this user. If you don't know how to do this, take a look at my [introduction to AWS CLI](/2020/03/introduction-to-aws-cli/).
 
-## IAM Terms
+## IAM glossary
 
 At a high level, IAM will help us identify who someone is and what they are allowed to do.
 
-In order to understand how to use IAM, we need to understand the diferent pieces that interact when authenticating (who they are) and authorizing (what do they have permission to do) a request.
+In order to understand how to use IAM, we need to understand the diferent pieces that interact when authenticating (who they are) and authorizing (what they can do) a request.
 
-- **Resource** - A resource is pretty much anything that can be managed in AWS. An EC2 instance or an S3 bucker are resources, that can be created or destroyed. Users are also resources that can be managed through AWS.
+- **Resource** - A resource is pretty much anything that can be managed in AWS. An EC2 instance or an S3 bucket are resources, that can be created or destroyed. Users are also resources that can be managed through AWS.
 - **User** - A user can be given permissions to perform actions on other resources. A user can have permissions to read certain S3 buckets, for example.
 - **Group** - Groups can be used to give permissions to users that are similar. For example, imagine an organization uses `CodeCommit` (Private git repository) to store their source code. All developers in that organization will probably need permissions to work on these repositories. A user can be created for each developer and all users added to a single group. Then this group can be given permissions on all `CodeCommit` repos. If a new developer joins the team, it's just a matter of adding the user to the group.
 - **Role** - A role is an identity that can be assumed by an entity to allow it to perform specific operations. When a user or service assumes a role, AWS provides it with temporary credentials that can be used to act as the assumed role.
 - **Policy** - A policy is a set of permissions. Policies can be assigned to users, groups or roles to allow them to perfom actions on resources.
-- **Identity** - A user, group or role
-- **Entity** - When a person or system authenticates to AWS, it will provide credentials that identify it as an entity (user or role)
+- **Identity** - A user, group or role.
+- **Entity** - When a person or system authenticates to AWS, it will provide credentials that identify it as an entity (user or role).
 - **Principal** - A person or system that authenticates to AWS.
 
 These terms can be a little confusing, so I'll try to explain it with an example:
@@ -47,19 +47,46 @@ Hopefully, that makes it a little clearer.
 
 ## Policies
 
-https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
-https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_understand.html
+Policies are used to define permissions for an Identity or Resource. AWS supports a few types of policies, but I'm just going to go over `Identity based policies`, which are policies that can be attached to an Identity.
 
+Policies are represented using JSON. They have the following structure:
+
+```js
+{
+  "Version": "2012-10-17",
+  "Statement": []
+}
+```
+
+`Version` refers to the version of the policy language. It hasn't been updated in a few years (which is a good thing), so the same value appears in all policies. The policy also contains an array of statements. Each `Statements` defines a permission.
+
+When AWS validates if an Entity has the correct permissions to perform an action, it will `OR` all the statements in all the policies attached to that Entity.
+
+Let's now look into statements. A statement looks like this:
+
+```js
+{
+  "Sid": "StatementName",
+  "Effect": "Allow",
+  "Action": ["s3:Get"],
+  "Resource": "arn:aws:s3:::someBucket/*"
+}
+```
+
+- `Sid` - An optional name for the statement
+- `Effect` - Either **Allow** or **Deny**
+- `Action` - Specifies the actions that this statement refers to. For a list of all the possible values look at the [actions' documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html)
+- `Resource` - Resources this statement refers to (Using the [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) format). Some actions apply only to some resources.
 
 ## IAM with AWS CLI
 
-Often when working with AWS CLI, I want to know which identity (user or role) is being used by the CLI. We can use this command to find out:
+Often, when working with AWS CLI, I want to know which Identity is being used by the CLI. This information can be obtained with this command:
 
 ```sh
 aws sts get-caller-identity
 ```
 
-To list all the users in your account:
+To list all the users in an account:
 
 ```sh
 aws iam list-users
@@ -80,7 +107,7 @@ aws iam list-groups
 There are a lot of policies provided by default by AWS, those can be listed using the following command (warning: takes a very long time):
 
 ```sh
-aws iam list-policies 
+aws iam list-policies
 ```
 
 A more useful (and much faster) command to list only policies created by this account:
@@ -98,50 +125,6 @@ aws iam create-policy --policy-name SourceCodeCommitter --description "Allows re
 ```
 
 Notice that we specify the actual policy in another file. Also notice that we need to prefix the path to the file with `file://`.
-
-The policy file I used for this policy is the following:
-
-```js
-{
-  "Version": "2012-10-17",
-  "Statement" : [
-    {
-      "Effect" : "Allow",
-      "Action" : [
-        "codecommit:AssociateApprovalRuleTemplateWithRepository",
-        "codecommit:BatchAssociateApprovalRuleTemplateWithRepositories",
-        "codecommit:BatchDisassociateApprovalRuleTemplateFromRepositories",
-        "codecommit:BatchGet*",
-        "codecommit:BatchDescribe*",
-        "codecommit:Get*",
-        "codecommit:List*",
-        "codecommit:Create*",
-        "codecommit:DeleteBranch",
-        "codecommit:DeleteFile",
-        "codecommit:Describe*",
-        "codecommit:DisassociateApprovalRuleTemplateFromRepository",
-        "codecommit:EvaluatePullRequestApprovalRules",
-        "codecommit:OverridePullRequestApprovalRules",
-        "codecommit:Put*",
-        "codecommit:Post*",
-        "codecommit:Merge*",
-        "codecommit:TagResource",
-        "codecommit:Test*",
-        "codecommit:UntagResource",
-        "codecommit:Update*",
-        "codecommit:GitPull",
-        "codecommit:GitPush"
-      ],
-      "Resource" : [
-        "arn:aws:codecommit:*"
-      ]
-    }
-  ]
-}
-```
-
-##################################################%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-I'm not going to go in detail into the policy, but it allows us to specify what actions to allow or deny in which resources.
 
 To create a new group we just need to provide a name:
 
@@ -169,42 +152,46 @@ aws iam attach-group-policy --group-name developers --policy-arn arn:aws:iam::12
 
 ## Roles and AWS STS (Security Token Service)
 
-You might have noticed that I didn't mentioned how to create a role using AWS CLI. The reason for this is that `roles` work a little different to `users` and `groups`.
+You might have noticed that I didn't mention how to create a role using AWS CLI. The reason for this is that `roles` work a little different to `users` and `groups`.
 
 The main difference between a `user` and a `role` is that there are no long living credentials for roles. If we need to use the permissions of a `role`, we need to `assume` that role and we will be given temporary credentials that we can use.
 
 Roles are necessary for some advanced use cases:
 
 - **Delegation** - Allow a user in one AWS account to manage resources on a different AWS account.
-- **Fedration** - Allow users that already have credentials in other directories (LDAP, OpenID, etc,) to manage resources in an AWS account, whithout having to create a user for it.
+- **Federation** - Allow users that already have credentials in other directories (LDAP, OpenID, etc,) to manage resources in an AWS account, whithout having to create users for them.
 
 I'm not going to cover those scenarios in this post. Instead, I'm just going to show how to create and assume a role within the same account.
 
 ### Assume role policy
 
-Before we can create a role, we need to define an assume role policy, which defines who can assume this role.
+Before we can create a role, we need to define an assume role policy, which defines who can assume this role. The format is the same as Identity policies:
 
-Roles also allow you to do certain things that 
+```js
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS" "arn:aws:iam::1234567890:user/carlos"
+      },
+      "Action": [
+        "sts:AssumeRole"
+      ]
+    }
+  ]
+}
+```
+
+This policy will allow the user identified by the ARN `arn:aws:iam::1234567890:user/carlos`, to assume the role this policy is attached to.
+
+### Creating the role
+
+With the assume role policy ready, we can create our role:
 
 ```sh
 aws iam create-role --role-name creator-role --assume-role-policy-document file://assume-policy.json
 ```
 
-https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html
-
-
-
-
-
-
-
-
-
-
-
-#################### Describe the different files used
-
-
-
-https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html
-https://docs.aws.amazon.com/IAM/latest/UserGuide/intro-structure.html
+### Assuming the role
