@@ -12,6 +12,8 @@ As computer users, we are accustomed to storing data to retrieve it sometime in 
 
 `Hard Disk Drives (HDD)` have been a reliable way to store data since the 1950's. Cloud providers (AWS, Azure, Google Cloud) have HDD offerings that are cheaper than the SSD alternatives. At the time I wrote this article, if I want to buy a 5TB HDD, I would have to pay around $100 USD; if I want to buy 5TB SSD I would have to pay around $500 USD. For this reason HDDs are still widely used.
 
+<!--more-->
+
 ## Hardware
 
 An HDD comes in a a rectangular box made of metal:
