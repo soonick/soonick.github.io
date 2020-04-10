@@ -2,31 +2,33 @@
 title: Identity and Access Management with AWS IAM
 author: adrian.ancona
 layout: post
-# date: 2020-03-04
-# permalink: /2020/03/introduction-to-aws-cli/
+date: 2020-04-22
+permalink: /2020/04/identity-and-access-management-with-aws-iam/
 tags:
   - authentication
   - aws
   - security
 ---
 
-In a previous post I wrote about [AWS CLI](/2020/03/introduction-to-aws-cli/). In that post I explained how to create an admin user and how to use that user with the CLI. In this post I'm going to go in more depth into what AWS IAM can do and what are some best practices.
+In a previous post I wrote about [AWS CLI](/2020/03/introduction-to-aws-cli/). In that post I explained how to create an admin user and how to use that user with the CLI. In this post I'm going to go in more depth into AWS IAM and show some examples.
 
 ## The root user
 
-When someone signs up to AWS they will need to provide an e-mail address and password they want to use to access their account. At this point, they are the only person that knows that combination of e-mail and password, so it can be safely assumed that whoever holds those two pieces of information is the owner of the account.
+When someone signs up to AWS they will need to provide an e-mail address and password they want to use to access their account. At this point, they are the only person who knows that combination of e-mail and password, so it can be safely assumed that whoever holds those two pieces of information is the owner of the account.
 
-The owner of the account has the power to create or delete resources as they desire, so it's very important that it doesn't fall in the wrong hands.
+The owner of the account has the power to create or delete resources as they desire, so it's very important that the password doesn't fall in the wrong hands.
 
-To protect this account, it is recommended that it is only used to create an Admin user. This admin user account can create and delete any resource, but it cannot for example, close the account or change the account settings.
+<!--more-->
 
-For the rest of this post I will assume the admin account has been created and the CLI has been configured to use this user. If you don't know how to do this, take a look at my [introduction to AWS CLI](/2020/03/introduction-to-aws-cli/).
+To protect this account, it is recommended that it is only used to create an Admin user. This admin user account can create and delete any resource, but it can't, for example, close the account or change the account settings.
+
+For the rest of this post I will assume the admin account has been created and the CLI has been configured to use the admin user. If you don't know how to do this, take a look at my [introduction to AWS CLI](/2020/03/introduction-to-aws-cli/).
 
 ## IAM glossary
 
 At a high level, IAM will help us identify who someone is and what they are allowed to do.
 
-In order to understand how to use IAM, we need to understand the diferent pieces that interact when authenticating (who they are) and authorizing (what they can do) a request.
+In order to understand how to use IAM effectively, we need to understand the diferent pieces that interact when authenticating (who they are) and authorizing (what they can do) a request.
 
 - **Resource** - A resource is pretty much anything that can be managed in AWS. An EC2 instance or an S3 bucket are resources, that can be created or destroyed. Users are also resources that can be managed through AWS.
 - **User** - A user can be given permissions to perform actions on other resources. A user can have permissions to read certain S3 buckets, for example.
@@ -41,7 +43,7 @@ These terms can be a little confusing, so I'll try to explain it with an example
 
 I (the writer of this post) am a `principal`. I have an AWS account that I created and in that account I created a `user` named `myself`. Because I have multiple users in that account, I created a `group` and named it `admins`. I attached a `policy` to this group that allows managing any kind of `resource` in my account.
 
-I have a service that creates S3 buckets (S3 buckets are `resources`) in my account. I created a `role` for this service and assigned a `policy` that allows it to create buckets. In order for the service to authenticate to AWS it needs some credentials. I create a `user` for my service and I allow it to assume the `role` I just created. When the service starts it will claim to be the service `entity` and try try to assume to correct `role`. Since the credentials are valid, it will be given temporary credentials that it can use to create the `resources` it needs.
+I have a service (The service is a `principal`) that creates S3 buckets (S3 buckets are `resources`) in my account. I created a `role` for this service and assigned a `policy` that allows it to create buckets. In order for the service to authenticate to AWS it needs some credentials. I create a `user` for my service and I allow it to assume the `role` I just created. When the service starts, it will claim to be the service `entity` and try try to assume to correct `role`. Since the credentials are valid, it will be given temporary credentials that it can use to create the `resources` it needs.
 
 Hopefully, that makes it a little clearer.
 
@@ -62,7 +64,7 @@ Policies are represented using JSON. They have the following structure:
 
 When AWS validates if an Entity has the correct permissions to perform an action, it will `OR` all the statements in all the policies attached to that Entity.
 
-Let's now look into statements. A statement looks like this:
+A statement looks like this:
 
 ```js
 {
@@ -76,7 +78,7 @@ Let's now look into statements. A statement looks like this:
 - `Sid` - An optional name for the statement
 - `Effect` - Either **Allow** or **Deny**
 - `Action` - Specifies the actions that this statement refers to. For a list of all the possible values look at the [actions' documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html)
-- `Resource` - Resources this statement refers to (Using the [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) format). Some actions apply only to some resources.
+- `Resource` - Resources this statement refers to (Using the [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) format). Some actions can apply only to some resources.
 
 ## IAM with AWS CLI
 
@@ -174,7 +176,7 @@ Before we can create a role, we need to define an assume role policy, which defi
     {
       "Effect": "Allow",
       "Principal": {
-        "AWS" "arn:aws:iam::1234567890:user/carlos"
+        "AWS": "arn:aws:iam::1234567890:user/carlos"
       },
       "Action": [
         "sts:AssumeRole"
@@ -184,14 +186,44 @@ Before we can create a role, we need to define an assume role policy, which defi
 }
 ```
 
-This policy will allow the user identified by the ARN `arn:aws:iam::1234567890:user/carlos`, to assume the role this policy is attached to.
+This policy will allow the user identified by ARN `arn:aws:iam::1234567890:user/carlos`, to assume the role this policy is attached to.
 
 ### Creating the role
 
 With the assume role policy ready, we can create our role:
 
 ```sh
-aws iam create-role --role-name creator-role --assume-role-policy-document file://assume-policy.json
+aws iam create-role --role-name blog-role --assume-role-policy-document file://assume-policy.json
 ```
 
+At this point the role doesn't have any permissions. We can assign permissions the same way we assign permissions to users or groups.
+
 ### Assuming the role
+
+To use a role we need to "assume" it. If our cli user is allowed to assume the role, we can use this command:
+
+```sh
+aws sts assume-role --role-arn arn:aws:iam::1234567890:role/blog-role --role-session-name cli-session
+```
+
+The session name can be any arbitrary string. The only limitation is that there can't be two sessions for the same role using the same name at the same time.
+
+The command above, outputs some credentials that can be used to assume the role. To use these credentials from the CLI, we can set 3 environment variables:
+
+```
+export AWS_ACCESS_KEY_ID="<access key id>"
+export AWS_SECRET_ACCESS_KEY="<access key>"
+export AWS_SESSION_TOKEN="<session token>"
+```
+
+We can verify this works with the following command:
+
+```
+aws sts get-caller-identity
+```
+
+If everything worked correctly, we will see the identity as that of the role we just assumed.
+
+## Conclusion
+
+IAM allows for very fine grained control of users and resources. This is good, but comes with some complexity. In this post I try to unravel some of the complexity by defining some of the terms; then I show some simple examples of how to use it from AWS CLI.
