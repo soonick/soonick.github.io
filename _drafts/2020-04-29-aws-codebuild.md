@@ -3,7 +3,7 @@ title: AWS CodeBuild
 author: adrian.ancona
 layout: post
 date: 2020-04-29
-permalink: /2020/04/aws-codebuild
+permalink: /2020/04/aws-codebuild/
 tags:
   - automation
   - aws
