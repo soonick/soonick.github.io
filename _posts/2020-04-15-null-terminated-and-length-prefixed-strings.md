@@ -30,12 +30,12 @@ Notice that even though, `taco` is only 4 characters, it is necesary to allocate
 
 And two main disadvantages:
 
-- To find the lenght of a string, it has to be searched character by character until `\0` is found.
+- To find the length of a string, it has to be searched character by character until `\0` is found
 - It isn't possible to store a `\0` character as part of the string
 
 Another less tangible issue with null terminated strings is that they are error prone:
 
-- If we try to store binary data in a string, the data will be truncated if it contains a null character, and we will not receive any warning about this
+- If we try to store binary data in a string, the data will be truncated without any warning if it contains a null character
 - Buffer overflows caused by forgetting to add a `\0` character at the end of a string have been the cause of security vulnerabilities in many systems
 
 ## Length prefixed strings
@@ -49,14 +49,14 @@ index: 0 | 1 | 2 | 3 | 4
 value: 4 | t | a | c | o
 ```
 
-As in the null terminated example, the overhead is a single byte. The problem is that the maximum number that can be stored in a byte is 255, so a string longer than this value can't be represented on this system.
+As in the null terminated example, the overhead is a single byte. The problem with this approach is that the maximum number that can be stored in a byte is 255, so a string with more than 255 characters can't be represented on this system.
 
 Modern computers have a lot more memory than they did before, so instead of storing the length on the first byte, systems use 16, 32 or 64 bits, which increases the limits to `65,536`, `4,294,967,295` or `9,223,372,036,854,775,807` characters.
 
-In this case the main benefits are:
+The main benefits of using length prefixed strings are:
 
 - Finding the length of a string is a constant time operation
-- Can contain any character, so they can be used to store binary data
+- Can contain any character (They can be used to store binary data)
 - Since the length is always known, it's harder to haver buffer overflows
 
 Disadvantages:
