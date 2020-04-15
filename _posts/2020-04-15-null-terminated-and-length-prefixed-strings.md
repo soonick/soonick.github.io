@@ -23,6 +23,8 @@ value: t | a | c | o | \0
 
 Notice that even though, `taco` is only 4 characters, it is necesary to allocate an extra byte for the null characer (`\0`).
 
+<!--more-->
+
 `C strings` have two main advantages:
 
 - Single byte overhead
