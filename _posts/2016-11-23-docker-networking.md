@@ -9,6 +9,7 @@ permalink: /2016/11/docker-networking/
 tags:
   - docker
   - linux
+  - networking
 ---
 I was trying to do some tuning on my servers network, but while I was at that I realized I couldn&#8217;t do it because I didn&#8217;t know anything about how Docker does networking. Since I need to move forward with my network configuration, I&#8217;m writing this article in the hope of understanding it better.
 

@@ -10,6 +10,7 @@ tags:
   - application_design
   - linux
   - security
+  - networking
 ---
 Google uses the concept of Virtual Private Cloud (VPC) to refer to their capability for creating your own private network withing their infrastructure. There are a few terms that will allow us to create a network of our design:
 
