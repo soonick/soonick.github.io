@@ -96,7 +96,7 @@ DROP DATABASE test;
 Once connected to a database, `\dt` can be used to list all the tables:
 
 ```sh
-\dt
+\dt *.*
          List of relations
  Schema | Name  | Type  |  Owner   
 --------+-------+-------+----------
