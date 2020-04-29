@@ -10,7 +10,7 @@ tags:
   - productivity
 ---
 
-In a previous post I wrote about [AWS CodeBuild](/2020/04/aws-codebuild), which allows us to run our builds using AWS infrastructure. In this post we are going one step further and explore CodePipeline; AWS' solution for continuos delivery.
+In a previous post I wrote about [AWS CodeBuild](/2020/04/introduction-to-aws-codebuild), which allows us to run our builds using AWS infrastructure. In this post we are going one step further and explore CodePipeline; AWS' solution for continuos delivery.
 
 Some of Pipelines' features:
 - Detect code changes and start Pipeline automatically
@@ -177,7 +177,7 @@ If we get the status again, we will discover that we require the CodeBuild proje
 ...
 ```
 
-I'm not going to go into detail into how to configure the CodeBuild project because I have [an article](/2020/04/aws-codebuild) explaining how to do that. The only thing we need to know is that the project needs to be configured so it can get the code from the artifacts bucket (`pipeline-bucket-01`), at `NewestCode.zip`.
+I'm not going to go into detail into how to configure the CodeBuild project because I have [an article](/2020/04/introduction-to-aws-codebuild) explaining how to do that. The only thing we need to know is that the project needs to be configured so it can get the code from the artifacts bucket (`pipeline-bucket-01`), at `NewestCode.zip`.
 
 Once the hiccups are fixed, the Pipeline will execute automatically every time a new version of the source is uploaded.
 
