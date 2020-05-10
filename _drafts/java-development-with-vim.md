@@ -22,3 +22,25 @@ My team uses IntelliJ, and they mostly talk about a few features:
 I'm not sure I will be able to make all of these work in Vim, but my goal is to get close enough that I can move efficiently on any Java codebase.
 
 
+
+
+Youcompleteme
+
+```
+sudo apt install build-essential cmake vim python3-dev
+``
+
+or 
+
+```
+sudo yum install cmake gcc-c++ make python3-devel
+```
+
+
+```
+cd ~/.vim/pack/my-plugins/start
+git clone https://github.com/ycm-core/YouCompleteMe.git
+cd YouCompleteMe
+git submodule update --init --recursive
+python3 install.py --java-completer
+```
