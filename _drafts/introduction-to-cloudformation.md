@@ -35,7 +35,7 @@ CloudFormation allows us to define our infrastructure on `template` files writte
 The same template can be written using YAML, which results in a more compact file:
 
 ```yaml
-Description: "Create a single EC2 instance"
+Description: Create a single EC2 instance
 Resources:
   Host1:
     Type: AWS::EC2::Instance
@@ -82,7 +82,7 @@ If everything goes well, it will soon transition to `CREATE_COMPLETE`. An explan
 There are a few things that can go wrong while creating a stack. A common but easy to fix problem is a syntax error. Let's see what happens when we introduce one in our template (Removed the semicolon after `Type`):
 
 ```yaml
-Description: "Create a single EC2 instance"
+Description: Create a single EC2 instance
 Resources:
   Host1:
     Type AWS::EC2::Instance
@@ -112,7 +112,7 @@ A template can be used to create multiple stacks, but all of them need to have a
 The issues mentioned above are very easy to notice and fix, but there are other types of issues that happen asynchronously. That's the case of a missing property that is necessary to create a resource. Let's see what happens if we try to create an EC2 instance without specifying an `ImageId`:
 
 ```yaml
-Description: "Create a single EC2 instance"
+Description: Create a single EC2 instance
 Resources:
   Host1:
     Type: AWS::EC2::Instance
@@ -223,7 +223,7 @@ aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMP
 Templates can accept parameters that can be used to create similar configurable stacks. Let's see how we can incorporate a parameter to a stack:
 
 ```yaml
-Description: "Create a single EC2 instance"
+Description: Create a single EC2 instance
 
 Parameters:
   Host1InstanceType:
@@ -265,7 +265,7 @@ aws cloudformation create-stack --stack-name stack-with-params \
 It's common to need to have a template create multiple resources and have connections between them. For example, we might want to create a security group and have an instance be part of this security group. Let' look at how we can do this:
 
 ```yaml
-Description: "Create a single EC2 instance"
+Description: Create a single EC2 instance
 
 Parameters:
   Host1InstanceType:
@@ -276,7 +276,7 @@ Resources:
   SecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: "Allows incoming traffic on port 8080"
+      GroupDescription: Allows incoming traffic on port 8080
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 8080
@@ -322,7 +322,7 @@ SecurityGroupIngress:
 Let's look at an example template using different parameters:
 
 ```yaml
-Description: "Create a single EC2 instance"
+Description: Create demo infrastructure
 
 Parameters:
   Host1InstanceType:
@@ -331,27 +331,107 @@ Parameters:
     AllowedValues:
       - t2.micro
       - t2.nano
-    Description: "Currently only t2.nano and t2.micro are supported"
+    Description: Currently only t2.nano and t2.micro are supported
   IncomingPort:
     Type: Number
-    Description: "Port that will be allowed incomming traffic"
+    MinValue: 1200
+    MaxValue: 1300
+    Description: Port that will be allowed incoming traffic
+  IngressCidr:
+    Type: String
+    AllowedPattern: '((\d{1,3})\.){3}\d{1,3}/\d{1,2}'
+    ConstraintDescription: A CIDR, for example, 10.0.0.0/24
+    Description: CIDR that will be allowed to talk to the host
+  AllowedAccounts:
+    Type: List<Number>
+    Description: Accounts that will be allowed to assume role
+  AvailabilityZones:
+    Type: CommaDelimitedList
+    Description: AvailabilityZones to use for Auto Scaling Group
+  BucketName:
+    Type: String
+    MinLength: 20
+    MaxLength: 60
+    Description: Name of bucket where files will be stored
 
 Resources:
   SecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: "Allows incoming traffic on port 8080"
+      GroupDescription: Allows incoming traffic on port 8080
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: !Ref IncomingPort
           ToPort: !Ref IncomingPort
-          CidrIp: 0.0.0.0/0
+          CidrIp: !Ref IngressCidr
 
   Host1:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: !Ref Host1InstanceType
       ImageId: ami-003634241a8fcdec0
+
+  ExternalRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: sts:AssumeRole
+            Principal:
+              AWS: { Ref: AllowedAccounts }
+
+  LaunchConfiguration:
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties:
+      ImageId: ami-003634241a8fcdec0
+      InstanceType: t2.micro
+
+  AutoScalingGroup:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      MaxSize: 1
+      AvailabilityZones: !Ref AvailabilityZones
+      MinSize: 0
+      DesiredCapacity: 0
+      LaunchConfigurationName: !Ref LaunchConfiguration
+
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+```
+
+The example above shows the use of some types that we haven't used before:
+
+- `Number` - It can be a integer or a float (number with decimal point)
+- `List<Number>` - A list of numbers
+- `CommaDelimitedList` - A comma delimited list of strings
+
+We also used some other features available to define parameters:
+
+- `AllowedValues` - Defines a list of values that can be assigned to the parameter
+- `MinValue` - Minumum valid value for a number
+- `MaxValue` - Maximum valid value for a number
+- `MinLength` - Minimum number of characters for a valid string
+- `MaxLength` - Maximum number of characters for a valid string
+- `AllowedPattern` - A regular expression that will be used to validate the value
+- `ConstraintDescription` - A description to explain a regular expression defined with `AllowedPattern`. It is not mandatory, but it will give a clearer error message to users of the template
+
+
+
+To create the stack:
+
+```bash
+aws cloudformation create-stack --stack-name stack-with-params \
+    --template-body file://template.yaml \
+    --parameters ParameterKey=IncomingPort,ParameterValue=1200  \
+        ParameterKey=AllowedAccounts,ParameterValue=\"123456789012,987654321234\" \
+        ParameterKey=AvailabilityZones,ParameterValue=\"us-west-2a,us-west-2b\" \
+        ParameterKey=IngressCidr,ParameterValue=10.0.1.0/24 \
+        ParameterKey=BucketName,ParameterValue=my-little-bucket-with-some-name \
+    --capabilities CAPABILITY_IAM
 ```
 
 ## Functions
