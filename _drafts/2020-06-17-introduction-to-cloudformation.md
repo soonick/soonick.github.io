@@ -2,8 +2,8 @@
 title: Introduction to CloudFormation
 author: adrian.ancona
 layout: post
-# date: 2020-06-17
-# permalink: /2020/06/introduction-to-cloudformation/
+date: 2020-06-17
+permalink: /2020/06/introduction-to-cloudformation/
 tags:
   - architecture
   - automation
@@ -32,6 +32,8 @@ CloudFormation allows us to define our infrastructure on `template` files writte
 }
 ```
 
+<!--more-->
+
 The same template can be written using YAML, which results in a more compact file:
 
 ```yaml
@@ -53,9 +55,9 @@ aws cloudformation create-stack --stack-name my-first-stack --template-body file
 }
 ```
 
-When we issue a `create-stack` request, AWS validates the request and if it deems it valid, it returns a stack id to track the progress. The actual resources defined in the stack are created asynchronously. If we get the status of a stack right acter creating it, wi'll probably see it in `CREATE_IN_PROGRESS` status.
+When we issue a `create-stack` request, AWS validates the request and if it deems it valid, it returns a stack id to track the progress. The actual resources defined in the stack are created asynchronously. If we get the status of a stack right after creating it, we'll probably see it in `CREATE_IN_PROGRESS` status.
 
-```ssh
+```bash
 aws cloudformation describe-stacks --stack-name my-first-stack
 {
     "Stacks": [
@@ -75,7 +77,7 @@ aws cloudformation describe-stacks --stack-name my-first-stack
 }
 ```
 
-If everything goes well, it will soon transition to `CREATE_COMPLETE`. An explanation of [all possible status](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html) can be found in the documentation.
+If everything goes well, it will soon transition to `CREATE_COMPLETE`. An explanation of [all possible statuses](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html) can be found in the documentation.
 
 ## Debugging failures
 
@@ -93,21 +95,19 @@ Resources:
 
 If we try to create a stack based on this template, we'll get a validation error:
 
-```sh
+```bash
 aws cloudformation create-stack --stack-name my-first-stack --template-body file://template.yaml
 
 An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 5, column 15)
 ```
 
-We would also see an error if we try to create a stack with a name that is already taken:
+A template can be used to create multiple stacks, but all of them need to have a different name. We would also see an error if we try to create a stack with a name that is already taken:
 
-```sh
+```bash
 aws cloudformation create-stack --stack-name my-first-stack --template-body file://template.yaml
 
 An error occurred (AlreadyExistsException) when calling the CreateStack operation: Stack [my-first-stack] already exists
 ```
-
-A template can be used to create multiple stacks, but all of them need to have a different name.
 
 The issues mentioned above are very easy to notice and fix, but there are other types of issues that happen asynchronously. That's the case of a missing property that is necessary to create a resource. Let's see what happens if we try to create an EC2 instance without specifying an `ImageId`:
 
@@ -122,7 +122,7 @@ Resources:
 
 The request is successful:
 
-```
+```bash
 aws cloudformation create-stack --stack-name my-first-stack --template-body file://template.yaml
 {
     "StackId": "arn:aws:cloudformation:us-west-2:758883867384:stack/my-first-stack/38a9ff30-9b52-11ea-a515-0af6392a9a8a"
@@ -131,7 +131,7 @@ aws cloudformation create-stack --stack-name my-first-stack --template-body file
 
 But if we describe the stack, we'll see that it was rolled back:
 
-```sh
+```bash
 aws cloudformation describe-stacks --stack-name my-first-stack
 {
     "Stacks": [
@@ -152,9 +152,9 @@ aws cloudformation describe-stacks --stack-name my-first-stack
 }
 ```
 
-In cases like this, we would want to know more about what happened. To do that we can look at the stack events:
+In cases like this, we would want to know more about what happened. To do that, we can look at the stack events:
 
-```sh
+```bash
 aws cloudformation describe-stack-events --stack-name my-first-stack
 {
     "StackEvents": [
@@ -181,13 +181,13 @@ The events show the steps AWS took as part of the stack creation. We can see tha
 
 We have already seen how we can create a stack and describe it. Other common operations are deleting a stack:
 
-```sh
+```bash
 aws cloudformation delete-stack --stack-name my-first-stack
 ```
 
 And listing all the stacks:
 
-```sh
+```bash
 aws cloudformation list-stacks
 {
     "StackSummaries": [
@@ -212,9 +212,9 @@ aws cloudformation list-stacks
 }
 ```
 
-Notice that even deleted stacks are listed. If we care only about some statuses, we show only those:
+Notice that even deleted stacks are listed. If we care only about some statuses, we can show only those:
 
-```sh
+```bash
 aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMPLETE
 ```
 
@@ -248,13 +248,13 @@ InstanceType: !Ref Host1InstanceType
 
 Since the only parameter on this template has a default value, we can start a stack with the command we used before:
 
-```sh
+```bash
 aws cloudformation create-stack --stack-name stack-with-params --template-body file://template.yaml
 ```
 
 If we want to use a different value for the instance type, we can specify it when we start the stack:
 
-```sh
+```bash
 aws cloudformation create-stack --stack-name stack-with-params \
     --template-body file://template.yaml \
     --parameters ParameterKey=Host1InstanceType,ParameterValue=t2.nano
@@ -262,7 +262,7 @@ aws cloudformation create-stack --stack-name stack-with-params \
 
 ## Referencing resources
 
-It's common to need to have a template create multiple resources and have connections between them. For example, we might want to create a security group and have an instance be part of this security group. Let' look at how we can do this:
+It's common to have a template create multiple resources and have connections between them. For example, we might want to create a security group and have an instance be part of this security group. Let' look at how we can do this:
 
 ```yaml
 Description: Create a single EC2 instance
@@ -419,9 +419,7 @@ We also used some other features available to define parameters:
 - `AllowedPattern` - A regular expression that will be used to validate the value
 - `ConstraintDescription` - A description to explain a regular expression defined with `AllowedPattern`. It is not mandatory, but it will give a clearer error message to users of the template
 
-
-
-To create the stack:
+We can create a stack based on this template using this command:
 
 ```bash
 aws cloudformation create-stack --stack-name stack-with-params \
@@ -434,9 +432,13 @@ aws cloudformation create-stack --stack-name stack-with-params \
     --capabilities CAPABILITY_IAM
 ```
 
+Notice that for passing a list of numbers or a list of strings, we need to quote the list.
+
+Another thing to notice is the use of `--capabilities`. I'm not going to cover capabilities in this article, but it's necessary to include the `CAPABILITY_IAM` if a template is going to create IAM resources.
+
 ## Functions
 
-In the previous section, I used `!Ref` to reference a parameter. `Ref` is one of cloudformation's supported functions. All functions have a short form:
+We have used `!Ref` to reference parameters in a template. `Ref` is one of CloudFormation's supported functions. All functions have a short form:
 
 ```yaml
 InstanceType: !Ref Host1InstanceType
@@ -449,4 +451,130 @@ InstanceType:
   Ref: Host1InstanceType
 ```
 
-Let's look at some of the available functions.
+Functions provide some functionality that can be useful while creating more dynamic templates.
+
+The [CloudFormation functions documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html) provides a reference of the available functions, so I'm just going to introduce some that are used often.
+
+### Join
+
+Joins values using the specified delimiter:
+
+```yaml
+!Join [",", [one, two, three]]
+```
+
+The results will be: `one,two,three`
+
+### Split
+
+Does the opposite to `Join`. Given a string it returns a list separated by the specified delimiter:
+
+```yaml
+!Split [",", "one,two,three"]
+```
+
+Returns `["one", "two", "three"]`
+
+### GetAtt
+
+Allows us to get an attribute from a resource. To see the list of attributes that can be retrieved, look at the documentation for the resource type:
+
+```yaml
+!GetAtt Host1.PrivateIp
+```
+
+Will return the private IP address that was assigned to the host.
+
+### Select
+
+Retrieve an element from a list of elements:
+
+```yaml
+!Select [2, [zero, one, two]]
+```
+
+Returns `two`.
+
+### Sub
+
+Provides a way to substitute parts of a template string with specified values.
+
+```yaml
+!Sub
+  - "I like ${Food}, but I prefer ${Drink}
+  - Food: Pizza
+  - Drink: Beer
+```
+
+`Sub` will automatically replace parameters:
+
+```yaml
+!Sub "You chose instance type: ${Host1InstanceType}"
+```
+
+As well as [built in pseudo parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html):
+
+```yaml
+!Sub "The region is: ${AWS::Region}"
+```
+
+### FindInMap
+
+Given a map, it allows us to select a value.
+
+To use this function we need to have a `Mappings` section in the template, for example:
+
+```yaml
+Mappings:
+  NumbersMap:
+    spanish:
+      one: uno
+      two: dos
+    german:
+      one: ein
+      two: zwei
+```
+
+Let's say that we want to select the correct translation based on the language and number:
+
+```yaml
+!FindInMap
+  - NumbersMap
+  - spanish
+  - two
+```
+
+This would return `dos`.
+
+## Condition Functions
+
+Condition functions allow us to conditionally create resources. This can be useful when we want to do things a little different based on the environment where the stack is being created (provided parameters, region, etc.)
+
+Conditions can be declared in the `Conditions` section of a template:
+
+```yaml
+Conditions:
+  CreateWebServer:
+    !Equals [Ref: 'AWS::Region', us-east-1]
+```
+
+In the example above, `CreateWebServer` will be set to true, if the stack is being created in `us-east-1`.
+
+A resource can then be created based on this condition:
+
+```yaml
+Host1:
+  Type: AWS::EC2::Instance
+  Condition: CreateWebServer
+  Properties:
+    InstanceType: t2.micro
+    ImageId: ami-003634241a8fcdec0
+```
+
+In this case, the instance will only be created if `CreateWebServer` is true.
+
+Conditions can be chained using `Or`, `And`, `If` and `Not`. [Conditions Functions documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html) explains the syntax.
+
+## Conclusion
+
+This article covers some of the most fundamental topics related to CloudFormation. With this knowledge we will be able to understand most of the templates we find, write our own, and manipulate the stacks we create.
