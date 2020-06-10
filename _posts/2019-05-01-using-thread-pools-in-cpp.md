@@ -184,6 +184,11 @@ class ThreadPool {
           return !workQueue.empty() || done;
         });
 
+        // If we are shutting down exit witout trying to process more work
+        if (done) {
+          break;
+        }
+
         request = workQueue.front();
         workQueue.pop();
       }
