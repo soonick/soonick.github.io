@@ -128,13 +128,114 @@ The result looks like this:
 
 [<img src="/images/posts/smiley-pwa-notification.png" alt="Smiley PWA notification" />](/images/posts/smiley-pwa-notification.png)
 
+A notification will be default notify the user (depending on their settings it might vibrate or beep). If we don't want to do this, we can mark it as silent:
 
-################## TODO: Show other options. More specifically: badge (Notification bar icon), (renotify and tag), silent, vibrate
+```js
+navigator.serviceWorker.getRegistration().then(reg => {
+  const options = {
+    icon: 'icon.png',
+    silent: true
+  };
+  reg.showNotification('Smiley face', options);
+});
+```
 
-Now that we know how to show notifications, let's see how users can interact with them. 
+The notification bar will by default show a browser icon when there is a notification for any PWA, but we can provide our own icon:
+
+```js
+navigator.serviceWorker.getRegistration().then(reg => {
+  const options = {
+    icon: 'icon.png',
+    badge: 'badge.png'
+  };
+  reg.showNotification('Smiley face', options);
+});
+```
+
+The badge should be a `png` image using only color white, and it should be at least 96px by 96px.
+
+A notification can be given an ID using a tag. If a notification with the same tag value is started it will overwrite the previous one.
+
+```js
+navigator.serviceWorker.getRegistration().then(reg => {
+  const options = {
+    tag: 'someid'
+  };
+  window.myCounter = window.myCounter ? window.myCounter + 1 : 1;
+  reg.showNotification('Smiley face ' + window.myCounter, options);
+});
+```
+
+The code above will update the notification with a new number every time. By default updating a notification will not notify the user, if we want the user to be notified, we can pass `renotify: true`.
+
+Now that we know how to show notifications, let's see how users can interact with them. A notification can contain some arbirary `data` that can be used by the web app. We just need to trigger a functions to do the processing we need. By default, we can set event listeners for when the user closes the notification or when they click it. We can also add custom actions:
+
+```js
+navigator.serviceWorker.getRegistration().then(reg => {
+  const options = {
+    icon: 'icon.png',
+    badge: 'badge.png',
+    body: 'Do you want this smiley face?',
+    actions: [
+      { action: 'iLikeIt', title: 'Yes', icon: 'check.png' },
+      { action: 'iDontLikeIt', title: 'No', icon: 'cross.png' }
+    ],
+    data: {
+      'smileyId': 9876543,
+      'smileyUrl': '/icon.png'
+    }
+  };
+  reg.showNotification('Smiley face', options);
+});
+```
+
+The notification will look like this on an phone:
+
+[<img src="/images/posts/phone-pwa-notification.png" alt="Phone PWA notification" />](/images/posts/phone-pwa-notification.png)
+
+Handling user actions needs to be done in the service worker (`worker.js`):
+
+```js
+self.addEventListener('notificationclick', event => {
+  const action = event.action;
+  const notification = event.notification;
+  const smileyId = notification.data.smileyId;
+
+  if (action == 'iLikeIt') {
+    console.log('User liked smiley ' + smileyId);
+  } else if (action == 'iDontLikeIt') {
+    console.log('User didn\'t like smiley ' + smileyId);
+  } else {
+    // They clicked the notification, but not any of the action buttons
+    const url = notification.data.smileyUrl;
+    if (url) {
+      clients.openWindow('https://localhost:9876' + url);
+    }
+  }
+
+  notification.close();
+});
+
+self.addEventListener('notificationclose', event => {
+  const action = event.action;
+  const notification = event.notification;
+  const smileyId = notification.data.smileyId;
+  console.log('User didn\'t respond for smiley ' + smileyId);
+});
+```
+
+In the example above we can see that 'notificationclose' event is triggered if the user explicitly closes the notification. If the user clicks the notification or any of the action buttons, `notificationclick` will be triggered.
+
+We can also see that `event.notification.data` contains the data from the notification, and `event.action` contains the action that was selected by the user.
+
+Now that we know how to show notifications, let's proceed to learn how we can listen to notification messages sent from our servers.
+
+## Push API
 
 
-data and actions
+
+
+
 
 
 https://codelabs.developers.google.com/codelabs/pwa-integrating-push/index.html?index=..%2F..dev-pwa-training#2
