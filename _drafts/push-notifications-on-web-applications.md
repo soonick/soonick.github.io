@@ -228,12 +228,48 @@ In the example above we can see that 'notificationclose' event is triggered if t
 
 We can also see that `event.notification.data` contains the data from the notification, and `event.action` contains the action that was selected by the user.
 
-Now that we know how to show notifications, let's proceed to learn how we can listen to notification messages sent from our servers.
-
 ## Push API
 
+Now that we know how to show notifications, let's proceed to learn how we can listen to notification messages sent from our servers.
+
+Before our app can receive notifications it needs to request a subscription from the browser. To do this, we need the service worker registration (`index.html`):
+
+```js
+registration.pushManager.getSubscription().then(subscription => {
+  if (subscription) {
+    return subscription;
+  }
+
+  return registration.pushManager.subscribe({
+    // This means that all push events will result in a notification
+    userVisibleOnly: true
+  });
+}).then(subscription => {
+  console.log(subscription);
+  // Send the subscription details to our server
+  fetch('http://localhost:9999/register-push-device', {
+    method: 'post',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      subscription: subscription
+    }),
+  });
+});
+```
+
+Right after registering our service worker, we use that registration to get our push subscription. If we don't have a push subscription yet, we request one. Once our app has the push subscription from the browser, it sends it to our server.
+
+The server will then receive the subscription object with an `endpoint` it can use to push notifications. Let's create a node server to receive the subscription:
+
+```
+```
 
 
+
+* Anybody can push to the endpoint, so it needs to be protected
+* This is a lot more fucking complex than I expected
 
 
 
