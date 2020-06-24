@@ -26,9 +26,17 @@ group :jekyll_plugins do
 end
 ```
 
+<!--more-->
+
+We also need to update `_config.yml`:
+
+```yaml
+plugins:
+  - jekyll-graphviz
+```
+
 And run `bundle` to install it.
 
-<!--more-->
 
 To add graphs to a blog post, just wrap it in `graphviz` tags using this syntax:
 
