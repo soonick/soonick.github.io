@@ -12,6 +12,8 @@ tags:
   - projects
 ---
 
+### Graphviz is not a supported plugin, so this doesn't work :(
+
 In a previous post I showed how to [create graphs using Graphviz](/2020/06/create-diagrams-with-code-using-graphviz/). In this post, I'm going to explore how we can embed graphs directly in a Jekyll page (such as this blog).
 
 This blog is built with Jekyll and published by Github pages. To write Graphviz diagrams and have them rendered in a page, we need to use a plugin.
