@@ -45,25 +45,7 @@ Before we start building a workflow, let's learn a little about the components o
 
 To help us get familiar with SWF, we are going to create a workflow to model the process for fixing a broken machine in a fleet. It will look something like this:
 
-{% graphviz %}
-digraph MyGraph {
-  maintenance [label="Change machine status to maintenance",shape=box]
-  drain [label="Drain services",shape=box]
-  fix [label="Human fixes the machine",shape=box]
-  reimage [label="Reimage the machine",shape=box]
-  available [label="Change machine status to available",shape=box]
-  finish [label="Finish",shape=box]
-
-  maintenance -> drain
-  drain -> fix
-  drain -> reimage
-  fix -> available
-  reimage -> available
-  available -> finish
-  maintenance -> finish
-}
-{% endgraphviz %}
-
+[<img src="/images/posts/fixing-broken-machine-workflow.png" alt="Fixing broken machine workflow" />](/images/posts/fixing-broken-machine-workflow.png)
 
 This workflow can be used in a datacenter that runs a lot of machines. We can have the workflow probe machines to see if they are working well. If it notices something wrong, it sets the machine state as `maintenance` in a database. If it doesn't find anything wrong, it finishes the execution.
 

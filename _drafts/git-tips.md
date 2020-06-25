@@ -17,32 +17,9 @@ In the beginning of times, there were centralized version control systems (`SVN`
 
 If the server looks something like this (Every letter represents a different commit):
 
-{% graphviz %}
-digraph MyGraph {
-  rankdir=LR
-  A -> B [dir=none]
-  B -> C [dir=none]
-  C -> D [dir=none]
-  main -> D
-}
-{% endgraphviz %}
+[<img src="/images/posts/source-control-server.png" alt="Source control server" />](/images/posts/source-control-server.png)
 
-When a developer checks out `main`, they will get only the files at `D`. When they have changes that are ready to be committed, they will create a new commit in the server:
-
-{% graphviz %}
-digraph MyGraph {
-  rankdir=LR
-  A -> B [dir=none]
-  B -> C [dir=none]
-  C -> D [dir=none]
-  D -> E [dir=none]
-  main -> E
-}
-{% endgraphviz %}
-
-The contents of the developer machine, will be the same as `E`.
-
-This has a two main disadvantages:
+When a developer checks out `main`, they will get only the files at `D`, the history about the past commits exists only in the server. This has a two main disadvantages:
 
 - It is not possible to create local branches. If a developer needs a branch they have to push it to the server
 - If the server explodes, all the history is lost
