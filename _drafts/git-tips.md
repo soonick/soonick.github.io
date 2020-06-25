@@ -97,7 +97,7 @@ It's very common for people to work with only one remote, but it's possible to h
 
 ## Branches
 
-Another thing we get when we clone (or start) a repo is a branch. Git's default branch is called `master`. A branch is an identifier that points to a place in the commit history. To list branches:
+Another thing we get when we clone (or create) a repo is a branch. Git's default branch is called `master`. A branch is an identifier that points to a place in the commit history. To list branches:
 
 ```sh
 git branch -v   # Only local branches
@@ -110,7 +110,27 @@ git branch -va  # Include branches in remotes
 
 
 
+[laptop ~/repos/soonick.github.io] $ git config --list
+user.name=Adrian Ancona Novelo
+user.email=annovelo@amazon.com
+alias.lg=log --graph --pretty=format:'%Cred%h -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>'
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@github.com:soonick/soonick.github.io.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+user.name=Adrian Ancona Novelo
+user.email=soonick5@yahoo.com.mx
 
+
+
+
+
+
+git config --global alias.lg "log --graph --all --pretty=format:'%Cred%h -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an (%ae)>'"
 
 
 
