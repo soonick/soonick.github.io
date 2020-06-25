@@ -40,7 +40,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-graphviz
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
 
 paginate: 10
