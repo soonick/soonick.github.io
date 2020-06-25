@@ -28,15 +28,186 @@ When a developer checks out `main`, they will get only the files at `D`, the his
 
 Git is a distributed version control system, what this means is that a developer `clones` a repo before it starts working on it. The developer's machine will contain not only the files necessary for working, but also the history of all commits. By doing this, we avoid the two problems mentioned above.
 
-## Repos
+## Creating a repo
 
 If we want to create a new repo:
 
-```
+```sh
 mkdir new-repo
 cd new-repo
 git init
 ```
+
+## Creating a commit
+
+Once we are on a repo, the next thing we want to do is create a commit. A commit is an entry in the history of our repo. Let's start by creating a file:
+
+```sh
+touch README.md
+```
+
+We can use `git status` to see the state of our repo, compared to the previous committed state:
+
+```sh
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+The command tells us that we are standing in `master` and that we have a file that is not yet being tracked.
+
+In git, the commit process has two stages:
+
+1. Select what we want to include in the commit
+2. Commit the changes
+
+When we select what we want to commit we say we are moving it to the `staging` area. Let's do that:
+
+```sh
+git add README.md
+```
+
+We can see that the status changed:
+
+```
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README.md
+```
+
+We can now commit the change:
+
+```sh
+git commit -m 'Added readme file'
+```
+
+## Looking at the history
+
+If we want to see the list of commits from where we are standing:
+
+```sh
+git log
+```
+
+The output looks something like this:
+
+```sh
+$ git log
+commit 0eba2722139ff6e91baaeb6540d4ce76c5e33d48 (HEAD -> master)
+Author: User Usernikov <user@userni.kov>
+Date:   Thu Jun 25 21:53:16 2020 +1000
+
+    Added readme file
+```
+
+I personally prefer a more compact view that can be achived with this command:
+
+```sh
+git log --graph --all --pretty=format:'%Cred%h -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an (%ae)>'
+```
+
+The output looks like this:
+
+```
+* 0eba272 - (HEAD -> master) Added readme file (2020-06-25 21:53:16 +1000) <User Usernikov (user@userni.kov)>
+```
+
+Because that's a very long command, I prefer to create an alias for it. To create an alias:
+
+```sh
+git config --global alias.lg "log --graph --all --pretty=format:'%Cred%h -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an (%ae)>'"
+```
+
+The command creates a git alias named `lg`. Now, we can use this command:
+
+```sh
+git lg
+```
+
+## Branches
+
+In the section above, you probably noticed `0eba272 - (HEAD -> master)` as part of the log ouput. There are a few important pieces of information.
+
+- `0eba272` - The commit hash. A unique identifier for each commit
+- `HEAD` - Represents the commit where we are currently standing
+- `master` - Branch name
+
+From this information we can say that `master` is currently located at `0eba272` and our `HEAD` is pointing to master. Let's create a new branch:
+
+```sh
+$ git branch first-branch
+$ git lg
+* 0eba272 - (HEAD -> master, first-branch) Added readme file (2020-06-25 21:53:16 +1000) <User Usernikov (user@userni.kov)>
+```
+
+We created a new branch, but as we can see, `HEAD` is still pointing to `master`. Let's see what happens if we create a commit:
+
+```sh
+$ echo "Git demo" >> README.md
+$ git add README.md
+$ git commit -m 'Add title to readme'
+$ git lg
+* 0af5c64 - (HEAD -> master) Add title to readme (2020-06-25 22:03:42 +1000) <User Usernikov (user@userni.kov)>
+* 0eba272 - (first-branch) Added readme file (2020-06-25 21:53:16 +1000) <User Usernikov (user@userni.kov)>
+```
+
+We can see that a new commit was created and both `HEAD` and `master` are now in that commit. Our `first-branch` was left behind. If we want to create a branch and move to it immediately, we can use:
+
+```sh
+$ git checkout -b second-branch
+$ git lg
+* 0af5c64 - (HEAD -> second-branch, master) Add title to readme (2020-06-25 22:03:42 +1000) <User Usernikov (user@userni.kov)>
+* 0eba272 - (first-branch) Added readme file (2020-06-25 21:53:16 +1000) <User Usernikov (user@userni.kov)>
+```
+
+This time `HEAD` moved. It's now pointing to `second-branch`. To switch branches:
+
+```sh
+$ git checkout first-branch
+$ git lg
+* 0af5c64 - (second-branch, master) Add title to readme (2020-06-25 22:03:42 +1000) <User Usernikov (user@userni.kov)>
+* 0eba272 - (HEAD -> first-branch) Added readme file (2020-06-25 21:53:16 +1000) <User Usernikov (user@userni.kov)>
+```
+
+Let's se what happens when we create a commit from here:
+
+```sh
+$ touch other.file
+$ git add other.file
+$ git commit -m 'Added other file'
+$ git lg
+* 07c7128 - (HEAD -> first-branch) Added other file (2020-06-25 22:08:23 +1000) <User Usernikov (user@userni.kov)>
+| * 0af5c64 - (second-branch, master) Add title to readme (2020-06-25 22:03:42 +1000) <User Usernikov (user@userni.kov)>
+|/
+* 0eba272 - Added readme file (2020-06-25 21:53:16 +1000) <User Usernikov (user@userni.kov)>
+```
+
+The alias we created to see the history, has the advantage of showing us places where the history branches out of the main trunk. To see a list of all our branches:
+
+```sh
+git branch -v
+```
+
+## Merging
+
+
+
+
+
 
 This is all that's needed to create an empty repo. If we look at the contents of the folder, we'll see a `.git` directory was created, that's where all the magic happens.
 
@@ -74,83 +245,6 @@ git remote -v
 
 It's very common for people to work with only one remote, but it's possible to have multiple remotes if desired. A `remote` is just an identifier (In this case `origin`) and an associated URL that points to a repo somewhere else.
 
-## Branches
-
-Another thing we get when we clone (or create) a repo is a branch. Git's default branch is called `master`. A branch is an identifier that points to a place in the commit history. To list branches:
-
-```sh
-git branch -v   # Only local branches
-git branch -va  # Include branches in remotes
-```
-
-To create a branch we can use:
-
-```sh
-git branch branch-name # create a branch, but stay wherever we are
-git checkout -b branch-name # create a branch and move to that branch
-```
-
-To move between branches:
-
-```sh
-git checkout branch-name
-```
-
-## History
-
-If we want to see the list of commits from where we are standing:
-
-```sh
-git log
-```
-
-The output looks something like this:
-
-```sh
-commit 95d50c49b042fec79e85cd267fec15329de7c291 (HEAD -> master)
-Author: User Usingston <user@email.com>
-Date:   Thu Jun 25 19:42:51 2020 +1000
-
-    Some commit message
-
-commit 47c9f97d1a5d1f7f1a0461686bbf4dce13fc2dac (origin/master, origin/HEAD)
-Author: User Usingston <user@email.com>
-Date:   Thu Jun 25 19:28:31 2020 +1000
-
-    Another message
-
-commit 830e3538c28bc5138daf1090d39a1ae96f2f6c23
-Author: User Usingston <user@email.com>
-Date:   Thu Jun 25 19:11:34 2020 +1000
-
-    More intersting stuff
-```
-
-I personally prefer a more compact view that can be achived with this command:
-
-```sh
-git log --graph --all --pretty=format:'%Cred%h -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an (%ae)>'
-```
-
-The output looks like this:
-
-```
-* 95d50c4 - (HEAD -> master) Some commit message (2020-06-25 19:42:51 +1000) <User Usingston (user@email.com)>
-* 47c9f97 - (origin/master, origin/HEAD) Another message (2020-06-25 19:28:31 +1000) <User Usingston (user@email.com)>
-* 830e353 - More interesting stuff (2020-06-25 19:25:45 +1000) <User Usingston (user@email.com)>
-```
-
-Because that's a very long command, I prefer to create an alias for it. To create an alias:
-
-```sh
-git config --global alias.lg "log --graph --all --pretty=format:'%Cred%h -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an (%ae)>'"
-```
-
-The command creates a git alias named `lg`. Now, we can use this command:
-
-```sh
-git lg
-```
 
 
 
