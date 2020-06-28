@@ -1,9 +1,9 @@
 ---
-title: Git tips
+title: The most useful git commands
 author: adrian.ancona
 layout: post
 # date: 2020-07-01
-# permalink: /2020/07/git-tips/
+# permalink: /2020/07/the-most-useful-git-commands/
 tags:
   - productivity
   - git
@@ -284,7 +284,7 @@ To ../main-repo/
 
 If we look at the history, we'll see that both `master` and `origin/master` are positioned in the same place:
 
-```
+```sh
 $ git lg
 * 4e87837 - (HEAD -> master, origin/master) Add file-in-master (2020-06-26 21:40:08 +1000) <User Usernikov (user@userni.kov)>
 * 0af5c64 - (origin/second-branch, second-branch) Add title to readme (2020-06-25 22:03:42 +1000) <User Usernikov (user@userni.kov)>
@@ -297,7 +297,7 @@ $ git lg
 
 We can see in our history that `first-branch` is not part of the master branch. To add it to master, we need to merge it.
 
-```
+```sh
 # Assuming we are in master
 $ git merge first-branch
 Merge made by the 'recursive' strategy.
@@ -474,7 +474,7 @@ So far we have been using our repo as if there was only one person using it. In 
 
 Let's imagine another person made a change and pushed it to `origin/master` before we try to push our change. When we try to push, we would get an error:
 
-```
+```sh
 $ git push
 To ../main-repo/
  ! [rejected]        master -> master (fetch first)
@@ -717,28 +717,317 @@ Since stashes don't have identifiers (like branch names), it's best to use them 
 
 ## Rewriting history
 
+There are going to be times when we will need to make changes to the way our history looks. Let's say our local history looks like this:
 
+```sh
+* 833cb34 - (HEAD -> master) A not so good feature (2020-06-28 18:49:36 +1000) <User Usernikov (user@userni.kov)>
+* f4b9b9a - Fix bug (2020-06-28 18:48:53 +1000) <User Usernikov (user@userni.kov)>
+* b779d06 - Created awesome feature (2020-06-28 18:48:11 +1000) <User Usernikov (user@userni.kov)>
+* fc35d43 - Added README.md (2020-06-28 18:47:11 +1000) <User Usernikov (user@userni.kov)>
+```
 
+We want to push our changes to `origin`, but we want commits `b779d06` and `f4b9b9a` to be a single commit instead of two. We also don't want to push `833cb34` yet. To achieve this we can use create a branch we are standing and rewrite the history of `master` so `833cb34` is not there, and `f4b9b9a` is squashed into `b779d06`.
 
-## selecting just some files / Selecting just part of some files
+We start by creating a branch so we don't lose commit `833cb34` when we rewrite the history.
+
+```sh
+git branch feature
+```
+
+We can use an interactive rebase to rewrite the history.
+
+```sh
+git rebase -i fc35d43
+```
+
+Notice that the commit I chose is one before the last commit I care about.
+
+The command will open a window that looks like this:
+
+```
+pick b779d06 Created awesome feature
+pick f4b9b9a Fix bug
+pick 833cb34 A not so good feature
+
+# Rebase fc35d43..833cb34 onto fc35d43 (3 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified). Use -c <commit> to reword the commit message.
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+```
+
+The at the bottom explains all the things we can do from here. For our example, we are doing the following modifications:
+
+```
+pick b779d06 Created awesome feature
+f f4b9b9a Fix bug
+d 833cb34 A not so good feature
+
+...
+```
+
+Putting an `f` before `f4b9b9a` means that it will be squased into `b779d06` (They will be made one commit). Putting a `d` before `833cb34` means that the commit will be deleted. After we save the changes and quit the editor, the changes will be applied. The history now looks like this:
+
+```sh
+* 5ce1955 - (HEAD -> master) Created awesome feature (2020-06-28 19:11:53 +1000) <User Usernikov (user@userni.kov)>
+| * 833cb34 - (feature) A not so good feature (2020-06-28 18:49:36 +1000) <User Usernikov (user@userni.kov)>
+| * f4b9b9a - Fix bug (2020-06-28 18:48:53 +1000) <User Usernikov (user@userni.kov)>
+| * b779d06 - Created awesome feature (2020-06-28 18:48:11 +1000) <User Usernikov (user@userni.kov)>
+|/
+* fc35d43 - Added README.md (2020-06-28 18:47:11 +1000) <User Usernikov (user@userni.kov)>
+```
+
+We can see that master has only one commit now. The feature branch contains all the commits we had before. If we wanted, we could move to `feature` and do an interactive rebase to delete `f4b9b9a` and `b779d06`, since they are already in master.
+
+## Selecting what to commit
+
+We have so far only created commits where a single file is modified, but this is not always the case. Often we will be working on multiple files at the same time and we might want to add all of them in a single commit or just some of them.
+
+Let's say our repo status looks like this:
+
+```sh
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+	modified:   abc.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	new-file
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+We have 2 modified files and a new one. We can add all the changes in all the tracked files:
+
+```sh
+$ git add -u
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+	modified:   abc.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	new-file
+```
+
+The previous command adds all the tracked files to the staging area, but omits untracked files. If we wanted to add all files (including untracked ones):
+
+```sh
+$ git add -A
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+	modified:   abc.cpp
+	new file:   new-file
+```
+
+There might be times where there are multiple changes in a file, but we want to commit just some of them. In this case we can add patches:
+
+```sh
+$ git add -p abc.cpp
+diff --git a/abc.cpp b/abc.cpp
+index fcfc898..314d3bc 100644
+--- a/abc.cpp
++++ b/abc.cpp
+@@ -5,15 +5,18 @@ Something
+
+ Other
+ Other
++Adding stuff here
+ Other
+ Other
+
+ Something
+ Something
++Here
+ Something
+ Something
+
+ Other
+ Other
++And here
+ Other
+ Other
+(1/1) Stage this hunk [y,n,q,a,d,s,e,?]?
+```
+
+We can see what each of the options means by choosing `?`:
+
+- `y` - stage this hunk
+- `n` - do not stage this hunk
+- `q` - quit; do not stage this hunk or any of the remaining ones
+- `a` - stage this hunk and all later hunks in the file
+- `d` - do not stage this hunk or any of the later hunks in the file
+- `s` - split the current hunk into smaller hunks
+- `e` - manually edit the current hunk
+- `?` - print help
+
+If we choose `s`, we will be shown a smaller hunk to decide what to do with it:
+
+```sh
+(1/1) Stage this hunk [y,n,q,a,d,s,e,?]? s
+Split into 3 hunks.
+@@ -5,8 +5,9 @@
+
+ Other
+ Other
++Adding stuff here
+ Other
+ Other
+
+ Something
+ Something
+```
+
+We can continue this process until we have selected what we want to commit.
 
 ## Bisect
 
-## Undoing stuff reflog / clean / checkout / reset
+Imagine we are working on a software project and suddenly we get a report that a feature that was working a month ago, is suddenly not working. We look at the code, but we can't find anything suspicious. We broke something in the last month, but we are not sure how.
+
+If we find ourselves in this scenario, bisect could help us find the commit that introduced the issue. Bisect works by performing a binary search on the commit history until we find the culprit.
+
+To start bisecting:
+
+```sh
+git bisect start
+```
+
+Next we need to find a commit where we know the bug is present and mark it as bad:
+
+```sh
+git bisect bad
+```
+
+Then we need to find a commit where we know the bug is not present. Since we know the feature was working one month ago, we can go to a commit one month back, verify the bug is not there and mark the commit as good:
+
+```sh
+git bisect good
+```
+
+After doing that, git will automatically checkout the commit in the middle of those two commits. We can then verify if the bug is there or not and mark it `good` or `bad`. When we are done, we will get a message like this:
+
+```sh
+$ git bisect good
+a03db35bd0dd3987d2d822a8b2a863afadd8114b is the first bad commit
+commit a03db35bd0dd3987d2d822a8b2a863afadd8114b
+Author: User Usernikov <user@userni.kov>
+Date:   Sun Jun 28 20:14:14 2020 +1000
+
+    commit 5
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+```
+
+When we are done, we might want to clean our bisect history:
+
+```sh
+git bisect reset
+```
+
+In the scenario above we had to manually check each commit to verify if it's good or bad. If there is a way to automatically validate the commit, we can use this commad:
+
+```sh
+git bisect run verify-commit.sh
+```
+
+In this case `verify-commit.sh` is a script that can check if the commit is good or bad. If it's good it should exit with code 0. To use this command we have to first mark at least one commit as good and one as bad.
+
+## Undoing
+
+We all make mistakes, luckily git helps us recover when we make those mistakes.
+
+Something that has happened more than once is adding a bunch of files to my repo by mistake. If we want to delete all the untracked files in our repo, we can use this command (This command is not reversible, so use it with caution):
+
+```sh
+git clean -f
+```
+
+The command will delete all the untracked files in the repo.
+
+Another thing that could happen is that something modified the files in our repo and we want to restore it to the state of our `HEAD` (Another dangerous command):
+
+```sh
+git reset --hard
+```
+
+One more common mistake is deleting a branch that we didn't want to delete. In this case we can use:
+
+```sh
+git reflog
+```
+
+The command gives as output a log of all the commits where we were standing. We can then checkout that commit to recover the state at that point in time. The output looks something like this:
+
+```
+e595ba0 (HEAD -> master) HEAD@{0}: checkout: moving from some-branch to master
+31cc940 HEAD@{1}: commit: Some cool stuff
+e595ba0 (HEAD -> master) HEAD@{2}: checkout: moving from master to some-branch
+...
+```
 
 ## Configuration
 
-[laptop ~/repos/soonick.github.io] $ git config --list
-user.name=User Usingston
-user.email=annovelo@amazon.com
-alias.lg=log --graph --pretty=format:'%Cred%h -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>'
+We used `git config` before to create an alias, in this section I'm going to show a few more things we can do.
+
+We can see the current configuration with the following:
+
+```sh
+$ git config --list
+core.editor=vim
+alias.lg=log --graph --all --pretty=format:'%Cred%h -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an (%ae)>'
+user.email=myemail@provider.com
+user.name=Some user
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
 core.logallrefupdates=true
-remote.origin.url=git@github.com:soonick/soonick.github.io.git
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.master.remote=origin
-branch.master.merge=refs/heads/master
-user.name=User Usingston
-user.email=user@email.com
+user.name=User Usernikov
+user.email=user@userni.kov
+```
+
+We can see a few things there: Our default editor, the alias we added, the user name and e-mail used when we create a commit, etc.
+
+The things that most users most commonly want to configure are their editor, and they user information:
+
+```sh
+git config --local user.name "User Usernikov"
+git config --local user.email "user@userni.kov"
+git config --global core.editor vim
+```
+
+Note the use of `--local` and `--global`. When `--local` is used, the configuration applies only to the current repo. If we want to apply the configuration to all repos in the machine, we use `--global`.
+
+## Conclusion
+
+In this article I described the most common git commands and some not so common commands that I have found useful during my career. If you are new to git, this should cover most of your every day work and a little more.
