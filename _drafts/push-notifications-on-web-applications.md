@@ -245,7 +245,6 @@ registration.pushManager.getSubscription().then(subscription => {
     userVisibleOnly: true
   });
 }).then(subscription => {
-  console.log(subscription);
   // Send the subscription details to our server
   fetch('http://localhost:9999/register-push-device', {
     method: 'post',
@@ -259,14 +258,34 @@ registration.pushManager.getSubscription().then(subscription => {
 });
 ```
 
-Right after registering our service worker, we use that registration to get our push subscription. If we don't have a push subscription yet, we request one. Once our app has the push subscription from the browser, it sends it to our server.
+application server keys: https://developers.google.com/web/fundamentals/push-notifications/subscribing-a-user
+
+Right after registering our service worker, we use that registration to get our push subscription. If we don't have a push subscription yet, we request one. Before we continue it's worth talking a little about what happens here.
+
+When we request a push subscription, our browser will first generate a key pair for us (a private and a public key). It will then ask their `push service` (Different browsers will use different push services) for a subscription, passing the public key that it generated. The push service generates a unique URL and sends it back to the server. The resulting subscription looks like this for us:
+
+```
+{
+  "endpoint": "https://updates.push.services.mozilla.com/wpush/v1/gAAAAABe7ruTkV65q-11wPk4gnWu022HtidezPePx5mWmmmWmz",
+  "keys": {
+    "auth": "SnhbZ2I_E7aBnK_ZI9tRTg",
+    "p256dh": "BMhflLnnr2I8czZgH_B6gHQcjisClt1f-T1ShCR4hnbCiosIdDewWBw3SCz4AbNoXXvH4Bd3Qu3J7k8Q"
+  }
+}
+```
+
+
+
+
+What 
+The `endpoint` is the URL where we will send our push notification. The `keys` are called `applicationServerKeys`. They are used to identify the server that is allowed to send push messages to this app. This makes sure that only our server can send push notifications to our app.
+
+
 
 The server will then receive the subscription object with an `endpoint` it can use to push notifications. Let's create a node server to receive the subscription:
 
 ```
 ```
-
-
 
 * Anybody can push to the endpoint, so it needs to be protected
 * This is a lot more fucking complex than I expected
