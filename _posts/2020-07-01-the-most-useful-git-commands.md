@@ -2,16 +2,12 @@
 title: The most useful git commands
 author: adrian.ancona
 layout: post
-# date: 2020-07-01
-# permalink: /2020/07/the-most-useful-git-commands/
+date: 2020-07-01
+permalink: /2020/07/the-most-useful-git-commands/
 tags:
   - productivity
   - git
 ---
-
-I have been using git for a while, and I feel pretty comfortable using it. I often find myself sharing tips on how to better use git at work, so I decided to write an article where I can share this tips with the world.
-
-## Introduction
 
 In the beginning of times, there were centralized version control systems (`SVN` and `Perforce` are examples). This means that there is a server somewhere that contains all our code and the history of all the changes. If someone needs to work on that codebase they do a `checkout` (typically of the main branch) and they will get the newest version of all the files.
 
@@ -19,14 +15,16 @@ If the server looks something like this (Every letter represents a different com
 
 [<img src="/images/posts/source-control-server.png" alt="Source control server" />](/images/posts/source-control-server.png)
 
-When a developer checks out `main`, they will get only the files at `D`, the history about the past commits exists only in the server. This has a two main disadvantages:
+When a developer checks out `main`, they will get only the files at `D`, the commit history exists only in the server.
+
+This has a two main disadvantages:
 
 - It is not possible to create local branches. If a developer needs a branch they have to push it to the server
 - If the server explodes, all the history is lost
 
 <!--more-->
 
-Git is a distributed version control system, what this means is that a developer `clones` a repo before it starts working on it. The developer's machine will contain not only the files necessary for working, but also the history of all commits. By doing this, we avoid the two problems mentioned above.
+Git is a distributed version control system. What this means is that a developer `clones` a repo before it starts working on it. The developer's machine will contain not only the files necessary for working, but also the history of all commits. By doing this, we avoid the two problems mentioned above.
 
 ## Creating a repo
 
@@ -77,7 +75,7 @@ git add README.md
 
 We can see that the status changed:
 
-```
+```sh
 $ git status
 On branch master
 
@@ -196,7 +194,7 @@ $ git lg
 * 0eba272 - Added readme file (2020-06-25 21:53:16 +1000) <User Usernikov (user@userni.kov)>
 ```
 
-The alias we created to see the history, has the advantage of showing us places where the history branches out of the main trunk. To see a list of all our branches:
+The alias we created to see the history, has the advantage of showing us places where the history branches out. To see a list of all our branches:
 
 ```sh
 git branch -v
@@ -204,9 +202,9 @@ git branch -v
 
 ## Remotes
 
-When we create a repo using `git init`, the repo exists only in the folder where we created it. Usually we want to host our repos in a centralized location so it act as the source of truth for a team.
+When we create a repo using `git init`, the repo exists only in the folder where we created it. Usually we want to host our repos in a centralized location so it acts as the source of truth for a team.
 
-One interesting thing about centralized source code locations is that nobody actually works in there, it's just a place for integration. For this reason the location where everybody pushes to doesn't have a working directory, it just keeps track of the history of all files. This is called a bare repo. We can create a bare repo if we want:
+One interesting thing about centralized source code locations is that nobody works in that clone directly, it's just a place for integration. The location where everybody pushes doesn't have a working directory, it just keeps track of the history of all files. This is referred as a `bare` repo. We can create a bare repo:
 
 ```sh
 # Assuming we are in `new-repo` folder
@@ -216,13 +214,14 @@ git clone new-repo main-repo --bare
 
 This creates a new folder called `main-repo`, that contains something very similar to `new-repo/.git`.
 
-Let's say we want to use this new folder as the souce of truth for our repo. We would need to make `new-repo` aware of it.
+Let's say we want to use this new clone as the souce of truth for our repo. We would need to make `new-repo` aware of it.
 
 ```sh
+# Assuming we are in `new-repo` folder
 git remote add origin ../main-repo/
 ```
 
-The main `remote` for a repo, is usually called `origin`, which is what we called this remote. We can have multiple remotes, but it's common to have a single one. To see our remotes and where they are hosted:
+The main `remote` for a repo, is usually called `origin`, which is what we called our remote. We can have multiple remotes, but it's common to have a single one. To see our remotes and where they are hosted:
 
 ```sh
 $ git remote -v
@@ -230,7 +229,7 @@ origin	../main-repo/ (fetch)
 origin	../main-repo/ (push)
 ```
 
-If we `fetch` from `origin`, we can will get all remote branches:
+If we `fetch` from `origin`, we will get all remote branches:
 
 ```sh
 $ git fetch origin
@@ -252,7 +251,7 @@ $ git branch -av
   remotes/origin/second-branch 0af5c64 Add title to readme
 ```
 
-It's very common to have the `master` branch track `origin/master`. What this means is that the local `master` will by default be pushed to `origin/master` and changes from `origin/master` will be integrated into local `master` when they are pulled. Let's make our master track `origin/master`:
+It's very common to have the `master` branch track `origin/master`. What this means is that the local `master` will by default be pushed to `origin/master` and changes from `origin/master` will be integrated into local `master` when they are pulled. Let's make our `master` track `origin/master`:
 
 ```sh
 $ git checkout master
@@ -319,7 +318,7 @@ This created a `merge commit` to integrate the changes from `first-branch` into 
 
 ## Cherry picking
 
-Let's we didn't do that merge and we are still at this stage:
+Let's imagine we didn't do that merge and we are still at this stage:
 
 ```sh
 * 4e87837 - (HEAD -> master, origin/master) Add file-in-master (2020-06-26 21:40:08 +1000) <User Usernikov (user@userni.kov)>
@@ -329,7 +328,7 @@ Let's we didn't do that merge and we are still at this stage:
 * 0eba272 - Added readme file (2020-06-25 21:53:16 +1000) <User Usernikov (user@userni.kov)>
 ```
 
-Another way we can add the `first-branch` commit to master is by `cherry-picking` it. This is useful when we have commits in different branches, but we don't want to merge the whole branch, we just want a single commit. To do this:
+Another way we can add the `first-branch` commit to master is by `cherry-picking` it. This is useful when we have commits in different branches, but we don't want to merge the whole branch. To do this:
 
 ```sh
 # Assuming we are in master
@@ -352,7 +351,7 @@ We can see that the result here is different. A copy of the commit was added to 
 
 ## Rebasing
 
-Rebasing is an alternative to merging that doesn't create a merge commit. The result is similar to following these steps. We are going to call `current branch` the branch where we are standing and `base branch` the branch we are rebasing to.
+Rebasing is an alternative to merging that doesn't create a merge commit. The result is similar to following these steps (We are going to call `current branch` the branch where we are standing and `base branch` the branch we are rebasing to):
 
 - Checkout `base branch`
 - Go back in history and find the first common commit for `base branch` and `current branch`
@@ -437,13 +436,13 @@ Deleted branch first-branch (was f2bd6e6).
 Deleted branch second-branch (was 0af5c64).
 ```
 
-If the branches are not part of master yet, the previous command won't work. This is done to prevent people from deleting branches by mistake. If we are sure we want to delete a branch that we haven't integrated into master, we can use:
+If the branches aren't part of master yet, the previous command won't work. This is done to prevent us from deleting branches by mistake. If we are sure we want to delete a branch that we haven't integrated into master, we can use:
 
 ```sh
 $ git branch -D branch-name
 ```
 
-We also have some branches in our remote that we are not going to need. Let's delete them from there (Keep in mind that this deletes the branches from the remote, so this will affect all users of that remote):
+We also have some branches in our remote that we aren't going to need. Let's delete them from there (Keep in mind that this deletes the branches from the remote, so this will affect all users of that remote):
 
 ```sh
 $ git push origin :second-branch 
@@ -509,7 +508,7 @@ $ git lg
 
 To use the fetch command we specify the `remote` and the `brach` we want to fetch. Once we have the latest changes we can either `merge` or `rebase` so our `master` is ahead of `origin/master`.
 
-An alternative to fetch is `pull`. A `pull` is the same as doing a merge, followed by a merge:
+An alternative to fetch is `pull`. A `pull` is the same as doing a fetch, followed by a merge:
 
 ```sh
 $ git pull origin master
@@ -550,7 +549,7 @@ $ git lg
 
 ## Conflicts
 
-In all the previous example we were able to merge or rebase without any conflicts. In this section I'm going to show what happens when conflicts occur. Let's imagine we have two branches that made modifications to the same file and we want to merge them:
+In all the previous examples we were able to merge or rebase without any conflicts. In this section I'm going to show what happens when conflicts occur. Let's imagine we have two branches that made modifications to the same file and we want to merge them:
 
 ```sh
 $ git lg
@@ -599,7 +598,7 @@ Adding some information
 >>>>>>> temp
 ```
 
-The `<<<<<<<`, `=======` and `>>>>>>>` markers tell us where our conflicts are. The first section is the contents of `HEAD`(`master`) and the second section is the contents of `temp`. What we do in this scenario depends on us. We could delete one of the sections, combine them or keep both. In this case, we are going to keep both. We'll modify the file to look like this:
+The `<<<<<<<`, `=======` and `>>>>>>>` markers tell us where our conflicts are. The first section is the contents of `HEAD` (`master`) and the second section is the contents of `temp`. What we do in this scenario depends on us. We could delete one of the sections, combine them or keep both. In this case, we are going to keep both. We'll modify the file to look like this:
 
 ```
 Git demo
@@ -629,11 +628,11 @@ $ git commit
 [master 555c386] Merge branch 'temp'
 ```
 
-Conflicts can appear in any situation when we are trying to integrate code. Some examples are: merge, rebase, cherry-pick. The way to deal with them is the same in any scenario.
+Conflicts can appear in any situation when we are trying to integrate code. Some examples are: `merge`, `rebase`, `cherry-pick`. The way to deal with them is the same in any scenario.
 
 ## Amending
 
-It's common in software development to write some code and have someone else review it. What this means is that we can end with a history like this:
+It's common in software development to write some code and have someone else review it. What this means is that we can end with history like this:
 
 ```sh
 ...
@@ -642,7 +641,9 @@ It's common in software development to write some code and have someone else rev
 * aaaaa - Developed awesome feature
 ```
 
-This makes the history hard to understand. To avoid this problem, we can ammend changes to a commit instead of creating new commits. Amending, means adding changes to the commit currently on our `HEAD`. This effetively adds the new changes to the commit where we are stading without creating a new commit. Let's say we made a commit, but realized we need to make some more changes. We can add those changes to our commit like this:
+This makes the history hard to understand.
+
+To avoid this problem, we can ammend changes to a commit instead of creating new commits. Amending, means adding changes to the commit currently on our `HEAD`. This effetively adds the new changes to the commit where we are stading without creating a new commit. Let's say we made a commit, but realized we need to make some more changes. We can add those changes to our commit like this:
 
 ```sh
 $ git lg
@@ -701,7 +702,9 @@ git diff 4f243e1 0af5c64
 
 ## The stash
 
-Sometimes we are working on something and we get interrupted for something that will require us to make some changes in our repo. Since we don't want to mix the new changes with whatever we were working before, we wan't to save our state before we start working on something new. One way we could do this is by creating a branch and commiting our changes to that branch. Git can do this automatically for us with stashes. If we want to save our current state, we can use:
+Sometimes we are working on something and we get interrupted for something that will require us to make some changes in our repo. Since we don't want to mix the new changes with whatever we were working on before, we wan't to save our state before we start working on something new.
+
+One way we could do this is by creating a branch and commiting our changes to that branch. Git can do this automatically for us with stashes. If we want to save our current state, we can use:
 
 ```sh
 git stash
@@ -713,7 +716,7 @@ The `stash` works like a stack. We can keep stashing things and they will go one
 git stash pop
 ```
 
-Since stashes don't have identifiers (like branch names), it's best to use them only for quick things, otherwise we might forget what's on our stash.
+Since stashes don't have identifiers (like branch names), it's best to use them only for quick things, otherwise we might forget what's in our stash.
 
 ## Rewriting history
 
@@ -726,7 +729,9 @@ There are going to be times when we will need to make changes to the way our his
 * fc35d43 - Added README.md (2020-06-28 18:47:11 +1000) <User Usernikov (user@userni.kov)>
 ```
 
-We want to push our changes to `origin`, but we want commits `b779d06` and `f4b9b9a` to be a single commit instead of two. We also don't want to push `833cb34` yet. To achieve this we can use create a branch we are standing and rewrite the history of `master` so `833cb34` is not there, and `f4b9b9a` is squashed into `b779d06`.
+We want to push our changes to `origin`, but we want commits `b779d06` and `f4b9b9a` to be a single commit instead of two. We also don't want to push `833cb34` yet, so we'll remove it from this branch.
+
+To achieve this we can create a branch where we are standing and rewrite the history of `master` so `833cb34` is not there and `f4b9b9a` is squashed into `b779d06`.
 
 We start by creating a branch so we don't lose commit `833cb34` when we rewrite the history.
 
@@ -776,7 +781,7 @@ pick 833cb34 A not so good feature
 # Note that empty commits are commented out
 ```
 
-The at the bottom explains all the things we can do from here. For our example, we are doing the following modifications:
+The comment at the bottom explains all the things we can do from here. For our example, we are doing the following modifications:
 
 ```
 pick b779d06 Created awesome feature
@@ -786,7 +791,9 @@ d 833cb34 A not so good feature
 ...
 ```
 
-Putting an `f` before `f4b9b9a` means that it will be squased into `b779d06` (They will be made one commit). Putting a `d` before `833cb34` means that the commit will be deleted. After we save the changes and quit the editor, the changes will be applied. The history now looks like this:
+Putting an `f` before `f4b9b9a` means that it will be squased into `b779d06` (They will be made one commit). Putting a `d` before `833cb34` means that the commit will be deleted. After we save the changes and quit the editor, the changes will be applied.
+
+The history now looks like this:
 
 ```sh
 * 5ce1955 - (HEAD -> master) Created awesome feature (2020-06-28 19:11:53 +1000) <User Usernikov (user@userni.kov)>
@@ -801,7 +808,7 @@ We can see that master has only one commit now. The feature branch contains all 
 
 ## Selecting what to commit
 
-We have so far only created commits where a single file is modified, but this is not always the case. Often we will be working on multiple files at the same time and we might want to add all of them in a single commit or just some of them.
+We have so far only created commits where a single file is modified, but this is not always the case. Often we will be working on multiple files at the same time and we might want to add all of them or just some of them in a single commit.
 
 Let's say our repo status looks like this:
 
@@ -850,7 +857,7 @@ Changes to be committed:
 	new file:   new-file
 ```
 
-There might be times where there are multiple changes in a file, but we want to commit just some of them. In this case we can add patches:
+There might be times when there are multiple changes in a file, but we want to commit just some of them. In this case we can add parts of a file:
 
 ```sh
 $ git add -p abc.cpp
@@ -912,11 +919,11 @@ We can continue this process until we have selected what we want to commit.
 
 ## Bisect
 
-Imagine we are working on a software project and suddenly we get a report that a feature that was working a month ago, is suddenly not working. We look at the code, but we can't find anything suspicious. We broke something in the last month, but we are not sure how.
+Imagine we are working on a software project and suddenly we get a report that a feature that was working a month ago, is suddenly not working. We look at the code, but we can't find anything suspicious. We broke something in the last month, but we aren't sure how.
 
-If we find ourselves in this scenario, bisect could help us find the commit that introduced the issue. Bisect works by performing a binary search on the commit history until we find the culprit.
+If we find ourselves in this scenario, bisect could help us find the commit that introduced the issue.
 
-To start bisecting:
+Bisect works by performing a binary search on the commit history until we find the culprit. To start bisecting:
 
 ```sh
 git bisect start
@@ -1018,7 +1025,7 @@ user.email=user@userni.kov
 
 We can see a few things there: Our default editor, the alias we added, the user name and e-mail used when we create a commit, etc.
 
-The things that most users most commonly want to configure are their editor, and they user information:
+The things we most commonly want to configure are the editor, and the user information:
 
 ```sh
 git config --local user.name "User Usernikov"
