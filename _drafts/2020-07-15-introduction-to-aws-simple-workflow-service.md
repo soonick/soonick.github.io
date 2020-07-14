@@ -2,7 +2,7 @@
 title: Introduction to Simple Workflow Service (SWF)
 author: adrian.ancona
 layout: post
-date: 2020-07-08
+date: 2020-07-15
 permalink: /2020/07/introduction-to-aws-simple-workflow-service/
 tags:
   - architecture

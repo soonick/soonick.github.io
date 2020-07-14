@@ -2,7 +2,7 @@
 title: Push notifications on web applications
 author: adrian.ancona
 layout: post
-date: 2020-07-15
+date: 2020-07-22
 permalink: /2020/07/push-notifications-on-web-applications/
 tags:
   - javascript
