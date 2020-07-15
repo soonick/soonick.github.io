@@ -32,7 +32,7 @@ Those are some high level examples. In this post I'm going to go over one exampl
 Before we start building a workflow, let's learn a little about the components of an SWF:
 
 - **Workflow**: A set of activities, and some logic that defines how these work together to achieve some objective
-- **Domain**: A workflow lives in a domain. A Domain can contain multiple workflows. Workflows in different domains can't interact.
+- **Domain**: A workflow lives in a domain. A Domain can contain multiple workflows. Workflows in different domains can't interact
 - **Execution**: An instance of the workflow with its associated state
 - **Event**: Represents a change on the state of an execution
 - **Starter**: A program, or person that starts and execution
@@ -539,6 +539,4 @@ ruby execution_started.rb
 
 ## Conclusion
 
-Using SWF turned out to be a lot more complicated than I expected. Having to parse all to events to figure out which activity goes next, seems error prone and makes the code confusing. The documentation is also not very clear on how this should be done, so hopefully this example help people interested.
-
-
+Using SWF turned out to be a lot more complicated than I expected. Having to parse all to events to figure out which activity goes next, seems error prone and makes the code confusing. The documentation is also not very clear on how this should be done, so hopefully this example helps people interested.
