@@ -418,4 +418,4 @@ node app.js
 
 ## Conclusion
 
-In this post I covered how to show push notifications and how to send push notifications from a server to a web app. The example I showed is very naive, but it shows the mechanisms that need to be used in a real app.
+In this post I covered how to show push notifications and how to send push notifications from a server to a web app. The example is very naive, but it shows the mechanisms that need to be used in a real app.
