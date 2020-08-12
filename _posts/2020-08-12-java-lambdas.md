@@ -3,7 +3,7 @@ title: Java Lambdas
 author: adrian.ancona
 layout: post
 date: 2020-08-12
-permalink: /2020/08/java-streams/
+permalink: /2020/08/java-lambdas/
 tags:
   - design_patterns
   - java
