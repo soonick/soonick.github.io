@@ -312,26 +312,26 @@ function urlBase64ToUint8Array(base64String) {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/worker.js').then(registration => {
-      return registration.pushManager.getSubscription();
-    }).then(subscription => {
-      if (subscription) {
-        return subscription;
-      }
+      registration.pushManager.getSubscription().then(subscription => {
+        if (subscription) {
+          return subscription;
+        }
 
-      const convertedVapidKey = urlBase64ToUint8Array(VAPID_PUBLIC)
-      return registration.pushManager.subscribe({
-        // This means all push events will result in a notification
-        userVisibleOnly: true,
-        applicationServerKey: convertedVapidKey
-      });
-    }).then(subscription => {
-      // Send the subscription details to our server
-      fetch('http://localhost:9999/register-push-device', {
-        method: 'post',
-        headers: {
-          'Content-type': 'application/json'
-        },
-        body: JSON.stringify({ subscription: subscription })
+        const convertedVapidKey = urlBase64ToUint8Array(VAPID_PUBLIC)
+        return registration.pushManager.subscribe({
+          // This means all push events will result in a notification
+          userVisibleOnly: true,
+          applicationServerKey: convertedVapidKey
+        });
+      }).then(subscription => {
+        // Send the subscription details to our server
+        fetch('http://localhost:9999/register-push-device', {
+          method: 'post',
+          headers: {
+            'Content-type': 'application/json'
+          },
+          body: JSON.stringify({ subscription: subscription })
+        });
       });
     });
   });
