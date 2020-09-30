@@ -2,8 +2,8 @@
 title: Introduction to Google Cloud CLI
 author: adrian.ancona
 layout: post
-# date: 2020-03-04
-# permalink: /2020/03/introduction-to-google-cloud-cli/
+date: 2020-09-30
+permalink: /2020/09/introduction-to-google-cloud-cli/
 tags:
   - gcp
   - productivity
