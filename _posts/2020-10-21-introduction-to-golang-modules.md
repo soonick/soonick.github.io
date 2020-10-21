@@ -11,7 +11,7 @@ tags:
 
 Modules are the new way of doing dependency management in Golang.
 
-A module is a collection of packages that are distributed together (i.e. a single binary). A module contains a `go.mod` file at its root.
+A module is a collection of packages that are distributed together (e.g. a single binary). A module contains a `go.mod` file at its root.
 
 With modules, it is not necessary to have our code in `$GOPATH/src` anymore, so we can create a project anywhere.
 
@@ -75,7 +75,7 @@ func main() {
 }
 ```
 
-Next time we try to run it, all the dependencies will be downloaded and the dependencies versions will be added to `go.mod`:
+Next time we try to run it, all the dependencies will be downloaded and the dependencies' versions will be added to `go.mod`:
 
 ```
 module mymodule/hello
@@ -96,7 +96,7 @@ rsc.io/sampler v1.3.0 h1:7uVkIFmeBqHfdjD+gZwtXXI+RODJ2Wc4O7MPEh/QiW4=
 rsc.io/sampler v1.3.0/go.mod h1:T1hPZKmBbMNahiBKFy5HrXp6adAjACjK9JXDnKaTXpA=
 ```
 
-Both files should be checked into version control, to provide reproducible builds.
+Both files should be checked into version control to provide reproducible builds.
 
 We can also see all the dependencies in our module using `go list`:
 
@@ -104,7 +104,7 @@ We can also see all the dependencies in our module using `go list`:
 go list -m all
 ```
 
-We can also see the available versions of a specific module:
+To see the available versions of a specific module:
 
 ```
 go list -m -versions rsc.io/sampler
@@ -116,7 +116,7 @@ We can upgrade a package to a specific version:
 go get rsc.io/sampler@v1.3.1
 ```
 
-We can upgrade to the latest version, by omiting the version
+To upgrade to the latest version, just omit the version
 
 ```
 go get rsc.io/sampler
