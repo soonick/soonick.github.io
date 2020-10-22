@@ -6,7 +6,7 @@ date: 2020-10-21
 permalink: /2020/10/introduction-to-golang-modules/
 tags:
   - golang
-  - programing
+  - programming
 ---
 
 Modules are the new way of doing dependency management in Golang.
