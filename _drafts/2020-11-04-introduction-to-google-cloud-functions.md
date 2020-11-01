@@ -7,7 +7,7 @@ permalink: /2020/11/introduction-to-google-cloud-functions/
 tags:
   - architecture
   - gcp
-  - programing
+  - programming
 ---
 
 Cloud Functions are Google's offering for serverless architecture (similar to AWS lambdas).
