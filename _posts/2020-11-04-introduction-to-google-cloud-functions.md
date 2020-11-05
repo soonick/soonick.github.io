@@ -197,7 +197,7 @@ gcloud functions deploy DoYouLikeTacos \
 ```
 
 - `DoYouLikeTacos` is the name of the function we are deploying. The tool will search the package for a function with that name.
-- `--runtime go113` tells google to use Golang 11.3. We can see the available runtimes in the help (`gcloud functions deploy --help`)
+- `--runtime go113` tells google to use Golang 1.13. We can see the available runtimes in the help (`gcloud functions deploy --help`)
 - `--trigger-http` means that an http endpoint will be assigned to the function
 - `--allow-unauthenticated` means that the function will be available for everybody without authentication. Note that the function code itself could expect some kind of authentication independently of this flag
 
