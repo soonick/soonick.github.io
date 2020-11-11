@@ -12,7 +12,9 @@ layout: default
     </div>
 
     <a href="{{post.url | prepend: site.baseurl}}" class="button button-primary">Read More</a>
-
+    {% if forloop.index == 2 or forloop.index == 6 %}
+    {% include adsense.html %}
+    {% endif %}
   </article>
   {% endfor %}
 
