@@ -49,7 +49,7 @@ Finally, we have the `gcloud` command installed.
 
 ## Configuring gcloud
 
-For `gcloud` to be usedful, we need to connect it to an actual Google Cloud account. To do this, we need to get a JSON key file from our console. We can do this from the `Service Accounts` section:
+For `gcloud` to be useful, we need to connect it to an actual Google Cloud account. To do this, we need to get a JSON key file from our console. We can do this from the `Service Accounts` section:
 
 [<img src="/images/posts/gcp-service-accounts.png" alt="GCP Service Accounts" />](/images/posts/gcp-service-accounts.png)
 
