@@ -94,7 +94,7 @@ This is how ncona-component.html looks like:
 
 The final result is this:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/06/ncona-component.png" alt="ncona-component" width="207" height="29" class="alignnone size-full wp-image-2948" />](http://ncona.com/wp-content/uploads/2015/06/ncona-component.png)
+[<img src="/images/posts/ncona-component.png" alt="ncona-component" />](/images/posts/ncona-component.png)
 
 I added a link to show how the link inside the component is red, but the link outside the component is not affected even when the CSS rule targets all a tags.
 
@@ -197,7 +197,7 @@ This is a heavily commented version of the polymer component:
 
 We can see the accordion on the page and working as expected:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/06/accordion.png" alt="accordion" width="575" height="72" class="alignnone size-full wp-image-2957" srcset="https://ncona.com/wp-content/uploads/2015/06/accordion.png 575w, https://ncona.com/wp-content/uploads/2015/06/accordion-300x38.png 300w" sizes="(max-width: 575px) 100vw, 575px" />](http://ncona.com/wp-content/uploads/2015/06/accordion.png)
+[<img src="/images/posts/accordion.png" alt="accordion" />](/images/posts/accordion.png)
 
 A cool thing about the accordion is that we made it possible for the user to change the color of the titles. The user can add this style declaration:
 
@@ -213,6 +213,6 @@ ncona-accordion {
 
 And the title color will change:
 
-[<img src="http://ncona.com/wp-content/uploads/2015/06/accordion-styled.png" alt="accordion-styled" width="574" height="74" class="alignnone size-full wp-image-2958" srcset="https://ncona.com/wp-content/uploads/2015/06/accordion-styled.png 574w, https://ncona.com/wp-content/uploads/2015/06/accordion-styled-300x39.png 300w" sizes="(max-width: 574px) 100vw, 574px" />](http://ncona.com/wp-content/uploads/2015/06/accordion-styled.png)
+[<img src="/images/posts/accordion-styled.png" alt="accordion-styled" />](/images/posts/accordion-styled.png)
 
 A lot of the features that I used in my examples require polymer 1.0. If you are using an old version of polymer, they might not work.
