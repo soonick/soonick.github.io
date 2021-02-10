@@ -26,6 +26,8 @@ I'm not going to go into the depths of the protocol, but in broad terms, these a
 
 In this post we are going to focus on the validation of the JWT.
 
+<!--more-->
+
 ## Validating the JWT
 
 The `go-oidc` library implements all the hairy bits of the OpenID protocol for us. We need to start by creating a provider that will connect to Google's server:
