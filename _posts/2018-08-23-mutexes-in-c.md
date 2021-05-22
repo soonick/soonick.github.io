@@ -77,7 +77,7 @@ int main() {
 }
 ```
 
-The example above shows how you can lock a Mutex before accessing shared data and unlock it when you are done. One important thing to notice here is that we have to explicitly unlock the Mutex, otherwise it will never be made available again an the program will be waiting forever. To make things trickier, if the section of code protected by the Mutex threw and exception, the Mutex would never be unlocked.
+The example above shows how you can lock a Mutex before accessing shared data and unlock it when you are done. One important thing to notice here is that we have to explicitly unlock the Mutex, otherwise it will never be made available again and the program will be waiting forever. To make things trickier, if the section of code protected by the Mutex threw an exception, the Mutex would never be unlocked.
 
 To prevent problems caused by not unlocking a Mutex, C++ provides _std::lock_guard_. It works by locking the provided Mutex on creation and unlocking it on it&#8217;s destructor (when it goes out of scope).
 

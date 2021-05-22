@@ -81,7 +81,7 @@ I left the program to execute for a couple of minutes and no value got corrupted
 
 Because there is no guarantee that operations on primitive types are atomic, C++ provides atomic types. Atomic types are a wrapper on a type that allows only certain operations that are guaranteed to be atomic.
 
-The most common operations one atomic types are:
+The most common operations on atomic types are:
 
 - `store(T desired)` - Set the value to `desired`
 - `load()` - Get the value

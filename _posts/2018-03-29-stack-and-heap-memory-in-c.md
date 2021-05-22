@@ -16,7 +16,7 @@ I decided to write this post to try to explain to myself what is the difference 
 
 ## The names
 
-[Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) and [Heap](https://en.wikipedia.org/wiki/Heap_(data_structure)) are both names of data structures. This can lead to some confusion, because although the stack is called like that because it works similar to a stack (I&#8217;ll explain more about this), the heap is not related at all to the heap data structure. The exact origin of the heap word in this context is unknown to me, but from a little research it seems like it&#8217;s use is based on the English language definition for that word:
+[Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) and [Heap](https://en.wikipedia.org/wiki/Heap_(data_structure)) are both names of data structures. This can lead to some confusion, because although the stack is called like that because it works similar to a stack (I&#8217;ll explain more about this), the heap is not related at all to the heap data structure. The exact origin of the heap word in this context is unknown to me, but from a little research it seems like its use is based on the English language definition for that word:
 
 ```
 An untidy collection of things piled up haphazardly
@@ -30,7 +30,7 @@ Which actually describes pretty well what a heap of memory is.
 
 There are a few interesting high level details that are worth knowing about the heap and the stack before we give a closer look. Let&#8217;s start with the stack.
 
-The stack is a portion of memory (lives in RAM) that is allocated to a thread when it is created (each thread has it&#8217;s own stack). The stack is not very smart. It grows and shrinks similar to a stack (The data structure); things can be added to the top and are removed by moving the stack pointer downwards. The stack space is allocated in RAM when the thread is created and it doesn&#8217;t change it&#8217;s size. If you try to store more information than fits in the stack, you will get a stack overflow and the application will crash.
+The stack is a portion of memory (lives in RAM) that is allocated to a thread when it is created (each thread has it&#8217;s own stack). The stack is not very smart. It grows and shrinks similar to a stack (The data structure); things can be added to the top and are removed by moving the stack pointer downwards. The stack space is allocated in RAM when the thread is created and it doesn&#8217;t change its size. If you try to store more information than fits in the stack, you will get a stack overflow and the application will crash.
 
 The heap is a portion of memory that is allocated to the process when it is started. You can add information to the heap on demand and it can be accessed by all threads in the same process. If you try to store more information in the heap than it can hold, the Operating System will look for free space in RAM and give it to you. This means that you can store a lot more information in the heap than in the stack.
 

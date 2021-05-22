@@ -39,7 +39,7 @@ int main()
 
 <!--more-->
 
-The code above works with some compilers but not with others. When it works, the result that is printed is __. What happens is that when the thread is started the arguments are first copied into the thread and then passed into the function. This copy is done to avoid threads from reading memory addresses that are not valid (The memory address could become invalid if the caller of the thread has returned already).
+The code above works with some compilers but not with others. When it works, the result that is printed is _0_. What happens is that when the thread is started the arguments are first copied into the thread and then passed into the function. This copy is done to avoid threads from reading memory addresses that are not valid (The memory address could become invalid if the caller of the thread has returned already).
 
 The intent of this code was to have the thread modify the container. This is possible by using _std::ref_:
 
@@ -67,7 +67,7 @@ int main()
 }
 ```
 
-In this case the value printed is _3_, as expected. std::ref wraps c in a _reference_wrapper<container>_. The reason we are able to pass a _reference_wrapper<container>_ to setThings instead of a _container&_ is because it defines and implicit conversion from reference_wrapper<T> to T&.
+In this case the value printed is _3_, as expected. std::ref wraps c in a `reference_wrapper<container>`. The reason we are able to pass a `reference_wrapper<container>` to setThings instead of a `container&` is because it defines an implicit conversion from `reference_wrapper<T>` to `T&`.
 
 The behavior above is good, because it makes you explicitly decide when you want to pass by reference to a thread, which could be dangerous in some situations.
 
@@ -101,7 +101,7 @@ The output of this program varies depending on the order in which threads are ex
 
 The problem comes from the buffer variable. This variable is a _char*_. When doInThread exits, the memory from that pointer is released and is free to use again. Because we call doInThread 3 times in a row, the same memory is being assigned and released on each call. The last value it is assigned is 3.
 
-The tricky thing is when we create our thread, all arguments are copied to the thread context. In this case, the _char*_ is copied to the thread. In the thread context, the _char*_ is converted to std::string and used by the talk function. The copying of the _char*_ happens right away, but the conversion to _std::string_ can happen some time in the future. In the case where we get _333_ the conversion is not done until after the buffer is the to 3, so all threads end up converting to the same value.
+The tricky thing is when we create our thread, all arguments are copied to the thread context. In this case, the _char*_ is copied to the thread. In the thread context, the _char*_ is converted to std::string and used by the talk function. The copying of the _char*_ happens right away, but the conversion to _std::string_ can happen some time in the future. In the case where we get _333_ the conversion is not done until after the buffer is set to 3, so all threads end up converting to the same value.
 
 This scenario feels to me like hard to avoid, so it is probably a good idea to keep and eye on this automatic conversions when using threads. It&#8217;s safer to do the explicit conversion before to be sure:
 
