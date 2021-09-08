@@ -2,7 +2,7 @@
 title: Dependency injection with Dagger and Bazel
 author: adrian.ancona
 layout: post
-date: 2021-09-01
+date: 2021-09-08
 permalink: /2021/09/dependency-injection-with-dagger-and-bazel
 tags:
   - dependency_management
