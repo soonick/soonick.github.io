@@ -2,8 +2,8 @@
 title: Introduction to Protocol Buffers and gRPC
 author: adrian.ancona
 layout: post
-# date: 2021-10-20
-# permalink: /2021/10/introduction-to-protocol-buffers-and-grpc
+date: 2021-10-27
+permalink: /2021/10/introduction-to-protocol-buffers-and-grpc
 tags:
   - application_design
   - architecture
@@ -12,11 +12,15 @@ tags:
   - server
 ---
 
-In the beginning of time RPC (Remote Procedure Calls) was the standard way of communicating between remote services. Some time passed and REST (REpresentational State Transfer) took over as the king. REST, using JSON as the transport language became popular because it made it easy to understand the communication between clients and servers, since JSON is easy to read for humans.
+In the beginning of time RPC (Remote Procedure Calls) was the standard way of communicating between remote services. Some time passed and REST (REpresentational State Transfer) took over as the king.
 
-With the rise of Microservices and systems that are increasingly more chatty, using JSON became a considerable overhead. Transmiting data in a human readable format, as well as serializing and deserializing proved to be slow. For this reason, different teams started working in better ways serialization formats (e.g. protobuf, thrift, etc), as well getting rid of the HTTP overhead. As part of this revolution, gRPC was born.
+REST and JSON became popular because they made it easy to understand the communication between clients and servers, since JSON is easy for humans to read.
 
-gRPC is a recursive acronym that stands for gRPC Remote Procedure Call. It's a framework for that is supported by many programming languages and provides many features for advances use-cases.
+With the rise of Microservices and systems that are increasingly chatty, JSON became a considerable overhead. Transmiting data in a human readable format, as well as serializing and deserializing this data turned out to be very slow. For this reason, different teams started working in more efficient serialization formats (e.g. protobuf, thrift, etc). As part of this revolution, gRPC was born.
+
+gRPC is a recursive acronym that stands for gRPC Remote Procedure Call. It's a framework for that is supported by many programming languages and provides many features for advanced use-cases.
+
+<!--more-->
 
 ## Protocol Buffers
 
@@ -35,7 +39,7 @@ message Person {
 
 We can think of a message as a struct or a plain object. In the example above, the name of the message is `Person` and it has two fields. The field `name` is a `string` and the field `age` is a 32 bit integer.
 
-We can also see that after each field we have something like `= <number>`. This is an identifier for the build that helps the compiler encode and decode messages. These `<number>`s must be different for each field in a message and and must never change.
+We can also see that after each field we have something like `= <number>`. This is an identifier for the field that helps the compiler encode and decode messages. These `<number>`s must be different for each field in a message and and must never change.
 
 In the example above, each field has a single value, but we can also have fields that can receive a list of values, by using the `repeated` keyword:
 
@@ -89,13 +93,13 @@ message Person {
 }
 ```
 
-There are many more things we can do with Protocol Bufferd DIL, but we're not going to cover those here.
+There are many more things we can do with Protocol Buffers DIL, but we're not going to cover everything here. This should be enough to get started.
 
 ## Using Protocol Buffers in Java
 
-Protocol Buffers are supported in many languages. In this article I'm going to show how to get started with Java since it's the language I've been using the most lately.
+For a proto definition to be useful in a specific language it needs to be compiled and generate the language specific files. The name of the program that does this is the `protoc` compiler. To try the compiler we need to first download it and install it.
 
-For a proto definition to be useful in a specific language it needs to be compiled and generate the language specific files. The name of the program that does this is the `protoc` compiler. To try the compiler we need to first download it and install it. We can find the latest version in [the releases page](https://github.com/protocolbuffers/protobuf/releases/tag/v3.18.1).
+We can find the latest version in [the releases page](https://github.com/protocolbuffers/protobuf/releases/tag/v3.18.1).
 
 Once it's installed, let's create a file named `person.proto`, with this content:
 
@@ -127,17 +131,17 @@ We can navigate to that folder in a terminal and use this command to compile the
 /path/to/protoc ./person.proto --java_out=.
 ```
 
-Replace `/path/to/protoc` with the location of your `protoc` binary. The result is a single file named `PersonOuterClass.java`. This file contains a lot of code that might not be super clear, but the important thing is that we have a `Person` class that follows the same structure as the message we defined in the `proto` file.
+Replace `/path/to/protoc` with the location of your `protoc` binary. The result is a single file named `PersonOuterClass.java`. This file contains a lot of code that might not be super clear. The important thing is that we have a `Person` class that follows the same structure as the message we defined in the `proto` file.
 
-A not obvious detail about the generated classes is that they are immutable, which means that once an object is created, it can't be modified. Also, the way new instances of the class is by using a Builder (which is also part of the generated code). To generate a person, we would do something like this:
+A not obvious detail about the generated classes is that they are immutable, which means that once an object is created, it can't be modified. The way new instances of the class are created is by using a Builder (which is also part of the generated code). To generate a person, we would do something like this:
 
 ```java
 Person adrian = Person.newBuilder().setAge(35).build();
 ```
 
-I omitted a lot most of the fields for brevity, but the idea is the same.
+I omitted a lot most of the fields for brevity, but that's the main idea.
 
-Although we can compile `proto` files using `protoc` like we did above, it would be time consuming and error prone to expect people to do this manually every time a `proto` file is changed. For this reason there are tools that allow us to add this as a compilation step in most build tools.
+Although we can compile `proto` files using `protoc` like we did above, it would be time consuming and error prone to expect people to do this manually every time a `proto` file is changed. For this reason there are tools that allow us to add this compilation step as part of our build.
 
 ## Compiling proto files in Bazel
 
@@ -278,7 +282,7 @@ service MyServer {
 
 As we can probably guess, the `service` keyword allows us to define a service. In this case, we named our service `MyServer`. This service contains a single method called `Greet`. This method takes a message as input (`GreetRequest`) and returns another message (`GreetResponse`).
 
-This file works as the API for our service, that will be shared by clients and servers, but we haven't created any client or server yet.
+This file works as the API definition for our service, that will be shared by clients and servers, but we haven't created any client or server yet.
 
 To create a gRPC server the proto definition isn't enough, we also need the gRPC code generator. As with the `proto` compiler, this step can be integrated into most build systems, but I'm just going to show how to do it for Bazel.
 
@@ -424,5 +428,59 @@ We use a `ServerBuilder` to start our `MyServerImpl` in the specified port. Late
 
 ## gRPC Clients
 
-Now that we have our server, we need a client so we can talk to it.
+Now that we have our server, we need a client so we can talk to it. In the gRPC world, clients are referered as [stubs](https://en.wikipedia.org/wiki/Stub_(distributed_computing)). Let's look at an example stub for our server:
 
+```java
+package example;
+
+import example.protos.GreetRequest;
+import example.protos.GreetResponse;
+import example.protos.MyServerGrpc;
+import io.grpc.Channel;
+import io.grpc.ManagedChannelBuilder;
+
+public class ClientMain {
+  public static void main(String args[]) {
+    final String target = "localhost:9876";
+    final Channel channel = ManagedChannelBuilder.forTarget(target)
+        // Channels use SSL by default. This disables SSL since our server doesn't
+        // support it
+        .usePlaintext()
+        .build();
+    final MyServerGrpc.MyServerBlockingStub stub = MyServerGrpc.newBlockingStub(channel);
+    final GreetRequest request = GreetRequest.newBuilder().setName("Carlos").build();
+    final GreetResponse response = stub.greet(request);
+    System.out.println("Response: " + response.getGreeting());
+  }
+}
+```
+
+We start by creating a `channel`, which basically is the configuration for the connection with the server:
+
+```java
+final Channel channel = ManagedChannelBuilder.forTarget(target)
+    // Channels use SSL by default. This disables SSL since our server doesn't
+    // support it
+    .usePlaintext()
+    .build();
+```
+
+The next step is to create a stub. In this case we create a blocking stub, which allows us to call remote methods and wait for a response synchronously:
+
+```java
+final MyServerGrpc.MyServerBlockingStub stub = MyServerGrpc.newBlockingStub(channel);
+```
+
+Finally, we make the request and get the response:
+
+```java
+final GreetRequest request = GreetRequest.newBuilder().setName("Carlos").build();
+final GreetResponse response = stub.greet(request);
+System.out.println("Response: " + response.getGreeting());
+```
+
+## Conclusion
+
+Getting started with gRPC takes a little more effort than communicating with services with HTTP and JSON, but it comes with some advantages, the most important ones being performance and type safety.
+
+In this article we learned how to set up the necesary tooling to get started with gRPC and also learned how to build a basic server and client. There is a lot more to learn, but this should serve as a foundation for the next steps.
