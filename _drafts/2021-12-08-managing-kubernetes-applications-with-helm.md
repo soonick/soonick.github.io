@@ -2,17 +2,19 @@
 title: Managing Kubernetes Applications with Helm
 author: adrian.ancona
 layout: post
-# date: 2021-12-01
-# permalink: /2021/12/managing-kubernetes-objects-with-yaml-configurations
+date: 2021-12-08
+permalink: /2021/12/managing-kubernetes-applications-with-helm
 tags:
   - automation
   - docker
   - linux
 ---
 
-Helm is a package manager for Charts. You might already be familiar with package managers like the ones used for Linux distributions (apt, yum, etc.) In Linux, a package manager takes care of installing, updating, configuring and removing packages from a machine. Helm does something similar, but with Kubernetes applications.
+Helm is a package manager for Charts.
 
-I mentioned that Helm manages Charts. Charts are a set of files that describe a Kubernetes application. These files must be layed out in a folder structure that follows a convention. The folder structure looks something like this:
+You might already be familiar with package managers like the ones used for Linux distributions (apt, yum, etc.). In Linux, a package manager takes care of installing, updating, configuring and removing packages from a machine. Helm does something similar, but with Kubernetes applications.
+
+`Charts` are a set of files that describe a Kubernetes application. These files must be layed out in a folder structure that follows a convention that looks like this:
 
 ```
 .
@@ -23,6 +25,8 @@ I mentioned that Helm manages Charts. Charts are a set of files that describe a 
 ```
 
 The `Chart.yaml` contains some information about the Chart. It looks something like this:
+
+<!--more-->
 
 ```yaml
 apiVersion: v2
@@ -54,7 +58,7 @@ spec:
   selector:
     matchLabels:
       app: echo-server-deployment
-  replicas: {{ .Values.replicaCount }}
+  {% raw %}replicas: {{ .Values.replicaCount }}{% endraw %}
   template:
     metadata:
       labels:
@@ -65,9 +69,9 @@ spec:
         name: echo-server
 ```
 
-The file is a pretty standard Kubernetes manifest file, except for the `replicas: {{ .Values.replicaCount }}`. This line will replace the template part with the `replicaCount` from our `values.yaml` file.
+The file is a pretty standard Kubernetes manifest file, except for the `{% raw %}replicas: {{ .Values.replicaCount }}{% endraw %}`. This line will replace the template part with the `replicaCount` from our `values.yaml` file.
 
-Before we can start using our Chart, we need the Helm CLI.
+Before we can use our Chart, we need the Helm CLI.
 
 ## Helm CLI
 
@@ -99,7 +103,7 @@ This creates a folder named `test-chart` with some files we need to create Chart
 helm lint
 ```
 
-Let's create a very simple Chart. Set this content to `Chart.yaml`:
+We can create a very simple Chart by adding this content to `Chart.yaml`:
 
 ```yaml
 apiVersion: v2
@@ -127,7 +131,7 @@ spec:
   selector:
     matchLabels:
       app: echo-server-deployment
-  replicas: {{ .Values.replicaCount }}
+  {% raw %}replicas: {{ .Values.replicaCount }}{% endraw %}
   template:
     metadata:
       labels:
@@ -183,7 +187,7 @@ NAME            	NAMESPACE	REVISION	UPDATED                                	STAT
 chart-1637726261	default  	1       	2021-11-23 22:57:48.127492259 -0500 EST	deployed	test-chart-0.1.0	1
 ```
 
-Let's update the nubmer of replicas in `values.yaml`:
+Let's update the number of replicas in `values.yaml`:
 
 ```yaml
 replicaCount: 2
@@ -227,31 +231,11 @@ Finally, we can delete our Chart with this command:
 helm uninstall chart-1637726261
 ```
 
+## Working with repositories
 
+Besides using our own Charts, there are repositories where we can find open source Charts that are ready to use.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Installing a Chart ## TODO: Change title
-
-If we have a Kubernetes cluster configured, we can start installing open source Charts to our cluster. Let's say we want to install a node application. First we search for the Chart:
+We can use the Helm CLI to search for available Charts in `ArtifactHub`. Let's say we are looking for a Chart for a node application:
 
 ```sh
 helm search hub node -o yaml
@@ -267,21 +251,25 @@ helm search hub node -o yaml
 ...
 ```
 
-The URL is a link to the Chart in ArtifactHub. The link can be used to learn more about the Chart, and currently is the only way to know which repo a Chart is in.
+The output is a list of Charts that match the `node` keyword.
 
-If we go to `https://artifacthub.io/packages/helm/bitnami/node` we'll find a `INSTALL` button that will give us instructions to install the repo:
+The URL included in each result is a link to the Chart in ArtifactHub. It can be used to learn more about the Chart and currently is the only way to know which repo a Chart is in.
+
+`AftifactHub` is website that allows us to search multiple repositories for Charts. A `repository` is where the Chart is actually hosted.
+
+If we go to `https://artifacthub.io/packages/helm/bitnami/node` we'll find an `INSTALL` button that will give us instructions to install the repo:
 
 ```
 helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
 
-Once our repo is installed, we can install the Chart:
+Once our repo is installed, we can install the Chart in our cluster:
 
 ```sh
 helm install bitnami/node --generate-name
 ```
 
-We can see the state of all our deployed Charts:
+The Chart will be installed, the same way our own Chart was installed. We can see the Chart using `helm list`:
 
 ```sh
 helm list
@@ -290,55 +278,6 @@ NAME           	NAMESPACE	REVISION	UPDATED                                	STATU
 node-1637284508	default  	1       	2021-11-18 20:15:20.849604214 -0500 EST	deployed	node-16.0.1	16.13.0
 ```
 
-We'll learn a little more about deployments in the next chapters, for now, let's uninstall:
+## Conclusion
 
-```sh
-helm uninstall node-1637284508
-```
-
-## Creating a Chart
-
-In the previous section we learned how to install a Chart, but we don't really know much about how Charts work yet. In this section, we'll get more familiar with how Charts work.
-
-We can crate a new chart using this command:
-
-```sh
-heml create <chart-name>
-```
-
-This creates a folder named `<char-name>` with the directory structure for a Chart:
-
-```sh
-.
-├── charts
-├── Chart.yaml
-├── templates
-│   ├── deployment.yaml
-│   ├── _helpers.tpl
-│   ├── hpa.yaml
-│   ├── ingress.yaml
-│   ├── NOTES.txt
-│   ├── serviceaccount.yaml
-│   ├── service.yaml
-│   └── tests
-│       └── test-connection.yaml
-└── values.yaml
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+In this article we learned how to create a simple Chart and consume Charts from a repository. While doing this we got familiar with the basic operations available in the `helm` CLI.
