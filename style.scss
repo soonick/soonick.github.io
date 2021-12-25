@@ -125,12 +125,12 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: highlighttext;
+  background: highlight;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: highlighttext;
+  background: highlight;
 }
 
 .clearfix:before,
