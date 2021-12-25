@@ -11,7 +11,6 @@ tags:
   - javascript
   - projects
   - tntfixer
-  - xul
 ---
 This post is a continuation of [using Firefox preferences to store data](http://ncona.com/2011/05/using-firefox-preferences-system-when-developing-extensions/ "Using Firefox preferences to store data") post. We are going to be using what we did on that post as a base for this one.
 

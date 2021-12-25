@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=1539
 permalink: /2013/09/rest-services/
 tags:
-  - application_design
   - design_patterns
   - json
   - programming

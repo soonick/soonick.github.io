@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=491
 permalink: /2012/01/configuring-a-quick-and-ugly-local-email-server-on-ubuntu/
 tags:
   - apache
-  - e-mail
   - linux
 ---
 Configuring an e-mail server for local testing on ubuntu is a really fast an easy task. You just need to install and configure sendmail with these commands:

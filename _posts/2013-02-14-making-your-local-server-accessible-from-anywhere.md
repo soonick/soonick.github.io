@@ -10,7 +10,6 @@ tags:
   - linux
   - apache
   - networking
-  - ssh
 ---
 In reality you probably don&#8217;t want to host you websites on your local computer unless you have a very good computer, a very good internet connection and you are an expert system administrator, but this is very useful to learn how the internet works.
 

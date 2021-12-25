@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=799
 permalink: /2013/01/javascript-static-code-analysis-using-jslint/
 tags:
-  - ant
   - automation
   - java
   - javascript

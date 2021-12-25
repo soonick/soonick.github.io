@@ -7,7 +7,6 @@ permalink: /2019/12/using-service-workers-for-caching/
 tags:
   - javascript
   - programming
-  - application_design
 ---
 
 ## What's a service worker?

@@ -7,7 +7,6 @@ permalink: /2020/07/push-notifications-on-web-applications/
 tags:
   - javascript
   - programming
-  - application_design
 ---
 
 In this post I'm going to explore how to use the [Notification API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) and the [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) to send push notifications to users.

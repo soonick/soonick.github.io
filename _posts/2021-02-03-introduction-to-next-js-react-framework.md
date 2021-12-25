@@ -9,7 +9,6 @@ tags:
   - javascript
   - programming
   - react
-  - application_design
 ---
 
 In a recent article I gave an introduction to [React](/2021/01/introduction-to-react-js). That article shows the first steps of building React components, but leaves us very far from building a useful web application. In this article we will learn how to create a real world application using Next JS.

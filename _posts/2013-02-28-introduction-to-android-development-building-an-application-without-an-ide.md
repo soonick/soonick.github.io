@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=1206
 permalink: /2013/02/introduction-to-android-development-building-an-application-without-an-ide/
 tags:
   - android
-  - ant
   - java
   - mobile
 ---

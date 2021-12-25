@@ -11,7 +11,6 @@ tags:
   - javascript
   - projects
   - tntfixer
-  - xul
 ---
 This post is a continuation of [Detecting when a tab or window is opened on Firefox](http://ncona.com/2011/05/detecting-when-a-new-tab-or-window-is-open-on-firefox/ "Detecting when a new tab or window is opened on Firefox") post. We are going to be using what we did on that post as a base for this one.
 

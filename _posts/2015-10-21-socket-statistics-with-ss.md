@@ -10,7 +10,6 @@ tags:
   - apache
   - debugging
   - linux
-  - ss
 ---
 ss is a replacement for netstat; a program that allows you to analyze the sockets running on a Linux system. In practice, it is useful to investigate if a port is being used and by whom or to investigate which services are running.
 

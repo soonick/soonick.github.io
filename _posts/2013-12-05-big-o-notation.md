@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=1852
 permalink: /2013/12/big-o-notation/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - programming

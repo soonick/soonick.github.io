@@ -10,7 +10,6 @@ tags:
   - dependency_management
   - javascript
   - programming
-  - require_js
 ---
 It is common for JavaScript applications to depend on libraries, or JavasScript files to depend on other files. The way we usually deal with this problem is by manually including the files we depend on on our document:
 

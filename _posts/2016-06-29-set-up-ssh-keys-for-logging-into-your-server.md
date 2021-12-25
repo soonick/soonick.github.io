@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=3714
 permalink: /2016/06/set-up-ssh-keys-for-logging-into-your-server/
 tags:
   - linux
-  - ssh
 ---
 I have a server that I can SSH to by using a username and password. This works fine, but I need to automate some things and now I have the need to SSH into my server without being prompted for a password. Using SSH keys is a very natural way of doing this so I decided to go ahead.
 

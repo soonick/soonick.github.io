@@ -5,8 +5,6 @@ layout: post
 date: 2021-02-10
 permalink: /2021/02/google-sign-in-with-golang
 tags:
-  - application_design
-  - authentication
   - golang
   - google
   - programming

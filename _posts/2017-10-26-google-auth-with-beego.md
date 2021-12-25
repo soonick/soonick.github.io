@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=4464
 permalink: /2017/10/google-auth-with-beego/
 tags:
-  - authentication
   - golang
   - programming
   - security

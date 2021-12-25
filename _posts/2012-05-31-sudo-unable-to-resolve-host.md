@@ -9,7 +9,6 @@ permalink: /2012/05/sudo-unable-to-resolve-host/
 tags:
   - apache
   - linux
-  - virtual_host
 ---
 Today out of the blue (or at least that is what I thought when I first saw it) I started seeing this message everytime I issued a command using sudo:
 

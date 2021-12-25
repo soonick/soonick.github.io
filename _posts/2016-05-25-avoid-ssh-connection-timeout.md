@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=3678
 permalink: /2016/05/avoid-ssh-connection-timeout/
 tags:
   - linux
-  - ssh
 ---
 I have gotten tired of my SSH connections timing out when connecting to my servers, so I found out how to fix it. Edit this file **/etc/ssh/ssh_config** in the computer you are using as a client. Then add these lines at the end:
 

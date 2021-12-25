@@ -10,7 +10,6 @@ tags:
   - design_patterns
   - php
   - programming
-  - traits
 ---
 PHP 5.4 introduced a technique called traits. This technique aims to provide code re-usability functionality similar to mixins in other programming languages. The most common use case is to reuse methods among different classes.
 

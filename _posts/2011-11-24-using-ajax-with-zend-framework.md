@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=464
 permalink: /2011/11/using-ajax-with-zend-framework/
 tags:
-  - ajax
   - json
   - php
   - xml

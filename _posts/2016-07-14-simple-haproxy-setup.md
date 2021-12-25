@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=3771
 permalink: /2016/07/simple-haproxy-setup/
 tags:
   - docker
-  - haproxy
   - linux
 ---
 I&#8217;m migrating a few web apps from a shared web server to a Digital Ocean droplet. Since I&#8217;m going to be hosting more than one application in the same machine I need a proxy that will direct traffic to the correct application based on the domain name.

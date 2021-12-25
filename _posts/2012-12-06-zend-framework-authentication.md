@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=794
 permalink: /2012/12/zend-framework-authentication/
 tags:
-  - authentication
   - php
   - programming
   - zend_framework

@@ -11,7 +11,6 @@ tags:
   - javascript
   - projects
   - tntfixer
-  - xul
 ---
 This post is a continuation of  [Adding an icon to our Firefox extension](http://ncona.com/2011/05/adding-an-icon-to-our-firefox-extension/ "Adding an icon to our Firefox extension") post. We are going to be using what we did on that post as a base for this one.
 

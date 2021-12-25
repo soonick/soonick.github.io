@@ -5,7 +5,6 @@ layout: post
 date: 2020-03-04
 permalink: /2020/03/introduction-to-aws-cli/
 tags:
-  - authentication
   - automation
   - aws
   - productivity

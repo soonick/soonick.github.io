@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2189
 permalink: /2014/09/find-even-occurring-element/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

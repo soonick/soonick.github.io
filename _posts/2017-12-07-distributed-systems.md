@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=4553
 permalink: /2017/12/distributed-systems/
 tags:
-  - application_design
   - design_patterns
   - mysql
 ---

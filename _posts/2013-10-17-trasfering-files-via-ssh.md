@@ -9,7 +9,6 @@ permalink: /2013/10/trasfering-files-via-ssh/
 tags:
   - linux
   - productivity
-  - ssh
 ---
 I sometimes need to transfer files from one computer to another using SSH and I always forget how to do it so I decided to write a short post as a reminder.
 

@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=796
 permalink: /2013/01/zend-framework-authorization/
 tags:
-  - authentication
   - design_patterns
   - php
   - programming

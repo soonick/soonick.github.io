@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2135
 permalink: /2014/10/transform-word/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

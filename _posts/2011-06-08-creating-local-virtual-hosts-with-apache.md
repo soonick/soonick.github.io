@@ -9,7 +9,6 @@ permalink: /2011/06/creating-local-virtual-hosts-with-apache/
 tags:
   - apache
   - linux
-  - virtual_host
 ---
 If you are a web developer, virtual hosts is probably something you already use, if not, you should.
 

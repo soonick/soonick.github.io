@@ -9,7 +9,6 @@ permalink: /2016/06/ssh-tunneling/
 tags:
   - automation
   - linux
-  - ssh
 ---
 I have found SSH tunneling very useful for two main scenarios:
 

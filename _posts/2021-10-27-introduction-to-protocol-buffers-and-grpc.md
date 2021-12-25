@@ -5,7 +5,6 @@ layout: post
 date: 2021-10-27
 permalink: /2021/10/introduction-to-protocol-buffers-and-grpc
 tags:
-  - application_design
   - architecture
   - java
   - programming

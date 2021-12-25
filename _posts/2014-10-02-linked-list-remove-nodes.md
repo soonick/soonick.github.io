@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2107
 permalink: /2014/10/linked-list-remove-nodes/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2116
 permalink: /2014/08/combine-two-strings/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

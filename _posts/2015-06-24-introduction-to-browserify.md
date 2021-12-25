@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2815
 permalink: /2015/06/introduction-to-browserify/
 tags:
-  - browserify
   - javascript
   - productivity
   - programming

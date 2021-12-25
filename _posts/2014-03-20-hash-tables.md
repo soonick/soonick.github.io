@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=1863
 permalink: /2014/03/hash-tables/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - data_structures

@@ -5,7 +5,6 @@ layout: post
 date: 2020-11-25
 permalink: /2020/11/identity-and-access-management-with-google-cloud/
 tags:
-  - authentication
   - gcp
   - security
 ---

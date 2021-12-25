@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2228
 permalink: /2014/09/find-frequency-in-sorted-array/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

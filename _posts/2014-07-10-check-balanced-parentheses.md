@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2167
 permalink: /2014/07/check-balanced-parentheses/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

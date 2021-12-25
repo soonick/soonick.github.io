@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2140
 permalink: /2014/11/convert-array/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

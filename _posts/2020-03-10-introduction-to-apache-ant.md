@@ -5,7 +5,6 @@ layout: post
 date: 2020-03-10
 permalink: /2020/03/introduction-to-apache-ant/
 tags:
-  - ant
   - automation
   - java
   - productivity

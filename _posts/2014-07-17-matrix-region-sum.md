@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2092
 permalink: /2014/07/matrix-region-sum/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

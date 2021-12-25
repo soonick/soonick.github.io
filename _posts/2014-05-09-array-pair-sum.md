@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2086
 permalink: /2014/05/array-pair-sum/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

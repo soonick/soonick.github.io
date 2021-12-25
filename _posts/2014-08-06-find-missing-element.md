@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2104
 permalink: /2014/08/find-missing-element/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2182
 permalink: /2014/07/anagram-strings/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

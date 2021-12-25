@@ -5,7 +5,6 @@ layout: post
 date: 2020-04-22
 permalink: /2020/04/identity-and-access-management-with-aws-iam/
 tags:
-  - authentication
   - aws
   - security
 ---

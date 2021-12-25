@@ -8,7 +8,6 @@ tags:
   - javascript
   - programming
   - react
-  - application_design
 ---
 
 React is without a doubt the most popular web component framework today. With the power of facebook backing it up, it has a lot of support and documentation behind it.

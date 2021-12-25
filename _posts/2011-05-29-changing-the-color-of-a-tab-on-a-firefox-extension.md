@@ -9,7 +9,6 @@ permalink: /2011/05/changing-the-color-of-a-tab-on-a-firefox-extension/
 tags:
   - firefox_extension
   - javascript
-  - xul
 ---
 Changing the color of a tab on a Firefox extension is a very straight forward task. You can use this code to change the color of all the tabs on a window:
 

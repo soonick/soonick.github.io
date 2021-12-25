@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2159
 permalink: /2014/08/reverse-words-in-a-string/
 tags:
-  - application_design
   - algorithms
   - computer_science
   - javascript

@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2225
 permalink: /2014/10/algorithm-to-check-if-a-word-is-a-palindrome/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2220
 permalink: /2014/06/dutch-national-flag-problem/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

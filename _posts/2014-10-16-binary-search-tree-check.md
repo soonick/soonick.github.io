@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2123
 permalink: /2014/10/binary-search-tree-check/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

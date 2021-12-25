@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=1939
 permalink: /2014/04/android-ui-automation-using-espresso/
 tags:
   - android
-  - ant
   - automation
   - java
   - mobile

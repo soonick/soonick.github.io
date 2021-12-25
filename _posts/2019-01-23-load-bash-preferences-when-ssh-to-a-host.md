@@ -8,7 +8,6 @@ tags:
   - linux
   - productivity
   - bash
-  - ssh
 ---
 
 I have a laptop computer where I customize my bash using a `.bashrc` file. Whenever I SSH to a remote host, I always find myself trying to use aliases or other functionality that I have set on my laptop, but they are not there. Today I found a little trick that I can use to copy my `.bashrc` configuration to a remote host, so I can feel at home.

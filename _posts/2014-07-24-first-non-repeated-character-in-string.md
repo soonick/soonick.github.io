@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2170
 permalink: /2014/07/first-non-repeated-character-in-string/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

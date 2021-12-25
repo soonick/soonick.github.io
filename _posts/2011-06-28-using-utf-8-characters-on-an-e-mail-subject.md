@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=234
 permalink: /2011/06/using-utf-8-characters-on-an-e-mail-subject/
 tags:
   - php
-  - e-mail
   - internationalization
 ---
 If you have sent e-mails in a different language than English or using characters outside the ASCII range you have probably already used utf8 to send them.

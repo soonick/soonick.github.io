@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=4060
 permalink: /2017/01/ssl-termination-with-ha-proxy/
 tags:
   - docker
-  - haproxy
   - linux
 ---
 SSL termination refers to the process of terminating the encrypted connection at the load balancer and handling all internal traffic in an unencrypted way. This means that traffic between your load balancer and internal services (or between internal services) will not be encrypted, so you should make sure your network is secure. If you have your own data center, you can trust your network, otherwise you should set up a VPN so traffic can&#8217;t be sniffed.

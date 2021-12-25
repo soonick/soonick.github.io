@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=1952
 permalink: /2014/02/creating-a-robolectric-project-from-scratch-with-ant/
 tags:
   - android
-  - ant
   - automation
   - java
   - mobile

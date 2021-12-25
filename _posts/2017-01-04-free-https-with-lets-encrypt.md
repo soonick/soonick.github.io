@@ -9,7 +9,6 @@ permalink: /2017/01/free-https-with-lets-encrypt/
 tags:
   - automation
   - linux
-  - ssh
 ---
 This blog and a few other of my personal projects are not using HTTPS at the moment of this writing. Using plain HTTP has a couple of disadvantages that could result in catastrophic consequences:
 

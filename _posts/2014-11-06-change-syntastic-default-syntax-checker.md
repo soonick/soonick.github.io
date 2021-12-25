@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=2389
 permalink: /2014/11/change-syntastic-default-syntax-checker/
 tags:
   - productivity
-  - syntastic
   - vim
 ---
 I have recently moved away from JSHint in favor of ESLint and it became annoying that syntastic uses JSHint to check my syntax. Luckily, this is easily configurable. To have syntastic use ESLint instead of JSHint I just added this to my .vimrc file:

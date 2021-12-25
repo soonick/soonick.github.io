@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2099
 permalink: /2014/06/largest-continuous-sum/
 tags:
-  - application_design
   - computer_science
   - algorithms
   - javascript

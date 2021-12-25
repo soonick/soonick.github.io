@@ -9,7 +9,6 @@ permalink: /2012/05/enabling-mod-rewrite-on-ubuntu/
 tags:
   - apache
   - linux
-  - virtual_host
 ---
 I recently reinstalled the operating system on my computer and thus had to re-install all my applications and development environments.
 

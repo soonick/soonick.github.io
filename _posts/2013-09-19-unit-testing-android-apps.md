@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=1718
 permalink: /2013/09/unit-testing-android-apps/
 tags:
   - android
-  - ant
   - automation
   - java
   - mobile
