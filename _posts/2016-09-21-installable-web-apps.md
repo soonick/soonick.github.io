@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=3903
 permalink: /2016/09/installable-web-apps/
 tags:
-  - json
   - mobile
   - programming
 ---

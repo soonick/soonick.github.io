@@ -10,7 +10,6 @@ tags:
   - mobile
   - android
   - java
-  - json
   - programming
 ---
 The time finally came when I need to consume a service from my Android app. As I expected this is not as easy as with JavaScript. Strict types, threads and craziness come all into play for this simple task.

@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=1539
 permalink: /2013/09/rest-services/
 tags:
   - design_patterns
-  - json
   - programming
 ---
 The more I have been working on large scale projects the more I have seen the use of REST (Representational State Transfer) for almost everything. The basic concept of having an HTTP end point where you can make a request and get a JSON as a response is pretty easy to understand, but since I have never build a service from scratch I wanted to dig a little deeper into the architecture and requirements of this type of services.

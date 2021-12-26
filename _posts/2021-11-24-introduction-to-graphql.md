@@ -7,7 +7,6 @@ permalink: /2021/11/introduction-to-graphql
 tags:
   - architecture
   - java
-  - json
   - programming
   - server
 ---
