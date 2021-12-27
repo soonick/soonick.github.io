@@ -297,6 +297,24 @@ footer {
   margin-bottom: 12px;
 }
 
+.rouge-table {
+  td {
+    border: 0;
+    padding: 0;
+  }
+}
+
+td, th {
+  border: 1px solid $h1-color;
+  padding: 2px 8px;
+}
+
+th {
+  background: $h1-color;
+  color: white;
+  font-weight: bold;
+}
+
 @import "highlights";
 @import "jekyll-mono";
 @import "sharebuttons";

@@ -2,8 +2,8 @@
 title: Jackson - Working with JSON in Java
 author: adrian.ancona
 layout: post
-date: 2021-01-05
-permalink: /2021/12/jackson-working-with-json-in-java
+date: 2022-01-05
+permalink: /2022/01/jackson-working-with-json-in-java
 tags:
   - data_structures
   - java
