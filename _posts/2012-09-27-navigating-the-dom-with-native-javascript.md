@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=843
 permalink: /2012/09/navigating-the-dom-with-native-javascript/
 tags:
-  - dom
   - javascript
   - programming
   - xml

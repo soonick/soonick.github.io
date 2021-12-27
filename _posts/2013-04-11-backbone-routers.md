@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=1231
 permalink: /2013/04/backbone-routers/
 tags:
-  - backbone
   - design_patterns
   - javascript
   - open_source

@@ -7,7 +7,6 @@ permalink: /2022/01/concurrency-in-computer-systems
 tags:
   - computer_science
   - design_patterns
-
 ---
 
 In this article we are going to learn what is concurrency in computer systems. To understand it better, we'll see what are the problems that occur when there is concurrency and what are some ways to prevent those problems.

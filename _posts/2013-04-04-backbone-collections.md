@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=1195
 permalink: /2013/04/backbone-collections/
 tags:
-  - backbone
   - javascript
 ---
 Collections are a convenient way to group models together. An example usage of them is when you want to show a list of elements in your page. You can create a simple collection using Backbone.Collection (I am using the models I defined on [Introduction to Backbone.js](http://ncona.com/2013/02/introduction-to-backbone-js/ "Introduction to Backbone.js")):

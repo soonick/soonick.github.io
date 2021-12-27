@@ -7,10 +7,8 @@ layout: post
 guid: http://ncona.com/?p=792
 permalink: /2013/02/introduction-to-backbone-js/
 tags:
-  - backbone
   - design_patterns
   - javascript
-  - mvc
 ---
 Backbone.js is a JavaScript framework that facilitates the separation between models and views. It&#8217;s lack of controllers make me think of it as being similar to Django framework, so familiarity with Django may make it easier to understand backbone.
 

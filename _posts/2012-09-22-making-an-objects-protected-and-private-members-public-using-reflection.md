@@ -10,7 +10,6 @@ tags:
   - design_patterns
   - php
   - programming
-  - reflection
 ---
 This is a very special scenario and you may never want to really do this, but I found myself in the necessity of changing the visibility of an object&#8217;s methods an attributes at runtime so I could access them directly.
 

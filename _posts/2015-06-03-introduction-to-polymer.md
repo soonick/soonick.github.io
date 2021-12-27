@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=2770
 permalink: /2015/06/introduction-to-polymer/
 tags:
   - design_patterns
-  - dom
   - javascript
   - polymer
   - programming

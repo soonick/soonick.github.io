@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=866
 permalink: /2012/10/clear-floating-elements-with-css-clearfix/
 tags:
   - css
-  - dom
   - programming
 ---
 When working with floating elements there is one problem web developers usually face. Since float elements are removed from the normal flow of the page, this causes some other side effects that may be seen as undesireable.
