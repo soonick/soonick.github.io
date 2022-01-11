@@ -7,8 +7,8 @@ layout: post
 guid: http://ncona.com/?p=2875
 permalink: /2015/06/introduction-to-salt/
 tags:
+  - automation
   - linux
-  - salt
 ---
 Salt is a server orchestration platform that allows you to manage your server infrastructure. It allows you to remotely configure all your servers(minions) from a single place(master). Salt also allows you to execute commands or scripts in a collection of servers at the same time and it will aggregate the output for you.
 

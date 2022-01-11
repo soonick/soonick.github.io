@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=3885
 permalink: /2016/09/introduction-to-mongodb/
 tags:
   - databases
-  - mongodb
 ---
 Last weekend I participated in a hack day with some colleagues and one of them decided that it would be a good idea to use MongoDB. Since I had never used it, I thought it would be fun to learn a little about it. Here I&#8217;m going to write about the things that I learned.
 

@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=464
 permalink: /2011/11/using-ajax-with-zend-framework/
 tags:
   - php
-  - xml
   - zend_framework
 ---
 When I first read something like &#8220;AJAX and Zend Framework&#8221; I thought it didn&#8217;t make any sense. If AJAX is an HTTP request made by JavaScript then Zend Framework shouldn&#8217;t care how the request arrived.

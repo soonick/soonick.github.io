@@ -10,7 +10,6 @@ tags:
   - debugging
   - php
   - programming
-  - xdebug
 ---
 Xdebug is a PHP extension which provides debugging, tracing and profiling capabilities.
 

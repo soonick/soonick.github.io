@@ -9,9 +9,7 @@ permalink: /2012/02/running-selenium-2-webdriver-tests/
 tags:
   - automation
   - java
-  - selenium
   - testing
-  - webdriver
 ---
 Selenium is probably the most popular web functional testing automation tool out there. Functional testing means testing your application as if you were a user (clicking links, entering information in fields, etc&#8230;). And thanks to selenium this can be automated.
 

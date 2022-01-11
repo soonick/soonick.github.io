@@ -10,7 +10,6 @@ tags:
   - firefox_extension
   - javascript
   - projects
-  - tntfixer
 ---
 Once you have created an extension, you will probably want to make it easily available to the public.
 

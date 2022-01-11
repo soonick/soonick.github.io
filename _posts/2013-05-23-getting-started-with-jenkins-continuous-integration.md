@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=1230
 permalink: /2013/05/getting-started-with-jenkins-continuous-integration/
 tags:
   - automation
-  - jenkins
   - open_source
   - testing
 ---

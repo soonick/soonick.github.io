@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=1430
 permalink: /2015/02/virtualization/
 tags:
-  - hardware
   - linux
 ---
 Since I started working on big companies I&#8217;ve been becoming a little interested in distributed systems. There are some distributed technologies I&#8217;ve been wanting to play with, but I don&#8217;t have a bunch of machines I can use to test how they work. To avoid having to buy multiple machines I decided to learn how to do it in a single machine using virtualization.

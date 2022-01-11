@@ -10,7 +10,6 @@ tags:
   - firefox_extension
   - javascript
   - projects
-  - tntfixer
 ---
 For strange reasons I have been needing to use Test and Target in my current job. Test and Target is a tool that allows to easily perform content testing for  websites. The thing is that it&#8217;s interface has some issues that make working with it a little dangerous. Because of  that I decided to create a Firefox extension that will decrease the dangers of the interface. I will try to explain through a series of posts the procedure I will follow to create this extension.
 

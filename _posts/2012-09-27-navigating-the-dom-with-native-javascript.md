@@ -9,7 +9,6 @@ permalink: /2012/09/navigating-the-dom-with-native-javascript/
 tags:
   - javascript
   - programming
-  - xml
 ---
 To be able to successsfully work with the DOM, first we need to understand what it is. DOM stands for Document Object Model and it is the way browsers represent the structure of your HTML (XHTML or XML) document so JS can navigate it (actually it is supposed to be language agnostic, but I&#8217;ll explain how to interact with it using JS), or modify it.
 

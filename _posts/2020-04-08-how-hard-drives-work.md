@@ -5,7 +5,7 @@ layout: post
 date: 2020-04-08
 permalink: /2020/04/how-hard-drives-work/
 tags:
-  - hardware
+  - computer_science
 ---
 
 As computer users, we are accustomed to storing data to retrieve it sometime in the future. Today there are many ways to do this. If you take a photo on your cell phone, it's going to be saved into the phones internal `flash memory` (or an external flash card). If you have a modern computer it's likely that you have a `Solid State Drive (SSD)`. It's also possible to save your data in the "`cloud`". So, why focus on Hard drives?

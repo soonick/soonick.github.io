@@ -9,7 +9,6 @@ permalink: /2013/10/adroid-emulator-acceleration/
 tags:
   - android
   - automation
-  - hardware
   - linux
   - mobile
   - productivity

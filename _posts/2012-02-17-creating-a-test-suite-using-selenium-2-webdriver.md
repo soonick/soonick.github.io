@@ -9,7 +9,6 @@ permalink: /2012/02/creating-a-test-suite-using-selenium-2-webdriver/
 tags:
   - automation
   - java
-  - selenium
   - testing
 ---
 After writing my post: [Running Selenium 2.0 / Webdriver tests](http://ncona.com/2012/02/running-selenium-2-webdriver-tests/ "Running Selenium 2.0 / Webdriver tests"), I was thinking how could I make a test suite so I could run all my functional tests with just one command. In this post I am going to explain how I used Java classes to do this.

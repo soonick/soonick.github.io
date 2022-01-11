@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=3446
 permalink: /2016/01/debugging-with-tcpdump/
 tags:
   - linux
-  - tcpdump
 ---
 I&#8217;m having some problems with one of my hobby servers but this time instead of looking at the code to try to figure out what is happening, I decided to try to do it using only tcpdump. I was trying to start my server and I got this error message:
 

@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=331
 permalink: /2011/08/transforming-xhtml-documents-with-xslt-1-0-and-php/
 tags:
   - php
-  - xml
 ---
 **XSLT (Extensible Stylesheet Language Transformations)** is a language used to transform XML documents. It is mostly used to transform an XML document into a different XML document with a different XML Schema.
 

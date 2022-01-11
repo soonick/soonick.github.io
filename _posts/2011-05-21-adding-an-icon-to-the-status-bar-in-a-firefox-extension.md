@@ -10,7 +10,6 @@ tags:
   - firefox_extension
   - javascript
   - projects
-  - tntfixer
 ---
 This post is a continuation of [Firefox extensions development post](http://ncona.com/2011/05/firefox-extensions-development/ "Firefox extensions development"). We are going to be using what we did on that post as a base for this one.
 
