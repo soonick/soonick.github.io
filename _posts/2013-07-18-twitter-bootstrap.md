@@ -7,10 +7,8 @@ layout: post
 guid: http://ncona.com/?p=1571
 permalink: /2013/07/twitter-bootstrap/
 tags:
-  - bootstrapping
   - css
   - javascript
-  - open_source
 ---
 Twitter bootstrap is a front end framework that helps rapidly develop responsive web apps. Everybody says it is awesome, so I thought it was time to explore what it does.
 

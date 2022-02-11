@@ -6,7 +6,6 @@ date: 2021-02-10
 permalink: /2021/02/google-sign-in-with-golang
 tags:
   - golang
-  - google
   - programming
   - security
 ---

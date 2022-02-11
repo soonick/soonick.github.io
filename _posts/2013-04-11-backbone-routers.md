@@ -9,7 +9,6 @@ permalink: /2013/04/backbone-routers/
 tags:
   - design_patterns
   - javascript
-  - open_source
   - programming
 ---
 Routers are a common way for web frameworks to translate a URL to an action. On backbone they are used when creating single page applications to refresh the content of the page without actually refreshing the page.

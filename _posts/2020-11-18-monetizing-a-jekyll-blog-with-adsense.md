@@ -6,7 +6,6 @@ date: 2020-11-18
 permalink: /2020/11/monetizing-a-jekyll-blog-with-adsense/
 tags:
   - automation
-  - google
   - productivity
   - projects
 ---

@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2699
 permalink: /2015/03/routing-with-angular/
 tags:
-  - angularjs
   - javascript
   - programming
 ---

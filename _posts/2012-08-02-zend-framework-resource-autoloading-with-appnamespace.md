@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=763
 permalink: /2012/08/zend-framework-resource-autoloading-with-appnamespace/
 tags:
-  - bootstrapping
   - php
   - programming
   - zend_framework

@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2817
 permalink: /2015/05/unit-testing-angular-with-karma/
 tags:
-  - angularjs
   - javascript
   - productivity
   - testing

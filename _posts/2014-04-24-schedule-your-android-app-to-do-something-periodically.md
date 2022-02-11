@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=1972
 permalink: /2014/04/schedule-your-android-app-to-do-something-periodically/
 tags:
   - android
-  - bootstrapping
   - java
   - mobile
   - programming

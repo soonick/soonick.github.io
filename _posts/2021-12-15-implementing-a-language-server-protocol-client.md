@@ -5,7 +5,6 @@ layout: post
 date: 2021-12-15
 permalink: /2021/12/implementing-a-language-server-protocol-client
 tags:
-  - open_source
   - productivity
   - programming
 ---

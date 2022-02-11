@@ -9,7 +9,6 @@ permalink: /2014/09/building-an-android-project-from-scratch-using-gradle/
 tags:
   - android
   - automation
-  - gradle
   - java
   - mobile
   - productivity

@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=1487
 permalink: /2013/06/creating-user-interfaces-with-android-part-2-of-2/
 tags:
   - android
-  - internationalization
   - java
   - mobile
   - programming

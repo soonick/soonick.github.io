@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=2356
 permalink: /2015/01/project-scaffolding-with-yeoman/
 tags:
   - automation
-  - bootstrapping
   - javascript
   - productivity
   - programming

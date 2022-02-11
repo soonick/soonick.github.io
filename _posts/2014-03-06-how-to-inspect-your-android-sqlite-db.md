@@ -11,7 +11,6 @@ tags:
   - debugging
   - linux
   - mobile
-  - sqlite
 ---
 I am developing an Android app that makes use of an SQLite database. Every now and then I want to see what is the state of my app&#8217;s database to make sure things are being stored the way I expect. To do this you need to connect to your emulator using an adb shell.
 

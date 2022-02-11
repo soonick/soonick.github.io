@@ -9,7 +9,6 @@ permalink: /2015/11/using-gerrit-for-better-collaboration-on-git-projects/
 tags:
   - git
   - linux
-  - open_source
   - productivity
 ---
 I&#8217;m working with a small team that is divided in two geographical locations. This separation has made collaboration a little challenging which has compromised the quality of the code base. I&#8217;m exploring tools that can help us collaborate better, particularly making it easy to review each others code.

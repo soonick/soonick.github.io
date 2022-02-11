@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=448
 permalink: /2011/11/managing-views-with-zend-framework/
 tags:
-  - bootstrapping
   - php
   - zend_framework
 ---

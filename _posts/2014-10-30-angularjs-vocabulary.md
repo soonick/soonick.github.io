@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=1840
 permalink: /2014/10/angularjs-vocabulary/
 tags:
-  - angularjs
   - design_patterns
   - javascript
   - programming

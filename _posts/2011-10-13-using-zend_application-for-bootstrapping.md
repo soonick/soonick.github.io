@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=387
 permalink: /2011/10/using-zend_application-for-bootstrapping/
 tags:
-  - bootstrapping
   - php
   - zend_framework
 ---

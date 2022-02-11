@@ -5,7 +5,7 @@ layout: post
 date: 2020-06-10
 permalink: /2020/06/create-diagrams-with-code-using-graphviz/
 tags:
-  - open_source
+  - productivity
 ---
 
 Have you ever had to draw an architecture diagram and found the repetitive clicking and dragging tedious? Did you have to do modifications to that diagram and found it complicated?

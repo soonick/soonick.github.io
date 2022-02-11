@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=4355
 permalink: /2017/10/introduction-to-beego/
 tags:
-  - bootstrapping
   - docker
   - golang
   - programming
