@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=2543
 permalink: /2015/01/google-sign-in-on-android/
 tags:
   - android
-  - google
   - java
   - mobile
   - programming

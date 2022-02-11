@@ -8,7 +8,6 @@ guid: http://ncona.com/?p=1359
 permalink: /2013/06/getting-started-with-raspberry-pi/
 tags:
   - linux
-  - bootstrapping
 ---
 I got my hands into a Raspberry Pi, so I thought it was time to start playing with it. My goal is to show the first steps to get your Pi running, so basically installing the OS in the SD card.
 

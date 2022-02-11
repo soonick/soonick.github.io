@@ -7,8 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2758
 permalink: /2015/04/building-modular-apps-with-angular/
 tags:
-  - angularjs
-  - bootstrapping
   - design_patterns
   - javascript
   - productivity

@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=1847
 permalink: /2013/11/running-simple-web-server-on-a-folder/
 tags:
-  - bootstrapping
   - linux
   - python
 ---

@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=2821
 permalink: /2015/04/building-modular-apps-with-angular-part-2/
 tags:
-  - angularjs
   - design_patterns
   - javascript
   - programming

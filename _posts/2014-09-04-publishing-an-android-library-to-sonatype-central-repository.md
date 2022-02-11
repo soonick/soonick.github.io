@@ -9,7 +9,6 @@ permalink: /2014/09/publishing-an-android-library-to-sonatype-central-repository
 tags:
   - android
   - automation
-  - gradle
   - mobile
 ---
 I made this little open source library for Android that I want to consume from an app I&#8217;m building. I have the easy option of [checking in the .aar file into my repository as explained in my article](http://ncona.com/2014/08/consuming-android-library-with-gradle/ "Consuming Android library with gradle") but I want to do things right so I&#8217;m going to try to publish my app to central repository.

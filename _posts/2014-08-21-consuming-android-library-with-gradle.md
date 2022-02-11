@@ -9,7 +9,6 @@ permalink: /2014/08/consuming-android-library-with-gradle/
 tags:
   - mobile
   - android
-  - gradle
   - productivity
   - dependency_management
   - automation

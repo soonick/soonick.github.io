@@ -10,7 +10,6 @@ tags:
   - vim
   - automation
   - github
-  - open_source
   - productivity
   - programming
   - projects

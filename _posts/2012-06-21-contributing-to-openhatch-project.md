@@ -9,7 +9,6 @@ permalink: /2012/06/contributing-to-openhatch-project/
 tags:
   - git
   - github
-  - open_source
   - projects
   - python
 ---

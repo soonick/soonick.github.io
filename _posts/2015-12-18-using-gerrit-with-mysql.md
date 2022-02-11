@@ -9,7 +9,6 @@ permalink: /2015/12/using-gerrit-with-mysql/
 tags:
   - git
   - linux
-  - open_source
   - productivity
 ---
 A few weeks ago I published a post with an [introduction to Gerrit](http://ncona.com/2015/11/using-gerrit-for-better-collaboration-on-git-projects/). The configuration I explain there is not very scalable, so now I want to explain how to connect it to an external MySQL database so the data is more secure. As in my previous post, I&#8217;m going to do everything inside a docker image so it is easy to reuse and share.

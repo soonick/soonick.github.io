@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=759
 permalink: /2012/08/fatal-error-uncaught-exception-zend_controller_dispatcher_exception-with-message-invalid-controller-specified-error/
 tags:
-  - bootstrapping
   - php
   - programming
   - zend_framework

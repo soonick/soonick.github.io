@@ -9,7 +9,6 @@ permalink: /2016/02/using-the-gradle-wrapper-on-your-android-project/
 tags:
   - android
   - automation
-  - gradle
   - mobile
   - productivity
 ---

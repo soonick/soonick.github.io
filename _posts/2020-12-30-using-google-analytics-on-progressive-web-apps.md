@@ -5,7 +5,6 @@ layout: post
 date: 2020-12-30
 permalink: /2020/12/using-google-analytics-on-progressive-web-apps
 tags:
-  - google
   - javascript
   - programming
 ---

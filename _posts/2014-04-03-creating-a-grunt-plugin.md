@@ -7,7 +7,6 @@ layout: post
 guid: http://ncona.com/?p=1570
 permalink: /2014/04/creating-a-grunt-plugin/
 tags:
-  - grunt
   - javascript
   - productivity
 ---

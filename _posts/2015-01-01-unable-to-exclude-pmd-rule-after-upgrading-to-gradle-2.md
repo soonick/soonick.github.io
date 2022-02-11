@@ -10,7 +10,6 @@ tags:
   - mobile
   - android
   - automation
-  - gradle
   - productivity
 ---
 After upgrading to gradle 2.2.1 I started having some weird issues with my PMD plugin. I kept getting this error:

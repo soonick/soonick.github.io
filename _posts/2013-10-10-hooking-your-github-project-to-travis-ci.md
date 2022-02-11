@@ -11,7 +11,6 @@ tags:
   - git
   - github
   - node
-  - open_source
   - php
   - productivity
   - projects

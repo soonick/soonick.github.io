@@ -5,7 +5,6 @@ layout: post
 date: 2021-01-13
 permalink: /2021/01/publishing-a-pwa-to-the-play-store-with-pwa-builder
 tags:
-  - google
   - javascript
   - mobile
   - projects

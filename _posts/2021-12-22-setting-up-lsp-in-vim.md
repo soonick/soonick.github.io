@@ -5,7 +5,7 @@ layout: post
 date: 2021-12-22
 permalink: /2021/12/setting-up-lsp-in-vim
 tags:
-  - open_source
+  - vim
   - productivity
   - programming
 ---

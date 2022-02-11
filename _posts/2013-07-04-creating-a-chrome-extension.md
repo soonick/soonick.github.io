@@ -9,7 +9,6 @@ permalink: /2013/07/creating-a-chrome-extension/
 tags:
   - chrome_extension
   - javascript
-  - open_source
   - programming
   - projects
 ---

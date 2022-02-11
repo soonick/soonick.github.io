@@ -9,7 +9,6 @@ permalink: /2015/01/enforce-android-coding-style-with-checkstyle/
 tags:
   - android
   - automation
-  - gradle
   - java
   - mobile
   - productivity

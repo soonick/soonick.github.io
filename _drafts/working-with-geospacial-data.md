@@ -5,7 +5,6 @@ layout: post
 # date: 2021-01-13
 # permalink: /2021/01/introduction-to-aws-dynamo-db
 tags:
-  - open_source
   - productivity
   - programming
   - vim
