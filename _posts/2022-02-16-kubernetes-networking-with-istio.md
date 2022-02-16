@@ -3,7 +3,7 @@ title: Kubernetes networking with Istio
 author: adrian.ancona
 layout: post
 date: 2022-02-16
-permalink: /2021/01/kubernetes-networking-with-istio
+permalink: /2022/02/kubernetes-networking-with-istio
 tags:
   - architecture
   - automation
