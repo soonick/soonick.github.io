@@ -245,6 +245,8 @@ public class Main {
 
 And that's it. Every time we modify our proto file, the new messages will be available in our java code.
 
+The full working [protocol buffers example can be found in github](https://github.com/soonick/ncona-code-samples/tree/master/protobuf-grpc/protobuf)
+
 ## Getting started with gRPC
 
 So far we have learned how to use Protocol Buffers, but we haven't looked very much into gRPC. In this section we're going to see how these two work together.
@@ -477,6 +479,8 @@ final GreetRequest request = GreetRequest.newBuilder().setName("Carlos").build()
 final GreetResponse response = stub.greet(request);
 System.out.println("Response: " + response.getGreeting());
 ```
+
+The full [grpc server and client example can be found in github](https://github.com/soonick/ncona-code-samples/tree/master/protobuf-grpc/grpc)
 
 ## Conclusion
 
