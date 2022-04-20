@@ -25,6 +25,8 @@ A Spring `bean` refers to an object that is injected by Spring's depedency injec
 
 The `ApplicationContext` interface takes care of creation and injection of beans. There are different implementations of this interface that allow us to configure our beans using different methods. We'll start by looking at the traditional way: `ClassPathXmlApplicationContext`.
 
+<!--more-->
+
 We can instantiate an `ApplicationContext` that loads beans from the configuration file `beans.xml` with this code:
 
 ```java
