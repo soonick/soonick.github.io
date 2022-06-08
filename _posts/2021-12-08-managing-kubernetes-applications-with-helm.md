@@ -14,7 +14,7 @@ Helm is a package manager for Charts.
 
 You might already be familiar with package managers like the ones used for Linux distributions (apt, yum, etc.). In Linux, a package manager takes care of installing, updating, configuring and removing packages from a machine. Helm does something similar, but with Kubernetes applications.
 
-`Charts` are a set of files that describe a Kubernetes application. These files must be layed out in a folder structure that follows a convention that looks like this:
+`Charts` are a set of files that describe a Kubernetes application. These files must be laid out in a folder structure that follows a convention that looks like this:
 
 ```
 .
