@@ -113,6 +113,8 @@ The `build` command does what we expect; It builds our binary. Bazel will create
 ./bazel-bin/example-package/example_package
 ```
 
+A full example can be found at: https://github.com/soonick/ncona-code-samples/tree/master/introduction-to-bazel/first-binary
+
 ## Local dependencies
 
 Let's look at a few ways we can deal with dependencies that live in the same `workspace`. Let's start by creating a new file inside `example-package`:
@@ -244,6 +246,8 @@ We can also build only the library if that's what we want:
 bazel build //example-package:util
 ```
 
+A full example can be found at: https://github.com/soonick/ncona-code-samples/tree/master/introduction-to-bazel/local-dependencies
+
 ## Working with external dependencies
 
 Now that we know the basics of Bazel, let's look at how we can access dependencies that are not in our `workspace`. We'll start with dependencies in the same filesystem. Let's create the directory structure we need for this exercise:
@@ -341,6 +345,8 @@ We can now build and run our example binary (from within the `example` workspace
 bazel build //:example && bazel run //:example
 ```
 
+A full example can be found at: https://github.com/soonick/ncona-code-samples/tree/master/introduction-to-bazel/external-dependencies
+
 ## Third party dependencies
 
 So far I've gotten away without any third party dependencies because my examples have been trivial, but most real projects depend on many third party libraries. In this section we'll learn how to consume these libraries.
@@ -410,6 +416,8 @@ public class Example {
   }
 }
 ```
+
+A full example can be found at: https://github.com/soonick/ncona-code-samples/tree/master/introduction-to-bazel/third-party-dependencies
 
 ## Conclusion
 
