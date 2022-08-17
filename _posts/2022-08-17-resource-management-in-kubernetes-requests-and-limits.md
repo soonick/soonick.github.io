@@ -113,9 +113,9 @@ If we set a memory limit and a container tries to use more memory than this limi
 
 ## Practical examples
 
-If you want to see requests and limits in action, take a look at: https://github.com/soonick/ncona-code-samples/tree/master/resource-management-in-kubernetes
+If you want to see requests and limits in action, take a look at: [Resource management in Kubernetes](https://github.com/soonick/ncona-code-samples/tree/master/resource-management-in-kubernetes)
 
-You'll find some examples you can run on your own. Follow the examples in the README and try changing things some see what happens.
+You'll find some examples you can run on your own. Follow the instructions in the README and try changing things some see what happens.
 
 ## Conclusion
 
