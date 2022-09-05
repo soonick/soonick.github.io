@@ -16,9 +16,9 @@ In this article we are going to learn how to use the [Kubernetes Java Client](ht
 
 ## Installation
 
-The official installation instructions can be found here: https://github.com/kubernetes-client/java/wiki/1.-Installation
+We can find the up-to-date instructions at the [official installation documentation](https://github.com/kubernetes-client/java/wiki/1.-Installation).
 
-For Bazel, we need to have the maven repository configured in the namespace and the `client-java` artifact:
+For Bazel, we need to have the maven repository configured in the workspace and the `client-java` artifact:
 
 <!--more-->
 
@@ -47,7 +47,7 @@ maven_install(
 )
 ```
 
-We also need to add the kubernetes client packages as dependencies:
+We also need to add the Kubernetes client packages as dependencies:
 
 ```py
 java_binary(
@@ -95,17 +95,17 @@ public class PodLister {
 
 Note that the example above uses `Config.defaultClient()`; The default client looks for `~/.kube/config`, which contains the information and credentials necessary to connect to a cluster.
 
-If our configuration is in another path, we instruct the client to use this path:
+If our configuration is in another path, we can instruct the client to use a specific path:
 
 ```java
 ApiClient client = ClientBuilder
     .kubeconfig(KubeConfig.loadKubeConfig(new FileReader("/path/to/config")))
     .build();
 ```
-You can see a full running example in: https://github.com/soonick/ncona-code-samples/tree/master/kubernetes-java-client/default-client
+You can see a full running example in: [Kubernetes java client demo](https://github.com/soonick/ncona-code-samples/tree/master/kubernetes-java-client/default-client)
 
 ## Conclusion
 
 The Kubernetes Java Client provides a way to programatically perform operations on a Kubernetes cluster. This can be used to automate tasks or check on the status of the cluster.
 
-Although this is the official client, there is [another java client by fabric8.io](https://github.com/fabric8io/kubernetes-client) that is more widely used and you should probably be considered too.
+Although this is the official client, there is [another java client by fabric8.io](https://github.com/fabric8io/kubernetes-client) that is more widely used and has a simpler API.
