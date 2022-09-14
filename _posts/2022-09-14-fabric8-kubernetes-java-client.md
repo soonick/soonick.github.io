@@ -16,7 +16,7 @@ In this article we are going to learn how we can use the most popular Kubernetes
 
 ## Installation
 
-For using fabric8's Kubernetes client, we need to have the maven repository configured in the workspace and the `kubernetes-client` artifact:
+For using fabric8's Kubernetes client with Bazel, we need to have the maven repository configured in the workspace and the `kubernetes-client` artifact:
 
 <!--more-->
 
@@ -97,6 +97,6 @@ A full example can be found at [Fabric8 Kubernetes Java Client demo](https://git
 
 ## Conclusion
 
-Fabric8's Kubernetes Client provides an easier to read API compared to the official [Kubernetes Java Client]((https://github.com/kubernetes-client/java).
+Fabric8's Kubernetes Client provides an easier to read API compared to the official [Kubernetes Java Client](https://github.com/kubernetes-client/java).
 
 In this article I showed a very simple usage, but I'm planning on building a controller where we will use a lot more features.

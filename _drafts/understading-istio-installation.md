@@ -21,8 +21,11 @@ istioctl install --set profile=demo -y
 
 [`istioctl`](https://istio.io/latest/docs/reference/commands/istioctl/) is a tool that can be used to operate on an Istio cluster. As shown above, it can also be used to install Istio in a Kubernetes cluster.
 
-
 The [istioctl install command](https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-install) generates an Istio install manifests and applies it to a Kubernetes cluster.
+
+
+
+
 
 https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/
 https://istio.io/latest/docs/setup/additional-setup/config-profiles/
