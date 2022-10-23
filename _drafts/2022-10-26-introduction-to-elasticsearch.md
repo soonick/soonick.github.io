@@ -681,3 +681,5 @@ There are too many ways to search for data to cover all of them in this article.
 ## Conclusion
 
 In this article we went from not knowing anything about Elasticsearch from being able to start a test cluster, save some data and search on that data. The setup we used in this article is not suitable for production and there are many topics that we didn't cover so I plan to write a little more about Elasticsearch in future articles.
+
+You can see a more succinct list of all the commands used in this article in: [Introduction to Elasticsearch code samples](https://github.com/soonick/ncona-code-samples/tree/master/introduction-to-elasticsearch).
