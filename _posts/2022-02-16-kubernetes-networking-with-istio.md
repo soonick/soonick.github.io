@@ -217,3 +217,5 @@ istiod-7586c7dfd8-mjg9n                1/1     Running   0          111m
 In this article we learned what is Istio, why would we want to use it, and how to get started with it.
 
 We didn't cover some of the most interesting features, like mutual TLS and security, but we got a foundation so we can explore those features in future articles.
+
+Take a look at the [Kubernetes Networking with Istio](https://github.com/soonick/ncona-code-samples/tree/master/kubernetes-networking-with-istio) to run these examples in minikube.
