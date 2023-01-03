@@ -16,6 +16,6 @@ To run:
 docker run -it -p 4000:4000 \
     -v "$(pwd)/_drafts:/blog/_drafts" \
     -v "$(pwd)/_posts:/blog/_posts" \
-    -v "$(pwd)/_images:/blog/_images" \
+    -v "$(pwd)/images:/blog/images" \
     ncona-blog
 ```
