@@ -8,7 +8,6 @@ tags:
   - debugging
   - java
   - linux
-  - programming
 ---
 
 We can use `ps` to get all the processes running in a host. The problem is that all java processes just say `java` by default. For example:
