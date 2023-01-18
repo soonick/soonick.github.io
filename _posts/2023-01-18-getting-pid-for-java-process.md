@@ -33,7 +33,7 @@ adrian    313346  309158  5 15:35 ?        00:00:02 /home/adrian/.cache/bazel/_b
 adrian    313431  312937  0 15:36 pts/8    00:00:00 grep --color=auto java
 ```
 
-The problem now is that there is a lot of information so it is a little hard to find the process we are looking for.
+This is better, but there is a lot of information so it is a little hard to find the process we are looking for.
 
 <!--more-->
 
