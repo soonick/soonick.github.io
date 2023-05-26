@@ -30,6 +30,8 @@ Install prerequisites:
 sudo apt-get install ninja-build gettext cmake unzip curl
 ```
 
+<!--more-->
+
 Get code:
 
 ```
