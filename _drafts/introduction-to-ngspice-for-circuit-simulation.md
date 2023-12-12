@@ -2,8 +2,8 @@
 title: Introduction to Ngspice for Circuit Simulation
 author: adrian.ancona
 layout: post
-# date: 2022-06-15
-# permalink: /2022/06/introduction-to-ngspice-for-circuit-simulation
+# date: 2023-12-13
+# permalink: /2023/12/introduction-to-ngspice-for-circuit-simulation
 tags:
   - electronics
 ---
