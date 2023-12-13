@@ -25,6 +25,8 @@ With these simple requirements, I found two contenders:
 
 Qucs-S has a nice graphical user interface, but depends on a SPICE back-end (e.g. Ngspice) to run. Due to this dependency, I'm going to be required to learn Ngspice anyway, so I decided to start with this one.
 
+<!--more-->
+
 ## SPICE (Simulation Program with Integrated Circuit Emphasis)
 
 [SPICE](http://bwrcs.eecs.berkeley.edu/Classes/IcBook/SPICE/) is an Open Source command line application that can be used to run simulations of electrical circuits.
