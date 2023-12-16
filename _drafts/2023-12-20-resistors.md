@@ -24,6 +24,8 @@ Let's now connect the two containers, but we'll do it with an obstructed hose, s
 
 [<img src="/images/posts/resistors-obstructed-hose.png" alt="Two containers connected by obstructed hose" />](/images/posts/resistors-obstructed-hose.png)
 
+<!--more-->
+
 This is similar to connecting the poles of a battery with an insulator (e.g. Rubber).
 
 If we want water to flow from one container to the other, we can connect them with an unobstructed hose:
