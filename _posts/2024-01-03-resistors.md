@@ -2,8 +2,8 @@
 title: Resistors
 author: adrian.ancona
 layout: post
-# date: 2023-12-20
-# permalink: /2023/12/resistors
+date: 2024-01-03
+permalink: /2024/01/resistors
 tags:
   - electronics
 ---
@@ -78,7 +78,7 @@ I = 9V / 1Ω
 I = 9A
 ```
 
-The result is `9A`, which means our circuit will consume 9A in one second. We mentioned that our battery can provide 1A for 1 hour, this is the same as saying 3,600 amps in total for 3,600 seconds. A simple division can give us how long until we drain the battery:
+The result is `9A`, which means our circuit will consume 9 amperes. We mentioned that our battery can provide 1A for 1 hour, this is the same as saying 3,600 amps in total for 3,600 seconds. A simple division can give us how long until we drain the battery:
 
 ```
 3600 / 9 = 400
