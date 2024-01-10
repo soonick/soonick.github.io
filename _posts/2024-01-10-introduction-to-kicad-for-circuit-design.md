@@ -2,8 +2,8 @@
 title: Introduction to KiCad for Circuit Design
 author: adrian.ancona
 layout: post
-# date: 2023-12-27
-# permalink: /2023/12/introduction-to-kicad-for-circuit-design
+date: 2024-01-10
+permalink: /2024/01/introduction-to-kicad-for-circuit-design
 tags:
   - electronics
 ---
@@ -34,7 +34,7 @@ This will open a new window where we can choose a name for our project and a fol
 
 [<img src="/images/posts/kicad-first-project.png" alt="Create First KiCad Project" />](/images/posts/kicad-first-project.png)
 
-A new folder will be created with the same name as our project and the project files will be shown in the main window.
+A new folder will be created with the same name as our project. The project files will be shown in the left part of the main window.
 
 [<img src="/images/posts/kicad-project-files.png" alt="KiCad Project Files" />](/images/posts/kicad-project-files.png)
 
@@ -84,7 +84,7 @@ We'll also need a resistor, so we can follow the same process. One thing to keep
 
 [<img src="/images/posts/kicad-choose-resistor.png" alt="KiCad Choose Resistor" />](/images/posts/kicad-choose-resistor.png)
 
-Resistors are by default inserted vertically, we can rotate it by right clicking on it and choosing `Rotate Counterclockwise` (`R`):
+Resistors are by default inserted vertically. We can rotate our resistor by right clicking on it and choosing `Rotate Counterclockwise` (`R`):
 
 [<img src="/images/posts/kicad-rotate.png" alt="KiCad Rotate" />](/images/posts/kicad-rotate.png)
 
@@ -122,7 +122,7 @@ With the select tool set, we need to click our voltage source and it will become
 
 [<img src="/images/posts/kicad-highlighted-vs.png" alt="KiCad Highlighted Voltage Source" />](/images/posts/kicad-highlighted-vs.png)
 
-Use the `e` key to open the `Symbol Properties` window and click the `Simulation Model...` button:
+Use the `e` key to open the `Symbol Properties` window and click the `Simulation Model...` button (located at the bottom-right):
 
 [<img src="/images/posts/kicad-symbol-properties.png" alt="KiCad Symbol Properties" />](/images/posts/kicad-symbol-properties.png)
 
@@ -134,7 +134,7 @@ We are going to do the same for the resistor, but we'll choose these values:
 
 [<img src="/images/posts/kicad-simulation-resistor.png" alt="KiCad Simulation Resistor" />](/images/posts/kicad-simulation-resistor.png)
 
-The LED is a little trickier, since KiCad doesn't include a SPICE model for and LED. When we encounter this issue, our best bet is to search for the model on the internet. Ideally, we would find it at the manufacturer's website, but sometimes it might be harder to find.
+The LED is a little trickier, since KiCad doesn't include a SPICE model for an LED. When we encounter this issue, our best bet is to search for the model on the internet. Ideally, we would find it at the manufacturer's website, but sometimes it might be harder to find.
 
 This is one of the models for an LED I found online:
 
@@ -262,7 +262,7 @@ And we'll use it to draw a rectangle around our components:
 
 [<img src="/images/posts/kicad-draw-a-rectangle.png" alt="KiCad Draw a Rectangle" />](/images/posts/kicad-draw-a-rectangle.png)
 
-If we look closely, we will see that there are some very thin lines connecting components' pins. These are called ratsnest and show us the connections between the components as specified in our schematic. These lines are just guides, we still have to specify how the actual copper routes will be placed in the PCB.
+If we look closely, we will see that there are some very thin lines connecting components' pins. These are called ratsnest and show us the connections between the components as specified in our schematic. These lines are just guides, we still have to specify how the actual copper routes will be placed on the PCB.
 
 To draw our copper routes we need to first choose which copper layer to use. We'll use the one called `F.Cu`:
 
