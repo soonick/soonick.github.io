@@ -1,0 +1,21 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-2204:2023.04.2
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "42:6c:16:86:d5:f0:a9:4a:d6:0c:79:40:5f:96:31:36"
+      - checkout
+      - run: make verify
+
+workflows:
+  version: 2
+  push_and_publish:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
