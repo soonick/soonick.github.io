@@ -11,5 +11,6 @@ start: build
 	@docker run -it -p 4000:4000 -v $(PWD)/_drafts:/blog/_drafts -v $(PWD)/_posts:/blog/_posts -v $(PWD)/images:/blog/images ncona-blog
 .PHONY: start
 
-verify:
+verify: clean build
+	@docker run -it -p 4000:4000 ncona-blog ./_scripts/verify-all-tags-committed.sh
 .PHONY: verify
