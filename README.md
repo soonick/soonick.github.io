@@ -9,3 +9,9 @@ To run:
 ```
 make start
 ```
+
+To generate tag pages:
+
+```
+make generate-tags
+```
