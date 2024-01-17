@@ -2,10 +2,12 @@
 title: Getting Started With Arduino UNO R4
 author: adrian.ancona
 layout: post
-# date: 2023-12-27
-# permalink: /2023/12/introduction-to-kicad-for-circuit-design
+date: 2024-01-17
+permalink: /2024/01/getting-started-with-arduino-uno-r4
 tags:
+  - arduino
   - electronics
+  - programming
 ---
 
 In this article, I'm going to show how to write a simple program for Arduino UNO R4. I expect most of the steps I follow here can be used for other models of Arduino, but I'm going to be using the LED Matrix that come in the board and will only test on this model.
@@ -102,9 +104,9 @@ It's possible that we get a message asking us to install a board:
 
 [<img src="/images/posts/arduino-ide-install-board.png" alt="Arduino IDE Install Board" />](/images/posts/arduino-ide-install-board.png)
 
-We just need to click `yes`.
+We just need to click `YES`.
 
-If everything goes well, we will get a message saying that the upload is done:
+If everything goes well, we'll get a message saying that the upload is done:
 
 [<img src="/images/posts/arduino-ide-upload-done.png" alt="Arduino IDE Upload Done" />](/images/posts/arduino-ide-upload-done.png)
 
