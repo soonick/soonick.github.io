@@ -2,15 +2,15 @@
 title: Introduction to Arduino CLI
 author: adrian.ancona
 layout: post
-# date: 2023-12-27
-# permalink: /2023/12/introduction-to-kicad-for-circuit-design
+date: 2024-01-24
+permalink: /2023/12/introduction-to-arduino-cli
 tags:
   - arduino
   - electronics
   - programming
 ---
 
-In my previous post, [Getting Started With Arduino UNO R4](), I showed how we can install a program into an Arduino board. In this article, we are going to do the same, but this time using the Arduino CLI.
+In my previous post, [Getting Started With Arduino UNO R4](https://ncona.com/2024/01/getting-started-with-arduino-uno-r4), I showed how we can upload a sketch into an Arduino board. In this article, we are going to do the same, but this time using the Arduino CLI.
 
 ## Why Arduino CLI?
 
@@ -26,7 +26,7 @@ We can install the Arduino CLI on our system with these command:
 # Create a folder to install the CLI
 mkdir ~/bin/arduino-cli
 
-# Change to the folder where we want the installation
+# Move to the folder we created
 cd ~/bin/arduino-cli
 
 # Install
@@ -136,7 +136,7 @@ The part we care about is `arduino:renesas_uno`, which serves as the identifier 
 arduino-cli board listall
 ```
 
-If the board included in the output we can install it with this command:
+If the board is not included in the output we can install it with this command:
 
 ```bash
 arduino-cli core install arduino:renesas_uno
