@@ -5,7 +5,9 @@ layout: post
 # date: 2023-12-27
 # permalink: /2023/12/introduction-to-kicad-for-circuit-design
 tags:
+  - arduino
   - electronics
+  - programming
 ---
 
 In my previous post, [Getting Started With Arduino UNO R4](), I showed how we can install a program into an Arduino board. In this article, we are going to do the same, but this time using the Arduino CLI.

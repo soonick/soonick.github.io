@@ -5,7 +5,10 @@ layout: post
 # date: 2023-12-20
 # permalink: /2023/12/resistors
 tags:
+  - arduino
   - electronics
+  - productivity
+  - programming
 ---
 
 Arduino Serial Monitor is a tool that can be used for debugging or interacting with our Arduino board. More specifically, it allows us to read and write data from a serial port.
