@@ -2,8 +2,8 @@
 title: Using Arduino Serial Monitor From Linux
 author: adrian.ancona
 layout: post
-# date: 2023-12-20
-# permalink: /2023/12/resistors
+date: 2024-01-31
+permalink: /2024/01/using-arduino-serial-monitor-from-linux
 tags:
   - arduino
   - electronics
@@ -11,7 +11,7 @@ tags:
   - programming
 ---
 
-Arduino Serial Monitor is a tool that can be used for debugging or interacting with our Arduino board. More specifically, it allows us to read and write data from a serial port.
+Arduino Serial Monitor is a tool that can be used for debugging or interacting with our Arduino board. More specifically, it allows us to read and write data to a serial port.
 
 For our sketch to be able to use the serial monitor, we need to use `Serial.begin` and specify a baud rate. For example:
 
@@ -28,6 +28,8 @@ The first thing we want to do is [print](https://www.arduino.cc/reference/en/lan
 ```
 Serial.println("Hello");
 ```
+
+<!--more-->
 
 This simple sketch shows how we can print a `Hello` message every 2 seconds:
 
