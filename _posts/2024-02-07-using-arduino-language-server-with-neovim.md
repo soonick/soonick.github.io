@@ -2,8 +2,8 @@
 title: Using Arduino Language Server With Neovim
 author: adrian.ancona
 layout: post
-# date: 2023-12-27
-# permalink: /2023/12/introduction-to-kicad-for-circuit-design
+date: 2024-02-07
+permalink: /2024/02/using-arduino-language-server-with-neovim
 tags:
   - electronics
   - productivity
