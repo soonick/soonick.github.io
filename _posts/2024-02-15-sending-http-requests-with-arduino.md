@@ -2,8 +2,8 @@
 title: Sending HTTP requests with Arduino
 author: adrian.ancona
 layout: post
-# date: 2023-12-27
-# permalink: /2023/12/sending-http-requests-with-arduino
+date: 2024-02-15
+permalink: /2024/02/sending-http-requests-with-arduino
 tags:
   - arduino
   - electronics
@@ -17,6 +17,8 @@ arduino-cli lib install ArduinoHttpClient
 ```
 
 Once we have the library, we can use it to make requests:
+
+<!--more-->
 
 ```cpp
 #include <WiFiS3.h>
