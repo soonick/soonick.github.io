@@ -2,8 +2,8 @@
 title: Introduction to Rust
 author: adrian.ancona
 layout: post
-# date: 2019-01-30
-# permalink: /2019/02/introduction-to-rust/
+date: 2024-02-21
+permalink: /2024/02/introduction-to-rust/
 tags:
   - computer_science
   - programming
@@ -12,9 +12,9 @@ tags:
 
 [Rust](https://www.rust-lang.org/) is a relatively new programming language that promises to be as fast as C, but less complex and error prone.
 
-Rust compiles directly to machine code, so it doesn't require a runtime. This makes it faster than languages like Java or Python. It also doesn't use a garbage collector, which makes it faster and more predictive than other compiled languages like Golang.
+Rust compiles directly to machine code, so it doesn't require a virtual machine. This makes it faster than languages like Java or Python. It also doesn't use a garbage collector, which makes it faster and more predictive than other compiled languages like Golang.
 
-Rust also promises a programming model that ensures memory and thread safety, which makes it great for complex applications.
+On top of speed and predictability, Rust also promises a programming model that ensures memory and thread safety, which makes it great for complex applications.
 
 ## Installation
 
@@ -62,7 +62,7 @@ One thing to notice from our hello world code is that there is an exclamation ma
 
 ## Cargo, Rust's build system
 
-When we installed Rust, we also installed Cargo:
+When we installed Rust, Cargo was automatically installed:
 
 ```bash
 cargo --version
@@ -398,7 +398,7 @@ error[E0616]: field `sound` of struct `Animal` is private
 
 The way Rust manages resource ownership is probably its main selling point. At the cost of some initially unintuitive rules, it provides a safer way to manage resources.
 
-Rust is similar to C++ in that it uses destructors that can be used to free resources when a variable goes out of scope. When we are talking about collections or structs, the destructor will be run in all of the children recursively before it's run in the parent.
+Rust is similar to C++ in that it has the ability to create destructors that can be used to free resources when a variable goes out of scope. When we are talking about collections or structs, the destructor will be run in all of the children recursively before it's run in the parent.
 
 A destructor can be defined for a struct like so:
 
@@ -527,7 +527,7 @@ fn modify_string(input: &mut String) {
 }
 ```
 
-One thing to keep in mind about mutable references is that, when we have a mutable reference to a variable, we can't have any other reference at the same time. This will almost never be a problem for a single threaded program, but it becomes important when working with multiple threads. That's something I'll cover in more detail in another article.
+One thing to keep in mind about mutable references is that, when we have a mutable reference to a variable, we can't have any other reference at the same time. This will almost never be a problem for a single threaded program, but it becomes important when working with multiple threads. That's something we'll cover in more detail in another article.
 
 ## Conclusion
 
