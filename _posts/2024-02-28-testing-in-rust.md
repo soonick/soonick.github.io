@@ -2,8 +2,8 @@
 title: Testing in Rust
 author: adrian.ancona
 layout: post
-# date: 2019-01-30
-# permalink: /2019/02/introduction-to-rust/
+date: 2024-02-28
+permalink: /2024/02/testing-in-rust/
 tags:
   - programming
   - rust
