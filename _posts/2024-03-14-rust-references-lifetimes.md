@@ -28,6 +28,8 @@ fn main() {
 
 If we compile this, we'll get the following error:
 
+<!--more-->
+
 ```
 error[E0597]: `i` does not live long enough
  --> src/main.rs:6:13
