@@ -2,8 +2,8 @@
 title: Rust References Lifetimes
 author: adrian.ancona
 layout: post
-# date: 2019-01-30
-# permalink: /2019/02/introduction-to-rust/
+date: 2024-03-14
+permalink: /2024/03/rust-references-lifetimes/
 tags:
   - programming
   - rust
