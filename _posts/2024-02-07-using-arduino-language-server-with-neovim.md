@@ -5,6 +5,7 @@ layout: post
 date: 2024-02-07
 permalink: /2024/02/using-arduino-language-server-with-neovim
 tags:
+  - arduino
   - electronics
   - productivity
   - vim
