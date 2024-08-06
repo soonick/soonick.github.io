@@ -2,8 +2,8 @@
 title: Introduction to ESP32 development
 author: adrian.ancona
 layout: post
-# date: 2024-04-10
-# permalink: /2024/04/asynchronous-programming-with-tokio/
+date: 2024-08-07
+permalink: /2024/08/introduction-to-esp32-development
 tags:
   - arduino
   - c++
