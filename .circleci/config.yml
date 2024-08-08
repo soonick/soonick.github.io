@@ -15,7 +15,4 @@ workflows:
   version: 2
   push_and_publish:
     jobs:
-      - build:
-          filters:
-            branches:
-              only: master
+      - build
