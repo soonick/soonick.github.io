@@ -2,8 +2,8 @@
 title: Neovim as ESP32 IDE with Clangd LSP
 author: adrian.ancona
 layout: post
-# date: 2024-04-10
-# permalink: /2024/04/asynchronous-programming-with-tokio/
+date: 2024-08-14
+permalink: /2024/0/neovim-as-esp32-ide-with-clangd-lsp/
 tags:
   - arduino
   - c++
