@@ -2,8 +2,8 @@
 title: Modularizing ESP32 Software
 author: adrian.ancona
 layout: post
-# date: 2024-04-10
-# permalink: /2024/04/asynchronous-programming-with-tokio/
+date: 2024-08-21
+permalink: /2024/08/modularizing-esp32-software
 tags:
   - c++
   - esp32
