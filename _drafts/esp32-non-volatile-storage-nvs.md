@@ -3,7 +3,7 @@ title: ESP32 Non-Volatile Storage (NVS)
 author: adrian.ancona
 layout: post
 # date: 2024-09-04
-# permalink: /2024/04/esp32-non-volatile-storage-nvs/
+# permalink: /2024/09/esp32-non-volatile-storage-nvs/
 tags:
   - c++
   - esp32
