@@ -2,8 +2,8 @@
 title: Making HTTP / HTTPS requests with ESP32
 author: adrian.ancona
 layout: post
-# date: 2024-08-28
-# permalink: /2024/09/making-http-https-requests-with-esp32/
+date: 2024-08-28
+permalink: /2024/09/making-http-https-requests-with-esp32/
 tags:
   - c++
   - esp32
