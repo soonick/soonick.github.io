@@ -2,8 +2,8 @@
 title: Aligned and packed data in C and C++
 author: adrian.ancona
 layout: post
-# date: 2024-09-11
-# permalink: /2024/09/aligned-and-packed-data-in-c-and-cpp/
+date: 2024-09-11
+permalink: /2024/09/aligned-and-packed-data-in-c-and-cpp/
 tags:
   - c++
   - networking
