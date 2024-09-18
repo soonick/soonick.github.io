@@ -11,7 +11,7 @@ tags:
   - data_structures
   - databases
   - mysql
-  - potgresql
+  - postgresql
   - programming
 ---
 
@@ -193,9 +193,10 @@ We can calculate M with this equation:
 If we solve for M:
 
 ```
-8M + 8M - M = 4096
-15M = 4096
-M = 273
+8M + 8M - 8 = 4096
+16M = 4096 + 8
+16M = 4104
+M = 256.5
 ```
 
 B-Trees with degrees in the hundreds are typical for real world databases, but we'll start with a lower number to make them easier to understand.
