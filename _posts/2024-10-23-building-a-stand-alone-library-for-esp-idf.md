@@ -2,8 +2,8 @@
 title: Building a Stand-Alone Library for ESP-IDF
 author: adrian.ancona
 layout: post
-# date: 2024-10-16
-# permalink: /2024/10/building-a-stand-alone-library-for-esp-idf/
+date: 2024-10-23
+permalink: /2024/10/building-a-stand-alone-library-for-esp-idf/
 tags:
   - esp32
   - programming
