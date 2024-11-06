@@ -3,7 +3,7 @@ title: Pull Up and Pull Down Resistors
 author: adrian.ancona
 layout: post
 date: 2024-11-06
-permalink: /2024/11/unit-testing-code-for-esp32/
+permalink: /2024/11/pull-up-and-pull-down-resistors/
 tags:
   - electronics
   - esp32
