@@ -26,7 +26,7 @@ To convert the floating state to an affirmative `HIGH`, we would need a [pull-up
 
 [<img src="/images/posts/open-collector-with-pull-up.png" alt="Open collector with pull up" />](/images/posts/open-collector-with-pull-up.png)
 
-## Reason for open drain
+## Reason for open collector
 
 Having an open collector output, forces us to add a pull-up resistor and might give us a confusing output, so, why do manufacturers do this?
 
