@@ -5,6 +5,7 @@ layout: post
 date: 2025-05-14
 permalink: /2025/05/sharing-the-clipboard-linux-vim-tmux-docker/
 tags:
+  - docker
   - linux
   - productivity
   - vim
