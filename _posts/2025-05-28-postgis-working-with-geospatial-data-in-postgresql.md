@@ -38,6 +38,8 @@ postgres=# SELECT PostGIS_Version();
 
 If PostGIS is not installed on our system, we can follow the [installation instructions](https://postgis.net/documentation/getting_started/#installing-postgis) based on our system.
 
+<!--more-->
+
 ## Points
 
 One of the most common use cases for PostGIS is storing coordinates in a map. For this, we can use the `POINT` type.
