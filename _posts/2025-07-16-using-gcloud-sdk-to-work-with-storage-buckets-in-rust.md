@@ -2,8 +2,8 @@
 title: Using gcloud-sdk to Work with Storage Buckets in Rust
 author: adrian.ancona
 layout: post
-# date: 2025-07-16
-# permalink: /2025/07/using-gcloud-sdk-to-work-with-storage-buckets-in-rust/
+date: 2025-07-16
+permalink: /2025/07/using-gcloud-sdk-to-work-with-storage-buckets-in-rust/
 tags:
   - gcp
   - programming
