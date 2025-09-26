@@ -144,7 +144,7 @@ error[E0277]: the trait bound `fn(String, Method, HeaderMap) -> impl Future<Outp
     = note: Consider using `#[axum::debug_handler]` to improve the error message
 ``` 
 
-This error doesn't really tell us, much, but it does suggest using `#[axum::debug_handler]`, which we can do like this:
+This error doesn't really tell us much, but it does suggest using `#[axum::debug_handler]`, which we can do like this:
 
 ```rust
 #[axum::debug_handler]
