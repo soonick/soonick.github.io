@@ -2,8 +2,8 @@
 title: Add Watermark to Images From The Browser
 author: adrian.ancona
 layout: post
-# date: 2025-10-01
-# permalink: /2025/10/add-watermark-to-images-from-the-browser/
+date: 2025-10-01
+permalink: /2025/10/add-watermark-to-images-from-the-browser/
 tags:
   - javascript
   - programming
