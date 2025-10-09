@@ -2,8 +2,8 @@
 title: Building Google Cloud Storage Signed URLs
 author: adrian.ancona
 layout: post
-# date: 2025-10-08
-# permalink: /2025/10/building-google-cloud-storage-signed-urls/
+date: 2025-10-08
+permalink: /2025/10/building-google-cloud-storage-signed-urls/
 tags:
   - gcp
   - programming
